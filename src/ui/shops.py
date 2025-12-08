@@ -206,7 +206,7 @@ class BakerShop(Shop):
 
         self.add_item(ShopItem(
             id="blessed_baguette",
-            name=""Blessed Baguette",
+            name="Blessed Baguette",
             price=150,
             description="Restores 150 HP to one fish",
             level_requirement=20
