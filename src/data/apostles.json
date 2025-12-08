@@ -1,0 +1,354 @@
+{
+  "apostles": [
+    {
+      "id": "bartholomew",
+      "name": "Bartholomew",
+      "alternate_name": "Nathanael",
+      "title": "The True Israelite",
+      "town": "Cana",
+      "town_number": 2,
+      "battle_ability": {
+        "name": "Fig Tree Wisdom",
+        "description": "Reveals enemy weaknesses, resistances, and next move for 3 turns. Shows all enemy stats.",
+        "effect": "reveal_enemy_data",
+        "duration": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Illusion Detection",
+        "description": "Can identify fake walls and hidden passages. Reveals secret areas marked with '???' on map.",
+        "overworld_effect": "detect_illusions"
+      },
+      "personality": "Skeptical but genuine, becomes believer",
+      "biblical_reference": "John 1:45-51 (under the fig tree)",
+      "recruitment_event": "Witnesses water to wine miracle, impressed by what he sees"
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "alternate_name": "Simon Peter",
+      "title": "The Rock",
+      "town": "Capernaum",
+      "town_number": 3,
+      "battle_ability": {
+        "name": "Keys to the Kingdom",
+        "description": "Locks enemy's strongest attack for entire battle. Enemy cannot use their most powerful move.",
+        "effect": "lock_strongest_attack",
+        "duration": "permanent",
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Stone Moving",
+        "description": "Opens heavy stone gates and boulder-blocked paths. Required for several mountain/cave passages.",
+        "overworld_effect": "move_stones"
+      },
+      "personality": "Impulsive, loyal, leader figure",
+      "biblical_reference": "Matthew 16:18 (You are Peter, and on this rock...)",
+      "recruitment_event": "Witnesses miracles and healing, told 'from now on you will catch people'",
+      "combo_fish": "basilica",
+      "combo_attack": {
+        "name": "Rock Solid Foundation",
+        "description": "Massive DEF buff to all party + heal 30 HP",
+        "effect": "combo_rock_solid"
+      }
+    },
+    {
+      "id": "andrew",
+      "name": "Andrew",
+      "title": "The Introducer",
+      "town": "Bethsaida",
+      "town_number": 4,
+      "battle_ability": {
+        "name": "Brother's Keeper",
+        "description": "Heal 50% of Jesus's max HP. Remove all debuffs from Jesus.",
+        "effect": "heal_and_cleanse_jesus",
+        "amount": 0.5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Social Recruitment",
+        "description": "Can recruit crowds of townspeople to help. Opens paths that require multiple people (gates, bridges).",
+        "overworld_effect": "recruit_crowds"
+      },
+      "personality": "Supportive, brings people together",
+      "biblical_reference": "John 1:40-42 (brought Peter to Jesus)",
+      "recruitment_event": "Sees Jesus's compassion and miracles, Peter's brother joins eagerly",
+      "combo_fish": "tuna_other_cheek",
+      "combo_attack": {
+        "name": "Brother's Counter",
+        "description": "Reflect 100% of all damage for 1 turn",
+        "effect": "combo_brothers_counter"
+      }
+    },
+    {
+      "id": "james_zebedee",
+      "name": "James",
+      "alternate_name": "James son of Zebedee",
+      "title": "Son of Thunder",
+      "town": "Magdala",
+      "town_number": 5,
+      "battle_ability": {
+        "name": "Thunder Strike",
+        "description": "30 Lightning damage to all enemies. 20% chance to paralyze all targets.",
+        "effect": "lightning_aoe",
+        "damage": 30,
+        "paralyze_chance": 0.2,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Weather Control",
+        "description": "Summon or calm storms to clear obstacles. Can cross stormy waters or clear storm-blocked paths.",
+        "overworld_effect": "control_weather"
+      },
+      "personality": "Fierce, passionate, temperamental",
+      "biblical_reference": "Mark 3:17 (Jesus named them Boanerges)",
+      "recruitment_event": "Impressed by Jesus's power over evil spirits, joins to fight evil"
+    },
+    {
+      "id": "john",
+      "name": "John",
+      "title": "The Beloved",
+      "town": "Chorazin",
+      "town_number": 6,
+      "battle_ability": {
+        "name": "Revelation Vision",
+        "description": "Shows enemy's next 3 moves in advance. Also reveals hidden enemy abilities.",
+        "effect": "foresight",
+        "turns": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Ancient Text Reading",
+        "description": "Can read and decipher ancient scrolls. Opens sealed prophecy doors and old script locks.",
+        "overworld_effect": "read_ancient_texts"
+      },
+      "personality": "Contemplative, visionary, beloved",
+      "biblical_reference": "Gospel of John, Book of Revelation",
+      "recruitment_event": "Recognizes Jesus as the Word made flesh, joins with quiet devotion",
+      "combo_fish": "holy_mackerel",
+      "combo_attack": {
+        "name": "Revelation Smack",
+        "description": "200 Holy damage + blind all enemies for 2 turns",
+        "effect": "combo_revelation"
+      }
+    },
+    {
+      "id": "philip",
+      "name": "Philip",
+      "title": "The Calculator",
+      "town": "Tiberias",
+      "town_number": 7,
+      "battle_ability": {
+        "name": "Feed the 5000",
+        "description": "Multiply next bread item used × 5. One bread becomes five uses.",
+        "effect": "multiply_item",
+        "multiplier": 5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Mathematical Puzzles",
+        "description": "Solves complex numerical locks and puzzles. Required for certain gate mechanisms.",
+        "overworld_effect": "solve_math_puzzles"
+      },
+      "personality": "Logical, practical, analytical",
+      "biblical_reference": "John 6:7 (calculated cost of feeding crowd)",
+      "recruitment_event": "Sees Jesus as the answer beyond calculation, 'Come and see!'",
+      "combo_fish": "salmon_of_wisdom",
+      "combo_attack": {
+        "name": "Calculated Devastation",
+        "description": "Ignores all enemy defenses and type resistances",
+        "effect": "combo_calculated"
+      }
+    },
+    {
+      "id": "matthew",
+      "name": "Matthew",
+      "alternate_name": "Levi",
+      "title": "The Tax Collector",
+      "town": "Gadara",
+      "town_number": 8,
+      "battle_ability": {
+        "name": "Render unto Caesar",
+        "description": "Steal money from all enemies (5x normal battle reward). Also steals one random item from enemy.",
+        "effect": "steal_money_items",
+        "money_multiplier": 5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Bribery/Negotiation",
+        "description": "Can bribe corrupt officials and guards. Opens 'pay-to-pass' gates and checkpoints.",
+        "overworld_effect": "bribe_guards"
+      },
+      "personality": "Reformed, generous, guilt about past",
+      "biblical_reference": "Matthew 9:9 (tax collector called by Jesus)",
+      "recruitment_event": "Witnesses power over demons and compassion for outcasts, leaves tax booth",
+      "combo_fish": "hali_but",
+      "combo_attack": {
+        "name": "Tax the Wicked",
+        "description": "Multi-hit attack + steal 10x money",
+        "effect": "combo_tax_wicked"
+      }
+    },
+    {
+      "id": "simon_zealot",
+      "name": "Simon",
+      "alternate_name": "Simon the Zealot",
+      "title": "The Revolutionary",
+      "town": "Samaria",
+      "town_number": 9,
+      "battle_ability": {
+        "name": "Righteous Fury",
+        "description": "Next attack does 3x damage. Breaks through enemy defenses.",
+        "effect": "triple_damage_next",
+        "multiplier": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Intimidation",
+        "description": "Scares off hostile guards and enemies. Clears aggressive checkpoints without fighting.",
+        "overworld_effect": "intimidate_enemies"
+      },
+      "personality": "Former radical, learning peace",
+      "biblical_reference": "Luke 6:15 (called the Zealot)",
+      "recruitment_event": "Confronts his own prejudices, sees Jesus breaking down walls, reformed revolutionary",
+      "combo_fish": "swordfish",
+      "combo_attack": {
+        "name": "Zealot's Blade",
+        "description": "500 damage, single target, usable ONCE PER GAME",
+        "effect": "combo_zealot_blade",
+        "uses": 1
+      }
+    },
+    {
+      "id": "james_alphaeus",
+      "name": "James",
+      "alternate_name": "James son of Alphaeus",
+      "title": "The Lesser",
+      "town": "Jericho",
+      "town_number": 10,
+      "battle_ability": {
+        "name": "Humble Service",
+        "description": "Permanently increase all stats by 10% (stacks each use). Slow but steady power growth.",
+        "effect": "stat_boost_permanent",
+        "boost": 0.1,
+        "stacks": true,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Humility Gate",
+        "description": "Can pass through 'only the humble may enter' barriers. Required for certain holy sites.",
+        "overworld_effect": "humility_pass"
+      },
+      "personality": "Quiet, humble, often overlooked",
+      "biblical_reference": "Often called James the Less to distinguish from James son of Zebedee",
+      "recruitment_event": "Often-overlooked apostle quietly serving, his humility is his strength",
+      "combo_fish": "grouper_therapy",
+      "combo_attack": {
+        "name": "Humble Healing",
+        "description": "Full heal to all party members and Jesus",
+        "effect": "combo_humble_heal"
+      }
+    },
+    {
+      "id": "thomas",
+      "name": "Thomas",
+      "alternate_name": "Didymus",
+      "title": "The Doubter",
+      "town": "Bethany",
+      "town_number": 11,
+      "battle_ability": {
+        "name": "Proof Required",
+        "description": "Negates one enemy illusion, trick, or dodge. Reveals true form of shapeshifters.",
+        "effect": "negate_illusion",
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Trap Detection",
+        "description": "Sees through false paths and detects traps. Required for navigating treacherous dungeons.",
+        "overworld_effect": "detect_traps"
+      },
+      "personality": "Skeptical, needs evidence, honest",
+      "biblical_reference": "John 20:24-29 (unless I see... I will not believe)",
+      "recruitment_event": "Witnesses ultimate proof - power over death (Lazarus), convinced",
+      "combo_fish": "leviathan_lament",
+      "combo_attack": {
+        "name": "Proof of Power",
+        "description": "800 damage single target, undeniable damage",
+        "effect": "combo_proof_power"
+      }
+    },
+    {
+      "id": "thaddaeus",
+      "name": "Thaddaeus",
+      "alternate_name": "Jude",
+      "title": "The Forgotten",
+      "town": "Bethlehem",
+      "town_number": 12,
+      "battle_ability": {
+        "name": "Hidden Strength",
+        "description": "Random powerful effect (wild card). Could be massive heal, huge damage, full buffs, or minor effect.",
+        "effect": "random_wildcard",
+        "options": ["massive_heal", "huge_damage", "full_buffs", "minor_effect"],
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Secret Passages",
+        "description": "Finds hidden doors and forgotten paths. The forgotten apostle finds forgotten places.",
+        "overworld_effect": "find_secrets"
+      },
+      "personality": "Often overlooked, underestimated, surprisingly capable",
+      "biblical_reference": "John 14:22 (asks Jesus a question, often forgotten)",
+      "recruitment_event": "Quietly serving the broken, his hidden strength emerges, grateful to be seen",
+      "combo_fish": "angler_of_light",
+      "combo_attack": {
+        "name": "Forgotten Illumination",
+        "description": "Reveals all secrets in current area (items, parables, hidden paths)",
+        "effect": "combo_reveal_all"
+      }
+    },
+    {
+      "id": "judas",
+      "name": "Judas Iscariot",
+      "title": "The Betrayer",
+      "town": "Jerusalem",
+      "town_number": 13,
+      "battle_ability": {
+        "name": "Thirty Silver Pieces",
+        "description": "30-60 massive damage to enemy. Costs Jesus 30 HP (blood money). Most powerful single attack but comes with cost.",
+        "effect": "blood_money_attack",
+        "damage": [30, 60],
+        "cost_jesus_hp": 30,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Point of No Return",
+        "description": "Unlocks path to Gethsemane/Golgotha. Opens 'point of no return' final dungeon.",
+        "overworld_effect": "unlock_final_path"
+      },
+      "personality": "Complex, troubled, hints of guilt throughout",
+      "biblical_reference": "Matthew 26:14-16, 27:3-5 (betrayal and regret)",
+      "recruitment_event": "Already in Jerusalem managing money, joins at start of final chapter, something feels off",
+      "special_note": "1% chance to 'accidentally' help enemies in battle. Final boss requires his attack.",
+      "combo_fish": "red_herring",
+      "combo_attack": {
+        "name": "Silver Deception",
+        "description": "100 damage + steal all enemy buffs",
+        "effect": "combo_silver_deception"
+      }
+    }
+  ],
+  "ultimate_combo": {
+    "name": "Great Commission",
+    "description": "All 12 apostles + Fishers of Men-haden fish = Ultimate attack, final boss only",
+    "requires": ["all_12_apostles", "fishers_of_men_haden"],
+    "effect": "ultimate_commission",
+    "usable": "final_boss_only"
+  },
+  "metadata": {
+    "total_apostles": 12,
+    "recruitment_order": [
+      "bartholomew", "peter", "andrew", "james_zebedee", "john", "philip",
+      "matthew", "simon_zealot", "james_alphaeus", "thomas", "thaddaeus", "judas"
+    ]
+  }
+}

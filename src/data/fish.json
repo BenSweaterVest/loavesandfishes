@@ -1,0 +1,466 @@
+{
+  "fish": [
+    {
+      "id": "starter_sardine",
+      "name": "Starter Sardine",
+      "tier": 0,
+      "type": "Water",
+      "base_stats": {
+        "hp": 20,
+        "atk": 8,
+        "def": 6,
+        "spd": 12
+      },
+      "property": {
+        "name": "Tutorial Helper",
+        "description": "Gains XP 20% faster",
+        "effect": "xp_boost",
+        "value": 1.2
+      },
+      "moves": [
+        {
+          "name": "Splash",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": [5, 8],
+          "accuracy": 100,
+          "description": "A simple water splash attack"
+        },
+        {
+          "name": "Nibble",
+          "level": 1,
+          "type": "Physical",
+          "category": "Physical",
+          "power": [6, 10],
+          "accuracy": 95,
+          "description": "A quick nibbling attack"
+        },
+        {
+          "name": "School Together",
+          "level": 5,
+          "type": "Water",
+          "category": "Healing",
+          "power": 10,
+          "accuracy": 100,
+          "description": "Heal 10 HP with the power of friendship"
+        },
+        {
+          "name": "Sardine Rush",
+          "level": 10,
+          "type": "Water",
+          "category": "Multi-Target",
+          "power": 15,
+          "accuracy": 90,
+          "description": "Rush at all enemies at once"
+        }
+      ],
+      "acquisition": {
+        "method": "gift",
+        "location": "Nazareth",
+        "npc": "Joseph",
+        "cost": 0
+      },
+      "flavor_text": "Small beginnings lead to great catches"
+    },
+    {
+      "id": "carp_diem",
+      "name": "Carp Diem",
+      "tier": 1,
+      "type": "Earth",
+      "base_stats": {
+        "hp": 25,
+        "atk": 12,
+        "def": 8,
+        "spd": 10
+      },
+      "property": {
+        "name": "Seize the Moment",
+        "description": "15% chance to stun enemy for 1 turn",
+        "effect": "stun_chance",
+        "value": 0.15
+      },
+      "moves": [
+        {
+          "name": "Seize Strike",
+          "level": 1,
+          "type": "Earth",
+          "category": "Physical",
+          "power": [10, 15],
+          "accuracy": 100,
+          "description": "Strike decisively"
+        },
+        {
+          "name": "Mud Slap",
+          "level": 1,
+          "type": "Earth",
+          "category": "Status",
+          "power": 8,
+          "accuracy": 100,
+          "effect": "lower_accuracy",
+          "effect_value": 0.2,
+          "description": "Slap mud, lowering accuracy 20%"
+        },
+        {
+          "name": "Carpe Momentum",
+          "level": 8,
+          "type": "Earth",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "special": "momentum",
+          "description": "Damage increases each consecutive turn used"
+        },
+        {
+          "name": "Time's Up",
+          "level": 15,
+          "type": "Earth",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 90,
+          "effect": "stun",
+          "effect_chance": 0.3,
+          "description": "Heavy strike with 30% stun chance"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Cana",
+        "cost": 50
+      },
+      "flavor_text": "Seize the fish! Opportunity knocks but once"
+    },
+    {
+      "id": "sole_survivor",
+      "name": "Sole Survivor",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 30,
+        "atk": 10,
+        "def": 12,
+        "spd": 8
+      },
+      "property": {
+        "name": "Last Stand",
+        "description": "Takes 20% less damage when only fish remaining",
+        "effect": "damage_reduction_alone",
+        "value": 0.2
+      },
+      "moves": [
+        {
+          "name": "Last Stand",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [8, 15],
+          "accuracy": 100,
+          "special": "low_hp_boost",
+          "description": "Damage increases when below 30% HP"
+        },
+        {
+          "name": "Sole Comfort",
+          "level": 1,
+          "type": "Holy",
+          "category": "Healing",
+          "power": 15,
+          "accuracy": 100,
+          "description": "Heal 15 HP"
+        },
+        {
+          "name": "Survivor's Will",
+          "level": 10,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "auto_revive",
+          "description": "Auto-revive once at 1 HP (once per battle)"
+        },
+        {
+          "name": "Sole Purpose",
+          "level": 18,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 40,
+          "accuracy": 95,
+          "description": "A powerful holy strike"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Capernaum",
+        "cost": 100
+      },
+      "flavor_text": "The only fish you'll need to survive"
+    },
+    {
+      "id": "basilica",
+      "name": "Bass-ilica",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 35,
+        "atk": 15,
+        "def": 18,
+        "spd": 7
+      },
+      "property": {
+        "name": "Foundation Stone",
+        "description": "Takes 50% less damage from Dark-type moves",
+        "effect": "dark_resistance",
+        "value": 0.5
+      },
+      "moves": [
+        {
+          "name": "Foundation Strike",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "description": "A solid foundational attack"
+        },
+        {
+          "name": "Stone Wall",
+          "level": 1,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_boost",
+          "effect_value": 0.3,
+          "duration": 3,
+          "description": "Increase DEF by 30% for 3 turns"
+        },
+        {
+          "name": "Sacred Ground",
+          "level": 12,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "barrier",
+          "effect_value": 0.5,
+          "duration": 2,
+          "description": "Reduce all damage by 50% for 2 turns"
+        },
+        {
+          "name": "Pillar of Faith",
+          "level": 20,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "special": "heal_jesus",
+          "heal_amount": 10,
+          "description": "Deal 25 damage and heal Jesus 10 HP"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Bethsaida",
+        "cost": 150
+      },
+      "flavor_text": "Upon this bass I build my church",
+      "combo_attack": {
+        "apostle": "peter",
+        "name": "Rock Solid Foundation",
+        "description": "Massive DEF buff + heal",
+        "effect": "combo_rock_solid"
+      }
+    },
+    {
+      "id": "holy_mackerel",
+      "name": "Holy Mackerel",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 32,
+        "atk": 20,
+        "def": 10,
+        "spd": 15
+      },
+      "property": {
+        "name": "Righteous Fury",
+        "description": "Deals +20% damage to Dark and sinful enemy types",
+        "effect": "bonus_vs_evil",
+        "value": 0.2
+      },
+      "moves": [
+        {
+          "name": "Sacred Slap",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [15, 22],
+          "accuracy": 100,
+          "description": "A holy slap of justice"
+        },
+        {
+          "name": "Blessed Strike",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 18,
+          "accuracy": 100,
+          "special": "boosted_vs_evil",
+          "description": "Boosted damage vs evil enemies"
+        },
+        {
+          "name": "Act of Cod",
+          "level": 14,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 95,
+          "description": "A divine act of fishy justice"
+        },
+        {
+          "name": "Mackerel Miracle",
+          "level": 22,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 40,
+          "accuracy": 90,
+          "effect": "confuse",
+          "effect_chance": 0.2,
+          "description": "Miraculous strike with 20% confuse chance"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Magdala",
+        "cost": 200
+      },
+      "flavor_text": "Holy mackerel, that's a lot of damage!",
+      "combo_attack": {
+        "apostle": "john",
+        "name": "Revelation Smack",
+        "description": "200 Holy damage + blind all enemies",
+        "effect": "combo_revelation"
+      }
+    },
+    {
+      "id": "tuna_other_cheek",
+      "name": "Tuna the Other Cheek",
+      "tier": 2,
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 28,
+        "atk": 16,
+        "def": 14,
+        "spd": 12
+      },
+      "property": {
+        "name": "Counter Theology",
+        "description": "Automatically counters when attacked (30% of damage reflected)",
+        "effect": "auto_counter",
+        "value": 0.3
+      },
+      "moves": [
+        {
+          "name": "Turn Strike",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "description": "Turn and strike back"
+        },
+        {
+          "name": "Counter Tuna",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "counter_stance",
+          "effect_value": 0.5,
+          "description": "Reflect 50% damage back next turn"
+        },
+        {
+          "name": "Forgiveness",
+          "level": 16,
+          "type": "Spirit",
+          "category": "Healing",
+          "power": 25,
+          "accuracy": 100,
+          "special": "remove_debuffs",
+          "description": "Heal 25 HP and remove all debuffs"
+        },
+        {
+          "name": "Ultimate Counter",
+          "level": 24,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "full_counter",
+          "effect_value": 1.0,
+          "description": "Reflect 100% damage next turn"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Chorazin",
+        "cost": 300
+      },
+      "flavor_text": "Turn the other cheek... then strike back!",
+      "combo_attack": {
+        "apostle": "andrew",
+        "name": "Brother's Counter",
+        "description": "Reflect all damage for 1 turn",
+        "effect": "combo_brothers_counter"
+      }
+    }
+  ],
+  "type_chart": {
+    "Holy": {
+      "Holy": 1.0,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 2.0
+    },
+    "Water": {
+      "Holy": 1.0,
+      "Water": 0.5,
+      "Earth": 2.0,
+      "Spirit": 1.0,
+      "Dark": 1.0
+    },
+    "Earth": {
+      "Holy": 1.0,
+      "Water": 0.5,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 1.0
+    },
+    "Spirit": {
+      "Holy": 1.5,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 1.5
+    },
+    "Dark": {
+      "Holy": 0.5,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 0.5,
+      "Dark": 1.0
+    }
+  },
+  "metadata": {
+    "total_fish": 20,
+    "tiers": {
+      "0": "Tutorial",
+      "1": "Early Game (Towns 2-5)",
+      "2": "Mid Game (Towns 6-9)",
+      "3": "Late Game (Towns 10-12)",
+      "special": "Hidden/Rare"
+    },
+    "types": ["Holy", "Water", "Earth", "Spirit", "Dark"]
+  }
+}
