@@ -1,0 +1,1528 @@
+{
+  "enemies": [
+    {
+      "id": "skeptical_scholar",
+      "name": "Skeptical Scholar",
+      "type": "Normal",
+      "region": "Galilee",
+      "level_range": [1, 10],
+      "base_stats": {
+        "hp": 25,
+        "atk": 8,
+        "def": 6,
+        "spd": 10
+      },
+      "attacks": [
+        {
+          "name": "Doubt",
+          "type": "Spirit",
+          "power": [6, 10],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.2
+        },
+        {
+          "name": "Question",
+          "type": "Normal",
+          "power": [8, 12],
+          "accuracy": 100
+        }
+      ],
+      "xp_reward": 15,
+      "money_reward": 10,
+      "item_drops": [
+        {"item": "plain_pita", "chance": 0.1}
+      ],
+      "ai_pattern": "random",
+      "flavor_text": "Questions everything, believes nothing"
+    },
+    {
+      "id": "questioning_pharisee",
+      "name": "Questioning Pharisee",
+      "type": "Holy",
+      "region": "Galilee",
+      "level_range": [2, 12],
+      "base_stats": {
+        "hp": 30,
+        "atk": 10,
+        "def": 8,
+        "spd": 8
+      },
+      "attacks": [
+        {
+          "name": "Legal Challenge",
+          "type": "Holy",
+          "power": [10, 14],
+          "accuracy": 95,
+          "effect": "atk_down",
+          "effect_value": 0.15
+        },
+        {
+          "name": "Scripture Quote",
+          "type": "Holy",
+          "power": [8, 12],
+          "accuracy": 100
+        }
+      ],
+      "xp_reward": 18,
+      "money_reward": 12,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "Uses scripture as a weapon"
+    },
+    {
+      "id": "wild_bandit",
+      "name": "Wild Bandit",
+      "type": "Dark",
+      "region": "Galilee",
+      "level_range": [3, 13],
+      "base_stats": {
+        "hp": 35,
+        "atk": 12,
+        "def": 8,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Steal",
+          "type": "Dark",
+          "power": [8, 14],
+          "accuracy": 90,
+          "special": "steal_money",
+          "steal_amount": 5
+        },
+        {
+          "name": "Slash",
+          "type": "Physical",
+          "power": [10, 16],
+          "accuracy": 95
+        }
+      ],
+      "xp_reward": 20,
+      "money_reward": 25,
+      "item_drops": [
+        {"item": "ryedemption_roll", "chance": 0.15}
+      ],
+      "ai_pattern": "random",
+      "flavor_text": "Takes what isn't his"
+    },
+    {
+      "id": "lost_sheep",
+      "name": "Lost Sheep",
+      "type": "Earth",
+      "region": "Galilee",
+      "level_range": [1, 8],
+      "base_stats": {
+        "hp": 20,
+        "atk": 6,
+        "def": 8,
+        "spd": 6
+      },
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "type": "Earth",
+          "power": [6, 10],
+          "accuracy": 90
+        },
+        {
+          "name": "Bleat",
+          "type": "Normal",
+          "power": [4, 8],
+          "accuracy": 100,
+          "effect": "confusion",
+          "effect_chance": 0.1
+        }
+      ],
+      "xp_reward": 12,
+      "money_reward": 8,
+      "ai_pattern": "flee",
+      "flee_chance": 0.3,
+      "flavor_text": "Just trying to find its way home"
+    },
+    {
+      "id": "wheat_wisp",
+      "name": "Wheat Wisp",
+      "type": "Earth",
+      "region": "Galilee",
+      "level_range": [2, 10],
+      "base_stats": {
+        "hp": 22,
+        "atk": 8,
+        "def": 6,
+        "spd": 11
+      },
+      "attacks": [
+        {
+          "name": "Grain Shower",
+          "type": "Earth",
+          "power": [8, 12],
+          "accuracy": 95
+        },
+        {
+          "name": "Harvest Wind",
+          "type": "Earth",
+          "power": [6, 10],
+          "accuracy": 100,
+          "special": "multi_target"
+        }
+      ],
+      "xp_reward": 14,
+      "money_reward": 10,
+      "ai_pattern": "random",
+      "flavor_text": "The chaff that blows away"
+    },
+    {
+      "id": "water_spirit",
+      "name": "Water Spirit",
+      "type": "Water",
+      "region": "Galilee",
+      "level_range": [3, 12],
+      "base_stats": {
+        "hp": 28,
+        "atk": 9,
+        "def": 7,
+        "spd": 13
+      },
+      "attacks": [
+        {
+          "name": "Wave Crash",
+          "type": "Water",
+          "power": [10, 14],
+          "accuracy": 90
+        },
+        {
+          "name": "Splash",
+          "type": "Water",
+          "power": [7, 11],
+          "accuracy": 100
+        }
+      ],
+      "xp_reward": 16,
+      "money_reward": 11,
+      "ai_pattern": "random",
+      "flavor_text": "Born of the Sea of Galilee"
+    },
+    {
+      "id": "tax_collector_shade",
+      "name": "Tax Collector Shade",
+      "type": "Dark",
+      "region": "Coastal",
+      "level_range": [10, 20],
+      "base_stats": {
+        "hp": 40,
+        "atk": 15,
+        "def": 10,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Extort",
+          "type": "Dark",
+          "power": [12, 18],
+          "accuracy": 100,
+          "special": "steal_money",
+          "steal_amount": 15
+        },
+        {
+          "name": "Tax Audit",
+          "type": "Dark",
+          "power": [10, 16],
+          "accuracy": 95,
+          "effect": "def_down",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 35,
+      "money_reward": 30,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "The ghost of unjust taxation"
+    },
+    {
+      "id": "possessed_merchant",
+      "name": "Possessed Merchant",
+      "type": "Dark",
+      "region": "Coastal",
+      "level_range": [12, 22],
+      "base_stats": {
+        "hp": 45,
+        "atk": 16,
+        "def": 12,
+        "spd": 10
+      },
+      "attacks": [
+        {
+          "name": "Price Gouge",
+          "type": "Dark",
+          "power": [14, 20],
+          "accuracy": 90,
+          "special": "steal_money",
+          "steal_amount": 20
+        },
+        {
+          "name": "Greed Strike",
+          "type": "Dark",
+          "power": [16, 22],
+          "accuracy": 95
+        },
+        {
+          "name": "Demon's Whisper",
+          "type": "Dark",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "confusion",
+          "effect_chance": 0.3
+        }
+      ],
+      "xp_reward": 40,
+      "money_reward": 35,
+      "ai_pattern": "random",
+      "flavor_text": "Consumed by demonic greed"
+    },
+    {
+      "id": "roman_scout",
+      "name": "Roman Scout",
+      "type": "Normal",
+      "region": "Coastal",
+      "level_range": [14, 24],
+      "base_stats": {
+        "hp": 50,
+        "atk": 18,
+        "def": 16,
+        "spd": 14
+      },
+      "attacks": [
+        {
+          "name": "Gladius Strike",
+          "type": "Physical",
+          "power": [16, 22],
+          "accuracy": 100
+        },
+        {
+          "name": "Shield Bash",
+          "type": "Physical",
+          "power": [14, 20],
+          "accuracy": 90,
+          "effect": "stun",
+          "effect_chance": 0.15
+        },
+        {
+          "name": "Roman Discipline",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_up",
+          "effect_value": 0.25
+        }
+      ],
+      "xp_reward": 45,
+      "money_reward": 40,
+      "ai_pattern": "defensive",
+      "flavor_text": "Enforcer of Roman law"
+    },
+    {
+      "id": "herodian_guard",
+      "name": "Herodian Guard",
+      "type": "Normal",
+      "region": "Coastal",
+      "level_range": [16, 26],
+      "base_stats": {
+        "hp": 55,
+        "atk": 20,
+        "def": 18,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Royal Strike",
+          "type": "Physical",
+          "power": [18, 24],
+          "accuracy": 95
+        },
+        {
+          "name": "Guard's Honor",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "all_stats_up",
+          "effect_value": 0.15
+        },
+        {
+          "name": "Herod's Wrath",
+          "type": "Physical",
+          "power": [20, 28],
+          "accuracy": 85
+        }
+      ],
+      "xp_reward": 50,
+      "money_reward": 45,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "Loyal to the corrupt king"
+    },
+    {
+      "id": "corrupt_official",
+      "name": "Corrupt Official",
+      "type": "Dark",
+      "region": "Coastal",
+      "level_range": [15, 25],
+      "base_stats": {
+        "hp": 48,
+        "atk": 17,
+        "def": 14,
+        "spd": 11
+      },
+      "attacks": [
+        {
+          "name": "Bribery",
+          "type": "Dark",
+          "power": [15, 21],
+          "accuracy": 100,
+          "effect": "def_down",
+          "effect_value": 0.25
+        },
+        {
+          "name": "Corruption",
+          "type": "Dark",
+          "power": [12, 18],
+          "accuracy": 95,
+          "effect": "atk_down",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 42,
+      "money_reward": 50,
+      "ai_pattern": "random",
+      "flavor_text": "Power corrupts absolutely"
+    },
+    {
+      "id": "doubting_spirit",
+      "name": "Doubting Spirit",
+      "type": "Spirit",
+      "region": "Coastal",
+      "level_range": [13, 23],
+      "base_stats": {
+        "hp": 42,
+        "atk": 14,
+        "def": 12,
+        "spd": 16
+      },
+      "attacks": [
+        {
+          "name": "Seeds of Doubt",
+          "type": "Spirit",
+          "power": [12, 18],
+          "accuracy": 95,
+          "effect": "accuracy_down",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Whisper",
+          "type": "Spirit",
+          "power": [14, 20],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.25
+        }
+      ],
+      "xp_reward": 38,
+      "money_reward": 32,
+      "ai_pattern": "random",
+      "flavor_text": "Uncertainty made manifest"
+    },
+    {
+      "id": "swine_spirit",
+      "name": "Swine Spirit",
+      "type": "Dark",
+      "region": "Gentile",
+      "level_range": [20, 30],
+      "base_stats": {
+        "hp": 60,
+        "atk": 22,
+        "def": 15,
+        "spd": 14
+      },
+      "attacks": [
+        {
+          "name": "Possessed Charge",
+          "type": "Dark",
+          "power": [20, 28],
+          "accuracy": 90
+        },
+        {
+          "name": "Demon's Touch",
+          "type": "Dark",
+          "power": [18, 24],
+          "accuracy": 95,
+          "effect": "possession",
+          "effect_chance": 0.15
+        },
+        {
+          "name": "Corruption Aura",
+          "type": "Dark",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "all_stats_down",
+          "effect_value": 0.15
+        }
+      ],
+      "xp_reward": 65,
+      "money_reward": 55,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Host to dark forces"
+    },
+    {
+      "id": "cultural_critic",
+      "name": "Cultural Critic",
+      "type": "Spirit",
+      "region": "Gentile",
+      "level_range": [22, 32],
+      "base_stats": {
+        "hp": 58,
+        "atk": 20,
+        "def": 16,
+        "spd": 15
+      },
+      "attacks": [
+        {
+          "name": "Division",
+          "type": "Spirit",
+          "power": [18, 26],
+          "accuracy": 90,
+          "special": "divide_party"
+        },
+        {
+          "name": "Harsh Words",
+          "type": "Spirit",
+          "power": [16, 22],
+          "accuracy": 100,
+          "effect": "atk_down",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 68,
+      "money_reward": 58,
+      "ai_pattern": "random",
+      "flavor_text": "Sows discord and prejudice"
+    },
+    {
+      "id": "zealot_agitator",
+      "name": "Zealot Agitator",
+      "type": "Dark",
+      "region": "Gentile",
+      "level_range": [24, 34],
+      "base_stats": {
+        "hp": 65,
+        "atk": 24,
+        "def": 18,
+        "spd": 16
+      },
+      "attacks": [
+        {
+          "name": "Righteous Fury",
+          "type": "Dark",
+          "power": [22, 30],
+          "accuracy": 100
+        },
+        {
+          "name": "Revolutionary Strike",
+          "type": "Dark",
+          "power": [24, 32],
+          "accuracy": 85,
+          "special": "ignore_def"
+        },
+        {
+          "name": "Zealot's Rage",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_up",
+          "effect_value": 0.4
+        }
+      ],
+      "xp_reward": 72,
+      "money_reward": 60,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Misguided passion"
+    },
+    {
+      "id": "samaritan_skeptic",
+      "name": "Samaritan Skeptic",
+      "type": "Spirit",
+      "region": "Gentile",
+      "level_range": [23, 33],
+      "base_stats": {
+        "hp": 62,
+        "atk": 21,
+        "def": 17,
+        "spd": 14
+      },
+      "attacks": [
+        {
+          "name": "Prejudice",
+          "type": "Spirit",
+          "power": [19, 27],
+          "accuracy": 90,
+          "effect": "def_down",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Cultural Divide",
+          "type": "Spirit",
+          "power": [17, 23],
+          "accuracy": 95
+        }
+      ],
+      "xp_reward": 70,
+      "money_reward": 62,
+      "ai_pattern": "random",
+      "flavor_text": "Walls between peoples"
+    },
+    {
+      "id": "legion_fragment",
+      "name": "Legion Fragment",
+      "type": "Dark",
+      "region": "Gentile",
+      "level_range": [25, 35],
+      "base_stats": {
+        "hp": 55,
+        "atk": 19,
+        "def": 14,
+        "spd": 18
+      },
+      "attacks": [
+        {
+          "name": "Many Voices",
+          "type": "Dark",
+          "power": [15, 23],
+          "accuracy": 100,
+          "special": "multi_hit",
+          "hits": 3
+        },
+        {
+          "name": "Possession Attempt",
+          "type": "Dark",
+          "power": [18, 24],
+          "accuracy": 85,
+          "effect": "confusion",
+          "effect_chance": 0.3
+        }
+      ],
+      "xp_reward": 68,
+      "money_reward": 58,
+      "ai_pattern": "random",
+      "flavor_text": "One of many, many of one"
+    },
+    {
+      "id": "demon_piglet",
+      "name": "Demon Piglet",
+      "type": "Dark",
+      "region": "Gentile",
+      "level_range": [21, 31],
+      "base_stats": {
+        "hp": 50,
+        "atk": 18,
+        "def": 13,
+        "spd": 17
+      },
+      "attacks": [
+        {
+          "name": "Possessed Bite",
+          "type": "Dark",
+          "power": [17, 23],
+          "accuracy": 95
+        },
+        {
+          "name": "Demonic Squeal",
+          "type": "Dark",
+          "power": [14, 20],
+          "accuracy": 100,
+          "effect": "confusion",
+          "effect_chance": 0.2
+        }
+      ],
+      "xp_reward": 62,
+      "money_reward": 52,
+      "ai_pattern": "swarm",
+      "flavor_text": "Unclean spirits made manifest"
+    },
+    {
+      "id": "temple_guard",
+      "name": "Temple Guard",
+      "type": "Holy",
+      "region": "Judean",
+      "level_range": [30, 40],
+      "base_stats": {
+        "hp": 75,
+        "atk": 28,
+        "def": 22,
+        "spd": 15
+      },
+      "attacks": [
+        {
+          "name": "Sacred Strike",
+          "type": "Holy",
+          "power": [24, 32],
+          "accuracy": 100
+        },
+        {
+          "name": "Temple's Fury",
+          "type": "Holy",
+          "power": [26, 34],
+          "accuracy": 90
+        },
+        {
+          "name": "Religious Fervor",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_up",
+          "effect_value": 0.3
+        }
+      ],
+      "xp_reward": 85,
+      "money_reward": 70,
+      "ai_pattern": "defensive",
+      "flavor_text": "Protects the holy place"
+    },
+    {
+      "id": "sanhedrin_member",
+      "name": "Sanhedrin Member",
+      "type": "Holy",
+      "region": "Judean",
+      "level_range": [32, 42],
+      "base_stats": {
+        "hp": 70,
+        "atk": 26,
+        "def": 24,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Judgment",
+          "type": "Holy",
+          "power": [22, 30],
+          "accuracy": 95,
+          "effect": "all_stats_down",
+          "effect_value": 0.15
+        },
+        {
+          "name": "Condemn",
+          "type": "Holy",
+          "power": [24, 32],
+          "accuracy": 90
+        },
+        {
+          "name": "Legal Trap",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "paralyzed",
+          "effect_chance": 0.2
+        }
+      ],
+      "xp_reward": 88,
+      "money_reward": 75,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "Religious authority corrupted"
+    },
+    {
+      "id": "memory_phantom",
+      "name": "Memory Phantom",
+      "type": "Spirit",
+      "region": "Judean",
+      "level_range": [31, 41],
+      "base_stats": {
+        "hp": 68,
+        "atk": 25,
+        "def": 20,
+        "spd": 18
+      },
+      "attacks": [
+        {
+          "name": "Haunting Past",
+          "type": "Spirit",
+          "power": [23, 31],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.25
+        },
+        {
+          "name": "Traumatic Echo",
+          "type": "Spirit",
+          "power": [21, 29],
+          "accuracy": 95
+        }
+      ],
+      "xp_reward": 82,
+      "money_reward": 68,
+      "ai_pattern": "random",
+      "flavor_text": "Echoes of past suffering"
+    },
+    {
+      "id": "wall_sentinel",
+      "name": "Wall Sentinel",
+      "type": "Earth",
+      "region": "Judean",
+      "level_range": [33, 43],
+      "base_stats": {
+        "hp": 80,
+        "atk": 24,
+        "def": 28,
+        "spd": 10
+      },
+      "attacks": [
+        {
+          "name": "Stone Fist",
+          "type": "Earth",
+          "power": [25, 33],
+          "accuracy": 100
+        },
+        {
+          "name": "Wall Slam",
+          "type": "Earth",
+          "power": [28, 36],
+          "accuracy": 85,
+          "effect": "stun",
+          "effect_chance": 0.2
+        },
+        {
+          "name": "Fortress",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_up",
+          "effect_value": 0.4
+        }
+      ],
+      "xp_reward": 90,
+      "money_reward": 72,
+      "ai_pattern": "defensive",
+      "flavor_text": "Immovable as stone"
+    },
+    {
+      "id": "grief_manifest",
+      "name": "Grief Manifest",
+      "type": "Dark",
+      "region": "Judean",
+      "level_range": [34, 44],
+      "base_stats": {
+        "hp": 72,
+        "atk": 27,
+        "def": 21,
+        "spd": 16
+      },
+      "attacks": [
+        {
+          "name": "Sorrow Strike",
+          "type": "Dark",
+          "power": [24, 32],
+          "accuracy": 90,
+          "special": "hp_drain",
+          "drain_percent": 0.3
+        },
+        {
+          "name": "Tears of Mourning",
+          "type": "Dark",
+          "power": [22, 30],
+          "accuracy": 95,
+          "effect": "spd_down",
+          "effect_value": 0.25
+        }
+      ],
+      "xp_reward": 87,
+      "money_reward": 70,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Sadness given form"
+    },
+    {
+      "id": "guilt_shadow",
+      "name": "Guilt Shadow",
+      "type": "Dark",
+      "region": "Judean",
+      "level_range": [35, 45],
+      "base_stats": {
+        "hp": 69,
+        "atk": 26,
+        "def": 22,
+        "spd": 17
+      },
+      "attacks": [
+        {
+          "name": "Weight of Guilt",
+          "type": "Dark",
+          "power": [23, 31],
+          "accuracy": 100,
+          "effect": "def_down",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Reflect Pain",
+          "type": "Dark",
+          "power": 0,
+          "accuracy": 100,
+          "special": "counter",
+          "counter_percent": 0.5
+        }
+      ],
+      "xp_reward": 85,
+      "money_reward": 72,
+      "ai_pattern": "counter",
+      "flavor_text": "Your mistakes reflected"
+    },
+    {
+      "id": "roman_legionnaire",
+      "name": "Roman Legionnaire",
+      "type": "Normal",
+      "region": "Jerusalem",
+      "level_range": [40, 50],
+      "base_stats": {
+        "hp": 90,
+        "atk": 35,
+        "def": 28,
+        "spd": 20
+      },
+      "attacks": [
+        {
+          "name": "Legion Strike",
+          "type": "Physical",
+          "power": [30, 40],
+          "accuracy": 95
+        },
+        {
+          "name": "Pilum Throw",
+          "type": "Physical",
+          "power": [28, 38],
+          "accuracy": 100,
+          "special": "piercing"
+        },
+        {
+          "name": "Testudo Formation",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_up",
+          "effect_value": 0.5
+        }
+      ],
+      "xp_reward": 100,
+      "money_reward": 85,
+      "ai_pattern": "tactical",
+      "flavor_text": "Elite soldier of Rome"
+    },
+    {
+      "id": "high_priest_lackey",
+      "name": "High Priest Lackey",
+      "type": "Holy",
+      "region": "Jerusalem",
+      "level_range": [42, 50],
+      "base_stats": {
+        "hp": 85,
+        "atk": 32,
+        "def": 26,
+        "spd": 18
+      },
+      "attacks": [
+        {
+          "name": "False Witness",
+          "type": "Holy",
+          "power": [28, 38],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.3
+        },
+        {
+          "name": "Corrupted Light",
+          "type": "Holy",
+          "power": [30, 40],
+          "accuracy": 95
+        },
+        {
+          "name": "Hypocrisy",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "all_stats_down",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 105,
+      "money_reward": 90,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "Holy power misused"
+    },
+    {
+      "id": "demonic_tempter",
+      "name": "Demonic Tempter",
+      "type": "Dark",
+      "region": "Jerusalem",
+      "level_range": [44, 50],
+      "base_stats": {
+        "hp": 88,
+        "atk": 34,
+        "def": 24,
+        "spd": 22
+      },
+      "attacks": [
+        {
+          "name": "Temptation",
+          "type": "Dark",
+          "power": [32, 42],
+          "accuracy": 85,
+          "effect": "charm",
+          "effect_chance": 0.25
+        },
+        {
+          "name": "Sin's Embrace",
+          "type": "Dark",
+          "power": [30, 40],
+          "accuracy": 90,
+          "special": "hp_drain",
+          "drain_percent": 0.4
+        },
+        {
+          "name": "Whisper of Doubt",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_down",
+          "effect_value": 0.3
+        }
+      ],
+      "xp_reward": 108,
+      "money_reward": 95,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Tests your faith"
+    },
+    {
+      "id": "shadow_of_doubt",
+      "name": "Shadow of Doubt",
+      "type": "Dark",
+      "region": "Jerusalem",
+      "level_range": [43, 50],
+      "base_stats": {
+        "hp": 82,
+        "atk": 30,
+        "def": 25,
+        "spd": 21
+      },
+      "attacks": [
+        {
+          "name": "Faith Erosion",
+          "type": "Dark",
+          "power": [29, 39],
+          "accuracy": 90,
+          "effect": "all_stats_down",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Uncertainty",
+          "type": "Dark",
+          "power": [27, 37],
+          "accuracy": 95,
+          "effect": "accuracy_down",
+          "effect_value": 0.4
+        }
+      ],
+      "xp_reward": 102,
+      "money_reward": 88,
+      "ai_pattern": "random",
+      "flavor_text": "Uncertainty incarnate"
+    },
+    {
+      "id": "pilates_guard",
+      "name": "Pilate's Guard",
+      "type": "Normal",
+      "region": "Jerusalem",
+      "level_range": [45, 50],
+      "base_stats": {
+        "hp": 95,
+        "atk": 38,
+        "def": 30,
+        "spd": 19
+      },
+      "attacks": [
+        {
+          "name": "Scourge",
+          "type": "Physical",
+          "power": [34, 44],
+          "accuracy": 100,
+          "effect": "bleed",
+          "effect_chance": 0.3
+        },
+        {
+          "name": "Brutal Strike",
+          "type": "Physical",
+          "power": [36, 46],
+          "accuracy": 90
+        },
+        {
+          "name": "Roman Might",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_up",
+          "effect_value": 0.4
+        }
+      ],
+      "xp_reward": 110,
+      "money_reward": 100,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Enforcer of Roman will"
+    },
+    {
+      "id": "money_changer",
+      "name": "Money Changer",
+      "type": "Dark",
+      "region": "Jerusalem",
+      "level_range": [41, 50],
+      "base_stats": {
+        "hp": 80,
+        "atk": 31,
+        "def": 24,
+        "spd": 20
+      },
+      "attacks": [
+        {
+          "name": "Usury",
+          "type": "Dark",
+          "power": [28, 38],
+          "accuracy": 95,
+          "special": "steal_money",
+          "steal_amount": 50
+        },
+        {
+          "name": "Coin Toss",
+          "type": "Dark",
+          "power": [26, 36],
+          "accuracy": 100
+        },
+        {
+          "name": "Greed's Aura",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_down",
+          "effect_value": 0.25
+        }
+      ],
+      "xp_reward": 98,
+      "money_reward": 120,
+      "ai_pattern": "greedy",
+      "flavor_text": "Profiteering in the temple"
+    },
+    {
+      "id": "pride_personified",
+      "name": "Pride Personified",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [35, 50],
+      "base_stats": {
+        "hp": 78,
+        "atk": 30,
+        "def": 26,
+        "spd": 19
+      },
+      "attacks": [
+        {
+          "name": "Arrogant Strike",
+          "type": "Dark",
+          "power": [28, 38],
+          "accuracy": 90,
+          "effect": "atk_up_self",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Look Down Upon",
+          "type": "Dark",
+          "power": [26, 36],
+          "accuracy": 95,
+          "effect": "def_down",
+          "effect_value": 0.25
+        },
+        {
+          "name": "Hubris",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "all_stats_up",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 92,
+      "money_reward": 80,
+      "ai_pattern": "aggressive",
+      "flavor_text": "The first and greatest sin"
+    },
+    {
+      "id": "envy_incarnate",
+      "name": "Envy Incarnate",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [33, 48],
+      "base_stats": {
+        "hp": 74,
+        "atk": 28,
+        "def": 23,
+        "spd": 20
+      },
+      "attacks": [
+        {
+          "name": "Covetous Gaze",
+          "type": "Dark",
+          "power": [25, 35],
+          "accuracy": 90,
+          "special": "stat_steal",
+          "steal_stat": "atk"
+        },
+        {
+          "name": "Green Eyes",
+          "type": "Dark",
+          "power": [23, 33],
+          "accuracy": 95,
+          "effect": "confusion",
+          "effect_chance": 0.25
+        }
+      ],
+      "xp_reward": 88,
+      "money_reward": 75,
+      "ai_pattern": "random",
+      "flavor_text": "Desires what others have"
+    },
+    {
+      "id": "wrath_embodied",
+      "name": "Wrath Embodied",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [36, 50],
+      "base_stats": {
+        "hp": 85,
+        "atk": 36,
+        "def": 20,
+        "spd": 18
+      },
+      "attacks": [
+        {
+          "name": "Fury Unleashed",
+          "type": "Dark",
+          "power": [32, 42],
+          "accuracy": 85
+        },
+        {
+          "name": "Rage Strike",
+          "type": "Dark",
+          "power": [35, 45],
+          "accuracy": 80,
+          "special": "recoil",
+          "recoil_percent": 0.25
+        },
+        {
+          "name": "Berserk",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_up_def_down",
+          "atk_value": 0.5,
+          "def_value": -0.3
+        }
+      ],
+      "xp_reward": 95,
+      "money_reward": 82,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Uncontrolled anger"
+    },
+    {
+      "id": "sloth_manifest",
+      "name": "Sloth Manifest",
+      "type": "Earth",
+      "region": "Special",
+      "level_range": [30, 45],
+      "base_stats": {
+        "hp": 95,
+        "atk": 18,
+        "def": 28,
+        "spd": 5
+      },
+      "attacks": [
+        {
+          "name": "Lethargy Wave",
+          "type": "Earth",
+          "power": [20, 30],
+          "accuracy": 100,
+          "effect": "spd_down",
+          "effect_value": 0.5
+        },
+        {
+          "name": "Do Nothing",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_up",
+          "effect_value": 0.3
+        }
+      ],
+      "xp_reward": 75,
+      "money_reward": 60,
+      "ai_pattern": "defensive",
+      "flavor_text": "Why bother fighting?"
+    },
+    {
+      "id": "greed_given_form",
+      "name": "Greed Given Form",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [34, 48],
+      "base_stats": {
+        "hp": 76,
+        "atk": 29,
+        "def": 24,
+        "spd": 17
+      },
+      "attacks": [
+        {
+          "name": "Hoard",
+          "type": "Dark",
+          "power": [26, 36],
+          "accuracy": 95,
+          "special": "steal_money",
+          "steal_amount": 40
+        },
+        {
+          "name": "Never Enough",
+          "type": "Dark",
+          "power": [28, 38],
+          "accuracy": 90,
+          "special": "hp_drain",
+          "drain_percent": 0.35
+        },
+        {
+          "name": "Avarice",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_up",
+          "effect_value": 0.25
+        }
+      ],
+      "xp_reward": 90,
+      "money_reward": 150,
+      "ai_pattern": "greedy",
+      "flavor_text": "Insatiable hunger for more"
+    },
+    {
+      "id": "gluttony_embodied",
+      "name": "Gluttony Embodied",
+      "type": "Earth",
+      "region": "Special",
+      "level_range": [32, 46],
+      "base_stats": {
+        "hp": 100,
+        "atk": 27,
+        "def": 22,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Devour",
+          "type": "Earth",
+          "power": [27, 37],
+          "accuracy": 95,
+          "special": "hp_drain",
+          "drain_percent": 0.5
+        },
+        {
+          "name": "Consume All",
+          "type": "Earth",
+          "power": [25, 35],
+          "accuracy": 100
+        },
+        {
+          "name": "Feast",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "heal_self",
+          "heal_percent": 0.2
+        }
+      ],
+      "xp_reward": 86,
+      "money_reward": 72,
+      "ai_pattern": "aggressive",
+      "flavor_text": "Endless consumption"
+    },
+    {
+      "id": "lust_spirit",
+      "name": "Lust Spirit",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [31, 47],
+      "base_stats": {
+        "hp": 70,
+        "atk": 26,
+        "def": 21,
+        "spd": 24
+      },
+      "attacks": [
+        {
+          "name": "Tempt",
+          "type": "Dark",
+          "power": [24, 34],
+          "accuracy": 90,
+          "effect": "charm",
+          "effect_chance": 0.35
+        },
+        {
+          "name": "Desire's Pull",
+          "type": "Dark",
+          "power": [22, 32],
+          "accuracy": 95,
+          "effect": "confusion",
+          "effect_chance": 0.3
+        },
+        {
+          "name": "Enthrall",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 85,
+          "effect": "control",
+          "effect_chance": 0.2
+        }
+      ],
+      "xp_reward": 84,
+      "money_reward": 70,
+      "ai_pattern": "random",
+      "flavor_text": "Corrupts the heart"
+    },
+    {
+      "id": "wilderness_wolf",
+      "name": "Wilderness Wolf",
+      "type": "Earth",
+      "region": "Special",
+      "level_range": [15, 35],
+      "base_stats": {
+        "hp": 55,
+        "atk": 24,
+        "def": 16,
+        "spd": 22
+      },
+      "attacks": [
+        {
+          "name": "Pack Hunter",
+          "type": "Earth",
+          "power": [20, 28],
+          "accuracy": 95,
+          "special": "bonus_if_allies"
+        },
+        {
+          "name": "Savage Bite",
+          "type": "Earth",
+          "power": [22, 30],
+          "accuracy": 90,
+          "effect": "bleed",
+          "effect_chance": 0.25
+        },
+        {
+          "name": "Howl",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "atk_up",
+          "effect_value": 0.25
+        }
+      ],
+      "xp_reward": 65,
+      "money_reward": 45,
+      "ai_pattern": "swarm",
+      "flavor_text": "Predator of the desert"
+    },
+    {
+      "id": "desert_scorpion",
+      "name": "Desert Scorpion",
+      "type": "Earth",
+      "region": "Special",
+      "level_range": [12, 30],
+      "base_stats": {
+        "hp": 45,
+        "atk": 20,
+        "def": 18,
+        "spd": 16
+      },
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "type": "Earth",
+          "power": [18, 26],
+          "accuracy": 90,
+          "effect": "poison",
+          "effect_chance": 0.4
+        },
+        {
+          "name": "Pincer Attack",
+          "type": "Earth",
+          "power": [16, 24],
+          "accuracy": 95
+        },
+        {
+          "name": "Burrow",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "evasion_up",
+          "effect_value": 0.3
+        }
+      ],
+      "xp_reward": 58,
+      "money_reward": 40,
+      "ai_pattern": "defensive",
+      "flavor_text": "Deadly desert dweller"
+    },
+    {
+      "id": "false_prophet",
+      "name": "False Prophet",
+      "type": "Dark",
+      "region": "Special",
+      "level_range": [38, 50],
+      "base_stats": {
+        "hp": 82,
+        "atk": 31,
+        "def": 25,
+        "spd": 19
+      },
+      "attacks": [
+        {
+          "name": "False Teaching",
+          "type": "Dark",
+          "power": [29, 39],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.35
+        },
+        {
+          "name": "Deceitful Words",
+          "type": "Dark",
+          "power": [27, 37],
+          "accuracy": 95,
+          "effect": "all_stats_down",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Mislead",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 85,
+          "effect": "charm",
+          "effect_chance": 0.3
+        }
+      ],
+      "xp_reward": 98,
+      "money_reward": 85,
+      "ai_pattern": "strongest_first",
+      "flavor_text": "Wolves in sheep's clothing"
+    }
+  ],
+  "metadata": {
+    "total_enemies": 40,
+    "implemented": 40,
+    "regions": ["Galilee", "Coastal", "Gentile", "Judean", "Jerusalem"],
+    "types": ["Normal", "Holy", "Dark", "Spirit", "Water", "Earth", "Physical"],
+    "ai_patterns": ["random", "strongest_first", "defensive", "aggressive", "flee", "swarm"]
+  }
+}
