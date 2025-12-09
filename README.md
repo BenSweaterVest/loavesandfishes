@@ -58,36 +58,316 @@ The game is **fully playable** in text-based form! You can explore towns, talk t
 ## 🎮 How to Play
 
 ### Requirements
-- Python 3.8 or higher
-- No external dependencies (uses standard library only)
+- **Python 3.8 or higher** (Python 3.10+ recommended)
+- **No external dependencies** - Uses standard library only
+- **Terminal/Command Prompt** - Any terminal that supports text input
+- **~5 MB disk space** for game + save files
 
-### Running the Game
+### Installation & Running
+
 ```bash
+# Clone or download the repository
+git clone https://github.com/yourusername/loavesandfishes.git
 cd loavesandfishes
+
+# Run the game
 python3 main.py
+
+# Or on Windows
+python main.py
 ```
 
-### Controls
+### First Time Setup
+
+When you first start the game:
+
+1. **Title Screen** - You'll see the game title and menu
+2. **Select "New Game"** - Start a fresh adventure
+3. **Enter Your Name** - Customize Jesus's display name (optional)
+4. **Introduction** - Brief story setup
+5. **Starting Town** - You begin in Nazareth
+
+### Game Controls
+
+The game uses **text-based input**. Simply type the number or command shown:
+
 ```
-Text-based input:
-- Enter numbers to select options
-- Type commands when prompted
-- w/up/s/down for menu navigation
-- e/enter/select to choose
-- q/back/exit to return
+Menu Navigation:
+→ Type a number (1, 2, 3, etc.) to select options
+→ Press Enter to confirm
+
+Common Commands:
+→ Numbers (1-9) - Select menu options
+→ "help" - Show available commands
+→ "back" or "b" - Return to previous menu
+→ "quit" or "q" - Exit to title screen
+→ "save" - Quick save (in towns)
 ```
 
-### Gameplay Flow
-1. **Start in Nazareth** - Your hometown
-2. **Explore Towns** - Talk to NPCs, visit shops, rest at inns
-3. **World Map** - Travel between towns (walking or fast travel)
-4. **Collect Fish** - Build your party (currently manual, fishing mini-game exists)
-5. **Battle Enemies** - Turn-based combat (integration in progress)
-6. **Complete Quests** - Story and side content
-7. **Recruit Apostles** - Gain new abilities
-8. **Find Parables** - Collectibles with bonuses
-9. **Challenge Bosses** - Epic multi-phase battles
-10. **Save Progress** - 5 save slots available
+### Gameplay Guide
+
+#### 🏘️ **Exploring Towns**
+
+When in a town, you'll see locations to visit:
+
+1. **Plaza** - Central hub, talk to NPCs
+   - Press `1` to talk to NPCs
+   - Press `2` to move to other locations
+
+2. **Inn** - Rest and save
+   - Heal your entire party for free
+   - Save your game (5 save slots)
+   - Talk to innkeepers for information
+
+3. **Baker** - Buy healing items
+   - Browse bread items (Loaf of Life, Manna Bread, etc.)
+   - Prices range from 10-100 denarii
+   - Stock up before long journeys
+
+4. **Fishmonger** - Buy fishing equipment
+   - Purchase better rods and bait
+   - Improve fishing success rates
+   - Get tips on rare fish locations
+
+5. **Gate** - Exit to World Map
+   - Leave town to travel
+   - Access the overworld
+
+6. **Fishing Spot** - Catch fish (mini-game)
+   - Access the fishing mini-game
+   - Catch fish to add to your party
+   - Difficulty varies by location
+
+**Example Town Navigation:**
+```
+=== NAZARETH - Plaza ===
+You are in the town plaza.
+
+Locations:
+1. Plaza (current)
+2. Inn
+3. Baker
+4. Fishmonger
+5. Gate
+6. Fishing Spot
+
+What would you like to do?
+> 2
+
+[You move to the Inn]
+```
+
+#### 🗺️ **Using the World Map**
+
+Exit any town through the Gate to access the world map:
+
+1. **View Map** - See all 13 towns and your location
+2. **Travel** - Walk to connected towns (may encounter enemies)
+3. **Fast Travel** - Instant teleport (unlock by visiting towns)
+
+**13 Towns to Explore:**
+- **Galilee Region**: Nazareth, Cana, Capernaum, Tiberias
+- **Coastal Region**: Caesarea Philippi, Tyre
+- **Gentile Region**: Samaria, Sychar
+- **Judean Region**: Jericho, Bethany, Bethlehem
+- **Jerusalem Region**: Mount of Olives, Jerusalem
+
+**Travel Example:**
+```
+=== WORLD MAP ===
+Current Location: Nazareth
+
+Where would you like to go?
+1. Cana (Connected - 1 day walk)
+2. Capernaum (Connected - 2 days walk)
+3. Fast Travel Menu
+
+> 1
+[Walking to Cana...]
+[Random encounter may occur!]
+```
+
+#### ⚔️ **Combat System** (When Triggered)
+
+Battle flow:
+1. **Encounter** - Enemy appears
+2. **Choose Action** - Your turn
+   - **Fight** - Use fish moves
+   - **Item** - Use bread/healing items
+   - **Switch** - Change active fish
+   - **Run** - Attempt to flee (50% chance)
+3. **Enemy Turn** - Enemy attacks
+4. **Repeat** until victory or defeat
+
+**Battle Tips:**
+- Check type advantages (Holy > Dark, Water > Fire, etc.)
+- Use status effects strategically
+- Keep fish HP above 50% in tough fights
+- Switch fish to counter enemy types
+
+#### 🐟 **Managing Your Fish Party**
+
+Access the **Menu** from the title or town menu:
+
+1. **Party** - View/organize your 4 active fish
+2. **Storage** - Access unlimited fish storage
+3. **Switch Fish** - Move fish between party and storage
+4. **Check Stats** - View HP, Attack, Defense, Speed, etc.
+
+**Party Management:**
+```
+=== PARTY ===
+1. Holy Mackerel (Lv 12) - HP: 45/60
+2. Bass of Galilee (Lv 10) - HP: 55/55
+3. Carp Diem (Lv 8) - HP: 40/40
+4. [Empty Slot]
+
+Options:
+1. View Details
+2. Switch Fish
+3. Return to Menu
+```
+
+#### 🎣 **Fishing Mini-Game**
+
+When at a Fishing Spot:
+
+1. **Cast Line** - Start fishing
+2. **Watch Indicators** - Fish position (F) and Hook position (H)
+3. **Reel In** - Press Enter when positions are close
+4. **Manage Tension** - Don't let tension hit 100%
+5. **Build Progress** - Get progress to 100% to catch
+
+**Fishing Example:**
+```
+=== FISHING ===
+|----F---H----|
+Tension:  [####] 25%
+Progress: [========] 40%
+
+1. Reel In
+2. Wait
+3. Stop Fishing
+
+> 1
+[Hook moves closer to fish!]
+```
+
+#### 💰 **Shopping & Economy**
+
+**Currency**: Denarii (starting amount: 500)
+
+**Baker Items:**
+- Loaf of Life (10 denarii) - Heal 20 HP
+- Manna Bread (25 denarii) - Heal 50 HP
+- Blessed Baguette (50 denarii) - Heal 100 HP
+- Ryedemption Roll (30 denarii) - Cure status effects
+
+**Fishmonger Items:**
+- Basic Rod (50 denarii) - Standard fishing
+- Quality Rod (150 denarii) - +10% catch rate
+- Master Rod (500 denarii) - +25% catch rate
+- Super Bait (20 denarii) - Rare fish attraction
+
+**Shopping Example:**
+```
+=== BAKER ===
+Your Money: 345 denarii
+
+Items for Sale:
+1. Loaf of Life (10g) - Heal 20 HP
+2. Manna Bread (25g) - Heal 50 HP
+3. Exit Shop
+
+How many would you like to buy?
+> 5
+[Purchased 5x Loaf of Life for 50 denarii]
+```
+
+#### 💾 **Saving Your Game**
+
+**Where to Save:**
+- Any Inn in any town
+- Use the "Save" option in the menu
+
+**5 Save Slots:**
+- Each slot shows: Name, Location, Time Played, Level
+- Overwrite or create new saves
+- Auto-backup on save
+
+**Save Example:**
+```
+=== SAVE GAME ===
+Select Save Slot:
+
+1. [Empty]
+2. Jesus - Nazareth - Lv 12 - 3h 45m
+3. [Empty]
+4. TestRun - Jerusalem - Lv 45 - 12h 30m
+5. [Empty]
+
+> 1
+[Game saved to Slot 1!]
+```
+
+#### 📖 **Quest System** (Integration In Progress)
+
+Quests are tracked automatically:
+- **Main Quests** - Story progression
+- **Side Quests** - Optional content
+- **Apostle Quests** - Recruit the 12 apostles
+- **Collection Quests** - Find all parables
+
+Check your **Quest Log** in the menu to see:
+- Active quests
+- Completed quests
+- Quest objectives
+- Rewards
+
+#### 🎯 **Tips for New Players**
+
+1. **Save Often** - Visit inns regularly
+2. **Stock Up on Bread** - Always carry healing items
+3. **Explore Every Town** - Find NPCs, items, and parables
+4. **Talk to Everyone** - NPCs give hints and quests
+5. **Upgrade Your Rod** - Better fishing = better fish
+6. **Balance Your Party** - Mix different fish types
+7. **Check Type Advantages** - Holy beats Dark, Water beats Earth, etc.
+8. **Manage Your Money** - Don't spend all denarii at once
+9. **Unlock Fast Travel** - Visit towns to enable quick travel
+10. **Read Parables** - They provide gameplay bonuses
+
+### Current Limitations (Alpha Version)
+
+⚠️ **Note**: This is a playable alpha. Some features are not fully integrated:
+
+- **Battles** - Combat system exists but random encounters not fully integrated
+- **Quests** - Quest system exists but triggers need full integration
+- **Apostle Recruitment** - System exists but cutscenes need integration
+- **Fishing Mini-game** - Functional but not connected to all fishing spots
+
+**You CAN currently:**
+✅ Explore all 13 towns
+✅ Talk to NPCs
+✅ Buy items from shops
+✅ Save and load games
+✅ Navigate the world map
+✅ View your party and inventory
+✅ Test the battle system (via test files)
+
+**Coming in Beta:**
+- Full battle integration with random encounters
+- Quest trigger system
+- Apostle recruitment cutscenes
+- Fishing integration at all spots
+- Boss battles triggered by story progression
+
+### Getting Help
+
+- Check **STATUS.md** for implementation progress
+- See **ROADMAP.md** for upcoming features
+- Read **ARCHITECTURE.md** for technical details
+- Check **CONTRIBUTING.md** to add content
 
 ---
 
