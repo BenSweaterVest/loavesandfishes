@@ -11,7 +11,7 @@
 
 ## 🎮 Overview
 
-**Loaves and Fishes** is a Pokémon-style JRPG where Jesus travels ancient Israel recruiting the 12 apostles, collecting weapon fish, and using strategic bread items in turn-based battles. It's a soft parody in the style of LEGO games - respectful, punny, and full of 90s JRPG nostalgia.
+**Loaves and Fishes** is a collection-based JRPG where Jesus travels ancient Israel recruiting the 12 apostles, collecting weapon fish, and using strategic bread items in turn-based battles. It's a lighthearted soft parody - respectful, punny, and full of 90s JRPG nostalgia.
 
 ### 🎯 Current Status: **PLAYABLE ALPHA**
 
@@ -23,7 +23,7 @@ The game is **fully playable** in text-based form! You can explore towns, talk t
 
 ### ✅ Core Systems (100% Complete)
 - **🐟 Fish Battle System**: 21 unique fish with complete stats, moves, and type effectiveness
-- **⚔️ Turn-Based Combat**: Pokémon-style battles with type advantages, critical hits, status effects
+- **⚔️ Turn-Based Combat**: Monster-collection style battles with type advantages, critical hits, status effects
 - **⚡ Type System**: 5 elemental types (Holy, Water, Earth, Spirit, Dark) with strategic matchups
 - **📊 Leveling System**: Fish gain XP, level up (max 50), learn new moves
 - **🎒 Party Management**: 4 active fish + unlimited storage
@@ -187,14 +187,14 @@ loavesandfishes/
 ## 🎨 Tone & Style
 
 ### Soft Parody Approach
-- **Like LEGO games**: Poking fun, not mocking
+- **Lighthearted tone**: Poking fun, not mocking
 - **Respectful**: Biblical events treated as real
 - **Punny**: Fish puns ("Holy Mackerel"), bread puns ("Ryedemption Roll")
 - **Wholesome**: Family-friendly humor
 - **Educational**: Accurate Biblical references
 
 ### 90s JRPG Nostalgia
-- **Inspired by**: Pokémon, Dragon Quest, Final Fantasy, Chrono Trigger
+- **Classic JRPG inspiration**: Classic monster-collection and turn-based RPGs
 - **Turn-based combat**: Strategic, not action-based
 - **Overworld exploration**: Towns, dungeons, world map
 - **Random encounters**: (planned)
@@ -379,12 +379,10 @@ MIT License - See [LICENSE](LICENSE) for details
 ## 🙏 Credits & Inspiration
 
 - **The Holy Bible** - Source material
-- **Pokémon** - Battle and collection mechanics
-- **Final Fantasy** - Turn-based combat, ATB system
-- **Dragon Quest** - JRPG structure and tone
-- **Chrono Trigger** - Time-based storytelling
-- **LEGO Games** - Soft parody approach
-- **Earthbound** - Quirky humor and heart
+- **Classic monster-collection RPGs** - Battle and collection mechanics
+- **Turn-based JRPGs** - Strategic combat systems
+- **90s JRPG classics** - Structure, tone, and nostalgia
+- **Lighthearted family games** - Soft parody approach
 
 ---
 

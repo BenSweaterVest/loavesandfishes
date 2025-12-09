@@ -44,7 +44,7 @@ Create all core game systems and foundational content to make a playable game lo
 ### Completed Features
 
 #### Core Systems (100%)
-- ✅ **Turn-based Battle System** - Full Pokémon-style combat
+- ✅ **Turn-based Battle System** - Full monster-collection style combat
 - ✅ **Type Effectiveness** - 5 types with strategic matchups
 - ✅ **Status Effects** - 6 effects (Blessed, Burn, Poison, Paralysis, Sleep, Confusion)
 - ✅ **Leveling System** - XP gain, level up, stat growth

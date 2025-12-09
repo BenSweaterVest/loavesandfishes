@@ -65,11 +65,11 @@ loavesandfishes/
 
 **Difficulty**: ⭐ Easy
 **Time**: ~10 minutes
-**Files to Edit**: `data/fish/fish_data.json`
+**Files to Edit**: `src/data/fish.json`
 
 #### Step 1: Define the Fish
 
-Add an entry to `data/fish/fish_data.json`:
+Add an entry to the `fish` array in `src/data/fish.json`:
 
 ```json
 {
@@ -137,11 +137,11 @@ self.player.party.append(test_fish)
 
 **Difficulty**: ⭐ Easy
 **Time**: ~5 minutes
-**Files to Edit**: `data/enemies/enemy_data.json`
+**Files to Edit**: `src/data/enemies.json`
 
 #### Step 1: Define the Enemy
 
-Add an entry to `data/enemies/enemy_data.json`:
+Add an entry to the `enemies` array in `src/data/enemies.json`:
 
 ```json
 {
@@ -785,13 +785,13 @@ battle = Battle(self.player, [test_enemy], BattleType.WILD)
 git checkout -b feature/add-dolphin-fish
 
 # Make your changes
-# Edit data/fish/fish_data.json
+# Edit src/data/fish.json
 
 # Test your changes
 python3 main.py
 
 # Commit with clear message
-git add data/fish/fish_data.json
+git add src/data/fish.json
 git commit -m "Add Divine Dolphin fish species
 
 - Added Divine Dolphin (Holy type, rare)

@@ -85,69 +85,61 @@ loavesandfishes/
 ├── main.py                      # Game entry point (479 lines)
 │
 ├── src/
-│   ├── engine/                  # Core game systems (~3,500 lines)
-│   │   ├── __init__.py
-│   │   ├── battle.py            # Battle system (850 lines)
-│   │   ├── player.py            # Player management (450 lines)
-│   │   ├── fish.py              # Fish entities (280 lines)
-│   │   ├── enemy.py             # Enemy entities (220 lines)
-│   │   ├── items.py             # Item system (180 lines)
-│   │   ├── quests.py            # Quest system (350 lines)
-│   │   ├── parables.py          # Parable system (150 lines)
-│   │   ├── game_state.py        # State management (248 lines)
-│   │   ├── town.py              # Town exploration (363 lines)
-│   │   ├── world_map.py         # World navigation (398 lines)
-│   │   ├── dialogue.py          # Dialogue trees (316 lines)
-│   │   ├── apostle_abilities.py # Apostle abilities (188 lines)
-│   │   ├── miracles.py          # Miracle system (182 lines)
-│   │   ├── combos.py            # Combo attacks (153 lines)
-│   │   └── fishing.py           # Fishing mini-game (319 lines)
+│   ├── engine/                  # Core game systems (~4,100 lines)
+│   │   ├── __init__.py          # Engine module init (20 lines)
+│   │   ├── battle.py            # Battle system (526 lines)
+│   │   ├── player.py            # Player management (317 lines)
+│   │   ├── fish.py              # Fish entities (298 lines)
+│   │   ├── enemy.py             # Enemy entities (364 lines)
+│   │   ├── game_state.py        # State management (278 lines)
+│   │   ├── town.py              # Town exploration (397 lines)
+│   │   ├── world_map.py         # World navigation (375 lines)
+│   │   ├── dialogue.py          # Dialogue trees (400 lines)
+│   │   ├── apostle_abilities.py # Apostle abilities (273 lines)
+│   │   ├── miracles.py          # Miracle system (250 lines)
+│   │   ├── combos.py            # Combo attacks (287 lines)
+│   │   └── fishing.py           # Fishing mini-game (348 lines)
 │   │
-│   ├── ui/                      # User interface (~1,200 lines)
-│   │   ├── __init__.py
-│   │   ├── display.py           # Display manager (600 lines)
-│   │   ├── menus.py             # Menu systems (400 lines)
-│   │   └── battle_ui.py         # Battle interface (200 lines)
+│   ├── ui/                      # User interface (~1,100 lines)
+│   │   ├── __init__.py          # UI module init (40 lines)
+│   │   ├── menu.py              # Menu systems (571 lines)
+│   │   └── shops.py             # Shop interface (510 lines)
 │   │
-│   └── utils/                   # Utilities (~400 lines)
-│       ├── __init__.py
-│       ├── colors.py            # Color codes (150 lines)
-│       ├── text.py              # Text formatting (150 lines)
-│       └── helpers.py           # Misc helpers (100 lines)
+│   ├── utils/                   # Utilities (~800 lines)
+│   │   ├── __init__.py          # Utils module init (8 lines)
+│   │   ├── constants.py         # Game constants (165 lines)
+│   │   ├── data_loader.py       # JSON data loading (165 lines)
+│   │   └── save_system.py       # Save/load functionality (470 lines)
+│   │
+│   └── data/                    # Game content (JSON, ~200KB)
+│       ├── fish.json            # 21 fish species
+│       ├── enemies.json         # 40 enemies in 5 tiers
+│       ├── bosses.json          # 13 bosses (one per town)
+│       ├── items.json           # 30+ items
+│       ├── quests.json          # 50 quests
+│       ├── parables.json        # 25 parables
+│       ├── towns.json           # 13 towns
+│       └── apostles.json        # 12 apostles
 │
-├── data/                        # Game content (JSON)
-│   ├── fish/
-│   │   ├── fish_data.json       # 21 fish species
-│   │   └── fish_stats.json      # Base stats and growth
-│   ├── enemies/
-│   │   └── enemy_data.json      # 40 enemies in 5 tiers
-│   ├── bosses/
-│   │   └── boss_data.json       # 13 bosses (one per town)
-│   ├── items/
-│   │   └── item_data.json       # 30 items
-│   ├── quests/
-│   │   └── quest_data.json      # 50 quests
-│   ├── parables/
-│   │   └── parable_data.json    # 25 parables
-│   ├── towns/
-│   │   └── town_data.json       # 13 towns
-│   └── apostles/
-│       └── apostle_data.json    # 12 apostles
+├── assets/                      # Game assets (music, sprites, etc.)
+│   ├── maps/
+│   ├── music/
+│   ├── sfx/
+│   └── sprites/
 │
 ├── saves/                       # Save files directory
-│   └── .gitkeep
 │
-├── tests/                       # Unit tests
-│   ├── test_battle.py
-│   ├── test_fish.py
-│   └── ...
+├── docs/                        # Additional documentation
 │
-└── docs/                        # Documentation
-    ├── README.md
-    ├── STATUS.md
-    ├── ROADMAP.md
+├── test_battle.py               # Battle system test
+├── test_battle_auto.py          # Automated battle test
+│
+└── Documentation Files:
+    ├── README.md                # Project overview
+    ├── STATUS.md                # Implementation status
+    ├── ROADMAP.md               # Future plans
     ├── ARCHITECTURE.md          # This file
-    └── CONTRIBUTING.md
+    └── CONTRIBUTING.md          # Contributor guide
 ```
 
 ---
@@ -1007,7 +999,7 @@ main.py
 - **Exponential Scaling**: Fish get noticeably stronger
 - **Balanced**: Not too fast, not too slow
 - **Level 50 Math**: At max level, stats ~2.5x base
-- **Proven Formula**: Similar to Pokémon's system
+- **Proven Formula**: Similar to classic monster-collection RPGs
 
 ---
 
