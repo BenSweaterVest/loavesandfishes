@@ -1,7 +1,7 @@
 # LOAVES AND FISHES
-## A 90s JRPG-Style Biblical Adventure
+## An Irreverent Mythology-Based JRPG
 
-*"The Greatest Story Ever Played"*
+*"What if the greatest story ever told... had fish battles?"*
 
 [![Status](https://img.shields.io/badge/status-playable%20alpha-green)]()
 [![Python](https://img.shields.io/badge/python-3.8+-blue)]()
@@ -11,7 +11,9 @@
 
 ## 🎮 Overview
 
-**Loaves and Fishes** is a collection-based JRPG where Jesus travels ancient Israel recruiting the 12 apostles, collecting weapon fish, and using strategic bread items in turn-based battles. It's a lighthearted soft parody - respectful, punny, and full of 90s JRPG nostalgia.
+**Loaves and Fishes** is a mythology-based monster-collection JRPG where you play as Jesus traveling ancient Israel, recruiting questionably competent apostles, and training weapon fish to battle enemies like "Pharisee Follower" and "Doubt Incarnate." Think **Binding of Isaac** meets classic JRPGs, with the irreverent humor of **Cult of the Lamb** and the charm of **Stardew Valley**.
+
+**This is NOT a Christian game** - it's secular entertainment that uses Biblical mythology the same way God of War uses Greek myths. It's for everyone who enjoys quirky indie games with unique premises, whether you're religious, atheist, or just here for the fish puns.
 
 ### 🎯 Current Status: **PLAYABLE ALPHA**
 
@@ -466,19 +468,43 @@ loavesandfishes/
 
 ## 🎨 Tone & Style
 
-### Soft Parody Approach
-- **Lighthearted tone**: Poking fun, not mocking
-- **Respectful**: Biblical events treated as real
+### Irreverent Mythology-Based Humor
+- **Secular entertainment**: Uses Biblical mythology like God of War uses Greek myths
+- **Darkly funny**: Think Binding of Isaac, Cult of the Lamb
+- **Campy**: VelociPastor energy with JRPG mechanics
+- **Self-aware**: Knows it's absurd and leans into it
 - **Punny**: Fish puns ("Holy Mackerel"), bread puns ("Ryedemption Roll")
-- **Wholesome**: Family-friendly humor
-- **Educational**: Accurate Biblical references
+- **Sweet moments**: Stardew Valley-style emotional beats
+- **NOT preachy**: This is a game first, mythology second
+
+**Examples of the tone:**
+- Judas has an ability called "Thirty Pieces" that's powerful but costs you
+- Enemies include "Pharisee Follower" (who quotes rules at you) and "Money Changer" (just wants profit)
+- The fishing mini-game is genuinely relaxing despite the absurd premise
+- Apostles have personality quirks (Peter is impulsive, Thomas doubts everything)
+
+### Two Editions
+
+**FREE VERSION** (Default - Irreverent)
+- Secular, wide-appeal humor
+- Mythology-based storytelling
+- For everyone who enjoys quirky indie games
+- **This is the main game**
+
+**CHRISTIAN EDITION** (Paid DLC - Reverent)
+- More accurate Biblical dialogue
+- Educational focus
+- Suitable for Sunday schools and Bible studies
+- Same gameplay, different tone
+- **Optional for religious institutions**
 
 ### 90s JRPG Nostalgia
-- **Classic JRPG inspiration**: Classic monster-collection and turn-based RPGs
+- **Classic monster-collection mechanics**: Catch, train, battle
 - **Turn-based combat**: Strategic, not action-based
 - **Overworld exploration**: Towns, dungeons, world map
 - **Random encounters**: (planned)
-- **Save points**: Inn-based healing, save anywhere
+- **Save points**: Inn-based healing
+- **Gotta catch 'em all**: 21 fish species to collect
 
 ---
 
@@ -658,11 +684,21 @@ MIT License - See [LICENSE](LICENSE) for details
 
 ## 🙏 Credits & Inspiration
 
-- **The Holy Bible** - Source material
-- **Classic monster-collection RPGs** - Battle and collection mechanics
-- **Turn-based JRPGs** - Strategic combat systems
-- **90s JRPG classics** - Structure, tone, and nostalgia
-- **Lighthearted family games** - Soft parody approach
+### Tone & Humor
+- **Binding of Isaac** - Irreverent religious mythology meets roguelike
+- **Cult of the Lamb** - Cute + dark religious themes
+- **VelociPastor** - Campy B-movie absurdity
+- **Reefer Madness: The Movie Musical** - Over-the-top parody energy
+- **Stardew Valley** - Sweet, emotional, not taking itself too seriously
+
+### Game Mechanics
+- **Classic monster-collection RPGs** - Catch, train, battle loop
+- **Turn-based JRPG classics** - Strategic combat and party management
+- **God of War** - Mythology as storytelling framework (not reverence)
+- **90s JRPGs** - Structure, nostalgia, overworld exploration
+
+### Source Material
+- **The Bible** - Mythology and character source (used like Greek/Norse myths)
 
 ---
 
