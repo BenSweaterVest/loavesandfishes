@@ -589,11 +589,18 @@ All game content is stored in JSON files, making it easy to:
 
 ## 📚 Documentation
 
+**Game Manuals:**
+- **[MANUAL.md](MANUAL.md)** - Full game manual (FREE irreverent edition)
+- **[MANUAL_CHRISTIAN.md](MANUAL_CHRISTIAN.md)** - Christian Edition manual (PAID DLC version)
+
+**Project Documentation:**
 - **[README.md](README.md)** - This file (overview & quickstart)
+- **[PITCH.md](PITCH.md)** - Project pitch and vision
 - **[STATUS.md](STATUS.md)** - Detailed implementation status
-- **[ROADMAP.md](ROADMAP.md)** - Future plans and timeline
+- **[ROADMAP.md](ROADMAP.md)** - Future plans and platform migration
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and architecture
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to extend the game
+- **[DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md)** - Development progress log
 - **[SESSION_SUMMARY.md](SESSION_SUMMARY.md)** - Development session notes
 
 ---
