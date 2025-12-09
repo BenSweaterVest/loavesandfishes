@@ -517,13 +517,13 @@ We're looking for people who:
 ## FREQUENTLY ASKED QUESTIONS
 
 **Q: Is this making fun of religion?**
-A: No. It's a lighthearted take on Biblical stories with genuine respect for the source material. Think LEGO games or VeggieTales—fun but reverent.
+A: It's using Biblical mythology for entertainment, like God of War uses Greek myths. It's irreverent but not mean-spirited. Think Binding of Isaac or Cult of the Lamb—playful with sacred imagery, but not attacking anyone's faith. If someone's offended by "Holy Mackerel," they probably weren't our audience anyway.
 
 **Q: Do I need to be Christian to enjoy this?**
-A: Nope! The game works on multiple levels. You can enjoy it as a JRPG with unique theming, or appreciate the deeper Biblical connections.
+A: Nope! You don't need to be Greek to enjoy Hades. This is a game that uses Biblical mythology as source material. Christians can enjoy the references, atheists can enjoy the absurdity, everyone can enjoy the fish puns.
 
 **Q: Will this offend people?**
-A: We've been careful. Beta testers (including clergy) found it funny and respectful. If someone's offended by "Holy Mackerel," they probably weren't our audience anyway.
+A: Some people? Probably. But Binding of Isaac offended people and sold millions. Cult of the Lamb was called "satanic" and became a hit. Controversy = publicity for the free version. Meanwhile, we offer a reverent Christian Edition DLC for churches and schools who want the same gameplay without the irreverence.
 
 **Q: What about controversy?**
 A: Controversy = publicity. We're not trying to be edgy, but we're not afraid of discussion either. The game speaks for itself.
@@ -547,7 +547,7 @@ A: Flexible. This is passion-project driven, not deadline-driven. We'd rather do
 **Loaves and Fishes** is:
 - ✅ A genuinely fun game
 - ✅ A unique concept with market potential
-- ✅ A respectful take on Biblical stories
+- ✅ An irreverent take on Biblical mythology (with a reverent DLC option)
 - ✅ An opportunity to create something special
 - ✅ A chance to be early on something that could be big
 

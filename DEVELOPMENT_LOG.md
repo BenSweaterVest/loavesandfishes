@@ -296,17 +296,19 @@ Add to `BOSS_TEMPLATES` dict in `src/engine/enemy.py` or create a new JSON file.
 
 **What Makes This Game Special:**
 - 90s JRPG nostalgia (Pokémon, Dragon Quest, Final Fantasy)
-- Soft Biblical parody (LEGO game style - respectful and funny)
+- Irreverent Biblical mythology (Binding of Isaac, Cult of the Lamb style)
 - Pun-based humor (fish and bread puns everywhere)
 - Strategic depth (type effectiveness, party building)
 - Authentic references (all bosses from scripture)
 - Collectible systems (fish, apostles, parables)
+- Dual editions (free irreverent + paid Christian DLC)
 
 **Target Audience:**
+- Indie game fans who enjoy quirky, irreverent games
 - JRPG fans who grew up with Pokémon
-- People who appreciate clever wordplay
-- Those interested in Biblical stories
+- People who appreciate clever wordplay and dark humor
 - Gamers who enjoy turn-based strategy
+- NOT primarily Christians (that's the DLC audience)
 
 ---
 

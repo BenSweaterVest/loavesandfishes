@@ -398,9 +398,9 @@ This game combines:
 - **Biblical storytelling** (parables, miracles, apostles)
 - **Clever humor** (fish puns, bread puns)
 
-**Tone**: Respectful soft parody in the style of LEGO games
-**Target**: Fun, accessible, educational
-**Message**: Jesus's teachings through gameplay
+**Tone**: Irreverent secular mythology game (Binding of Isaac, Cult of the Lamb style)
+**Target**: Indie game fans who enjoy quirky premises, NOT primarily Christians
+**Message**: Biblical mythology as entertaining source material (like God of War uses Greek myths)
 
 ---
 
