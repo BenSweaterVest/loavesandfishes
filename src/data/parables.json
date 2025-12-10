@@ -7,9 +7,15 @@
       "location": "Galilee - Farm Field",
       "found_how": "Hidden in wheat field",
       "biblical_reference": "Matthew 13:1-23",
-      "short_teaching": "The Kingdom of Heaven is like a sower scattering seed. Some falls on good soil and produces a great harvest.",
+      "short_teaching": {
+        "default": "The Kingdom of Heaven is like a sower scattering seed. Some falls on good soil and produces a GREAT harvest. ROI varies by soil type!",
+        "christian_edition": "The Kingdom of Heaven is like a sower scattering seed. Some falls on good soil and produces a great harvest."
+      },
       "full_text": "A farmer went out to sow seed. Some fell on the path and birds ate it. Some fell on rocky ground and withered. Some fell among thorns and was choked. But some fell on good soil and produced a crop—a hundred, sixty, or thirty times what was sown. Whoever has ears, let them hear!",
-      "moral": "Be good soil: receptive, deep-rooted, and free from worldly distractions.",
+      "moral": {
+        "default": "Be good SOIL: receptive, deep-rooted, and FREE from worldly distractions. Don't be rocky or thorny!",
+        "christian_edition": "Be good soil: receptive, deep-rooted, and free from worldly distractions."
+      },
       "game_effect": {
         "type": "xp_bonus",
         "value": 0.02,
@@ -23,9 +29,15 @@
       "location": "Galilee - Garden",
       "found_how": "Given by farmer after helping with crops",
       "biblical_reference": "Matthew 13:31-32",
-      "short_teaching": "The Kingdom of Heaven is like a mustard seed—small at first, but grows into something great.",
+      "short_teaching": {
+        "default": "The Kingdom is like a mustard seed—SMALL at first, but grows into something GREAT. Tiny seed, BIG tree!",
+        "christian_edition": "The Kingdom of Heaven is like a mustard seed—small at first, but grows into something great."
+      },
       "full_text": "The kingdom of heaven is like a mustard seed, which a man took and planted in his field. Though it is the smallest of all seeds, yet when it grows, it is the largest of garden plants and becomes a tree, so that the birds come and perch in its branches.",
-      "moral": "Great things come from small beginnings. Faith starts small but grows mighty.",
+      "moral": {
+        "default": "Great things come from SMALL beginnings. Faith starts small but grows MIGHTY. Exponential growth!",
+        "christian_edition": "Great things come from small beginnings. Faith starts small but grows mighty."
+      },
       "game_effect": {
         "type": "fish_growth",
         "value": 0.03,
@@ -39,9 +51,15 @@
       "location": "Coastal - Hidden Cave",
       "found_how": "Hidden treasure (requires search)",
       "biblical_reference": "Matthew 13:44",
-      "short_teaching": "The Kingdom of Heaven is like treasure hidden in a field, worth selling everything to obtain.",
+      "short_teaching": {
+        "default": "The Kingdom is like TREASURE hidden in a field, worth selling EVERYTHING to obtain. Liquidate ALL assets!",
+        "christian_edition": "The Kingdom of Heaven is like treasure hidden in a field, worth selling everything to obtain."
+      },
       "full_text": "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field.",
-      "moral": "The Kingdom is worth everything you have. Don't hesitate to give all for what truly matters.",
+      "moral": {
+        "default": "The Kingdom is worth EVERYTHING you have. Don't hesitate—give ALL for what truly matters! Total commitment!",
+        "christian_edition": "The Kingdom is worth everything you have. Don't hesitate to give all for what truly matters."
+      },
       "game_effect": {
         "type": "money_find",
         "value": 0.1,
@@ -55,9 +73,15 @@
       "location": "Coastal - Merchant Shop",
       "found_how": "Purchase for 1000 denarii",
       "biblical_reference": "Matthew 13:45-46",
-      "short_teaching": "The Kingdom is like a merchant seeking fine pearls who sold everything for one pearl of great value.",
+      "short_teaching": {
+        "default": "The Kingdom is like a merchant seeking fine pearls who sold EVERYTHING for ONE pearl. Ultimate trade!",
+        "christian_edition": "The Kingdom is like a merchant seeking fine pearls who sold everything for one pearl of great value."
+      },
       "full_text": "The kingdom of heaven is like a merchant looking for fine pearls. When he found one of great value, he went away and sold everything he had and bought it.",
-      "moral": "When you find what's truly valuable, let nothing stop you from obtaining it.",
+      "moral": {
+        "default": "When you find what's TRULY valuable, let NOTHING stop you from obtaining it! All in!",
+        "christian_edition": "When you find what's truly valuable, let nothing stop you from obtaining it."
+      },
       "game_effect": {
         "type": "rare_fish",
         "value": 0.05,
@@ -71,9 +95,15 @@
       "location": "Galilee - Fishing Boat",
       "found_how": "Catch 50 fish total",
       "biblical_reference": "Matthew 13:47-50",
-      "short_teaching": "The Kingdom is like a net that catches all kinds of fish. The good are kept, the bad discarded.",
+      "short_teaching": {
+        "default": "The Kingdom is like a net that catches ALL kinds of fish. The good are kept, the bad discarded. Quality control!",
+        "christian_edition": "The Kingdom is like a net that catches all kinds of fish. The good are kept, the bad discarded."
+      },
       "full_text": "The kingdom of heaven is like a net that was let down into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore. Then they sat down and collected the good fish in baskets, but threw the bad away.",
-      "moral": "At the end of the age, there will be separation between the righteous and the wicked.",
+      "moral": {
+        "default": "At the end of the age, there will be SEPARATION between the righteous and the wicked. Final sorting!",
+        "christian_edition": "At the end of the age, there will be separation between the righteous and the wicked."
+      },
       "game_effect": {
         "type": "catch_bonus",
         "value": 0.1,
@@ -87,9 +117,15 @@
       "location": "Galilee - Wheat Field",
       "found_how": "Quest reward: 'Wheat and Tares'",
       "biblical_reference": "Matthew 13:24-30",
-      "short_teaching": "The Kingdom is like a field where wheat and weeds grow together until harvest.",
+      "short_teaching": {
+        "default": "The Kingdom is like a field where wheat and weeds grow TOGETHER until harvest. Coexistence until judgment day!",
+        "christian_edition": "The Kingdom is like a field where wheat and weeds grow together until harvest."
+      },
       "full_text": "The kingdom of heaven is like a man who sowed good seed in his field. But while everyone was sleeping, his enemy came and sowed weeds among the wheat. The servants wanted to pull up the weeds, but the owner said, 'Let both grow together until the harvest. At that time I will tell the harvesters to collect the weeds and burn them, but gather the wheat into my barn.'",
-      "moral": "Good and evil coexist in the world. Final judgment comes at harvest time.",
+      "moral": {
+        "default": "Good and evil COEXIST in the world. Final judgment comes at HARVEST time. Patience required!",
+        "christian_edition": "Good and evil coexist in the world. Final judgment comes at harvest time."
+      },
       "game_effect": {
         "type": "experience",
         "value": 500,
@@ -103,9 +139,15 @@
       "location": "Cana - Baker's Shop",
       "found_how": "Buy bread 10 times",
       "biblical_reference": "Matthew 13:33",
-      "short_teaching": "The Kingdom is like yeast that permeates the entire batch of dough.",
+      "short_teaching": {
+        "default": "The Kingdom is like YEAST that permeates the ENTIRE batch of dough. Invisible but POWERFUL!",
+        "christian_edition": "The Kingdom is like yeast that permeates the entire batch of dough."
+      },
       "full_text": "The kingdom of heaven is like yeast that a woman took and mixed into about sixty pounds of flour until it worked all through the dough.",
-      "moral": "The Kingdom starts small but influences everything it touches.",
+      "moral": {
+        "default": "The Kingdom starts SMALL but influences EVERYTHING it touches. Pervasive transformation!",
+        "christian_edition": "The Kingdom starts small but influences everything it touches."
+      },
       "game_effect": {
         "type": "bread_effect",
         "value": 0.15,
@@ -119,9 +161,15 @@
       "location": "Galilee - Shepherd's Field",
       "found_how": "Quest reward: 'Lost Sheep Roundup'",
       "biblical_reference": "Luke 15:3-7",
-      "short_teaching": "There is more rejoicing in heaven over one sinner who repents than ninety-nine righteous.",
+      "short_teaching": {
+        "default": "There is MORE rejoicing in heaven over ONE sinner who repents than NINETY-NINE righteous. The one matters!",
+        "christian_edition": "There is more rejoicing in heaven over one sinner who repents than ninety-nine righteous."
+      },
       "full_text": "Suppose one of you has a hundred sheep and loses one of them. Doesn't he leave the ninety-nine in the open country and go after the lost sheep until he finds it? And when he finds it, he joyfully puts it on his shoulders and goes home. Then he calls his friends and neighbors together and says, 'Rejoice with me; I have found my lost sheep.'",
-      "moral": "Every soul matters to God. He seeks the lost with relentless love.",
+      "moral": {
+        "default": "EVERY soul matters to God. He seeks the LOST with RELENTLESS love. No sheep left behind!",
+        "christian_edition": "Every soul matters to God. He seeks the lost with relentless love."
+      },
       "game_effect": {
         "type": "fainted_fish",
         "value": 0.1,
@@ -135,9 +183,15 @@
       "location": "Capernaum - Woman's House",
       "found_how": "Quest reward: 'The Lost Coin'",
       "biblical_reference": "Luke 15:8-10",
-      "short_teaching": "There is rejoicing in the presence of angels over one sinner who repents.",
+      "short_teaching": {
+        "default": "There is REJOICING in the presence of angels over ONE sinner who repents. Heaven's party time!",
+        "christian_edition": "There is rejoicing in the presence of angels over one sinner who repents."
+      },
       "full_text": "Suppose a woman has ten silver coins and loses one. Doesn't she light a lamp, sweep the house and search carefully until she finds it? And when she finds it, she calls her friends and neighbors together and says, 'Rejoice with me; I have found my lost coin.'",
-      "moral": "God searches diligently for each lost soul, and heaven celebrates when one is found.",
+      "moral": {
+        "default": "God searches DILIGENTLY for each lost soul, and heaven CELEBRATES when one is found! Divine search party!",
+        "christian_edition": "God searches diligently for each lost soul, and heaven celebrates when one is found."
+      },
       "game_effect": {
         "type": "money_find",
         "value": 0.15,
@@ -151,9 +205,15 @@
       "location": "Samaria - Father's House",
       "found_how": "Quest reward: 'The Prodigal Returns'",
       "biblical_reference": "Luke 15:11-32",
-      "short_teaching": "A father welcomes home his wayward son with joy and celebration.",
+      "short_teaching": {
+        "default": "A father welcomes home his wayward son with JOY and CELEBRATION. Ultimate comeback story!",
+        "christian_edition": "A father welcomes home his wayward son with joy and celebration."
+      },
       "full_text": "A man had two sons. The younger demanded his inheritance and squandered it in wild living. When famine came, he returned home, ready to be a servant. But his father ran to him, embraced him, and threw a feast. 'My son was dead and is alive again; he was lost and is found!'",
-      "moral": "God's love is unconditional. No matter how far you've strayed, He welcomes you home.",
+      "moral": {
+        "default": "God's love is UNCONDITIONAL. No matter how FAR you've strayed, He welcomes you HOME! Return accepted!",
+        "christian_edition": "God's love is unconditional. No matter how far you've strayed, He welcomes you home."
+      },
       "game_effect": {
         "type": "forgiveness",
         "value": 1,
