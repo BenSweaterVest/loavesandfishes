@@ -227,9 +227,15 @@
       "location": "Samaria - Roadside Inn",
       "found_how": "Quest reward: 'The Good Samaritan'",
       "biblical_reference": "Luke 10:25-37",
-      "short_teaching": "Love your neighbor as yourself. Your neighbor is anyone in need.",
+      "short_teaching": {
+        "default": "Love your neighbor as yourself. Your neighbor is ANYONE in need. Cultural boundaries? Irrelevant!",
+        "christian_edition": "Love your neighbor as yourself. Your neighbor is anyone in need."
+      },
       "full_text": "A man was attacked by robbers and left for dead. A priest and a Levite passed by without helping. But a Samaritan took pity on him, bandaged his wounds, took him to an inn, and paid for his care. Which of these three was a neighbor to the man?",
-      "moral": "True love crosses all boundaries and helps those in need, regardless of who they are.",
+      "moral": {
+        "default": "True love CROSSES all boundaries and helps those in need, regardless of who they are. No excuses!",
+        "christian_edition": "True love crosses all boundaries and helps those in need, regardless of who they are."
+      },
       "game_effect": {
         "type": "healing_bonus",
         "value": 0.2,
@@ -243,9 +249,15 @@
       "location": "Tiberias - Palace Courtyard",
       "found_how": "Hidden behind throne",
       "biblical_reference": "Matthew 18:21-35",
-      "short_teaching": "Forgive others as you have been forgiven. Mercy begets mercy.",
+      "short_teaching": {
+        "default": "Forgive others as you have been FORGIVEN. Mercy begets mercy. Pass it on!",
+        "christian_edition": "Forgive others as you have been forgiven. Mercy begets mercy."
+      },
       "full_text": "A servant owed the king a huge debt. Unable to pay, he begged for mercy, and the king forgave it all. But that servant then refused to forgive a fellow servant who owed him a small amount. When the king heard, he punished the unforgiving servant. 'Shouldn't you have had mercy on your fellow servant just as I had on you?'",
-      "moral": "As we have been forgiven much, we must forgive others. Refusing to forgive others brings judgment.",
+      "moral": {
+        "default": "As we have been FORGIVEN much, we MUST forgive others. Refusing to forgive brings JUDGMENT. Don't be that guy!",
+        "christian_edition": "As we have been forgiven much, we must forgive others. Refusing to forgive others brings judgment."
+      },
       "game_effect": {
         "type": "miracle_meter",
         "value": 0.05,
@@ -259,9 +271,15 @@
       "location": "Magdala - Mary's House",
       "found_how": "Given by Mary Magdalene after boss fight",
       "biblical_reference": "Luke 7:36-50",
-      "short_teaching": "Those who have been forgiven much, love much.",
+      "short_teaching": {
+        "default": "Those who have been forgiven MUCH, love MUCH. Debt forgiveness = love unlocked!",
+        "christian_edition": "Those who have been forgiven much, love much."
+      },
       "full_text": "Two people owed money to a moneylender. One owed five hundred denarii, the other fifty. Neither could pay, so he forgave both debts. 'Now which of them will love him more?' The one who was forgiven more. 'Therefore, I tell you, her many sins have been forgiven—as her great love has shown.'",
-      "moral": "When you realize how much you've been forgiven, you can't help but love deeply.",
+      "moral": {
+        "default": "When you realize how MUCH you've been forgiven, you CAN'T HELP but love deeply! Gratitude overflow!",
+        "christian_edition": "When you realize how much you've been forgiven, you can't help but love deeply."
+      },
       "game_effect": {
         "type": "love_bonus",
         "value": 1,
@@ -275,9 +293,15 @@
       "location": "Jerusalem - Temple",
       "found_how": "Pray at temple altar",
       "biblical_reference": "Luke 18:9-14",
-      "short_teaching": "Those who humble themselves will be exalted; the proud will be humbled.",
+      "short_teaching": {
+        "default": "Those who humble themselves will be EXALTED; the proud will be HUMBLED. Ego check required!",
+        "christian_edition": "Those who humble themselves will be exalted; the proud will be humbled."
+      },
       "full_text": "Two men went to the temple to pray. The Pharisee stood and prayed about himself: 'God, I thank you that I am not like other people.' But the tax collector stood at a distance and beat his breast, saying, 'God, have mercy on me, a sinner.' I tell you, this man went home justified before God. For all those who exalt themselves will be humbled, and those who humble themselves will be exalted.",
-      "moral": "True prayer comes from a humble heart that recognizes its need for God's mercy.",
+      "moral": {
+        "default": "True prayer comes from a HUMBLE heart that recognizes its need for God's mercy. No bragging allowed!",
+        "christian_edition": "True prayer comes from a humble heart that recognizes its need for God's mercy."
+      },
       "game_effect": {
         "type": "prayer_bonus",
         "value": 0.1,
@@ -291,9 +315,15 @@
       "location": "Judea - Rich Man's Estate",
       "found_how": "Found in barn full of grain",
       "biblical_reference": "Luke 12:13-21",
-      "short_teaching": "Don't store up treasures on earth. Be rich toward God.",
+      "short_teaching": {
+        "default": "Don't store up treasures on EARTH. Be RICH toward God. Eternal ROI beats temporal assets!",
+        "christian_edition": "Don't store up treasures on earth. Be rich toward God."
+      },
       "full_text": "A rich man's ground produced a great harvest. He said to himself, 'I'll tear down my barns and build bigger ones to store all my grain. Then I'll take life easy.' But God said to him, 'You fool! This very night your life will be demanded from you. Then who will get what you have prepared?' This is how it will be with whoever stores up things for themselves but is not rich toward God.",
-      "moral": "Life is more than possessions. Invest in eternal treasures, not earthly wealth.",
+      "moral": {
+        "default": "Life is MORE than possessions. Invest in ETERNAL treasures, not earthly wealth. You can't take it with you!",
+        "christian_edition": "Life is more than possessions. Invest in eternal treasures, not earthly wealth."
+      },
       "game_effect": {
         "type": "death_protection",
         "value": 1,
@@ -307,9 +337,15 @@
       "location": "Bethany - Rich Man's Gate",
       "found_how": "Give bread to beggar",
       "biblical_reference": "Luke 16:19-31",
-      "short_teaching": "The roles are reversed in eternity. Care for the poor now.",
+      "short_teaching": {
+        "default": "The roles are REVERSED in eternity. Care for the poor NOW. Future role reversal incoming!",
+        "christian_edition": "The roles are reversed in eternity. Care for the poor now."
+      },
       "full_text": "There was a rich man who lived in luxury. At his gate lay a beggar named Lazarus, covered with sores. The beggar died and was carried by angels to Abraham's side. The rich man also died and in torment he begged for relief. But Abraham said, 'In your lifetime you received good things, while Lazarus received bad things, but now he is comforted and you are in agony.'",
-      "moral": "How you treat the poor and marginalized matters eternally. Compassion now means blessing later.",
+      "moral": {
+        "default": "How you treat the poor and marginalized matters ETERNALLY. Compassion now means blessing later. Help the beggar!",
+        "christian_edition": "How you treat the poor and marginalized matters eternally. Compassion now means blessing later."
+      },
       "game_effect": {
         "type": "blessing",
         "value": 1,
@@ -323,9 +359,15 @@
       "location": "Jerusalem - Treasury",
       "found_how": "Donate 5000 denarii total",
       "biblical_reference": "Matthew 25:14-30",
-      "short_teaching": "Use what God has given you. To whom much is given, much is required.",
+      "short_teaching": {
+        "default": "Use what God has GIVEN you. To whom MUCH is given, MUCH is required. Divine accountability!",
+        "christian_edition": "Use what God has given you. To whom much is given, much is required."
+      },
       "full_text": "A man gave his servants talents: five to one, two to another, one to the last. The first two doubled their talents through investment. The last buried his talent. The master praised the faithful servants: 'Well done, good and faithful servant! You have been faithful with a few things; I will put you in charge of many things.' But he condemned the one who buried his talent.",
-      "moral": "God expects us to use our gifts wisely. Faithful stewardship is rewarded; fearful hoarding is punished.",
+      "moral": {
+        "default": "God expects us to USE our gifts wisely. Faithful stewardship is REWARDED; fearful hoarding is PUNISHED. Invest or perish!",
+        "christian_edition": "God expects us to use our gifts wisely. Faithful stewardship is rewarded; fearful hoarding is punished."
+      },
       "game_effect": {
         "type": "money_multiplier",
         "value": 0.25,
@@ -339,9 +381,15 @@
       "location": "Coastal - Manager's Office",
       "found_how": "Complete 10 quests",
       "biblical_reference": "Luke 16:1-13",
-      "short_teaching": "Use worldly wealth to gain eternal friends. Be faithful in small things.",
+      "short_teaching": {
+        "default": "Use worldly WEALTH to gain eternal friends. Be FAITHFUL in small things. Strategic resource management!",
+        "christian_edition": "Use worldly wealth to gain eternal friends. Be faithful in small things."
+      },
       "full_text": "A rich man's manager was wasting his possessions. When about to be fired, the manager reduced the debts of his master's debtors to secure his future. The master commended the dishonest manager because he had acted shrewdly. Use worldly wealth to gain friends, so that when it is gone, you will be welcomed into eternal dwellings.",
-      "moral": "Be shrewd in using resources for eternal purposes. Worldly wealth should serve eternal goals.",
+      "moral": {
+        "default": "Be SHREWD in using resources for ETERNAL purposes. Worldly wealth should serve eternal goals. Smart investing!",
+        "christian_edition": "Be shrewd in using resources for eternal purposes. Worldly wealth should serve eternal goals."
+      },
       "game_effect": {
         "type": "discount",
         "value": 0.1,
@@ -355,9 +403,15 @@
       "location": "Galilee - Vineyard",
       "found_how": "Work in vineyard (mini-game)",
       "biblical_reference": "Matthew 20:1-16",
-      "short_teaching": "God's grace is generous and not based on our merit.",
+      "short_teaching": {
+        "default": "God's grace is GENEROUS and NOT based on our merit. Equal pay for unequal work? Yes!",
+        "christian_edition": "God's grace is generous and not based on our merit."
+      },
       "full_text": "A landowner hired workers throughout the day. Some worked all day, others only one hour. At the end, he paid them all the same wage. Those who worked all day complained, but the owner said, 'Don't I have the right to do what I want with my own money? Or are you envious because I am generous?'",
-      "moral": "God's grace is not earned; it's freely given. Don't begrudge others God's generosity.",
+      "moral": {
+        "default": "God's grace is NOT EARNED; it's FREELY given. Don't begrudge others God's generosity. No envy allowed!",
+        "christian_edition": "God's grace is not earned; it's freely given. Don't begrudge others God's generosity."
+      },
       "game_effect": {
         "type": "equal_xp",
         "value": 1,
@@ -371,9 +425,15 @@
       "location": "Judea - Judge's House",
       "found_how": "Talk to judge 5 times",
       "biblical_reference": "Luke 18:1-8",
-      "short_teaching": "Pray persistently and don't give up.",
+      "short_teaching": {
+        "default": "Pray PERSISTENTLY and DON'T GIVE UP. Persistence pays off!",
+        "christian_edition": "Pray persistently and don't give up."
+      },
       "full_text": "A widow kept coming to an unjust judge, pleading for justice. For a while he refused, but eventually said, 'Because this widow keeps bothering me, I will see that she gets justice.' And will not God bring about justice for his chosen ones who cry out to him day and night?",
-      "moral": "Persistent prayer is heard by God. Never give up praying.",
+      "moral": {
+        "default": "Persistent prayer is HEARD by God. NEVER give up praying. Keep bothering Him!",
+        "christian_edition": "Persistent prayer is heard by God. Never give up praying."
+      },
       "game_effect": {
         "type": "prayer_power",
         "value": 1,
