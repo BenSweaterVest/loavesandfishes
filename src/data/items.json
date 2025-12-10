@@ -8,7 +8,10 @@
       "power": 20,
       "cost": 0,
       "town": "Nazareth",
-      "flavor_text": "Nothing fancy, but it'll fill you up",
+      "flavor_text": {
+        "default": "Nothing fancy, but it'll fill you up. Basic. Boring. Gets the job done.",
+        "christian_edition": "Simple bread that sustains. Sometimes the simplest blessings are the most important."
+      },
       "quick_item": true
     },
     {
@@ -19,7 +22,10 @@
       "power": 30,
       "cost": 30,
       "town": "Cana",
-      "flavor_text": "Rise again with restored health!",
+      "flavor_text": {
+        "default": "RYE-demption! Rise again with restored health! Get it? RYE? We're not sorry.",
+        "christian_edition": "Bread that restores and renews. Redemption brings us back to wholeness and health."
+      },
       "quick_item": true
     },
     {
@@ -30,7 +36,10 @@
       "power": 50,
       "cost": 50,
       "town": "Bethsaida",
-      "flavor_text": "Praise the yeast!",
+      "flavor_text": {
+        "default": "CHALLAH-LUJAH! Praise the yeast! This bread is blessed! *angelic choir sounds*",
+        "christian_edition": "Bread of celebration and praise. Let us give thanks for the gifts we receive!"
+      },
       "quick_item": true
     },
     {
@@ -41,7 +50,10 @@
       "power": 40,
       "cost": 60,
       "town": "Gadara",
-      "flavor_text": "Mind the blessing",
+      "flavor_text": {
+        "default": "Naan of your business what's in this! Mind the blessing! It's private! ...It's curative herbs.",
+        "christian_edition": "Blessed bread with healing properties. The cure for what ails you, given freely."
+      },
       "quick_item": true
     },
     {
@@ -54,7 +66,10 @@
       "duration": 3,
       "cost": 100,
       "town": "Bethlehem",
-      "flavor_text": "The bagel that combines everything good",
+      "flavor_text": {
+        "default": "The BREADgel! Combines EVERYTHING good! Healing? Check. Strength boost? Check. Carbs? OH YES.",
+        "christian_edition": "A perfect combination of sustenance and strength. Everything needed for the journey ahead."
+      },
       "quick_item": true
     },
     {
@@ -65,7 +80,10 @@
       "power": 999,
       "cost": 200,
       "town": "Jerusalem",
-      "flavor_text": "The OG miracle food",
+      "flavor_text": {
+        "default": "Manna from Breakfast! The OG miracle food! Your ancestors ate this in the desert for 40 YEARS. Full heal, baby!",
+        "christian_edition": "The bread from heaven that sustained God's people through their wilderness journey. Divine provision made manifest."
+      },
       "quick_item": true
     },
     {
@@ -77,7 +95,10 @@
       "duration": 3,
       "cost": 40,
       "town": "Capernaum",
-      "flavor_text": "The power of gluten!",
+      "flavor_text": {
+        "default": "The POWER of GLUTEN! Attack boost! Makes you strong! *Not suitable for celiac sufferers*",
+        "christian_edition": "Bread that strengthens the body and fortifies the spirit for battle ahead."
+      },
       "quick_item": false
     },
     {
@@ -89,7 +110,10 @@
       "duration": 3,
       "cost": 55,
       "town": "Tiberias",
-      "flavor_text": "Light and quick",
+      "flavor_text": {
+        "default": "Focaccia Blessing! Light, quick, and blessed! Speed boost activated! Zoom zoom!",
+        "christian_edition": "Light bread that grants swiftness. Move quickly on your mission with divine blessing."
+      },
       "quick_item": false
     },
     {
@@ -101,7 +125,10 @@
       "duration": 4,
       "cost": 65,
       "town": "Samaria",
-      "flavor_text": "Tougher than it looks",
+      "flavor_text": {
+        "default": "Pumper-NICKEL and DIME! Cheap defense! Tougher than it looks! Dense enough to stop arrows. Probably.",
+        "christian_edition": "Hearty bread that fortifies defenses. Protection that exceeds its humble appearance."
+      },
       "quick_item": false
     },
     {
@@ -113,7 +140,10 @@
       "duration": 3,
       "cost": 50,
       "town": "Magdala",
-      "flavor_text": "Bitter and effective",
+      "flavor_text": {
+        "default": "Sourdough of SORROW! Bitter. Effective. Makes enemies weaker just by existing. Tastes terrible. Works great.",
+        "christian_edition": "Bread infused with sorrow that weakens the wicked. Bitter but righteous in purpose."
+      },
       "quick_item": false
     },
     {
@@ -123,7 +153,10 @@
       "effect": "remove_all_debuffs",
       "cost": 70,
       "town": "Chorazin",
-      "flavor_text": "Pure and simple",
+      "flavor_text": {
+        "default": "Unleavened Legend! Pure! Simple! Removes ALL bad stuff! No rise, no problem. Passover approved!",
+        "christian_edition": "Bread made without leaven, symbol of purity. Cleanses all impurities and ailments."
+      },
       "quick_item": true
     },
     {
@@ -134,7 +167,10 @@
       "revive_hp": 1,
       "cost": 150,
       "town": "Jericho",
-      "flavor_text": "Everything returns - even you",
+      "flavor_text": {
+        "default": "Bagel of Second Chances! Everything returns—even YOU! Auto-revive! It's a do-over in bread form!",
+        "christian_edition": "Bread of resurrection and renewal. When you fall, this brings you back. Grace made edible."
+      },
       "quick_item": true,
       "special": "consumed_when_triggered"
     },
@@ -146,7 +182,10 @@
       "duration": 3,
       "cost": 180,
       "town": "Bethany",
-      "flavor_text": "Flaky but incredibly strong",
+      "flavor_text": {
+        "default": "Croissant CRUSADER! Flaky but INCREDIBLY strong! Temporary invincibility! Buttery protection!",
+        "christian_edition": "Layered bread that grants divine protection. Invincible for a time through faith's shield."
+      },
       "quick_item": false
     }
   ],
