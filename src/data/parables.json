@@ -447,9 +447,15 @@
       "location": "Bethany - Friend's House",
       "found_how": "Visit at night",
       "biblical_reference": "Luke 11:5-13",
-      "short_teaching": "Ask and it will be given. God gives good gifts to those who ask.",
+      "short_teaching": {
+        "default": "ASK and it will be GIVEN. God gives GOOD gifts to those who ask. Shameless boldness works!",
+        "christian_edition": "Ask and it will be given. God gives good gifts to those who ask."
+      },
       "full_text": "Suppose you go to a friend at midnight and ask for bread. Though he won't get up because of friendship, he will get up because of your shameless boldness. So I say to you: Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
-      "moral": "Bold, persistent asking moves God. He delights to give good gifts to His children.",
+      "moral": {
+        "default": "BOLD, persistent asking MOVES God. He DELIGHTS to give good gifts to His children. Be shameless!",
+        "christian_edition": "Bold, persistent asking moves God. He delights to give good gifts to His children."
+      },
       "game_effect": {
         "type": "item_find",
         "value": 0.15,
@@ -463,9 +469,15 @@
       "location": "Bethlehem - Wedding Hall",
       "found_how": "Attend wedding",
       "biblical_reference": "Matthew 25:1-13",
-      "short_teaching": "Be ready. The bridegroom comes when you least expect.",
+      "short_teaching": {
+        "default": "Be READY. The bridegroom comes when you LEAST expect. Extra oil essential!",
+        "christian_edition": "Be ready. The bridegroom comes when you least expect."
+      },
       "full_text": "Ten virgins took their lamps to meet the bridegroom. Five were wise and brought extra oil; five were foolish and didn't. When the bridegroom came at midnight, the foolish virgins' lamps went out. They went to buy oil, but while they were gone, the bridegroom arrived. The door was shut. 'Therefore keep watch, because you do not know the day or the hour.'",
-      "moral": "Be spiritually prepared. The Lord's return comes unexpectedly—stay ready.",
+      "moral": {
+        "default": "Be spiritually PREPARED. The Lord's return comes UNEXPECTEDLY—stay ready. Don't be caught without oil!",
+        "christian_edition": "Be spiritually prepared. The Lord's return comes unexpectedly—stay ready."
+      },
       "game_effect": {
         "type": "readiness",
         "value": 1,
@@ -479,9 +491,15 @@
       "location": "Jerusalem - Servant Quarters",
       "found_how": "Serve others 20 times",
       "biblical_reference": "Matthew 24:45-51",
-      "short_teaching": "Be faithful in your master's absence. He returns when least expected.",
+      "short_teaching": {
+        "default": "Be FAITHFUL in your master's absence. He returns when LEAST expected. Always on duty!",
+        "christian_edition": "Be faithful in your master's absence. He returns when least expected."
+      },
       "full_text": "Who is the faithful and wise servant, whom the master has put in charge of his household? It will be good for that servant whose master finds him doing so when he returns. But suppose that servant is wicked and says to himself, 'My master is staying away a long time,' and begins to beat his fellow servants and eat and drink with drunkards. The master will come on a day when he does not expect him.",
-      "moral": "Live faithfully as if Christ could return at any moment. Readiness means faithful service.",
+      "moral": {
+        "default": "Live FAITHFULLY as if Christ could return at ANY moment. Readiness means FAITHFUL service. No slacking!",
+        "christian_edition": "Live faithfully as if Christ could return at any moment. Readiness means faithful service."
+      },
       "game_effect": {
         "type": "faithful_bonus",
         "value": 0.1,
@@ -495,9 +513,15 @@
       "location": "Cana - Wedding Hall",
       "found_how": "Given after Steward boss fight",
       "biblical_reference": "Matthew 22:1-14",
-      "short_teaching": "Many are invited, but few accept. Come to the feast!",
+      "short_teaching": {
+        "default": "MANY are invited, but FEW accept. Come to the feast! RSVP required!",
+        "christian_edition": "Many are invited, but few accept. Come to the feast!"
+      },
       "full_text": "A king prepared a wedding feast for his son and sent servants to invite guests, but they refused to come. He sent servants again, but they paid no attention. The king was enraged and destroyed those who rejected his invitation. Then he sent servants to the streets: 'Invite to the banquet anyone you find.' The wedding hall was filled with guests.",
-      "moral": "God's invitation is open to all, but many refuse. Accept the invitation—the feast is ready!",
+      "moral": {
+        "default": "God's invitation is OPEN to ALL, but many REFUSE. Accept the invitation—the feast is ready! Don't miss out!",
+        "christian_edition": "God's invitation is open to all, but many refuse. Accept the invitation—the feast is ready!"
+      },
       "game_effect": {
         "type": "feast_bonus",
         "value": 1,
@@ -511,9 +535,15 @@
       "location": "Jerusalem - Banquet Hall",
       "found_how": "Invite 12 apostles to party",
       "biblical_reference": "Luke 14:15-24",
-      "short_teaching": "When you refuse the invitation, it goes to others.",
+      "short_teaching": {
+        "default": "When you REFUSE the invitation, it goes to OTHERS. Excuses not accepted!",
+        "christian_edition": "When you refuse the invitation, it goes to others."
+      },
       "full_text": "A man prepared a great banquet and invited many guests. But they all made excuses: 'I just bought a field,' 'I just bought oxen,' 'I just got married.' The master told his servant, 'Go to the streets and bring in the poor, the crippled, the blind and the lame.' Still there was room. 'Go and make them come in, so that my house will be full. Not one of those who were invited will taste my banquet.'",
-      "moral": "Don't make excuses when God calls. The invitation is urgent—respond now!",
+      "moral": {
+        "default": "Don't make EXCUSES when God calls. The invitation is URGENT—respond NOW! Snooze and lose!",
+        "christian_edition": "Don't make excuses when God calls. The invitation is urgent—respond now!"
+      },
       "game_effect": {
         "type": "banquet",
         "value": 1,
@@ -527,9 +557,15 @@
       "location": "Galilee - Field",
       "found_how": "Plant and harvest crops",
       "biblical_reference": "Mark 4:26-29",
-      "short_teaching": "The Kingdom grows mysteriously, and the harvest comes in time.",
+      "short_teaching": {
+        "default": "The Kingdom grows MYSTERIOUSLY, and the harvest comes in time. Auto-growth enabled!",
+        "christian_edition": "The Kingdom grows mysteriously, and the harvest comes in time."
+      },
       "full_text": "A man scatters seed on the ground. Night and day, whether he sleeps or gets up, the seed sprouts and grows, though he does not know how. All by itself the soil produces grain—first the stalk, then the head, then the full kernel in the head. As soon as the grain is ripe, he puts the sickle to it, because the harvest has come.",
-      "moral": "God's Kingdom grows in His timing. We plant and water, but God gives the growth.",
+      "moral": {
+        "default": "God's Kingdom grows in HIS timing. We plant and water, but GOD gives the growth. Passive income!",
+        "christian_edition": "God's Kingdom grows in His timing. We plant and water, but God gives the growth."
+      },
       "game_effect": {
         "type": "passive_growth",
         "value": 1,
@@ -543,9 +579,15 @@
       "location": "Capernaum - Construction Site",
       "found_how": "Build on rock (complete foundation quest)",
       "biblical_reference": "Matthew 7:24-27",
-      "short_teaching": "Build your life on the rock of Christ's words.",
+      "short_teaching": {
+        "default": "Build your life on the ROCK of Christ's words. Foundation matters!",
+        "christian_edition": "Build your life on the rock of Christ's words."
+      },
       "full_text": "Everyone who hears my words and puts them into practice is like a wise man who built his house on the rock. The rain came, the streams rose, the winds blew, yet it did not fall, because it had its foundation on the rock. But everyone who hears my words and does not put them into practice is like a foolish man who built his house on sand. When the storm came, it fell with a great crash.",
-      "moral": "Hearing isn't enough—you must obey. Build your life on Christ's teachings.",
+      "moral": {
+        "default": "Hearing isn't ENOUGH—you must OBEY. Build your life on Christ's teachings. Rock > sand!",
+        "christian_edition": "Hearing isn't enough—you must obey. Build your life on Christ's teachings."
+      },
       "game_effect": {
         "type": "defense",
         "value": 0.15,
@@ -559,9 +601,15 @@
       "location": "Nazareth - Home",
       "found_how": "Light 10 lamps",
       "biblical_reference": "Matthew 5:14-16",
-      "short_teaching": "Let your light shine before others so they may see and glorify God.",
+      "short_teaching": {
+        "default": "Let your light SHINE before others so they may see and glorify God. No hiding!",
+        "christian_edition": "Let your light shine before others so they may see and glorify God."
+      },
       "full_text": "You are the light of the world. A town built on a hill cannot be hidden. Neither do people light a lamp and put it under a bowl. Instead they put it on its stand, and it gives light to everyone in the house. In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
-      "moral": "Don't hide your faith. Let your life illuminate the way to God for others.",
+      "moral": {
+        "default": "Don't HIDE your faith. Let your life ILLUMINATE the way to God for others. Shine bright!",
+        "christian_edition": "Don't hide your faith. Let your life illuminate the way to God for others."
+      },
       "game_effect": {
         "type": "light",
         "value": 1,
@@ -575,9 +623,15 @@
       "location": "Cana - Wine Cellar",
       "found_how": "Transform water to wine (miracle)",
       "biblical_reference": "Mark 2:21-22",
-      "short_teaching": "The new covenant requires new vessels. Old forms can't contain new life.",
+      "short_teaching": {
+        "default": "The new covenant requires NEW vessels. Old forms can't CONTAIN new life. Upgrade required!",
+        "christian_edition": "The new covenant requires new vessels. Old forms can't contain new life."
+      },
       "full_text": "No one sews a patch of unshrunk cloth on an old garment. Otherwise, the new piece will pull away from the old, making the tear worse. And no one pours new wine into old wineskins. Otherwise, the wine will burst the skins, and both the wine and the wineskins will be ruined. No, they pour new wine into new wineskins.",
-      "moral": "Christ brings radical renewal. The old religious system can't contain the new covenant.",
+      "moral": {
+        "default": "Christ brings RADICAL renewal. The old religious system can't CONTAIN the new covenant. New wine, new skins!",
+        "christian_edition": "Christ brings radical renewal. The old religious system can't contain the new covenant."
+      },
       "game_effect": {
         "type": "renewal",
         "value": 1,
@@ -591,9 +645,15 @@
       "location": "Jerusalem - City Gate",
       "found_how": "Enter through small gate",
       "biblical_reference": "Matthew 7:13-14",
-      "short_teaching": "The path to life is narrow. Few find it.",
+      "short_teaching": {
+        "default": "The path to life is NARROW. FEW find it. Exclusive club!",
+        "christian_edition": "The path to life is narrow. Few find it."
+      },
       "full_text": "Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it. But small is the gate and narrow the road that leads to life, and only a few find it.",
-      "moral": "The way to eternal life is narrow and difficult. Don't follow the crowd—follow Christ.",
+      "moral": {
+        "default": "The way to eternal life is NARROW and difficult. Don't follow the CROWD—follow Christ. Hard mode only!",
+        "christian_edition": "The way to eternal life is narrow and difficult. Don't follow the crowd—follow Christ."
+      },
       "game_effect": {
         "type": "narrow_path",
         "value": 0.2,
@@ -607,9 +667,15 @@
       "location": "Jerusalem - Judgment Hall",
       "found_how": "Serve the least 25 times",
       "biblical_reference": "Matthew 25:31-46",
-      "short_teaching": "How you treat the least is how you treat Christ.",
+      "short_teaching": {
+        "default": "How you treat the LEAST is how you treat Christ. Service = worship!",
+        "christian_edition": "How you treat the least is how you treat Christ."
+      },
       "full_text": "When the Son of Man comes in glory, he will separate people as a shepherd separates sheep from goats. To those on his right he will say, 'Come, you who are blessed, for I was hungry and you gave me something to eat, I was thirsty and you gave me something to drink.' They will ask, 'When did we see you hungry?' He will reply, 'Whatever you did for the least of these, you did for me.'",
-      "moral": "Serving the poor and marginalized is serving Christ. Our treatment of others reveals our heart.",
+      "moral": {
+        "default": "Serving the poor and marginalized is SERVING Christ. Our treatment of others reveals our HEART. Help = Jesus!",
+        "christian_edition": "Serving the poor and marginalized is serving Christ. Our treatment of others reveals our heart."
+      },
       "game_effect": {
         "type": "service",
         "value": 1,
@@ -623,9 +689,15 @@
       "location": "Jericho - Bank",
       "found_how": "Invest 2000 denarii",
       "biblical_reference": "Luke 19:11-27",
-      "short_teaching": "Use what you're given. Faithful servants are rewarded.",
+      "short_teaching": {
+        "default": "Use what you're GIVEN. Faithful servants are REWARDED. Invest wisely!",
+        "christian_edition": "Use what you're given. Faithful servants are rewarded."
+      },
       "full_text": "A nobleman gave ten servants each a mina and said, 'Put this money to work until I come back.' The first servant earned ten more minas. The master said, 'Well done! Because you have been trustworthy in a very small matter, take charge of ten cities.' Another earned five minas and received five cities. But one servant buried his mina. The master rebuked him and took the mina away.",
-      "moral": "God rewards faithful stewardship with greater responsibility. Use your gifts or lose them.",
+      "moral": {
+        "default": "God REWARDS faithful stewardship with GREATER responsibility. Use your gifts or LOSE them. Level up!",
+        "christian_edition": "God rewards faithful stewardship with greater responsibility. Use your gifts or lose them."
+      },
       "game_effect": {
         "type": "investment",
         "value": 0.5,
@@ -639,9 +711,15 @@
       "location": "Tiberias - Prison",
       "found_how": "Free 10 prisoners",
       "biblical_reference": "Matthew 18:23-35",
-      "short_teaching": "Forgive from your heart, as you have been forgiven.",
+      "short_teaching": {
+        "default": "Forgive from your HEART, as you have been FORGIVEN. Forgiveness cycle required!",
+        "christian_edition": "Forgive from your heart, as you have been forgiven."
+      },
       "full_text": "A king wanted to settle accounts with his servants. One owed him ten thousand bags of gold. Unable to pay, he begged for patience, and the king forgave the entire debt. But that servant went and found a fellow servant who owed him a hundred silver coins. He grabbed him and demanded payment. When the king heard, he handed him over to the jailers to be tortured. 'This is how my heavenly Father will treat you unless you forgive your brother from your heart.'",
-      "moral": "Having been forgiven so much, we must forgive others. Unforgiveness brings judgment.",
+      "moral": {
+        "default": "Having been forgiven SO much, we MUST forgive others. Unforgiveness brings JUDGMENT. Pay it forward!",
+        "christian_edition": "Having been forgiven so much, we must forgive others. Unforgiveness brings judgment."
+      },
       "game_effect": {
         "type": "mercy",
         "value": 1,
@@ -655,9 +733,15 @@
       "location": "Galilee - Father's Field",
       "found_how": "Return home after traveling far",
       "biblical_reference": "Luke 15:11-32",
-      "short_teaching": "God runs to meet you when you return to Him.",
+      "short_teaching": {
+        "default": "God RUNS to meet you when you return to Him. Sprint mode activated!",
+        "christian_edition": "God runs to meet you when you return to Him."
+      },
       "full_text": "While the son was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him. The son said, 'Father, I have sinned against heaven and against you. I am no longer worthy to be called your son.' But the father said, 'Quick! Bring the best robe and put it on him. Let's have a feast and celebrate!'",
-      "moral": "God's love runs to meet repentant sinners. No matter how far you've fallen, come home.",
+      "moral": {
+        "default": "God's love RUNS to meet repentant sinners. No matter how FAR you've fallen, COME HOME. Welcome back party!",
+        "christian_edition": "God's love runs to meet repentant sinners. No matter how far you've fallen, come home."
+      },
       "game_effect": {
         "type": "homecoming",
         "value": 1,
@@ -671,9 +755,15 @@
       "location": "Bethany - Fig Tree",
       "found_how": "Water barren tree",
       "biblical_reference": "Luke 13:6-9",
-      "short_teaching": "God is patient, but expects fruit. Time is limited.",
+      "short_teaching": {
+        "default": "God is PATIENT, but expects FRUIT. Time is limited. Produce or perish!",
+        "christian_edition": "God is patient, but expects fruit. Time is limited."
+      },
       "full_text": "A man had a fig tree planted in his vineyard, and he came looking for fruit on it but did not find any. So he said to the gardener, 'For three years now I've been coming to look for fruit on this fig tree and haven't found any. Cut it down!' The gardener replied, 'Sir, leave it alone for one more year, and I'll dig around it and fertilize it. If it bears fruit next year, fine! If not, then cut it down.'",
-      "moral": "God is patient but expects us to bear fruit. Don't waste the time He gives you.",
+      "moral": {
+        "default": "God is PATIENT but expects us to BEAR fruit. Don't WASTE the time He gives you. Final warning!",
+        "christian_edition": "God is patient but expects us to bear fruit. Don't waste the time He gives you."
+      },
       "game_effect": {
         "type": "fruitfulness",
         "value": 0.25,
@@ -687,9 +777,15 @@
       "location": "Galilee - Vineyard Gate",
       "found_how": "Complete father's quest",
       "biblical_reference": "Matthew 21:28-32",
-      "short_teaching": "It's not what you say, but what you do that matters.",
+      "short_teaching": {
+        "default": "It's not what you SAY, but what you DO that matters. Actions > words!",
+        "christian_edition": "It's not what you say, but what you do that matters."
+      },
       "full_text": "A man had two sons. He told the first, 'Go work in the vineyard.' The son said no, but later changed his mind and went. The father told the second son the same thing. He said, 'I will, sir,' but didn't go. Which of the two did what his father wanted? Tax collectors and prostitutes believed John, but you did not.",
-      "moral": "Obedience is better than empty promises. Actions reveal true faith, not words.",
+      "moral": {
+        "default": "Obedience is BETTER than empty promises. ACTIONS reveal true faith, NOT words. Walk the talk!",
+        "christian_edition": "Obedience is better than empty promises. Actions reveal true faith, not words."
+      },
       "game_effect": {
         "type": "obedience",
         "value": 1,
@@ -703,9 +799,15 @@
       "location": "Jerusalem - Vineyard",
       "found_how": "Find rejected cornerstone",
       "biblical_reference": "Matthew 21:33-46",
-      "short_teaching": "The stone the builders rejected has become the cornerstone.",
+      "short_teaching": {
+        "default": "The stone the builders REJECTED has become the CORNERSTONE. Epic reversal!",
+        "christian_edition": "The stone the builders rejected has become the cornerstone."
+      },
       "full_text": "A landowner planted a vineyard and rented it to tenants. When harvest time came, he sent servants to collect his fruit, but the tenants beat them. Finally, he sent his son. 'They will respect my son,' he said. But the tenants killed the son. Jesus said, 'The kingdom of God will be taken away from you and given to a people who will produce its fruit. The stone the builders rejected has become the cornerstone.'",
-      "moral": "Rejecting God's messengers leads to judgment. Christ is the cornerstone—don't reject Him.",
+      "moral": {
+        "default": "Rejecting God's messengers leads to JUDGMENT. Christ is the CORNERSTONE—don't reject Him. Foundation essential!",
+        "christian_edition": "Rejecting God's messengers leads to judgment. Christ is the cornerstone—don't reject Him."
+      },
       "game_effect": {
         "type": "cornerstone",
         "value": 1,
@@ -719,9 +821,15 @@
       "location": "Galilee - Salt Sea",
       "found_how": "Collect salt from sea",
       "biblical_reference": "Matthew 5:13-16",
-      "short_teaching": "You are salt and light. Preserve and illuminate the world.",
+      "short_teaching": {
+        "default": "You are SALT and LIGHT. Preserve and illuminate the world. Dual-purpose believers!",
+        "christian_edition": "You are salt and light. Preserve and illuminate the world."
+      },
       "full_text": "You are the salt of the earth. But if the salt loses its saltiness, how can it be made salty again? It is no longer good for anything, except to be thrown out and trampled underfoot. You are the light of the world. Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
-      "moral": "Christians preserve moral goodness and shine God's truth. Don't lose your distinctive flavor.",
+      "moral": {
+        "default": "Christians PRESERVE moral goodness and SHINE God's truth. Don't lose your distinctive FLAVOR. Stay salty!",
+        "christian_edition": "Christians preserve moral goodness and shine God's truth. Don't lose your distinctive flavor."
+      },
       "game_effect": {
         "type": "salt_light",
         "value": 0.1,
@@ -735,9 +843,15 @@
       "location": "Jerusalem - Synagogue",
       "found_how": "Read all scriptures",
       "biblical_reference": "Mark 12:38-40",
-      "short_teaching": "Beware of those who love honor but devour widows' houses.",
+      "short_teaching": {
+        "default": "BEWARE of those who love HONOR but devour widows' houses. Religious fraud alert!",
+        "christian_edition": "Beware of those who love honor but devour widows' houses."
+      },
       "full_text": "Watch out for the teachers of the law. They like to walk around in flowing robes and be greeted with respect in the marketplaces, and have the most important seats in the synagogues and the places of honor at banquets. They devour widows' houses and for a show make lengthy prayers. These men will be punished most severely.",
-      "moral": "Beware of religious hypocrites who seek honor but lack true righteousness.",
+      "moral": {
+        "default": "BEWARE of religious hypocrites who seek HONOR but lack true righteousness. Severe judgment incoming!",
+        "christian_edition": "Beware of religious hypocrites who seek honor but lack true righteousness."
+      },
       "game_effect": {
         "type": "discernment",
         "value": 1,
@@ -751,9 +865,15 @@
       "location": "Bethany - Tree",
       "found_how": "Observe seasons changing",
       "biblical_reference": "Mark 13:28-31",
-      "short_teaching": "Learn to discern the signs of the times.",
+      "short_teaching": {
+        "default": "Learn to DISCERN the signs of the times. Pattern recognition essential!",
+        "christian_edition": "Learn to discern the signs of the times."
+      },
       "full_text": "Now learn this lesson from the fig tree: As soon as its twigs get tender and its leaves come out, you know that summer is near. Even so, when you see these things happening, you know that it is near, right at the door. Heaven and earth will pass away, but my words will never pass away.",
-      "moral": "Pay attention to the signs of the times. Christ's return is certain—be watchful.",
+      "moral": {
+        "default": "PAY ATTENTION to the signs of the times. Christ's return is CERTAIN—be watchful. It's happening!",
+        "christian_edition": "Pay attention to the signs of the times. Christ's return is certain—be watchful."
+      },
       "game_effect": {
         "type": "signs",
         "value": 1,
@@ -767,9 +887,15 @@
       "location": "Jerusalem - Watchtower",
       "found_how": "Keep watch at night",
       "biblical_reference": "Mark 13:32-37",
-      "short_teaching": "Stay awake and watch. You don't know when the master returns.",
+      "short_teaching": {
+        "default": "Stay AWAKE and WATCH. You don't know when the master returns. No sleep mode!",
+        "christian_edition": "Stay awake and watch. You don't know when the master returns."
+      },
       "full_text": "It's like a man going away: He leaves his house and puts his servants in charge, each with their assigned task, and tells the one at the door to keep watch. Therefore keep watch because you do not know when the owner of the house will come back—whether in the evening, or at midnight, or when the rooster crows, or at dawn. What I say to you, I say to everyone: 'Watch!'",
-      "moral": "Christ's return is imminent and unexpected. Live each day ready for His coming.",
+      "moral": {
+        "default": "Christ's return is IMMINENT and UNEXPECTED. Live EACH day ready for His coming. Always on alert!",
+        "christian_edition": "Christ's return is imminent and unexpected. Live each day ready for His coming."
+      },
       "game_effect": {
         "type": "watchfulness",
         "value": 1,
