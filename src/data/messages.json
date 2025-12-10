@@ -1,0 +1,132 @@
+{
+  "battle_messages": {
+    "super_effective": {
+      "default": "It's SUPER effective! That fish isn't having a good time!",
+      "christian_edition": "It's super effective! The attack was very powerful."
+    },
+    "not_effective": {
+      "default": "It's not very effective... Maybe try a different fish?",
+      "christian_edition": "It's not very effective. The attack did little damage."
+    },
+    "critical_hit": {
+      "default": "A CRITICAL hit! BOOM! That's gonna leave a mark!",
+      "christian_edition": "A critical hit! The attack was especially powerful."
+    },
+    "miss": {
+      "default": "The attack MISSED! Aim isn't everything, but it helps!",
+      "christian_edition": "The attack missed! Better luck next time."
+    },
+    "fish_fainted": {
+      "default": "{fish_name} has FAINTED! F in the chat for our fallen friend.",
+      "christian_edition": "{fish_name} has fainted and can no longer battle."
+    },
+    "level_up": {
+      "default": "{name} grew to level {level}! LEVEL UP! Stats increased! Much wow!",
+      "christian_edition": "{name} grew to level {level}! Stats have increased."
+    },
+    "learned_move": {
+      "default": "{fish_name} learned {move_name}! New moves, who dis?",
+      "christian_edition": "{fish_name} learned {move_name}!"
+    },
+    "evolution": {
+      "default": "What?! {fish_name} is EVOLVING! *epic music plays*",
+      "christian_edition": "What? {fish_name} is evolving into a more powerful form!"
+    },
+    "no_pp": {
+      "default": "{move_name} has no PP left! Out of juice! Time for a different move!",
+      "christian_edition": "{move_name} cannot be used. No power points remaining."
+    },
+    "fled": {
+      "default": "Got away SAFELY! Discretion is the better part of valor! Run away!",
+      "christian_edition": "You escaped safely from the battle."
+    },
+    "cant_flee": {
+      "default": "Can't escape! You're stuck here! Fight or... well, just fight!",
+      "christian_edition": "Cannot escape from this battle. You must fight."
+    }
+  },
+  "victory_messages": {
+    "battle_won": {
+      "default": "VICTORY! You won! Your fish are looking pretty smug about it.",
+      "christian_edition": "Victory! You have won the battle."
+    },
+    "xp_gained": {
+      "default": "Gained {xp} XP! That sweet, sweet experience!",
+      "christian_edition": "Gained {xp} experience points."
+    },
+    "money_gained": {
+      "default": "Found {money} denarii! Cha-ching! *money sounds*",
+      "christian_edition": "Received {money} denarii as reward."
+    },
+    "item_found": {
+      "default": "Found {item}! Free stuff! The best kind of stuff!",
+      "christian_edition": "Found {item}!"
+    }
+  },
+  "defeat_messages": {
+    "party_wiped": {
+      "default": "You BLACKED OUT! All your fish fainted! This is fine. Everything is fine.",
+      "christian_edition": "All your fish have fainted. You must return to the last inn."
+    },
+    "game_over": {
+      "default": "GAME OVER. But hey, you tried! Press any key to continue.",
+      "christian_edition": "Game Over. Would you like to continue from your last save?"
+    }
+  },
+  "status_messages": {
+    "poisoned": {
+      "default": "{name} is POISONED! Taking damage each turn! Not ideal!",
+      "christian_edition": "{name} is poisoned and will take damage each turn."
+    },
+    "burned": {
+      "default": "{name} is BURNED! Ouch! Hot hot hot!",
+      "christian_edition": "{name} is burned and will take damage each turn."
+    },
+    "frozen": {
+      "default": "{name} is FROZEN solid! Can't move! Let it go! ...Sorry.",
+      "christian_edition": "{name} is frozen and cannot act."
+    },
+    "paralyzed": {
+      "default": "{name} is PARALYZED! Might not be able to move! Risky!",
+      "christian_edition": "{name} is paralyzed and may be unable to act."
+    },
+    "confused": {
+      "default": "{name} is CONFUSED! Might hurt itself in confusion! Classic!",
+      "christian_edition": "{name} is confused and may hurt itself instead of attacking."
+    },
+    "asleep": {
+      "default": "{name} is ASLEEP! Zzz... Wake up! Nope, still sleeping.",
+      "christian_edition": "{name} is asleep and cannot act."
+    },
+    "blessed": {
+      "default": "{name} is BLESSED! Stats boosted! Divine power activated!",
+      "christian_edition": "{name} is blessed and all stats have increased."
+    },
+    "cursed": {
+      "default": "{name} is CURSED! Stats lowered! This is not good!",
+      "christian_edition": "{name} is cursed and all stats have decreased."
+    }
+  },
+  "menu_messages": {
+    "save_success": {
+      "default": "Game SAVED! Your progress is safe! Don't worry, we got you!",
+      "christian_edition": "Game saved successfully."
+    },
+    "save_failed": {
+      "default": "Save FAILED! Oh no! Try again? Please?",
+      "christian_edition": "Failed to save game. Please try again."
+    },
+    "load_success": {
+      "default": "Game LOADED! Welcome back! Right where you left off!",
+      "christian_edition": "Game loaded successfully."
+    },
+    "load_failed": {
+      "default": "Load FAILED! No save file found! Start a new game?",
+      "christian_edition": "Failed to load game. No save file found."
+    }
+  },
+  "metadata": {
+    "total_message_categories": 6,
+    "description": "All system and battle messages with dual-text support"
+  }
+}

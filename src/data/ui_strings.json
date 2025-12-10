@@ -1,0 +1,194 @@
+{
+  "menu_titles": {
+    "main_menu": {
+      "default": "LOAVES AND FISHES - The Greatest Story Ever Played",
+      "christian_edition": "Loaves and Fishes - An Interactive Biblical Journey"
+    },
+    "party_menu": {
+      "default": "YOUR FISH PARTY - The Squad",
+      "christian_edition": "Your Fish Party"
+    },
+    "inventory": {
+      "default": "INVENTORY - Your Stuff",
+      "christian_edition": "Inventory"
+    },
+    "apostles": {
+      "default": "THE TWELVE - Your Crew",
+      "christian_edition": "The Twelve Apostles"
+    },
+    "parables": {
+      "default": "PARABLES COLLECTION - Story Time",
+      "christian_edition": "Parables Collection"
+    },
+    "settings": {
+      "default": "SETTINGS - Tweak It",
+      "christian_edition": "Settings"
+    },
+    "save_menu": {
+      "default": "SAVE/LOAD - Don't Lose Progress",
+      "christian_edition": "Save & Load Game"
+    }
+  },
+  "button_labels": {
+    "new_game": {
+      "default": "NEW GAME - Let's Go!",
+      "christian_edition": "New Game"
+    },
+    "continue": {
+      "default": "CONTINUE - Pick Up Where You Left Off",
+      "christian_edition": "Continue"
+    },
+    "save": {
+      "default": "SAVE - Don't Be Reckless",
+      "christian_edition": "Save Game"
+    },
+    "load": {
+      "default": "LOAD - Bring It Back",
+      "christian_edition": "Load Game"
+    },
+    "quit": {
+      "default": "QUIT - See Ya!",
+      "christian_edition": "Quit to Main Menu"
+    },
+    "back": {
+      "default": "BACK - Nevermind",
+      "christian_edition": "Back"
+    },
+    "accept": {
+      "default": "ACCEPT - I'm In!",
+      "christian_edition": "Accept"
+    },
+    "decline": {
+      "default": "DECLINE - Nah",
+      "christian_edition": "Decline"
+    },
+    "confirm": {
+      "default": "CONFIRM - Do It!",
+      "christian_edition": "Confirm"
+    },
+    "cancel": {
+      "default": "CANCEL - Abort!",
+      "christian_edition": "Cancel"
+    }
+  },
+  "dialogue_prompts": {
+    "quest_accepted": {
+      "default": "Quest accepted! Time to get to work! Check your quest log!",
+      "christian_edition": "Quest accepted. Check your quest log for details."
+    },
+    "quest_declined": {
+      "default": "Quest declined. Maybe later? They'll still be here!",
+      "christian_edition": "Quest declined. You can accept it later if you change your mind."
+    },
+    "quest_completed": {
+      "default": "Quest COMPLETED! Nice work! Rewards claimed!",
+      "christian_edition": "Quest completed successfully. Rewards have been received."
+    },
+    "continue_prompt": {
+      "default": "Press ANY KEY to continue... Hello? Anyone there?",
+      "christian_edition": "Press any key to continue."
+    },
+    "farewell": {
+      "default": "Peace out! May the fish be with you!",
+      "christian_edition": "Farewell. May peace be with you."
+    }
+  },
+  "tutorial_messages": {
+    "welcome": {
+      "default": "Welcome to LOAVES AND FISHES! This is a BIBLICAL RPG about Jesus, fish, and miracles! Let's get started!",
+      "christian_edition": "Welcome to Loaves and Fishes. This game tells the story of Jesus's ministry through an interactive adventure."
+    },
+    "movement": {
+      "default": "Use ARROW KEYS to move around. Pretty standard stuff! Go explore!",
+      "christian_edition": "Use the arrow keys to move your character around the world."
+    },
+    "battles": {
+      "default": "Battles are TURN-BASED! Pick your fish, pick your move, watch them FIGHT! Easy!",
+      "christian_edition": "Battles are turn-based. Choose your fish and select an attack each turn."
+    },
+    "fishing": {
+      "default": "Press SPACE to FISH! Catch fish, use them in battle! Gotta catch 'em all! ...Wait, wrong game.",
+      "christian_edition": "Press the spacebar to fish in designated fishing spots. You can use caught fish in battles."
+    },
+    "miracles": {
+      "default": "Fill the MIRACLE METER to use JESUS'S SPECIAL ABILITIES! Ultimate moves! Very powerful!",
+      "christian_edition": "Fill the Miracle Meter through battles to use Jesus's special miracle abilities."
+    }
+  },
+  "shop_dialogue": {
+    "greeting": {
+      "default": "Welcome! Looking to BUY or SELL? We've got fish and bread! The essentials!",
+      "christian_edition": "Welcome, traveler. Are you here to buy or sell?"
+    },
+    "buy_success": {
+      "default": "Purchased {item}! Enjoy! Money well spent!",
+      "christian_edition": "You have purchased {item}."
+    },
+    "sell_success": {
+      "default": "Sold {item} for {price} denarii! Cha-ching!",
+      "christian_edition": "You sold {item} for {price} denarii."
+    },
+    "not_enough_money": {
+      "default": "You're BROKE! Not enough denarii! Go earn some more!",
+      "christian_edition": "You do not have enough denarii for this purchase."
+    },
+    "inventory_full": {
+      "default": "Inventory is FULL! You can't carry any more! Sell something first!",
+      "christian_edition": "Your inventory is full. Please make room before purchasing."
+    },
+    "farewell": {
+      "default": "Thanks for shopping! Come back anytime! We'll be here!",
+      "christian_edition": "Thank you for your business. Come again."
+    }
+  },
+  "inn_dialogue": {
+    "greeting": {
+      "default": "Welcome to the INN! Rest up! Your fish look EXHAUSTED!",
+      "christian_edition": "Welcome to the inn. Would you like to rest and heal your fish?"
+    },
+    "rest_prompt": {
+      "default": "Rest here for {price} denarii? All fish FULLY HEALED! Best deal ever!",
+      "christian_edition": "Would you like to rest here for {price} denarii? All fish will be fully healed."
+    },
+    "rest_success": {
+      "default": "Good morning! You and your fish are FULLY RESTED! Ready to go!",
+      "christian_edition": "You are well rested. Your fish have been fully healed."
+    },
+    "rest_declined": {
+      "default": "Maybe later? The beds will still be here! We're always open!",
+      "christian_edition": "Very well. Return when you need rest."
+    }
+  },
+  "npc_generic": {
+    "hello": {
+      "default": "Hey there! How's it going? Nice day for fishing, isn't it?",
+      "christian_edition": "Greetings, traveler. How may I help you?"
+    },
+    "goodbye": {
+      "default": "See ya! Safe travels! Watch out for bandits!",
+      "christian_edition": "Farewell. May your journey be safe."
+    },
+    "no_more_dialogue": {
+      "default": "I've got nothing else to say! Already told you everything!",
+      "christian_edition": "I have nothing more to share at this time."
+    }
+  },
+  "error_messages": {
+    "file_not_found": {
+      "default": "ERROR: File not found! Uh oh! Something's missing!",
+      "christian_edition": "Error: File not found. Please check the game files."
+    },
+    "corrupted_save": {
+      "default": "ERROR: Save file is CORRUPTED! Oh no! Start a new game?",
+      "christian_edition": "Error: Save file is corrupted. Please start a new game."
+    },
+    "unknown_error": {
+      "default": "ERROR: Something went wrong! We don't know what! Sorry!",
+      "christian_edition": "An unknown error has occurred. Please restart the game."
+    }
+  },
+  "metadata": {
+    "total_ui_categories": 9,
+    "description": "All UI strings and menu text with dual-text support"
+  }
+}
