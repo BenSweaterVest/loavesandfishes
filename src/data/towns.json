@@ -21,7 +21,10 @@
         }
       },
       "boss": null,
-      "story": "Nazareth is skeptical of Jesus. Townspeople remember him as 'just the carpenter's son.' Tutorial involves proving yourself by helping with small tasks.",
+      "story": {
+        "default": "Nazareth is DEEPLY skeptical of Jesus. Townspeople remember him as 'just the carpenter's son.' You know, the kid who used to build chairs? Yeah, THAT guy. Tutorial involves proving yourself by helping with small tasks. No pressure!",
+        "christian_edition": "Nazareth is skeptical of Jesus. The townspeople remember him as the carpenter's son and struggle to see him as anything more. You must prove yourself through humble service."
+      },
       "npcs": ["Mary", "Joseph", "Childhood friends", "Rabbi"],
       "exit_requirement": "Complete tutorial tasks"
     },
@@ -51,7 +54,10 @@
         "hp": 60,
         "level": 5
       },
-      "problem": "Wedding has run out of wine. Celebration is falling apart.",
+      "problem": {
+        "default": "Wedding has run out of wine. Celebration is FALLING APART. Guests are getting cranky. The bride is panicking. This is a DISASTER. Social catastrophe imminent!",
+        "christian_edition": "The wedding has run out of wine. The celebration is at risk, and the family faces embarrassment. A miracle is needed to save the day."
+      },
       "unique_mechanic": "Wine Jars Puzzle - Arrange stone jars in correct pattern",
       "side_quests": ["more_wine", "wedding_crasher", "cold_feet"],
       "exit_requirement": "Use Bartholomew's Illusion Detection to reveal hidden path"
@@ -82,7 +88,10 @@
         "type": "puzzle_boss",
         "description": "Not a traditional fight - timed puzzle boss"
       },
-      "problem": "Severe fish shortage, economy collapsing, Peter won't leave until community is helped",
+      "problem": {
+        "default": "SEVERE fish shortage. Economy collapsing. Everyone's broke and hungry. Peter won't leave until the community is helped because he's stubborn and loyal like that. Classic Peter.",
+        "christian_edition": "A severe fish shortage threatens the town's economy. Peter, faithful to his community, refuses to leave until he can help provide for those in need."
+      },
       "unique_mechanic": "Net Fishing Mini-Game - Catch rare fish",
       "side_quests": ["peters_keys", "net_tournament", "tax_time"],
       "exit_requirement": "Use Peter's Stone Moving to push boulder aside"
@@ -113,7 +122,10 @@
         "hp": 120,
         "level": 12
       },
-      "problem": "Mysterious affliction causing blindness, town struggling to function",
+      "problem": {
+        "default": "Mysterious affliction causing blindness. Town struggling to function. Literally the BLIND leading the BLIND. It's chaos. People keep walking into things. Not great!",
+        "christian_edition": "A mysterious affliction is causing blindness throughout the town. The people struggle to function in darkness, both physical and spiritual."
+      },
       "unique_mechanic": "Navigate in Darkness - Use sound cues and echolocation",
       "side_quests": ["brotherly_love", "blind_faith", "philips_calculation"],
       "exit_requirement": "Andrew's Social Recruitment to gather crowd to lower bridge"
@@ -145,7 +157,10 @@
         "level": 17,
         "forms": 7
       },
-      "problem": "Merchants possessed, acting irrationally greedy, chaos in marketplace",
+      "problem": {
+        "default": "Merchants are POSSESSED and acting irrationally greedy. Like, MORE greedy than normal merchants. Prices are INSANE. Chaos in the marketplace. Economic nightmare!",
+        "christian_edition": "The merchants have been possessed by demons, causing them to act with extreme greed. The marketplace has descended into chaos and needs deliverance."
+      },
       "unique_mechanic": "Exorcism Rhythm Game - Time button presses to beat",
       "side_quests": ["marys_reputation", "merchants_greed", "port_authority"],
       "exit_requirement": "James uses Weather Control to calm storm"
@@ -176,7 +191,10 @@
         "hp": 180,
         "level": 21
       },
-      "problem": "Town in ruins after curse, few residents remain, haunted by past",
+      "problem": {
+        "default": "Town in RUINS after being cursed for not repenting. Few residents remain. Haunted by its unrepentant past. Very awkward. Everyone's living with that 'we were warned' energy.",
+        "christian_edition": "The town lies in ruins after being cursed for its refusal to repent. Few residents remain, and all are haunted by their past choices."
+      },
       "unique_mechanic": "Rebuild Mini-Game - Tetris-style stone placement",
       "side_quests": ["seven_seals", "rebuild_wall", "johns_vision"],
       "exit_requirement": "John reads Ancient Text on sealed door"
@@ -211,7 +229,10 @@
         "hp": 220,
         "level": 25
       },
-      "problem": "Heavy taxation, Roman oppression, Herod wants Jesus to perform miracles for entertainment",
+      "problem": {
+        "default": "HEAVY taxation. Roman oppression. Herod wants Jesus to perform miracles for ENTERTAINMENT. Like a circus act. The audacity! 'Do a miracle for me!' Nope. Not happening.",
+        "christian_edition": "The people suffer under heavy taxation and Roman oppression. Herod Antipas seeks Jesus, hoping to see him perform miraculous signs for entertainment."
+      },
       "unique_mechanic": "Render Unto Caesar Puzzle - Calculate exact tax amounts",
       "side_quests": ["gladiator_arena", "baptists_memory", "roman_relations"],
       "exit_requirement": "Philip solves complex gate mechanism (math puzzle)"
@@ -243,7 +264,10 @@
         "level": 29,
         "phases": 2
       },
-      "problem": "Demoniac terrorizes region, pig farmers losing livestock",
+      "problem": {
+        "default": "Demoniac TERRORIZES the region. Pig farmers losing livestock. Man's possessed by LEGION (yes, multiple demons, they couldn't share?). Absolute chaos. Send help!",
+        "christian_edition": "A demon-possessed man terrorizes the region. Local pig farmers are losing their livestock. The man is possessed by many demons and needs deliverance."
+      },
       "unique_mechanic": "Herd the Pigs - Don't let possessed pigs reach cliff",
       "side_quests": ["matthews_ledger", "herding_pigs", "legions_lament"],
       "exit_requirement": "Matthew bribes border guards"
@@ -275,7 +299,10 @@
         "level": 33,
         "forms": 5
       },
-      "problem": "Deep cultural division, town literally split by wall",
+      "problem": {
+        "default": "Deep cultural division between Jews and Samaritans. Town LITERALLY split by a wall. Not metaphorical. Actual wall. Peak pettiness. Nobody talks to each other. Great vibes.",
+        "christian_edition": "Deep cultural division separates Jews and Samaritans in this town. A wall literally divides the community, representing centuries of hatred and prejudice."
+      },
       "unique_mechanic": "Diplomacy System - Dialogue choices affect outcomes",
       "side_quests": ["water_for_all", "simons_past", "well_wishes"],
       "exit_requirement": "Simon intimidates hostile border patrol"
@@ -307,7 +334,10 @@
         "level": 37,
         "type": "wave_defense"
       },
-      "problem": "Corrupt officials rebuilt walls to trap people, city divided",
+      "problem": {
+        "default": "Corrupt officials REBUILT the walls to trap people inside. City divided. Walls of Jericho 2.0: This Time They're Corrupt Edition. Someone call a trumpet player!",
+        "christian_edition": "Corrupt officials have rebuilt the walls of Jericho to trap and control the people. The city is divided, and liberation is needed."
+      },
       "unique_mechanic": "Sound Puzzle - Play trumpet notes to weaken walls",
       "side_quests": ["trumpet_practice", "rahabs_inn", "wall_inspection"],
       "exit_requirement": "Use James's Humility Gate power"
@@ -338,7 +368,10 @@
         "hp": 300,
         "level": 41
       },
-      "problem": "Lazarus has died, town is grieving, graveyard haunted",
+      "problem": {
+        "default": "Lazarus has DIED. Town is grieving. Graveyard is haunted (because of course it is). Everyone's devastated. Mary and Martha are heartbroken. Four days in the tomb. It's BAD.",
+        "christian_edition": "Lazarus has died, and the town mourns deeply. Mary and Martha grieve for their brother. The graveyard is haunted by death's presence. Hope seems lost."
+      },
       "unique_mechanic": "See to Believe - Hidden enemies only appear when proven",
       "side_quests": ["comfort_mourners", "grave_clothes", "thomas_doubt"],
       "exit_requirement": "Thomas's Trap Detection to navigate treacherous path"
@@ -370,7 +403,10 @@
         "level": 45,
         "choice": true
       },
-      "problem": "Town traumatized by past massacre, captain's ghost haunts area",
+      "problem": {
+        "default": "Town TRAUMATIZED by Herod's past massacre. Captain's ghost haunts the area, consumed by guilt. Heavy topic. Dark stuff. Everyone needs healing. Handle with care.",
+        "christian_edition": "The town bears deep trauma from the massacre of innocents ordered by Herod. The captain's ghost, tormented by guilt, haunts the area. The community needs healing."
+      },
       "unique_mechanic": "Comfort the Mourning - Dialogue-based healing",
       "tone_warning": "Darkest subject - handled with care, abstract representation",
       "side_quests": ["memorial_candles", "healers_touch", "shepherds_gift"],
@@ -420,7 +456,10 @@
           "phase": 3
         }
       ],
-      "problem": "Passover approaching, Last Supper preparations, Judas troubled",
+      "problem": {
+        "default": "Passover approaching. Last Supper preparations underway. Judas is... troubled. Something's OFF with him. Tension in the air. Final chapter vibes. This is it.",
+        "christian_edition": "Passover is approaching, and preparations for the Last Supper are underway. Judas is troubled in spirit. The final chapter of Jesus's earthly ministry begins."
+      },
       "unique_mechanic": "Last Supper Preparation - Quest-based gameplay",
       "side_quests": ["last_supper_prep", "temple_cleansing", "judas_trouble", "passover_lamb"],
       "exit_requirement": "None - This is the end",
