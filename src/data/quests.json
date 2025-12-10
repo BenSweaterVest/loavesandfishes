@@ -517,8 +517,14 @@
         ]
       },
       "dialogue": {
-        "start": "Villager: Unclean spirits roam our lands! Please drive them out!",
-        "complete": "Villager: The spirits have fled! Our land is clean again!"
+        "start": {
+          "default": "Villager: Unclean spirits are EVERYWHERE! They're in the pigs! THE PIGS! Please, drive them out before they ruin everything!",
+          "christian_edition": "Villager: Unclean spirits roam our lands, tormenting us. Please, drive them out and cleanse this place!"
+        },
+        "complete": {
+          "default": "Villager: The spirits have FLED! Our land is clean again! The pigs are...well, the pigs didn't make it, but WE'RE safe!",
+          "christian_edition": "Villager: The spirits have been banished! Our land is cleansed! Thank you for your righteousness!"
+        }
       }
     },
     {
@@ -543,8 +549,14 @@
         ]
       },
       "dialogue": {
-        "start": "Critic: Jews and Gentiles should never mix! This is wrong!",
-        "complete": "In Christ, there is neither Jew nor Gentile! We are all one!"
+        "start": {
+          "default": "Critic: Jews and Gentiles should NEVER mix! This is WRONG! Separate! Divided! That's how it SHOULD be!",
+          "christian_edition": "Critic: Jews and Gentiles must remain separate! It is not proper for them to associate!"
+        },
+        "complete": {
+          "default": "In Christ, there is neither Jew nor Gentile! We're ALL one! Unity! Togetherness! Breaking down walls! *metaphorical walls, not Jericho walls*",
+          "christian_edition": "In Christ, there is neither Jew nor Gentile, slave nor free. We are all one in the body of Christ!"
+        }
       },
       "biblical_reference": "Galatians 3:28"
     },
@@ -570,8 +582,14 @@
         ]
       },
       "dialogue": {
-        "start": "Zealot: Only violence will free us from Rome! Join us or get out of the way!",
-        "complete": "Zealot: Your way... non-violence... maybe there's another path. Blessed are the peacemakers."
+        "start": {
+          "default": "Zealot: Only VIOLENCE will free us from Rome! Swords! Revolution! Join us or GET OUT OF THE WAY! No compromise!",
+          "christian_edition": "Zealot: Violence is the only way to freedom from Roman oppression! Join our cause or stand aside!"
+        },
+        "complete": {
+          "default": "Zealot: Your way... non-violence... *lowers sword* ...maybe there's another path? Blessed are the peacemakers. Huh. That's... different.",
+          "christian_edition": "Zealot: I see now that there is another way. A path of peace, not violence. Blessed are the peacemakers, for they shall be called children of God."
+        }
       },
       "requires_apostle": "simon_zealot"
     },
@@ -597,8 +615,14 @@
         ]
       },
       "dialogue": {
-        "start": "Skeptic: A Jew in Samaria? You people hate us!",
-        "complete": "Skeptic: You... you're different. You see us as equals. Thank you."
+        "start": {
+          "default": "Skeptic: A JEW in SAMARIA?! You people HATE us! This is a trick! What do you want?!",
+          "christian_edition": "Skeptic: A Jew in Samaria? Your people have always despised us. Why are you here?"
+        },
+        "complete": {
+          "default": "Skeptic: You're... different. You actually SEE us. As equals. As PEOPLE. Thank you. This is... unexpected.",
+          "christian_edition": "Skeptic: You are not like the others. You see us as equals, as neighbors. Thank you for showing us love."
+        }
       }
     },
     {
@@ -623,8 +647,14 @@
         ]
       },
       "dialogue": {
-        "start": "Fragment: We are many... we will reform... you cannot destroy us all...",
-        "complete": "The fragments are scattered! Legion cannot reform! The possessed are free!"
+        "start": {
+          "default": "Fragment: *whispers* We are many... we will reform... you cannot destroy us ALL... *hissing* ...we are LEGION...",
+          "christian_edition": "Fragment: We are many. We will reform. You cannot destroy all of us. We endure."
+        },
+        "complete": {
+          "default": "The fragments are SCATTERED! Legion cannot reform! Too spread out! The possessed are FREE! No more hissing!",
+          "christian_edition": "The fragments are scattered beyond recovery! Legion cannot reform! The possessed souls are freed from torment!"
+        }
       }
     },
     {
@@ -650,8 +680,14 @@
         ]
       },
       "dialogue": {
-        "start": "Young Man: I'm not worthy to be called his son... the guilt consumes me...",
-        "complete": "Father: My son was lost and is found! He was dead and is alive! Let's celebrate!"
+        "start": {
+          "default": "Young Man: I'm not WORTHY to be called his son... I wasted EVERYTHING... the guilt... *shadow looming* ...it CONSUMES me...",
+          "christian_edition": "Young Man: I am not worthy to be called your son. I have squandered everything. The guilt overwhelms me..."
+        },
+        "complete": {
+          "default": "Father: My SON was LOST and is FOUND! He was DEAD and is ALIVE! Bring the fattened calf! Let's CELEBRATE! *overwhelming joy*",
+          "christian_edition": "Father: My son was lost and now is found! He was dead and now is alive again! Let us feast and celebrate!"
+        }
       },
       "biblical_reference": "Luke 15:11-32"
     },
@@ -677,8 +713,14 @@
         ]
       },
       "dialogue": {
-        "start": "Temple Guard: You threaten the order! The Sanhedrin will hear of this!",
-        "complete": "Temple Guard: Your authority is... undeniable. But the priests won't like this."
+        "start": {
+          "default": "Temple Guard: You THREATEN the ORDER! The SANHEDRIN will hear of this! You can't just waltz in and teach whatever you want!",
+          "christian_edition": "Temple Guard: You threaten the established order. The Sanhedrin will be informed of your teachings!"
+        },
+        "complete": {
+          "default": "Temple Guard: Your authority is... *grudgingly* ...undeniable. But the priests WON'T like this. At all. You're making enemies.",
+          "christian_edition": "Temple Guard: Your authority is clear. But know that the priests will not accept this challenge to their power."
+        }
       }
     },
     {
@@ -703,8 +745,14 @@
         ]
       },
       "dialogue": {
-        "start": "Sanhedrin: By what authority do you teach? You have no formal training!",
-        "complete": "Sanhedrin: His wisdom is... it's from God. We cannot deny it."
+        "start": {
+          "default": "Sanhedrin: By what AUTHORITY do you teach?! You have NO formal training! No credentials! You're a CARPENTER! Who do you think you ARE?!",
+          "christian_edition": "Sanhedrin: By what authority do you teach these things? You have no formal training in the Law!"
+        },
+        "complete": {
+          "default": "Sanhedrin: His wisdom is... *reluctant admission* ...it's from God. We cannot deny it. This carpenter knows MORE than we do. Unsettling.",
+          "christian_edition": "Sanhedrin: His wisdom is beyond human learning. It comes from God. We cannot deny this truth."
+        }
       }
     },
     {
