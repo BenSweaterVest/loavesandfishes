@@ -150,16 +150,16 @@ MESSAGES = {
     "fish_fainted": "{fish_name} has fainted!",
     "level_up": "{name} grew to level {level}!",
     "learned_move": "{fish_name} learned {move_name}!",
-    "evolution": "What? {fish_name} is evolving!",  # Easter egg
-    "no_pp": "{move_name} has no PP left!",  # Pokémon reference
+    "fish_transformed": "What? {fish_name} is transforming!",
+    "ability_depleted": "{move_name} has no energy left!",
     "fled": "Got away safely!",
     "cant_flee": "Can't escape!"
 }
 
-# Easter eggs and references
-EASTER_EGGS = {
-    "konami_code": False,  # Up Up Down Down Left Right Left Right B A
-    "holy_hand_grenade": False,  # Monty Python reference
-    "ultimate_question": 42,  # Hitchhiker's Guide
-    "bass_to_bass": False  # Megaman reference
+# Special unlockables
+SPECIAL_UNLOCKS = {
+    "secret_code_unlocked": False,
+    "ultimate_miracle": False,
+    "hidden_fish": False,
+    "secret_ending": False
 }

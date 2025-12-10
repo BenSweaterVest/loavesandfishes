@@ -25,16 +25,16 @@
       "christian_edition": "{name} grew to level {level}! Stats have increased."
     },
     "learned_move": {
-      "default": "{fish_name} learned {move_name}! New moves, who dis?",
+      "default": "{fish_name} learned {move_name}! New moves unlocked!",
       "christian_edition": "{fish_name} learned {move_name}!"
     },
-    "evolution": {
-      "default": "What?! {fish_name} is EVOLVING! *epic music plays*",
-      "christian_edition": "What? {fish_name} is evolving into a more powerful form!"
+    "fish_transformed": {
+      "default": "What?! {fish_name} is TRANSFORMING into a more powerful form! *epic moment*",
+      "christian_edition": "What? {fish_name} is transforming into a more powerful form!"
     },
-    "no_pp": {
-      "default": "{move_name} has no PP left! Out of juice! Time for a different move!",
-      "christian_edition": "{move_name} cannot be used. No power points remaining."
+    "ability_depleted": {
+      "default": "{move_name} is OUT OF ENERGY! Time for a different move!",
+      "christian_edition": "{move_name} cannot be used. The ability is exhausted."
     },
     "fled": {
       "default": "Got away SAFELY! Discretion is the better part of valor! Run away!",
