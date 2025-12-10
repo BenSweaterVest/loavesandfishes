@@ -777,8 +777,14 @@
         ]
       },
       "dialogue": {
-        "start": "Villager: We're haunted by traumatic memories of the occupation...",
-        "complete": "Villager: The memories don't control us anymore! We're free from the past!"
+        "start": {
+          "default": "Villager: We're HAUNTED by traumatic memories... the occupation... the violence... *ghostly shapes* ...they won't LEAVE us alone...",
+          "christian_edition": "Villager: We are haunted by memories of occupation and violence. The past torments us endlessly."
+        },
+        "complete": {
+          "default": "Villager: The memories don't CONTROL us anymore! We're FREE from the past! We can finally... breathe...",
+          "christian_edition": "Villager: The memories no longer control us! We are free from the burden of the past! Thank you!"
+        }
       }
     },
     {
@@ -803,8 +809,14 @@
         ]
       },
       "dialogue": {
-        "start": "Sentinel: None shall pass! The walls stand firm!",
-        "complete": "The walls crumble! Nothing can stand against the truth!"
+        "start": {
+          "default": "Sentinel: NONE SHALL PASS! The walls stand FIRM! Impenetrable! Unbreakable! ...Probably unbreakable...",
+          "christian_edition": "Sentinel: None may pass! The walls stand firm and cannot be breached!"
+        },
+        "complete": {
+          "default": "The walls CRUMBLE! *dramatic collapse* Nothing can stand against the TRUTH! Not even REALLY BIG WALLS!",
+          "christian_edition": "The walls crumble and fall! No barrier can stand against divine truth!"
+        }
       }
     },
     {
@@ -829,8 +841,14 @@
         ]
       },
       "dialogue": {
-        "start": "Mourner: The grief is overwhelming... we can't escape it...",
-        "complete": "Mourner: Blessed are those who mourn, for they will be comforted. Thank you."
+        "start": {
+          "default": "Mourner: The grief is... *sobbing* ...overwhelming... we CAN'T escape it... it's EVERYWHERE... *shadows of grief loom*",
+          "christian_edition": "Mourner: The grief overwhelms us. We cannot escape this sorrow. It follows us everywhere..."
+        },
+        "complete": {
+          "default": "Mourner: Blessed are those who mourn, for they WILL be comforted. *finally at peace* Thank you. The weight... it's lifted.",
+          "christian_edition": "Mourner: Blessed are those who mourn, for they shall be comforted. Thank you for bringing us peace."
+        }
       },
       "biblical_reference": "Matthew 5:4"
     },
@@ -856,8 +874,14 @@
         ]
       },
       "dialogue": {
-        "start": "Guilty One: I can't escape what I've done... the guilt follows me...",
-        "complete": "Guilty One: You've shown me forgiveness is possible! My guilt is lifted!"
+        "start": {
+          "default": "Guilty One: I can't ESCAPE what I've done... *dark shadows swirl* ...the guilt FOLLOWS me... everywhere... always...",
+          "christian_edition": "Guilty One: I cannot escape my actions. The guilt pursues me relentlessly. I am trapped."
+        },
+        "complete": {
+          "default": "Guilty One: You've shown me forgiveness is POSSIBLE! My guilt is LIFTED! *shadows disperse* I'm... I'm FREE!",
+          "christian_edition": "Guilty One: You have shown me that forgiveness is possible! My guilt is lifted! I am free at last!"
+        }
       }
     },
     {
@@ -883,8 +907,14 @@
         "special_reward": "one_leper_returns"
       },
       "dialogue": {
-        "start": "Leper: Master, have mercy on us! Cleanse us!",
-        "complete": "One Leper Returns: Thank you, Lord! // Where are the other nine? Was no one found to return and give praise to God except this foreigner?"
+        "start": {
+          "default": "Leper: Master, have MERCY on us! Cleanse us! We're outcasts! Unclean! Please!",
+          "christian_edition": "Leper: Master, have mercy on us! Cleanse us from our affliction! Please, help us!"
+        },
+        "complete": {
+          "default": "One Leper Returns: THANK YOU, Lord! *bowing* // Where are the other NINE? Seriously? Was NO ONE found to return except this foreigner? Gratitude, people!",
+          "christian_edition": "One Leper Returns: Thank you, Lord! I am healed! // Were not all ten cleansed? Where are the other nine? Was no one found to return and give praise to God except this foreigner?"
+        }
       },
       "biblical_reference": "Luke 17:11-19"
     },
@@ -910,8 +940,14 @@
         "special_reward": "true_generosity_title"
       },
       "dialogue": {
-        "start": "Jesus: See this poor widow? She has put in more than all the others. They gave out of their wealth, but she gave all she had.",
-        "complete": "Your sacrifice is noted in heaven. True generosity gives from want, not abundance."
+        "start": {
+          "default": "Jesus: See this widow? She put in MORE than all the rich people. They gave pocket change. She gave EVERYTHING she had. That's real generosity.",
+          "christian_edition": "Jesus: This poor widow has put in more than all the others. They gave out of their wealth, but she out of her poverty put in all she had to live on."
+        },
+        "complete": {
+          "default": "Your sacrifice is noted in heaven. True generosity gives from WANT, not abundance. You get it. *divine approval*",
+          "christian_edition": "Your sacrifice has been seen and recorded in heaven. True generosity comes from giving what you need, not what you can spare."
+        }
       },
       "biblical_reference": "Mark 12:41-44"
     },
@@ -937,8 +973,14 @@
         ]
       },
       "dialogue": {
-        "start": "Legionnaire: Rome's authority is absolute! Bow or be crushed!",
-        "complete": "Even the legions cannot stop the truth! Render unto Caesar what is Caesar's!"
+        "start": {
+          "default": "Legionnaire: ROME'S authority is ABSOLUTE! Bow or be CRUSHED! We are the LEGION! We are INEVITABLE!",
+          "christian_edition": "Legionnaire: Rome's authority is absolute! Submit or be destroyed! The might of the legion is unstoppable!"
+        },
+        "complete": {
+          "default": "Even the legions cannot stop the TRUTH! Render unto Caesar what is Caesar's! ...But render unto GOD what is God's!",
+          "christian_edition": "Even the might of Rome cannot stop divine truth! Render to Caesar what is Caesar's, and to God what is God's!"
+        }
       }
     },
     {
@@ -963,8 +1005,14 @@
         ]
       },
       "dialogue": {
-        "start": "Lackey: The high priest commands it! You must stop these teachings!",
-        "complete": "Their authority is from men, not God! The truth prevails!"
+        "start": {
+          "default": "Lackey: The HIGH PRIEST commands it! You must STOP these teachings! Authority! Tradition! RULES! We have PROTOCOLS!",
+          "christian_edition": "Lackey: The high priest commands it! You must cease these teachings at once! Our authority demands obedience!"
+        },
+        "complete": {
+          "default": "Their authority is from MEN, not GOD! Religious bureaucracy FAILS! The TRUTH prevails! No amount of fancy robes can stop it!",
+          "christian_edition": "Their authority comes from men, not from God! The truth cannot be suppressed by human institutions!"
+        }
       }
     },
     {
@@ -989,8 +1037,14 @@
         ]
       },
       "dialogue": {
-        "start": "Tempter: All this can be yours! Just worship me!",
-        "complete": "Away from me, Satan! Worship the Lord your God and serve Him only!"
+        "start": {
+          "default": "Tempter: ALL this can be YOURS! Kingdoms! Power! Glory! Just one tiny little worship session! What's the harm? *devilish grin*",
+          "christian_edition": "Tempter: All these kingdoms and their glory can be yours! Just bow down and worship me..."
+        },
+        "complete": {
+          "default": "AWAY from me, Satan! Worship the LORD your God and serve Him ONLY! Nice try, demon! *divine mic drop*",
+          "christian_edition": "Away from me, Satan! For it is written: 'Worship the Lord your God, and serve Him only!'"
+        }
       },
       "biblical_reference": "Matthew 4:8-10"
     },
@@ -1016,8 +1070,14 @@
         ]
       },
       "dialogue": {
-        "start": "Shadow: Are you really the Messiah? Maybe you're just a man...",
-        "complete": "The shadows flee! Faith overcomes doubt! I know in whom I have believed!"
+        "start": {
+          "default": "Shadow: Are you REALLY the Messiah? Maybe you're just... a guy? A dude? Some random carpenter having a midlife crisis? *whispers intensify*",
+          "christian_edition": "Shadow: Are you truly the Messiah? Perhaps you are merely a man with delusions of grandeur..."
+        },
+        "complete": {
+          "default": "The shadows FLEE! Faith OBLITERATES doubt! I KNOW in whom I have believed! Get REKT, shadows!",
+          "christian_edition": "The shadows flee before the light of faith! Faith overcomes doubt! I know in whom I have believed!"
+        }
       }
     },
     {
@@ -1042,8 +1102,14 @@
         ]
       },
       "dialogue": {
-        "start": "Pilate's Guard: The governor finds you guilty! His word is law!",
-        "complete": "Pilate washes his hands, but the truth cannot be washed away!"
+        "start": {
+          "default": "Pilate's Guard: The GOVERNOR finds you GUILTY! His word is LAW! Rome has SPOKEN! Due process? Never heard of her!",
+          "christian_edition": "Pilate's Guard: The governor has pronounced judgment! You are found guilty! Submit to Roman authority!"
+        },
+        "complete": {
+          "default": "Pilate washes his hands, but the TRUTH cannot be washed away! Nice try, spineless bureaucrat! *judgment reversed*",
+          "christian_edition": "Pilate may wash his hands of responsibility, but the truth cannot be cleansed away by ritual gestures!"
+        }
       }
     },
     {
@@ -1069,8 +1135,14 @@
         "unlocks": ["temple_cleansed"]
       },
       "dialogue": {
-        "start": "Jesus: My house shall be called a house of prayer, but you have made it a den of robbers!",
-        "complete": "The temple is cleansed! No longer a marketplace, but a house of prayer for all nations!"
+        "start": {
+          "default": "Jesus: My house shall be called a house of PRAYER, but you have made it a DEN OF ROBBERS! *flips tables* TIME TO CLEAN HOUSE!",
+          "christian_edition": "Jesus: It is written, 'My house shall be called a house of prayer,' but you have made it a den of robbers!"
+        },
+        "complete": {
+          "default": "The temple is CLEANSED! No longer a marketplace! No more religious capitalism! House of prayer RESTORED! *divine capitalism critique*",
+          "christian_edition": "The temple is cleansed! It is once again a house of prayer for all nations, not a place of commerce!"
+        }
       },
       "biblical_reference": "Matthew 21:12-13"
     },
@@ -1097,8 +1169,14 @@
         "special_reward": "humility_virtue"
       },
       "dialogue": {
-        "start": "Pride: I am above all! None can match me!",
-        "complete": "Humility conquers pride. Blessed are the meek!"
+        "start": {
+          "default": "Pride: I am ABOVE all! None can MATCH me! I am PERFECTION! BOW before my GREATNESS! *insufferably smug*",
+          "christian_edition": "Pride: I am above all others! None can match my greatness! I am beyond reproach!"
+        },
+        "complete": {
+          "default": "Humility CONQUERS pride! Get DOWN from your high horse! Blessed are the MEEK! *ego destroyed*",
+          "christian_edition": "Humility conquers pride! Blessed are the meek, for they shall inherit the earth!"
+        }
       }
     },
     {
@@ -1124,8 +1202,14 @@
         "special_reward": "contentment_virtue"
       },
       "dialogue": {
-        "start": "Envy: What they have should be mine!",
-        "complete": "Be content with what you have. Godliness with contentment is great gain!"
+        "start": {
+          "default": "Envy: What THEY have should be MINE! Why do THEY get it?! Not FAIR! I DESERVE it more! *jealous rage*",
+          "christian_edition": "Envy: What they possess should rightfully be mine! Why do they have what I lack?"
+        },
+        "complete": {
+          "default": "Be CONTENT with what you have! Stop comparing! Godliness with contentment is GREAT gain! *comparison is the thief of joy*",
+          "christian_edition": "Be content with what you have! Godliness with contentment is great gain!"
+        }
       }
     },
     {
@@ -1151,8 +1235,14 @@
         "special_reward": "patience_virtue"
       },
       "dialogue": {
-        "start": "Wrath: RAGE! FURY! DESTRUCTION!",
-        "complete": "Patience overcomes wrath. Be slow to anger, quick to love!"
+        "start": {
+          "default": "Wrath: RAGE! FURY! DESTRUCTION! ANGER! SMASH! DESTROY EVERYTHING! *uncontrollable fury*",
+          "christian_edition": "Wrath: Rage! Fury! Destruction! Uncontrolled anger consumes all!"
+        },
+        "complete": {
+          "default": "Patience OVERCOMES wrath! Chill OUT, dude! Be SLOW to anger, QUICK to love! *anger management success*",
+          "christian_edition": "Patience overcomes wrath! Be slow to anger and quick to love!"
+        }
       }
     },
     {
@@ -1178,8 +1268,14 @@
         "special_reward": "generosity_virtue"
       },
       "dialogue": {
-        "start": "Greed: MORE! I NEED MORE! NEVER ENOUGH!",
-        "complete": "True riches are found in giving, not taking. It is more blessed to give than receive!"
+        "start": {
+          "default": "Greed: MORE! I NEED MORE! NEVER ENOUGH! GIMME! MINE! ALL MINE! *hoarding intensifies*",
+          "christian_edition": "Greed: More! I must have more! It is never enough! Everything must be mine!"
+        },
+        "complete": {
+          "default": "True riches are found in GIVING, not taking! It is MORE blessed to GIVE than receive! *generosity unlocked*",
+          "christian_edition": "True riches are found in giving, not taking. It is more blessed to give than to receive!"
+        }
       }
     },
     {
@@ -1205,8 +1301,14 @@
         "special_reward": "temperance_virtue"
       },
       "dialogue": {
-        "start": "Gluttony: CONSUME! DEVOUR! FEAST FOREVER!",
-        "complete": "Self-control conquers gluttony. Man shall not live by bread alone!"
+        "start": {
+          "default": "Gluttony: CONSUME! DEVOUR! FEAST FOREVER! EAT! MORE! NEVER STOP! *endless munching*",
+          "christian_edition": "Gluttony: Consume! Devour everything! An endless feast! Never be satisfied!"
+        },
+        "complete": {
+          "default": "Self-control CONQUERS gluttony! Man shall not live by BREAD alone! Put down the fork! *temperance achieved*",
+          "christian_edition": "Self-control conquers gluttony! Man shall not live by bread alone, but by every word of God!"
+        }
       }
     },
     {
@@ -1230,8 +1332,14 @@
         ]
       },
       "dialogue": {
-        "start": "Woman: I've lost one of my ten silver coins! Help me search for it!",
-        "complete": "Woman: I found it! Rejoice with me! There is joy in heaven over one sinner who repents!"
+        "start": {
+          "default": "Woman: I've lost ONE of my TEN silver coins! It's SOMEWHERE! Help me search! *frantically sweeping*",
+          "christian_edition": "Woman: I have lost one of my ten silver coins! Please help me search for it!"
+        },
+        "complete": {
+          "default": "Woman: I FOUND it! REJOICE with me! There is JOY in heaven over ONE sinner who repents! *party time*",
+          "christian_edition": "Woman: I found it! Rejoice with me! In the same way, there is joy in heaven over one sinner who repents!"
+        }
       },
       "biblical_reference": "Luke 15:8-10"
     },
@@ -1255,8 +1363,14 @@
         "unlocks": ["peter_andrew_recruit"]
       },
       "dialogue": {
-        "start": "Simon Peter: We've caught nothing all night. But if you say so, I'll let down the nets.",
-        "complete": "Peter & Andrew: We'll leave everything and follow you! Make us fishers of men!"
+        "start": {
+          "default": "Simon Peter: We've caught NOTHING all night. ZERO fish. But if YOU say so... I'll let down the nets. *skeptical fisherman*",
+          "christian_edition": "Simon Peter: Master, we have worked all night and caught nothing. But at your word, I will let down the nets."
+        },
+        "complete": {
+          "default": "Peter & Andrew: WHOA! SO MANY FISH! We'll leave EVERYTHING and follow you! Make us FISHERS OF MEN! *career change unlocked*",
+          "christian_edition": "Peter & Andrew: Lord, we will leave everything and follow you! Make us fishers of men!"
+        }
       },
       "biblical_reference": "Matthew 4:18-20"
     },
@@ -1288,8 +1402,14 @@
         "special_reward": "wilderness_survivor"
       },
       "dialogue": {
-        "start": "You enter the wilderness to pray and fast...",
-        "complete": "You have endured the wilderness trial! Angels come to minister to you."
+        "start": {
+          "default": "You enter the wilderness to pray and fast... *survival mode activated* This is gonna be rough.",
+          "christian_edition": "You are led by the Spirit into the wilderness to be tested. You will pray and fast for forty days and nights."
+        },
+        "complete": {
+          "default": "You have ENDURED the wilderness trial! Angels come to minister to you! *achievement unlocked: Survived 40 days*",
+          "christian_edition": "You have endured the wilderness trial! The tempter has departed, and angels come to minister to you."
+        }
       },
       "biblical_reference": "Matthew 4:1-11"
     },
@@ -1315,8 +1435,14 @@
         ]
       },
       "dialogue": {
-        "start": "False Prophet: I speak for God! Follow me, not this charlatan!",
-        "complete": "By their fruits you will know them! These wolves in sheep's clothing are exposed!"
+        "start": {
+          "default": "False Prophet: I speak for GOD! Follow ME, not this charlatan! I have the REAL truth! Subscribe to my newsletter! *obvious scam vibes*",
+          "christian_edition": "False Prophet: I alone speak for God! Follow me, not this deceiver! I am the true prophet!"
+        },
+        "complete": {
+          "default": "By their FRUITS you will KNOW them! These wolves in sheep's clothing are EXPOSED! Nice costume, buddy! *fraud detected*",
+          "christian_edition": "By their fruits you will know them! These wolves in sheep's clothing have been exposed and cast out!"
+        }
       },
       "biblical_reference": "Matthew 7:15-20"
     },
@@ -1342,8 +1468,14 @@
         "special_reward": "pearl_merchant_title"
       },
       "dialogue": {
-        "start": "Merchant: I have a fish of immeasurable value. Are you willing to sell everything for it?",
-        "complete": "The kingdom of heaven is like a merchant seeking fine pearls, who sold all to obtain one pearl of great price!"
+        "start": {
+          "default": "Merchant: I have a fish of IMMEASURABLE value. Are you willing to sell EVERYTHING for it? Like, literally everything? Your whole bank account?",
+          "christian_edition": "Merchant: I possess a fish of immeasurable value. Are you willing to give up all you have to obtain it?"
+        },
+        "complete": {
+          "default": "The kingdom of heaven is like a merchant seeking fine pearls, who sold ALL to obtain ONE pearl of great price! Worth it! *net worth = 0, spiritual wealth = infinite*",
+          "christian_edition": "The kingdom of heaven is like a merchant seeking fine pearls, who upon finding one pearl of great price, went and sold all that he had and bought it!"
+        }
       },
       "biblical_reference": "Matthew 13:45-46"
     },
@@ -1369,8 +1501,14 @@
         ]
       },
       "dialogue": {
-        "start": "Farmer: Some seed fell on the path, some on rocky ground, some among thorns, and some on good soil...",
-        "complete": "The seed on good soil produces a crop—a hundred, sixty, or thirty times what was sown!"
+        "start": {
+          "default": "Farmer: Some seed fell on the PATH, some on ROCKY ground, some among THORNS, and some on GOOD soil... Results may vary! *farming wisdom*",
+          "christian_edition": "Farmer: A sower went out to sow. Some seed fell along the path, some on rocky ground, some among thorns, and some on good soil..."
+        },
+        "complete": {
+          "default": "The seed on GOOD soil produces a crop—a HUNDRED, SIXTY, or THIRTY times what was sown! That's ROI! *divine agriculture*",
+          "christian_edition": "The seed on good soil produces a crop, yielding a hundred, sixty, or thirty times what was sown!"
+        }
       },
       "biblical_reference": "Matthew 13:1-23"
     }
