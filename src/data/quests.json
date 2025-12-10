@@ -22,8 +22,14 @@
         ]
       },
       "dialogue": {
-        "start": "Simon Peter: Master, we've fished all night and caught nothing. But at your word, I'll let down the nets.",
-        "complete": "Simon Peter: The nets are FULL! I've never seen anything like this! From now on, I'll be a fisher of men!"
+        "start": {
+          "default": "Peter: Okay, real talk? We fished ALL NIGHT. Caught absolutely nothing. My hands are blistered, my back is killing me, and I smell like disappointment. But... *sigh* ...you're the boss. Let's do this. Again.",
+          "christian_edition": "Simon Peter: Master, we have worked hard all night and haven't caught anything. But because you say so, I will let down the nets."
+        },
+        "complete": {
+          "default": "Peter: HOLY—sorry, I mean—LOOK AT ALL THESE FISH! The nets are about to BREAK! I've never seen anything like this! Okay, I'm in. From now on, I'm catching PEOPLE. ...That sounded better in my head.",
+          "christian_edition": "Simon Peter: Master, this is a miracle! The nets are full! I have never seen such a catch! From now on, I will be a fisher of men, as you have called me."
+        }
       },
       "unlocks": ["fishing_basics"]
     },
@@ -48,8 +54,14 @@
         ]
       },
       "dialogue": {
-        "start": "Thomas: I won't believe it unless I see it with my own eyes. Show me these miraculous fish!",
-        "complete": "Thomas: My Lord and my God! I believe! Blessed are those who have not seen and yet believe."
+        "start": {
+          "default": "Thomas: Look, I'm not saying you're lying, but I need PROOF. Show me these 'miraculous' fish. With evidence. Peer-reviewed evidence, ideally.",
+          "christian_edition": "Thomas: I will not believe unless I see with my own eyes. Show me these miraculous fish you speak of."
+        },
+        "complete": {
+          "default": "Thomas: Okay. OKAY. I believe. I REALLY believe. Sorry for being difficult. My Lord and my God! ...Can I stop doubting everything now?",
+          "christian_edition": "Thomas: My Lord and my God! I believe! Blessed are those who have not seen and yet have believed."
+        }
       }
     },
     {
@@ -74,8 +86,14 @@
         ]
       },
       "dialogue": {
-        "start": "Shepherd: I have 100 sheep, but 5 have wandered off! Please help me find them!",
-        "complete": "Shepherd: Rejoice with me! I have found my sheep that were lost! There's more joy in heaven over one sinner who repents!"
+        "start": {
+          "default": "Shepherd: I had 100 sheep. Count 'em. ONE HUNDRED. Now I have 95 because FIVE decided to wander off. Why? WHO KNOWS. Sheep are the WORST. Please help!",
+          "christian_edition": "Shepherd: I have 100 sheep, but five have wandered away from the flock. Please help me find my lost sheep!"
+        },
+        "complete": {
+          "default": "Shepherd: You found them! ALL FIVE! Rejoice with me! ...Seriously though, these sheep are grounded. There's more joy over one found sheep than 99 that didn't run off!",
+          "christian_edition": "Shepherd: Rejoice with me, for I have found my sheep that were lost! There is more joy in heaven over one sinner who repents than over ninety-nine righteous persons who need no repentance."
+        }
       },
       "biblical_reference": "Luke 15:3-7"
     },
@@ -100,8 +118,14 @@
         "unlocks": ["matthew_recruit"]
       },
       "dialogue": {
-        "start": "Tax Collector: The temple tax is due. Two drachmas per person.",
-        "complete": "You found a coin in the fish's mouth! Exactly enough for the tax. Give to Caesar what is Caesar's!"
+        "start": {
+          "default": "Tax Collector: Temple tax. Two drachmas per person. Yes, it's due NOW. No, I don't care that you're busy. Money. Now.",
+          "christian_edition": "Tax Collector: The temple tax is due. Each person must pay two drachmas."
+        },
+        "complete": {
+          "default": "You found a COIN in the FISH'S MOUTH. How? WHY? This doesn't make biological sense! But it's exactly enough for the tax, so... okay! Caesar gets his coin!",
+          "christian_edition": "You found a coin in the fish's mouth—exactly the amount needed for the temple tax. Give to Caesar what is Caesar's, and to God what is God's."
+        }
       },
       "biblical_reference": "Matthew 17:24-27"
     },
@@ -128,8 +152,14 @@
         ]
       },
       "dialogue": {
-        "start": "Andrew: There's a boy here with 5 loaves and 2 fish, but what is that among so many?",
-        "complete": "Everyone ate and was satisfied! And you collected 12 baskets of leftovers! The miracle of multiplication!"
+        "start": {
+          "default": "Andrew: So there's this kid with 5 loaves and 2 fish. Great. Wonderful. That'll feed about... *checks math* ...one person. Maybe. We have FIVE THOUSAND people here. This is impossible.",
+          "christian_edition": "Andrew: There is a boy here who has five loaves and two fish, but what are these among so many people?"
+        },
+        "complete": {
+          "default": "Everyone ATE and was SATISFIED! From FIVE LOAVES! And there are TWELVE BASKETS of leftovers! I don't understand physics anymore, but this is AMAZING!",
+          "christian_edition": "Everyone ate and was satisfied! You gathered twelve baskets full of leftovers. The miracle of multiplication has blessed this multitude!"
+        }
       },
       "biblical_reference": "John 6:1-14"
     },
@@ -155,8 +185,14 @@
         ]
       },
       "dialogue": {
-        "start": "Merchant: The roads aren't safe! Bandits everywhere! Please help!",
-        "complete": "Merchant: The roads are safe again! You've turned the other cheek... after whooping them first!"
+        "start": {
+          "default": "Merchant: The roads are a NIGHTMARE! Bandits EVERYWHERE! I can't move my goods! I'm losing MONEY! Please help before I go bankrupt!",
+          "christian_edition": "Merchant: The roads are not safe. Bandits terrorize travelers. Please, can you help restore peace?"
+        },
+        "complete": {
+          "default": "Merchant: The roads are safe again! You've turned the other cheek... AFTER whooping them senseless! That's... technically still turning the other cheek, right?",
+          "christian_edition": "Merchant: The roads are safe once more! You have brought justice and peace. Thank you for your courage!"
+        }
       }
     },
     {
@@ -181,8 +217,14 @@
         ]
       },
       "dialogue": {
-        "start": "Pharisee: By what authority do you do these things? We will test your knowledge!",
-        "complete": "Pharisee: Your wisdom is... unexpected. Perhaps there is more to you than we thought."
+        "start": {
+          "default": "Pharisee: By what AUTHORITY do you do these things?! We have 613 rules! MEMORIZED! Let's see if you can pass our pop quiz!",
+          "christian_edition": "Pharisee: By what authority do you teach and perform these acts? We will test your knowledge of the Law."
+        },
+        "complete": {
+          "default": "Pharisee: Your wisdom is... *adjusts glasses* ...unexpected. Perhaps there is more to you than we thought. We may have judged too quickly.",
+          "christian_edition": "Pharisee: Your wisdom surpasses our expectations. Perhaps we have much to learn from you. You understand the heart of the Law."
+        }
       }
     },
     {
@@ -207,8 +249,14 @@
         ]
       },
       "dialogue": {
-        "start": "Farmer: An enemy sowed tares among my wheat! But I dare not pull them up lest I uproot the wheat too!",
-        "complete": "Farmer: At harvest time, we've separated them! The wheat is saved, the tares are bundled for burning."
+        "start": {
+          "default": "Farmer: Some JERK planted weeds in my wheat field! WEEDS! Do you know how passive-aggressive that is?! But I can't pull them up or I'll damage the wheat!",
+          "christian_edition": "Farmer: An enemy has sown tares among my wheat. If I pull them up now, I risk uprooting the wheat as well. What shall I do?"
+        },
+        "complete": {
+          "default": "Farmer: At harvest time, we've separated them! Wheat goes in the barn, weeds go in the burn pile. Justice is served, agricultural edition!",
+          "christian_edition": "Farmer: At harvest time, we have separated the wheat from the tares. The wheat is gathered into the barn, and the tares are bound for burning. All is well."
+        }
       },
       "biblical_reference": "Matthew 13:24-30"
     },
@@ -236,8 +284,14 @@
         "unlocks": ["water_walking"]
       },
       "dialogue": {
-        "start": "Peter: Lord, if it's you, tell me to come to you on the water!",
-        "complete": "Peter: You truly are the Son of God! Even the wind and waves obey you!"
+        "start": {
+          "default": "Peter: If that's REALLY you out there, tell me to walk on the water! ...Wait, did I just volunteer to WALK ON WATER? Why do I say these things?!",
+          "christian_edition": "Peter: Lord, if it is you, command me to come to you on the water."
+        },
+        "complete": {
+          "default": "Peter: You truly ARE the Son of God! The wind and waves OBEY you! Also I just WALKED ON WATER and I'm having a moment here!",
+          "christian_edition": "Peter: Truly you are the Son of God! Even the wind and the waves obey your command!"
+        }
       },
       "biblical_reference": "Matthew 14:22-33"
     },
@@ -263,8 +317,14 @@
         ]
       },
       "dialogue": {
-        "start": "Matthew: These shades represent my shameful past. Help me defeat them so I can move forward!",
-        "complete": "Matthew: My past is behind me. I'm a new creation! Let's write a Gospel together!"
+        "start": {
+          "default": "Matthew: These shadow-things are literally my past sins haunting me. LITERALLY. This is some psychological horror stuff. Help me beat them up so I can move on!",
+          "christian_edition": "Matthew: These shades represent the shameful actions of my past. Help me defeat them so I can truly move forward in my new life."
+        },
+        "complete": {
+          "default": "Matthew: My past is GONE! I'm a new person! NEW CREATION! Let's write a Gospel together! I'm thinking... lots of genealogies. People LOVE genealogies.",
+          "christian_edition": "Matthew: My past is behind me. I am a new creation in you! Let us write together and share this good news with the world!"
+        }
       },
       "requires_apostle": "matthew"
     },

@@ -61,7 +61,10 @@
         "npc": "Joseph",
         "cost": 0
       },
-      "flavor_text": "Small beginnings lead to great catches"
+      "flavor_text": {
+        "default": "Started from the bottom, now we're... still pretty small, honestly. But we try!",
+        "christian_edition": "Even the smallest beginnings can lead to great things with faith and perseverance."
+      }
     },
     {
       "id": "carp_diem",
@@ -128,7 +131,10 @@
         "location": "Cana",
         "cost": 50
       },
-      "flavor_text": "Seize the fish! Opportunity knocks but once"
+      "flavor_text": {
+        "default": "Carpe diem? More like CARPe diem! We're not sorry about this pun.",
+        "christian_edition": "Seize the day with purpose. Every moment is a gift to be used wisely."
+      }
     },
     {
       "id": "sole_survivor",
@@ -192,7 +198,10 @@
         "location": "Capernaum",
         "cost": 100
       },
-      "flavor_text": "The only fish you'll need to survive"
+      "flavor_text": {
+        "default": "The last fish standing. Literally. Everyone else gave up. This one's stubborn.",
+        "christian_edition": "Through faith and perseverance, even a single soul can endure any trial."
+      }
     },
     {
       "id": "basilica",
@@ -262,7 +271,10 @@
         "location": "Bethsaida",
         "cost": 150
       },
-      "flavor_text": "Upon this bass I build my church",
+      "flavor_text": {
+        "default": "Upon this Bass I will build my church. *pause* Did I really just say Bass?",
+        "christian_edition": "A foundation as solid as stone, built upon unwavering faith and devotion."
+      },
       "combo_attack": {
         "apostle": "peter",
         "name": "Rock Solid Foundation",
@@ -333,7 +345,10 @@
         "location": "Magdala",
         "cost": 200
       },
-      "flavor_text": "Holy mackerel, that's a lot of damage!",
+      "flavor_text": {
+        "default": "Holy mackerel! That's a LOT of damage! This fish does NOT mess around.",
+        "christian_edition": "The most sacred of all fish, blessed with divine power to smite evil."
+      },
       "combo_attack": {
         "apostle": "john",
         "name": "Revelation Smack",
@@ -406,7 +421,10 @@
         "location": "Chorazin",
         "cost": 300
       },
-      "flavor_text": "Turn the other cheek... then strike back!",
+      "flavor_text": {
+        "default": "Turn the other cheek... THEN smack 'em back twice as hard! Counter theology in action.",
+        "christian_edition": "Teaches the power of mercy and strategic patience. Sometimes the greatest strength is in restraint."
+      },
       "combo_attack": {
         "apostle": "andrew",
         "name": "Brother's Counter",
@@ -478,7 +496,10 @@
         "location": "Tiberias",
         "cost": 400
       },
-      "flavor_text": "Swimming against the current of ignorance",
+      "flavor_text": {
+        "default": "Swims upstream through rivers of bad takes and questionable decisions. Very wise. Knows things.",
+        "christian_edition": "Ancient wisdom guides those who seek understanding. Knowledge flows like water to the discerning."
+      },
       "combo_attack": {
         "apostle": "philip",
         "name": "Calculated Devastation",
@@ -552,7 +573,10 @@
         "location": "Gadara",
         "cost": 500
       },
-      "flavor_text": "Mightier than the pen, sharper than wit!",
+      "flavor_text": {
+        "default": "Mightier than the pen, sharper than wit, and WAY more stabby than either! En garde!",
+        "christian_edition": "A warrior's spirit with precision and grace. Cuts through deception with truth."
+      },
       "combo_attack": {
         "apostle": "simon_zealot",
         "name": "Zealot's Blade",
@@ -624,7 +648,10 @@
         "location": "Gadara",
         "cost": 550
       },
-      "flavor_text": "A shocking display of faith!"
+      "flavor_text": {
+        "default": "Eel pray for you! *ZAP* There, prayed. With lightning. You're welcome.",
+        "christian_edition": "Faith that energizes and revitalizes. Prayers that carry the power of divine blessing."
+      }
     },
     {
       "id": "red_herring",
@@ -691,7 +718,10 @@
         "location": "Samaria",
         "cost": 600
       },
-      "flavor_text": "Not what you expected!",
+      "flavor_text": {
+        "default": "Not the fish you were looking for! Completely misleading! A total distraction! ...That's the point.",
+        "christian_edition": "Teaches vigilance against deception. Not all that appears true leads to righteousness."
+      },
       "combo_attack": {
         "apostle": "judas",
         "name": "Silver Deception",
@@ -764,7 +794,10 @@
         "location": "Jericho",
         "cost": 800
       },
-      "flavor_text": "Order now and get a second attack absolutely free!",
+      "flavor_text": {
+        "default": "But WAIT, there's MORE! Order now and get a second attack FREE! *Not actually free, it's just how this fish works.*",
+        "christian_edition": "Abundance and generosity made manifest. Gives double blessings to those in need."
+      },
       "combo_attack": {
         "apostle": "matthew",
         "name": "Tax the Wicked",
@@ -837,7 +870,10 @@
         "location": "Bethany",
         "cost": 1000
       },
-      "flavor_text": "The ultimate catch for mankind!"
+      "flavor_text": {
+        "default": "I will make you fishers of men! ...Wait, we're fishing FOR the fish that fishes men? This got complicated.",
+        "christian_edition": "The Great Commission embodied. Bringing souls to the light through love and example."
+      }
     },
     {
       "id": "leviathan_lament",
@@ -904,7 +940,10 @@
         "location": "Jerusalem",
         "cost": 2000
       },
-      "flavor_text": "The whale of judgment day!",
+      "flavor_text": {
+        "default": "The ancient chaos monster from Job. Yes, THAT Leviathan. This is fine. Everything is fine. *nervous sweating*",
+        "christian_edition": "The mighty beast of the deep, representing trials that test faith. Even chaos can be tamed."
+      },
       "combo_attack": {
         "apostle": "thomas",
         "name": "Proof of Power",
@@ -978,7 +1017,10 @@
         "location": "Tiberias",
         "quest": "Royal Audience"
       },
-      "flavor_text": "Long may he reign!"
+      "flavor_text": {
+        "default": "Cod save the King! No really, save him, he keeps getting into trouble. Royalty is exhausting.",
+        "christian_edition": "Protects and serves with regal devotion. A guardian blessed by divine authority."
+      }
     },
     {
       "id": "grouper_therapy",
@@ -1045,7 +1087,10 @@
         "location": "Bethany",
         "quest": "Comfort the Mourners"
       },
-      "flavor_text": "Let's talk about your feelings",
+      "flavor_text": {
+        "default": "Let's talk about your feelings. No really, sit down. This fish has OPINIONS about your emotional health.",
+        "christian_edition": "Provides comfort and healing to troubled souls. Fellowship brings restoration and peace."
+      },
       "combo_attack": {
         "apostle": "james_alphaeus",
         "name": "Humble Healing",
@@ -1117,7 +1162,10 @@
         "location": "Sea of Galilee",
         "game": "Fishing Competition Grand Prize"
       },
-      "flavor_text": "A light in the darkness of the deep",
+      "flavor_text": {
+        "default": "This fish has a LIGHT on its HEAD. Like a miner. For finding secrets. And also looking cool.",
+        "christian_edition": "Illuminates hidden truths and guides the lost. A beacon of hope in dark places."
+      },
       "combo_attack": {
         "apostle": "thaddaeus",
         "name": "Forgotten Illumination",
@@ -1190,7 +1238,10 @@
         "location": "Jericho",
         "time": "night_only"
       },
-      "flavor_text": "Not to be confused with the real deal"
+      "flavor_text": {
+        "default": "Not actually a catfish (the internet kind). Actually a fish. That steals. It's complicated.",
+        "christian_edition": "Reminds us that appearances can deceive. Discernment reveals true character."
+      }
     },
     {
       "id": "trout_of_bounds",
@@ -1259,7 +1310,10 @@
         "spawn_rate": 0.01,
         "note": "1% spawn rate in random encounters"
       },
-      "flavor_text": "Playing by its own rules!"
+      "flavor_text": {
+        "default": "Doesn't care about type charts, meta analysis, or your carefully planned strategy. Chaos fish.",
+        "christian_edition": "Sometimes faith transcends conventional wisdom. Divine providence works beyond our understanding."
+      }
     },
     {
       "id": "betta_together",
@@ -1330,7 +1384,10 @@
         "quest": "Brotherly Love",
         "giver": "Andrew"
       },
-      "flavor_text": "We're betta together!"
+      "flavor_text": {
+        "default": "We're Betta Together! Get it? BETTA? Like the fish? *awkward finger guns* ...I'll see myself out.",
+        "christian_edition": "Unity strengthens all. Together in fellowship, we achieve what one alone cannot."
+      }
     },
     {
       "id": "thunder_pike",
@@ -1398,7 +1455,10 @@
         "spawn_rate": 0.001,
         "note": "0.1% chance in any region - ULTRA RARE"
       },
-      "flavor_text": "Catch me if you can! (A rare blessing indeed)"
+      "flavor_text": {
+        "default": "So fast it makes other fish look like they're standing still. Catch it if you can! (You probably can't.)",
+        "christian_edition": "Blessed with divine speed. A rare gift that appears only to those deemed worthy."
+      }
     },
     {
       "id": "ichthys_divine",
@@ -1468,7 +1528,10 @@
         "requirement": "Complete all 40 Parables quest",
         "note": "New Game+ only"
       },
-      "flavor_text": "The symbol of faith made manifest"
+      "flavor_text": {
+        "default": "The fish that launched a thousand bumper stickers. The ultimate catch. You did it. GG.",
+        "christian_edition": "The ancient symbol of faith made flesh. Pure devotion in aquatic form. The ultimate blessing."
+      }
     }
   ],
   "type_chart": {
