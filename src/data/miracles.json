@@ -54,7 +54,7 @@
       "meter_cost": 75,
       "biblical_reference": "Matthew 21:12-13 (Cleansing of Temple)",
       "description": {
-        "default": "The WRATH of the righteous! Deals 300 HOLY damage to ALL enemies and reduces their stats by 50% for 3 turns. Table-flipping energy!",
+        "default": "The WRATH of the righteous! Deals 300 HOLY damage to ALL enemies and reduces their stats by 50% for 3 turns. Table-flipping intensity!",
         "christian_edition": "Righteous judgment upon the wicked. Deals 300 Holy damage to all enemies and reduces their stats by 50% for 3 turns."
       },
       "battle_text": {

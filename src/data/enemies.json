@@ -110,7 +110,7 @@
       ],
       "ai_pattern": "random",
       "flavor_text": {
-        "default": "Takes what isn't his. Five-finger discount specialist. *kleptomaniac vibes*",
+        "default": "Takes what isn't his. Five-finger discount specialist. *sticky fingers confirmed*",
         "christian_edition": "Takes what isn't his. A thief who lives by violence and robbery."
       }
     },
@@ -254,7 +254,7 @@
       "money_reward": 30,
       "ai_pattern": "strongest_first",
       "flavor_text": {
-        "default": "The ghost of unjust taxation. Death and taxes, but mostly taxes. *spectral IRS vibes*",
+        "default": "The ghost of unjust taxation. Death and taxes, but mostly taxes. *eternal audit*",
         "christian_edition": "The ghost of unjust taxation. A shadow of corruption and extortion."
       }
     },

@@ -1436,7 +1436,7 @@
       },
       "dialogue": {
         "start": {
-          "default": "False Prophet: I speak for GOD! Follow ME, not this charlatan! I have the REAL truth! Subscribe to my newsletter! *obvious scam vibes*",
+          "default": "False Prophet: I speak for GOD! Follow ME, not this charlatan! I have the REAL truth! Subscribe to my newsletter! *total scam*",
           "christian_edition": "False Prophet: I alone speak for God! Follow me, not this deceiver! I am the true prophet!"
         },
         "complete": {

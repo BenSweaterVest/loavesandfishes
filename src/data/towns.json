@@ -192,7 +192,7 @@
         "level": 21
       },
       "problem": {
-        "default": "Town in RUINS after being cursed for not repenting. Few residents remain. Haunted by its unrepentant past. Very awkward. Everyone's living with that 'we were warned' energy.",
+        "default": "Town in RUINS after being cursed for not repenting. Few residents remain. Haunted by its unrepentant past. Very awkward. Everyone's living with that 'we were warned' mentality.",
         "christian_edition": "The town lies in ruins after being cursed for its refusal to repent. Few residents remain, and all are haunted by their past choices."
       },
       "unique_mechanic": "Rebuild Mini-Game - Tetris-style stone placement",
@@ -300,7 +300,7 @@
         "forms": 5
       },
       "problem": {
-        "default": "Deep cultural division between Jews and Samaritans. Town LITERALLY split by a wall. Not metaphorical. Actual wall. Peak pettiness. Nobody talks to each other. Great vibes.",
+        "default": "Deep cultural division between Jews and Samaritans. Town LITERALLY split by a wall. Not metaphorical. Actual wall. Peak pettiness. Nobody talks to each other. Wonderful atmosphere.",
         "christian_edition": "Deep cultural division separates Jews and Samaritans in this town. A wall literally divides the community, representing centuries of hatred and prejudice."
       },
       "unique_mechanic": "Diplomacy System - Dialogue choices affect outcomes",
@@ -457,7 +457,7 @@
         }
       ],
       "problem": {
-        "default": "Passover approaching. Last Supper preparations underway. Judas is... troubled. Something's OFF with him. Tension in the air. Final chapter vibes. This is it.",
+        "default": "Passover approaching. Last Supper preparations underway. Judas is... troubled. Something's OFF with him. Tension in the air. End-game incoming. This is it.",
         "christian_edition": "Passover is approaching, and preparations for the Last Supper are underway. Judas is troubled in spirit. The final chapter of Jesus's earthly ministry begins."
       },
       "unique_mechanic": "Last Supper Preparation - Quest-based gameplay",
