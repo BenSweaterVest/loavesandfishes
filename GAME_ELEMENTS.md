@@ -5,6 +5,17 @@ Last Updated: December 10, 2025
 
 ---
 
+## ✅ DUAL-TEXT SYSTEM STATUS: 100% COMPLETE
+
+All user-facing content in this document has been implemented with the dual-text system:
+- **788 dual-text field instances** across 11 data files
+- **100% coverage** for player-visible text (default + christian_edition)
+- See **[TONE_GUIDE.md](TONE_GUIDE.md)** for writing guidelines
+
+**When adding new elements**: ALL player-visible text MUST use dual-text format. See the "ADDING NEW ELEMENTS" section below for requirements.
+
+---
+
 ## TABLE OF CONTENTS
 
 1. [Fish (21)](#fish)

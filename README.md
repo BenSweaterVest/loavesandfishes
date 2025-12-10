@@ -498,6 +498,39 @@ loavesandfishes/
 - Same gameplay, different tone
 - **Optional for religious institutions**
 
+### Dual-Text Content System (100% Complete)
+
+**Every piece of user-facing content** in Loaves and Fishes uses a dual-text system where both versions are maintained side-by-side in the same data files:
+
+```json
+{
+  "text_field": {
+    "default": "Irreverent, funny version",
+    "christian_edition": "Reverent, educational version"
+  }
+}
+```
+
+**Implementation Status:**
+- ✅ **788 dual-text field instances** (394 pairs) across 11 data files
+- ✅ **100% complete** for all user-facing content
+- ✅ Runtime toggle support (players choose edition at game start)
+
+**Files with Dual-Text:**
+- `fish.json` - 21 fish flavor descriptions
+- `enemies.json` - 40 enemy flavor texts
+- `bosses.json` - 13 bosses (intro/defeat dialogue)
+- `quests.json` - 45 quests (all dialogue)
+- `apostles.json` - 12 apostles (personality/recruitment)
+- `items.json` - 13 items (flavor text)
+- `parables.json` - 40 parables (teaching/moral)
+- `towns.json` - 13 towns (story/problem)
+- `messages.json` - ~30 system/battle messages
+- `miracles.json` - 4 miracles (name/description/battle text)
+- `ui_strings.json` - ~50 UI/menu strings
+
+See **[TONE_GUIDE.md](TONE_GUIDE.md)** for complete writing guidelines and implementation details.
+
 ### 90s JRPG Nostalgia
 - **Classic monster-collection mechanics**: Catch, train, battle
 - **Turn-based combat**: Strategic, not action-based

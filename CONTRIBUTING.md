@@ -59,6 +59,56 @@ loavesandfishes/
 
 ---
 
+## ⚠️ CRITICAL: Dual-Text Content Requirement
+
+**ALL new user-facing content MUST use the dual-text system.**
+
+Loaves and Fishes supports two distinct editions:
+- **DEFAULT** (Free): Irreverent, funny, secular mythology game
+- **CHRISTIAN EDITION** (Paid DLC): Reverent, educational, church-appropriate
+
+### Dual-Text Structure
+
+Every text field that players see must have BOTH versions:
+
+```json
+{
+  "text_field": {
+    "default": "Snarky, irreverent version with personality",
+    "christian_edition": "Reverent, educational version"
+  }
+}
+```
+
+### When Adding New Content:
+
+1. ✅ **Use dual-text for ALL player-visible text**:
+   - Fish descriptions
+   - Quest dialogue
+   - Item flavor text
+   - NPC dialogue
+   - Battle messages
+   - UI strings
+   - Boss dialogue
+   - Parable teachings
+   - Location descriptions
+
+2. ✅ **Follow tone guidelines**:
+   - **Default**: Casual, funny, self-aware, punny (NOT mean-spirited)
+   - **Christian Edition**: Respectful, educational, inspirational (NOT boring)
+
+3. ✅ **Reference TONE_GUIDE.md** for:
+   - Writing guidelines
+   - Good/bad examples
+   - Tone comparison
+   - Content-specific requirements
+
+4. ✅ **Test both versions** before submitting
+
+**See [TONE_GUIDE.md](TONE_GUIDE.md) for complete guidelines and examples.**
+
+---
+
 ## How to Add New Content
 
 ### Adding a New Fish Species
@@ -76,7 +126,10 @@ Add an entry to the `fish` array in `src/data/fish.json`:
   "fish_id": "divine_dolphin",
   "name": "Divine Dolphin",
   "type": "Holy",
-  "description": "A sacred dolphin blessed by the seas. Known for its wisdom and grace.",
+  "flavor_text": {
+    "default": "A sacred dolphin who's WAY too confident about its divine status. Swims around glowing like it owns the place. Spoiler: it kind of does.",
+    "christian_edition": "A sacred dolphin blessed by divine light. Known for its wisdom, grace, and miraculous healing abilities."
+  },
   "rarity": "rare",
   "base_stats": {
     "hp": 65,
@@ -148,7 +201,10 @@ Add an entry to the `enemies` array in `src/data/enemies.json`:
   "enemy_id": "shadow_serpent",
   "name": "Shadow Serpent",
   "type": "Dark",
-  "description": "A serpent wreathed in darkness, tempting travelers astray.",
+  "flavor_text": {
+    "default": "A serpent wreathed in darkness. Very dramatic. Loves to monologue about temptation. Just wants you to eat that apple. Or fish. Whatever's nearby, really.",
+    "christian_edition": "A serpent wreathed in darkness, representing temptation and deception. It seeks to lead travelers astray from the righteous path."
+  },
   "tier": 3,
   "base_level": 15,
   "base_stats": {
@@ -216,7 +272,10 @@ money_reward = base_level * 5
   "boss_id": "pharisee_leader",
   "name": "Pharisee Leader",
   "type": "Dark",
-  "description": "A proud leader who has strayed from the true path.",
+  "flavor_text": {
+    "default": "A proud leader who's REALLY into rules. All 613 of them. Memorized. Will quiz you. Fun at parties (citation needed).",
+    "christian_edition": "A religious leader who has lost sight of compassion in favor of strict adherence to the law. Represents legalism over love."
+  },
   "location": "Jerusalem",
   "level": 40,
   "base_stats": {
@@ -244,8 +303,14 @@ money_reward = base_level * 5
   "money_reward": 500,
   "guaranteed_drops": ["holy_relic", "boss_emblem"],
   "story_unlock": "jerusalem_complete",
-  "dialogue_before": "You dare challenge the authority of the temple?",
-  "dialogue_after": "Perhaps... there is another way..."
+  "intro_dialogue": {
+    "default": "You DARE challenge the authority of the temple?! I have REGULATIONS for this!",
+    "christian_edition": "You dare challenge the authority of the temple? You stand against centuries of tradition!"
+  },
+  "defeat_dialogue": {
+    "default": "Perhaps... there is another way. One that doesn't involve so much paperwork...",
+    "christian_edition": "Perhaps there is another way... one of compassion rather than condemnation."
+  }
 }
 ```
 
