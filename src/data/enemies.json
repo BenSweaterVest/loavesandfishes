@@ -34,7 +34,10 @@
         {"item": "plain_pita", "chance": 0.1}
       ],
       "ai_pattern": "random",
-      "flavor_text": "Questions everything, believes nothing"
+      "flavor_text": {
+        "default": "Questions EVERYTHING, believes NOTHING. Peak skepticism. *fedora intensifies*",
+        "christian_edition": "Questions everything and believes nothing. A mind closed to faith."
+      }
     },
     {
       "id": "questioning_pharisee",
@@ -67,7 +70,10 @@
       "xp_reward": 18,
       "money_reward": 12,
       "ai_pattern": "strongest_first",
-      "flavor_text": "Uses scripture as a weapon"
+      "flavor_text": {
+        "default": "Uses scripture as a WEAPON. Rules lawyer extraordinaire! *weaponized theology*",
+        "christian_edition": "Uses scripture as a weapon rather than as wisdom. The letter without the spirit."
+      }
     },
     {
       "id": "wild_bandit",
@@ -103,7 +109,10 @@
         {"item": "ryedemption_roll", "chance": 0.15}
       ],
       "ai_pattern": "random",
-      "flavor_text": "Takes what isn't his"
+      "flavor_text": {
+        "default": "Takes what isn't his. Five-finger discount specialist. *kleptomaniac vibes*",
+        "christian_edition": "Takes what isn't his. A thief who lives by violence and robbery."
+      }
     },
     {
       "id": "lost_sheep",
@@ -137,7 +146,10 @@
       "money_reward": 8,
       "ai_pattern": "flee",
       "flee_chance": 0.3,
-      "flavor_text": "Just trying to find its way home"
+      "flavor_text": {
+        "default": "Just trying to find its way home. Lost sheep energy. *confused bleating*",
+        "christian_edition": "Just trying to find its way home. A lost sheep needing guidance."
+      }
     },
     {
       "id": "wheat_wisp",
@@ -169,7 +181,10 @@
       "xp_reward": 14,
       "money_reward": 10,
       "ai_pattern": "random",
-      "flavor_text": "The chaff that blows away"
+      "flavor_text": {
+        "default": "The chaff that blows away. Temporary. Insubstantial. *whoosh*",
+        "christian_edition": "The chaff that blows away. Separated from the wheat in the harvest."
+      }
     },
     {
       "id": "water_spirit",
@@ -200,7 +215,10 @@
       "xp_reward": 16,
       "money_reward": 11,
       "ai_pattern": "random",
-      "flavor_text": "Born of the Sea of Galilee"
+      "flavor_text": {
+        "default": "Born of the Sea of Galilee. Aquatic and MOODY. *splashy temperament*",
+        "christian_edition": "Born of the Sea of Galilee. An elemental spirit of the waters."
+      }
     },
     {
       "id": "tax_collector_shade",
@@ -235,7 +253,10 @@
       "xp_reward": 35,
       "money_reward": 30,
       "ai_pattern": "strongest_first",
-      "flavor_text": "The ghost of unjust taxation"
+      "flavor_text": {
+        "default": "The ghost of unjust taxation. Death and taxes, but mostly taxes. *spectral IRS vibes*",
+        "christian_edition": "The ghost of unjust taxation. A shadow of corruption and extortion."
+      }
     },
     {
       "id": "possessed_merchant",
@@ -276,7 +297,10 @@
       "xp_reward": 40,
       "money_reward": 35,
       "ai_pattern": "random",
-      "flavor_text": "Consumed by demonic greed"
+      "flavor_text": {
+        "default": "Consumed by demonic GREED. Capitalism run amok. *possessed by profit margins*",
+        "christian_edition": "Consumed by demonic greed. A soul overtaken by the love of money."
+      }
     },
     {
       "id": "roman_scout",
@@ -317,7 +341,10 @@
       "xp_reward": 45,
       "money_reward": 40,
       "ai_pattern": "defensive",
-      "flavor_text": "Enforcer of Roman law"
+      "flavor_text": {
+        "default": "Enforcer of Roman LAW. Just following orders. *imperial authority complex*",
+        "christian_edition": "Enforcer of Roman law. A soldier of the occupying empire."
+      }
     },
     {
       "id": "herodian_guard",
@@ -356,7 +383,10 @@
       "xp_reward": 50,
       "money_reward": 45,
       "ai_pattern": "strongest_first",
-      "flavor_text": "Loyal to the corrupt king"
+      "flavor_text": {
+        "default": "Loyal to the corrupt KING. Bootlicker extraordinaire. *questionable allegiance*",
+        "christian_edition": "Loyal to the corrupt king. A guard who serves wickedness."
+      }
     },
     {
       "id": "corrupt_official",
@@ -391,7 +421,10 @@
       "xp_reward": 42,
       "money_reward": 50,
       "ai_pattern": "random",
-      "flavor_text": "Power corrupts absolutely"
+      "flavor_text": {
+        "default": "Power corrupts ABSOLUTELY. Absolute power corrupts... you get it. *corruption speedrun*",
+        "christian_edition": "Power corrupts absolutely. Authority without righteousness breeds wickedness."
+      }
     },
     {
       "id": "doubting_spirit",
@@ -426,7 +459,10 @@
       "xp_reward": 38,
       "money_reward": 32,
       "ai_pattern": "random",
-      "flavor_text": "Uncertainty made manifest"
+      "flavor_text": {
+        "default": "Uncertainty made MANIFEST. Existential crisis in monster form. *anxious whispers*",
+        "christian_edition": "Uncertainty made manifest. Doubt given spiritual form."
+      }
     },
     {
       "id": "swine_spirit",
@@ -467,7 +503,10 @@
       "xp_reward": 65,
       "money_reward": 55,
       "ai_pattern": "aggressive",
-      "flavor_text": "Host to dark forces"
+      "flavor_text": {
+        "default": "Host to DARK forces. Demon timeshare situation. *possessed pig problems*",
+        "christian_edition": "Host to dark forces. A creature overtaken by unclean spirits."
+      }
     },
     {
       "id": "cultural_critic",
@@ -501,7 +540,10 @@
       "xp_reward": 68,
       "money_reward": 58,
       "ai_pattern": "random",
-      "flavor_text": "Sows discord and prejudice"
+      "flavor_text": {
+        "default": "Sows DISCORD and PREJUDICE. Cancel culture personified. *divisive energy*",
+        "christian_edition": "Sows discord and prejudice. A spirit that divides and separates peoples."
+      }
     },
     {
       "id": "zealot_agitator",
@@ -541,7 +583,10 @@
       "xp_reward": 72,
       "money_reward": 60,
       "ai_pattern": "aggressive",
-      "flavor_text": "Misguided passion"
+      "flavor_text": {
+        "default": "Misguided PASSION. Wrong fight, wrong way. *revolutionary but lost*",
+        "christian_edition": "Misguided passion. Zeal without wisdom, violence without purpose."
+      }
     },
     {
       "id": "samaritan_skeptic",
@@ -574,7 +619,10 @@
       "xp_reward": 70,
       "money_reward": 62,
       "ai_pattern": "random",
-      "flavor_text": "Walls between peoples"
+      "flavor_text": {
+        "default": "Walls between peoples. Builds barriers, not bridges. *prejudice personified*",
+        "christian_edition": "Walls between peoples. The spirit of division and cultural hatred."
+      }
     },
     {
       "id": "legion_fragment",
@@ -609,7 +657,10 @@
       "xp_reward": 68,
       "money_reward": 58,
       "ai_pattern": "random",
-      "flavor_text": "One of many, many of one"
+      "flavor_text": {
+        "default": "One of MANY, MANY of ONE. Legion math is confusing. *collective consciousness*",
+        "christian_edition": "One of many, many of one. A fragment of the demon called Legion."
+      }
     },
     {
       "id": "demon_piglet",
@@ -642,7 +693,10 @@
       "xp_reward": 62,
       "money_reward": 52,
       "ai_pattern": "swarm",
-      "flavor_text": "Unclean spirits made manifest"
+      "flavor_text": {
+        "default": "Unclean spirits made MANIFEST. Cursed bacon. *demonic oinking*",
+        "christian_edition": "Unclean spirits made manifest. An impure creature possessed by demons."
+      }
     },
     {
       "id": "temple_guard",
@@ -681,7 +735,10 @@
       "xp_reward": 85,
       "money_reward": 70,
       "ai_pattern": "defensive",
-      "flavor_text": "Protects the holy place"
+      "flavor_text": {
+        "default": "Protects the holy place. Temple security on high alert. *religious bouncer*",
+        "christian_edition": "Protects the holy place. A guardian of the temple and its sanctity."
+      }
     },
     {
       "id": "sanhedrin_member",
@@ -722,7 +779,10 @@
       "xp_reward": 88,
       "money_reward": 75,
       "ai_pattern": "strongest_first",
-      "flavor_text": "Religious authority corrupted"
+      "flavor_text": {
+        "default": "Religious authority CORRUPTED. Power + religion = bad combo. *corrupted clergy*",
+        "christian_edition": "Religious authority corrupted. Leaders who have lost their way."
+      }
     },
     {
       "id": "memory_phantom",
@@ -755,7 +815,10 @@
       "xp_reward": 82,
       "money_reward": 68,
       "ai_pattern": "random",
-      "flavor_text": "Echoes of past suffering"
+      "flavor_text": {
+        "default": "Echoes of past SUFFERING. Trauma replays on loop. *haunted memories*",
+        "christian_edition": "Echoes of past suffering. Painful memories given ghostly form."
+      }
     },
     {
       "id": "wall_sentinel",
@@ -796,7 +859,10 @@
       "xp_reward": 90,
       "money_reward": 72,
       "ai_pattern": "defensive",
-      "flavor_text": "Immovable as stone"
+      "flavor_text": {
+        "default": "Immovable as STONE. Stubborn defender. *unmovable object*",
+        "christian_edition": "Immovable as stone. A fortress that will not yield."
+      }
     },
     {
       "id": "grief_manifest",
@@ -831,7 +897,10 @@
       "xp_reward": 87,
       "money_reward": 70,
       "ai_pattern": "aggressive",
-      "flavor_text": "Sadness given form"
+      "flavor_text": {
+        "default": "Sadness given FORM. Depression boss fight. *tears materialize*",
+        "christian_edition": "Sadness given form. The weight of sorrow made manifest."
+      }
     },
     {
       "id": "guilt_shadow",
@@ -866,7 +935,10 @@
       "xp_reward": 85,
       "money_reward": 72,
       "ai_pattern": "counter",
-      "flavor_text": "Your mistakes reflected"
+      "flavor_text": {
+        "default": "Your mistakes REFLECTED. Mirror of regret. *guilty conscience intensifies*",
+        "christian_edition": "Your mistakes reflected. A shadow that shows you your own failings."
+      }
     },
     {
       "id": "roman_legionnaire",
@@ -906,7 +978,10 @@
       "xp_reward": 100,
       "money_reward": 85,
       "ai_pattern": "tactical",
-      "flavor_text": "Elite soldier of Rome"
+      "flavor_text": {
+        "default": "Elite soldier of ROME. Maximum military efficiency. *imperial legion*",
+        "christian_edition": "Elite soldier of Rome. The empire's finest warrior."
+      }
     },
     {
       "id": "high_priest_lackey",
@@ -947,7 +1022,10 @@
       "xp_reward": 105,
       "money_reward": 90,
       "ai_pattern": "strongest_first",
-      "flavor_text": "Holy power misused"
+      "flavor_text": {
+        "default": "Holy power MISUSED. Divine gifts, CORRUPT intentions. *blessed corruption*",
+        "christian_edition": "Holy power misused. Sacred authority turned to wickedness."
+      }
     },
     {
       "id": "demonic_tempter",
@@ -990,7 +1068,10 @@
       "xp_reward": 108,
       "money_reward": 95,
       "ai_pattern": "aggressive",
-      "flavor_text": "Tests your faith"
+      "flavor_text": {
+        "default": "Tests your FAITH. Pop quiz! No study guide. *demonic exam proctor*",
+        "christian_edition": "Tests your faith. A tempter who seeks to lead you astray."
+      }
     },
     {
       "id": "shadow_of_doubt",
@@ -1025,7 +1106,10 @@
       "xp_reward": 102,
       "money_reward": 88,
       "ai_pattern": "random",
-      "flavor_text": "Uncertainty incarnate"
+      "flavor_text": {
+        "default": "Uncertainty INCARNATE. Existential dread personified. *doubt intensifies*",
+        "christian_edition": "Uncertainty incarnate. The shadow that makes you question everything."
+      }
     },
     {
       "id": "pilates_guard",
@@ -1066,7 +1150,10 @@
       "xp_reward": 110,
       "money_reward": 100,
       "ai_pattern": "aggressive",
-      "flavor_text": "Enforcer of Roman will"
+      "flavor_text": {
+        "default": "Enforcer of Roman WILL. Brutal compliance enforcer. *imperial violence*",
+        "christian_edition": "Enforcer of Roman will. A guard who carries out the empire's cruelty."
+      }
     },
     {
       "id": "money_changer",
@@ -1107,7 +1194,10 @@
       "xp_reward": 98,
       "money_reward": 120,
       "ai_pattern": "greedy",
-      "flavor_text": "Profiteering in the temple"
+      "flavor_text": {
+        "default": "Profiteering in the TEMPLE. Religious capitalism at its finest. *sacred commerce*",
+        "christian_edition": "Profiteering in the temple. One who turns the house of prayer into a marketplace."
+      }
     },
     {
       "id": "pride_personified",
@@ -1150,7 +1240,10 @@
       "xp_reward": 92,
       "money_reward": 80,
       "ai_pattern": "aggressive",
-      "flavor_text": "The first and greatest sin"
+      "flavor_text": {
+        "default": "The FIRST and GREATEST sin. Original sin energy. *ego maximus*",
+        "christian_edition": "The first and greatest sin. Pride that goes before destruction."
+      }
     },
     {
       "id": "envy_incarnate",
@@ -1185,7 +1278,10 @@
       "xp_reward": 88,
       "money_reward": 75,
       "ai_pattern": "random",
-      "flavor_text": "Desires what others have"
+      "flavor_text": {
+        "default": "Desires what others HAVE. Green with envy. Literally. *jealousy incarnate*",
+        "christian_edition": "Desires what others have. Covetousness made manifest."
+      }
     },
     {
       "id": "wrath_embodied",
@@ -1227,7 +1323,10 @@
       "xp_reward": 95,
       "money_reward": 82,
       "ai_pattern": "aggressive",
-      "flavor_text": "Uncontrolled anger"
+      "flavor_text": {
+        "default": "Uncontrolled ANGER. Big mad. *permanent rage mode*",
+        "christian_edition": "Uncontrolled anger. Fury without reason or restraint."
+      }
     },
     {
       "id": "sloth_manifest",
@@ -1262,7 +1361,10 @@
       "xp_reward": 75,
       "money_reward": 60,
       "ai_pattern": "defensive",
-      "flavor_text": "Why bother fighting?"
+      "flavor_text": {
+        "default": "Why bother FIGHTING? Maximum laziness achieved. *yawn*",
+        "christian_edition": "Why bother fighting? Laziness and apathy given form."
+      }
     },
     {
       "id": "greed_given_form",
@@ -1305,7 +1407,10 @@
       "xp_reward": 90,
       "money_reward": 150,
       "ai_pattern": "greedy",
-      "flavor_text": "Insatiable hunger for more"
+      "flavor_text": {
+        "default": "Insatiable HUNGER for MORE. Never enough. *hoarding intensifies*",
+        "christian_edition": "Insatiable hunger for more. Avarice that cannot be satisfied."
+      }
     },
     {
       "id": "gluttony_embodied",
@@ -1346,7 +1451,10 @@
       "xp_reward": 86,
       "money_reward": 72,
       "ai_pattern": "aggressive",
-      "flavor_text": "Endless consumption"
+      "flavor_text": {
+        "default": "Endless CONSUMPTION. Always eating. NEVER full. *nom nom nom*",
+        "christian_edition": "Endless consumption. A hunger that devours everything."
+      }
     },
     {
       "id": "lust_spirit",
@@ -1389,7 +1497,10 @@
       "xp_reward": 84,
       "money_reward": 70,
       "ai_pattern": "random",
-      "flavor_text": "Corrupts the heart"
+      "flavor_text": {
+        "default": "Corrupts the HEART. Inappropriate desires manifested. *temptation incarnate*",
+        "christian_edition": "Corrupts the heart. Impure desires given spiritual form."
+      }
     },
     {
       "id": "wilderness_wolf",
@@ -1431,7 +1542,10 @@
       "xp_reward": 65,
       "money_reward": 45,
       "ai_pattern": "swarm",
-      "flavor_text": "Predator of the desert"
+      "flavor_text": {
+        "default": "Predator of the DESERT. Pack hunter. Hungry for disciples. *howling intensifies*",
+        "christian_edition": "Predator of the desert. A wild beast that hunts the wilderness."
+      }
     },
     {
       "id": "desert_scorpion",
@@ -1472,7 +1586,10 @@
       "xp_reward": 58,
       "money_reward": 40,
       "ai_pattern": "defensive",
-      "flavor_text": "Deadly desert dweller"
+      "flavor_text": {
+        "default": "Deadly DESERT dweller. Venomous arthropod. *stinger ready*",
+        "christian_edition": "Deadly desert dweller. A creature of venom and danger."
+      }
     },
     {
       "id": "false_prophet",
@@ -1515,7 +1632,10 @@
       "xp_reward": 98,
       "money_reward": 85,
       "ai_pattern": "strongest_first",
-      "flavor_text": "Wolves in sheep's clothing"
+      "flavor_text": {
+        "default": "Wolves in sheep's CLOTHING. Fake prophets. Misleading merch. *deception detected*",
+        "christian_edition": "Wolves in sheep's clothing. False teachers who lead the faithful astray."
+      }
     }
   ],
   "metadata": {
