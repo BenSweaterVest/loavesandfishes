@@ -43,8 +43,14 @@
       "money_reward": 250,
       "phases": 1,
       "gimmick": "Gets progressively drunker and sloppier (accuracy decreases over time)",
-      "intro_dialogue": "This wine is... *hic*... absolutely unacceptable! Who serves such swill at a wedding?!",
-      "defeat_dialogue": "Wait... this new wine is... magnificent! My apologies, I have never tasted anything so divine!",
+      "intro_dialogue": {
+        "default": "This wine is *hic* absolutely UNACCEPTABLE! Who serves this SWILL at a WEDDING?! I have STANDARDS! *wobbles* HIGH standards!",
+        "christian_edition": "This wine is not suitable for such an important celebration. The quality must be maintained for our honored guests."
+      },
+      "defeat_dialogue": {
+        "default": "Wait... this new wine is... *sniff* ...magnificent? This is the BEST wine I've ever tasted! My apologies! I may have judged too harshly! *hic*",
+        "christian_edition": "This new wine is of exceptional quality! You have saved the best wine for last! This is truly remarkable!"
+      },
       "biblical_reference": "John 2:1-11 (Wedding at Cana - First Miracle)",
       "ai_pattern": "random",
       "special_mechanics": {
@@ -100,8 +106,14 @@
       "money_reward": 300,
       "phases": 1,
       "gimmick": "Puzzle boss - must defeat the four barriers in specific order to reach the paralytic",
-      "intro_dialogue": "You'll never get through this crowd! The paralytic will never walk again!",
-      "defeat_dialogue": "The roof... it opened! Faith moves mountains... and roofs, it seems.",
+      "intro_dialogue": {
+        "default": "You'll NEVER get through this crowd! It's PACKED! The paralytic will NEVER walk again! We're an impenetrable wall of PEOPLE!",
+        "christian_edition": "You cannot reach him through this crowd. The path is blocked. There is no way forward."
+      },
+      "defeat_dialogue": {
+        "default": "The ROOF... they opened the ROOF?! That's... that's actually pretty creative. Faith moves mountains... and apparently roofs. I stand corrected.",
+        "christian_edition": "The roof has opened! Such faith I have never seen! Truly, nothing is impossible for those who believe!"
+      },
       "biblical_reference": "Mark 2:1-12 (Healing of the Paralytic)",
       "ai_pattern": "defensive",
       "special_mechanics": {
@@ -166,8 +178,14 @@
       "money_reward": 350,
       "phases": 1,
       "gimmick": "Attacks that blind or reduce accuracy. Vision clears as you defeat them.",
-      "intro_dialogue": "This man was never blind! It's a trick! You're all being deceived!",
-      "defeat_dialogue": "I... I can see now. We were the blind ones all along.",
+      "intro_dialogue": {
+        "default": "This man was NEVER blind! It's a TRICK! A HOAX! You're all being DECEIVED! We have QUESTIONS! Many, many questions!",
+        "christian_edition": "This man was never truly blind. You are deceiving these people with tricks and illusions!"
+      },
+      "defeat_dialogue": {
+        "default": "I... I can see now. Clearly. We were the blind ones all along. Ironic, really. Very ironic. The metaphor was right there.",
+        "christian_edition": "I see now... we were the ones who could not see. Our doubt blinded us to the truth. Forgive us."
+      },
       "biblical_reference": "John 9:1-41 (Healing of the Man Born Blind)",
       "ai_pattern": "random",
       "special_mechanics": {
@@ -232,8 +250,14 @@
       "money_reward": 400,
       "phases": 1,
       "gimmick": "Seven demons must be exorcised one by one. Each demon defeated makes boss weaker.",
-      "intro_dialogue": "WE ARE MANY! WE ARE LEGION! YOU CANNOT CAST US OUT!",
-      "defeat_dialogue": "Master... thank you. I am... myself again. Mary Magdalene, at your service.",
+      "intro_dialogue": {
+        "default": "WE ARE MANY! WE ARE LEGION! *demonic screeching* YOU CANNOT CAST US OUT! WE ARE SEVEN! COUNT THEM! SEVEN!",
+        "christian_edition": "We are many! We are legion! You cannot cast us out! We have claimed this soul!"
+      },
+      "defeat_dialogue": {
+        "default": "Master... *normal voice* ...thank you. I am... myself again. Finally. All seven are gone. Mary Magdalene, at your service. Sorry about all the screeching.",
+        "christian_edition": "Master, thank you. I am freed from my torment. I am myself once more. Mary Magdalene, forever grateful."
+      },
       "biblical_reference": "Luke 8:2 (Mary Magdalene and the Seven Demons)",
       "ai_pattern": "aggressive",
       "special_mechanics": {
@@ -298,8 +322,14 @@
       "money_reward": 450,
       "phases": 1,
       "gimmick": "Extremely high defense. Rejects all healing. Only Holy-type moves are fully effective.",
-      "intro_dialogue": "We've seen your miracles and reject them! Our hearts are stone!",
-      "defeat_dialogue": "Woe... woe to us. We had our chance and threw it away...",
+      "intro_dialogue": {
+        "default": "We've SEEN your so-called miracles and REJECT them! Our hearts are STONE! We don't NEED you! We're FINE!",
+        "christian_edition": "We have witnessed your works and still reject you. Our hearts are hardened. We will not believe!"
+      },
+      "defeat_dialogue": {
+        "default": "Woe... woe to us. We had our chance and THREW it away. *stone hearts crumbling* We should have listened...",
+        "christian_edition": "Woe to us... we had the opportunity to believe and rejected it. What have we done?"
+      },
       "biblical_reference": "Matthew 11:20-24 (Woe to Unrepentant Cities)",
       "ai_pattern": "defensive",
       "special_mechanics": {
@@ -367,8 +397,14 @@
         "2": "You think you can challenge ME?! I killed John the Baptist! You're next!"
       },
       "gimmick": "Two phases. In phase 2, summons guards and becomes more aggressive.",
-      "intro_dialogue": "So, you're the miracle worker everyone's talking about. Entertain me, prophet.",
-      "defeat_dialogue": "This isn't over... I'll tell Pilate about you... you haven't heard the last of Herod!",
+      "intro_dialogue": {
+        "default": "So YOU'RE the miracle worker everyone won't shut up about. ENTERTAIN me, prophet. Show me a TRICK. I'm BORED and you're here, so... perform!",
+        "christian_edition": "So you are the one they call a prophet. I have heard much about you. Show me your power."
+      },
+      "defeat_dialogue": {
+        "default": "This isn't OVER! I'll tell Pilate about you! You haven't heard the LAST of Herod! The Fox remembers! *retreats dramatically*",
+        "christian_edition": "This is not finished. Pilate will hear of this. You have not seen the last of me!"
+      },
       "biblical_reference": "Luke 13:31-32, Luke 23:8-12 (Herod the Fox)",
       "ai_pattern": "tactical",
       "special_mechanics": {
@@ -441,8 +477,14 @@
         "2": "NO! DON'T SEND US AWAY! Let us enter the swine! THE PIGS! ANYTHING BUT THE ABYSS!"
       },
       "gimmick": "Phase 1: Possessed man. Phase 2: Demons flee into swine that charge at you.",
-      "intro_dialogue": "WHAT DO YOU WANT WITH US, SON OF THE MOST HIGH GOD?! HAVE YOU COME TO TORMENT US?!",
-      "defeat_dialogue": "The man: Thank you... I am... free. The demons are... gone. Drowned in the sea.",
+      "intro_dialogue": {
+        "default": "*demonic voices* WHAT DO YOU WANT WITH US, SON OF THE MOST HIGH GOD?! *chains rattling* HAVE YOU COME TO TORMENT US BEFORE THE APPOINTED TIME?!",
+        "christian_edition": "What do you want with us, Son of the Most High God?! Have you come here to torment us before the appointed time?!"
+      },
+      "defeat_dialogue": {
+        "default": "*normal voice* Thank you... I'm... myself. FREE. The demons are... gone. *looks at drowned swine* Drowned in the sea. That's... that's a lot of dead pigs.",
+        "christian_edition": "Thank you, Lord. I am free at last. The demons have been cast out. They are gone, drowned in the depths."
+      },
       "biblical_reference": "Mark 5:1-20 (Legion and the Swine)",
       "ai_pattern": "aggressive",
       "special_mechanics": {
@@ -514,8 +556,14 @@
       "money_reward": 650,
       "phases": 1,
       "gimmick": "Manifestation of past mistakes. Must defeat each 'husband' (35 HP each) to free the woman.",
-      "intro_dialogue": "The woman: My past... it haunts me. The five shadows of my failures...",
-      "defeat_dialogue": "The woman: You knew everything about me... and still offered living water. I am free!",
+      "intro_dialogue": {
+        "default": "Woman: My past... it HAUNTS me. Five husbands. FIVE. The shadows of my failures... they won't let me go. *shadow figures appear*",
+        "christian_edition": "Woman: My past burdens me. Five marriages, each one ending. The weight of my choices... I cannot escape them."
+      },
+      "defeat_dialogue": {
+        "default": "Woman: You knew EVERYTHING about me... ALL of it... and you STILL offered living water. I'm... I'm FREE! The shadows are gone!",
+        "christian_edition": "Woman: You knew all about me, yet you offered me living water. I am forgiven. I am free! Thank you!"
+      },
       "biblical_reference": "John 4:1-42 (Woman at the Well)",
       "ai_pattern": "random",
       "special_mechanics": {
@@ -581,8 +629,14 @@
         "2": "The walls are falling! Jericho crumbles! We must finish this NOW!"
       },
       "gimmick": "Walls of Jericho fall during battle, changing terrain and weakening defense.",
-      "intro_dialogue": "Hand over the spies! Rahab the traitor will face justice!",
-      "defeat_dialogue": "The scarlet cord... it saved her. Faith has protected the faithful.",
+      "intro_dialogue": {
+        "default": "Hand over the SPIES! Rahab the TRAITOR will face JUSTICE! The king's men NEVER fail! *walls rumbling ominously in background*",
+        "christian_edition": "Surrender the spies! Rahab has betrayed the king and must face justice!"
+      },
+      "defeat_dialogue": {
+        "default": "The scarlet cord... *walls crumbling* ...it SAVED her?! Faith has protected the faithful. *defeated as walls collapse* We failed...",
+        "christian_edition": "The scarlet cord marked her house... faith has protected those who believed. We have been defeated."
+      },
       "biblical_reference": "Joshua 2:1-24, 6:22-25 (Rahab and the Spies)",
       "ai_pattern": "aggressive",
       "special_mechanics": {
@@ -648,8 +702,14 @@
       "money_reward": 800,
       "phases": 1,
       "gimmick": "Represents death holding Lazarus. Very powerful but can be overcome with Holy damage.",
-      "intro_dialogue": "I am the end of all things. Four days I have held this one. You cannot undo death!",
-      "defeat_dialogue": "LAZARUS, COME FORTH! ...No... NO! My hold is broken! Death... is not... final...",
+      "intro_dialogue": {
+        "default": "I am the END of ALL things. FOUR DAYS I have held this one. His body DECAYS. You CANNOT undo DEATH! I am INEVITABLE!",
+        "christian_edition": "I am Death. I am the end. Four days this one has been mine. You cannot undo what has been done. Death is final."
+      },
+      "defeat_dialogue": {
+        "default": "*voice echoing* LAZARUS, COME FORTH! ...No... NO! My hold is BROKEN! Death... is not... *fading* ...final? IMPOSSIBLE!",
+        "christian_edition": "Lazarus, come forth! No... my hold is broken! Death itself has been defeated. This cannot be!"
+      },
       "biblical_reference": "John 11:1-44 (Raising of Lazarus)",
       "ai_pattern": "aggressive",
       "special_mechanics": {
@@ -716,8 +776,14 @@
       "money_reward": 900,
       "phases": 1,
       "gimmick": "CHOICE BOSS: Can choose to fight or show mercy. Mercy heals his servant and he joins you.",
-      "intro_dialogue": "My servant lies dying. But I know you need only say the word... Will you heal him, or must we fight?",
-      "defeat_dialogue": "Fight: Your power is great... perhaps you ARE who they say you are... // Mercy: Lord, I am not worthy... but just say the word, and my servant will be healed!",
+      "intro_dialogue": {
+        "default": "My servant is dying. But I'm a man of authority—I give orders, they're followed. You need only SAY THE WORD. Will you heal him? Or must we fight?",
+        "christian_edition": "My servant lies at home, paralyzed and suffering. But I know you need only say the word, and he will be healed. Will you help?"
+      },
+      "defeat_dialogue": {
+        "default": "Fight: Your power is... incredible. Perhaps you ARE who they say... // Mercy: Lord, I am not WORTHY for you to come under my roof! Just say the word, and my servant will be healed!",
+        "christian_edition": "If you fight: Your power is great. Truly, you are who they claim. // If you show mercy: Lord, I am not worthy that you should enter under my roof. But only say the word and my servant shall be healed."
+      },
       "biblical_reference": "Matthew 8:5-13 (The Centurion's Servant)",
       "ai_pattern": "defensive",
       "special_mechanics": {
@@ -847,8 +913,14 @@
         "3": "Pilate defeated. Satan appears: So, you've made it this far. But can you resist... EVERYTHING? All the kingdoms of the world can be yours... just bow down."
       },
       "gimmick": "Three-phase finale. Each phase has different mechanics and must be defeated in sequence.",
-      "intro_dialogue": "Caiaphas: You claim to be the Son of God?! BLASPHEMY! The Sanhedrin finds you GUILTY!",
-      "defeat_dialogue": "Satan: You have... resisted. The victory is... yours. But remember... I will return. This is not the end... // Victory theme plays - credits roll after epilogue",
+      "intro_dialogue": {
+        "default": "Caiaphas: You claim to be the SON OF GOD?! BLASPHEMY! The Sanhedrin finds you GUILTY! *pounds staff* GUILTY OF BLASPHEMY!",
+        "christian_edition": "Caiaphas: You claim to be the Son of God? This is blasphemy! The Sanhedrin finds you guilty!"
+      },
+      "defeat_dialogue": {
+        "default": "Satan: You have... resisted. *fading* The victory is... yours. But REMEMBER... I WILL return. This is not the end... *disappears* // [Victory theme - credits roll]",
+        "christian_edition": "Satan: You have withstood every trial. The victory is yours. But I will return... this is not finished... // [Victory - the journey continues]"
+      },
       "biblical_reference": "Matthew 26-27, Luke 22-23, John 18-19 (The Passion), Matthew 4:1-11 (Temptation)",
       "ai_pattern": "tactical",
       "special_mechanics": {
