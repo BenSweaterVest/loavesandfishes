@@ -350,8 +350,14 @@
         ]
       },
       "dialogue": {
-        "start": "Merchant: HELP US! *demonic voice* STAY AWAY!",
-        "complete": "Merchant: Thank you! We're free! The demons are gone!"
+        "start": {
+          "default": "Merchant: HELP US! *demonic voice* STAY AWAY FROM US! *normal voice* Please help! *demonic* FLEE! This is very confusing!",
+          "christian_edition": "Merchant: Help us, please! *demonic voice* Leave us alone! *The demons cry out in torment*"
+        },
+        "complete": {
+          "default": "Merchant: We're FREE! The demons are GONE! Thank you! We feel so much lighter! Also significantly less evil-voiced!",
+          "christian_edition": "Merchant: Thank you! The demons have been cast out! We are free from their torment! Praise be!"
+        }
       }
     },
     {
@@ -376,8 +382,14 @@
         ]
       },
       "dialogue": {
-        "start": "Roman Scout: We have orders to monitor this traveling rabbi. Don't interfere!",
-        "complete": "You've evaded the Roman patrols. But they'll be watching..."
+        "start": {
+          "default": "Roman Scout: We have orders to monitor you, traveling rabbi. Don't make this difficult. We're just doing our jobs! Very intimidating jobs!",
+          "christian_edition": "Roman Scout: We are under orders to observe you. Do not interfere with Roman business."
+        },
+        "complete": {
+          "default": "You've evaded the patrols! But Rome doesn't forget. They'll be watching. Always watching. It's what they do. Very committed to watching.",
+          "christian_edition": "You have eluded the Roman patrols for now. But be watchful—they will not cease their surveillance."
+        }
       }
     },
     {
@@ -402,8 +414,14 @@
         ]
       },
       "dialogue": {
-        "start": "Herodian Guard: Herod wants you brought to him. Come quietly or by force!",
-        "complete": "The guards retreat. But word of you has reached Herod's court..."
+        "start": {
+          "default": "Herodian Guard: Herod wants a word with you. Come QUIETLY or come BY FORCE! Your choice! Hint: we prefer force. More exciting.",
+          "christian_edition": "Herodian Guard: King Herod summons you. You will come with us, willingly or otherwise."
+        },
+        "complete": {
+          "default": "The guards retreat! But word has reached Herod's court. Great. Now you're on a paranoid king's radar. This'll end well.",
+          "christian_edition": "The guards have withdrawn. But news of your deeds has reached Herod's palace. Be cautious."
+        }
       }
     },
     {
@@ -428,8 +446,14 @@
         ]
       },
       "dialogue": {
-        "start": "Official: You can't prove anything! We run this town!",
-        "complete": "The corruption is exposed! Justice prevails! Give to God what is God's!"
+        "start": {
+          "default": "Official: You can't PROVE anything! We RUN this town! You have NO power here! *nervous sweating*",
+          "christian_edition": "Official: You have no authority here! We are in control of this town!"
+        },
+        "complete": {
+          "default": "The corruption is EXPOSED! Justice PREVAILS! Give to God what is God's! And give corrupt officials what THEY deserve!",
+          "christian_edition": "The corruption has been brought to light! Justice is served! Give to God what belongs to God!"
+        }
       }
     },
     {
@@ -460,8 +484,14 @@
         "unlocks": ["good_samaritan_title"]
       },
       "dialogue": {
-        "start": "Injured Man: Please... help me... bandits... left me for dead...",
-        "complete": "Injured Man: A Samaritan helped me! I thought they were my enemies! Who is my neighbor? Everyone!"
+        "start": {
+          "default": "Injured Man: Please... help... bandits took everything... left me here... This is a bad day. The worst day.",
+          "christian_edition": "Injured Man: Please, I beg you... help me... bandits attacked me and left me for dead..."
+        },
+        "complete": {
+          "default": "Injured Man: You HELPED me! Even though we're supposed to be enemies! Who is my neighbor? EVERYONE! Mind = blown!",
+          "christian_edition": "Injured Man: You have shown me mercy when others passed by. Who is my neighbor? I understand now—everyone is my neighbor!"
+        }
       },
       "biblical_reference": "Luke 10:25-37"
     },
