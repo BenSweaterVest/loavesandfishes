@@ -310,8 +310,11 @@ Kids' shows   Fantasy novels  Mythology games  Dark religious indies
 
 ## CHECKLIST FOR NEW CONTENT
 
+**⚠️ CRITICAL REQUIREMENT**: Before implementing ANY new user-facing element, you **MUST** first add it to **GAME_ELEMENTS.md** with complete documentation, sprite placeholders, and flowchart updates if applicable.
+
 When adding new content, ensure:
 
+- [ ] **DOCUMENTED in GAME_ELEMENTS.md** (tables, flowcharts, sprite placeholders)
 - [ ] All text fields have BOTH `default` and `christian_edition` versions
 - [ ] Default version is irreverent, self-aware, has personality
 - [ ] Christian Edition version is respectful, educational, age-appropriate
