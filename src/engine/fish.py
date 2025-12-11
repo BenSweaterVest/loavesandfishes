@@ -73,12 +73,29 @@ class Fish:
 
     def _calculate_stat(self, base_stat: int, level: int) -> int:
         """
-        Calculate stat based on level
-        Stats grow 5-10% per level (using 7% average)
+        Calculate stat based on level using a linear growth formula.
+
+        Stats grow 7% per level, meaning a Level 10 fish will have stats
+        that are about 63% higher than at Level 1.
+
+        Formula: stat = base_stat × (1 + 0.07 × (level - 1))
+        Example: Base ATK of 20 at Level 10 = 20 × (1 + 0.07 × 9) = 32.6 → 32
+
+        Args:
+            base_stat: The stat value at level 1 (from JSON data)
+            level: Current level of the fish (1-50)
+
+        Returns:
+            The calculated stat value as an integer
+
+        Note:
+            You can adjust growth_rate (0.07) to make fish stronger/weaker:
+            - 0.05 = slower growth (5% per level)
+            - 0.10 = faster growth (10% per level)
         """
-        growth_rate = 0.07  # 7% per level
+        growth_rate = 0.07  # 7% growth per level - balanced for JRPG progression
         stat_value = base_stat * (1 + growth_rate * (level - 1))
-        return int(stat_value)
+        return int(stat_value)  # Convert to integer (rounds down)
 
     def _get_available_moves(self) -> List[Dict[str, Any]]:
         """Get moves available at current level"""
@@ -141,23 +158,49 @@ class Fish:
 
     def take_damage(self, damage: int) -> int:
         """
-        Apply damage to the fish. Returns actual damage dealt.
+        Apply damage to the fish and calculate actual damage after defense.
+
+        Uses a damage reduction formula based on defense stat:
+        actual_damage = raw_damage × (100 / (100 + defense))
+
+        Examples:
+        - Defense 0: Takes 100% damage
+        - Defense 50: Takes 67% damage (100/(100+50))
+        - Defense 100: Takes 50% damage (100/(100+100))
+        - Defense 200: Takes 33% damage (100/(100+200))
+
+        The formula ensures defense is valuable but never makes you invincible.
 
         Args:
-            damage: Amount of damage to take
+            damage: Raw damage amount before defense reduction
 
         Returns:
-            Actual damage dealt (after applying defense, etc.)
-        """
-        # Apply defense
-        defense_mult = self.stat_modifiers["def"]
-        actual_damage = max(1, int(damage * (100 / (100 + self.defense * defense_mult))))
+            Actual damage dealt after defense calculation (minimum 1)
 
-        # Apply property effects (e.g., damage reduction)
+        Note:
+            Defense is MULTIPLICATIVE with stat modifiers (buffs/debuffs).
+            Always deals at least 1 damage to prevent stalling.
+        """
+        # Get current defense modifier (affected by buffs/debuffs)
+        defense_mult = self.stat_modifiers["def"]
+
+        # Calculate damage reduction based on defense
+        # Formula: damage × (100 / (100 + effective_defense))
+        # Higher defense = lower damage multiplier
+        effective_defense = self.defense * defense_mult
+        damage_multiplier = 100 / (100 + effective_defense)
+        actual_damage = int(damage * damage_multiplier)
+
+        # Ensure at least 1 damage is dealt (prevents immortality)
+        actual_damage = max(1, actual_damage)
+
+        # Apply special property effects (e.g., damage reduction abilities)
         if self.property.get("effect") == "damage_reduction_alone":
-            # TODO: Check if this is the only fish remaining
+            # TODO: Check if this is the only fish remaining in party
+            # If yes, apply 50% damage reduction bonus
             pass
 
+        # Reduce HP, but never go below 0
         self.current_hp = max(0, self.current_hp - actual_damage)
 
         return actual_damage
@@ -277,22 +320,60 @@ class Fish:
                 f"hp={self.current_hp}/{self.max_hp}, type={self.type})")
 
     def to_dict(self) -> Dict[str, Any]:
-        """Convert fish to dictionary for saving"""
+        """
+        Convert fish to dictionary for saving to JSON.
+
+        Only saves dynamic state that changes during gameplay.
+        Static data (name, base stats, moves) comes from fish.json.
+
+        Returns:
+            Dictionary with all data needed to restore this fish's state
+
+        Example saved data:
+            {
+                "fish_id": "holy_mackerel",
+                "level": 15,
+                "xp": 450,
+                "current_hp": 48,
+                "held_item": {"id": "focus_band", ...},
+                "status_effects": ["blessed"]
+            }
+        """
         return {
-            "fish_id": self.fish_id,
-            "level": self.level,
-            "xp": self.xp,
-            "current_hp": self.current_hp,
-            "held_item": self.held_item,
-            "status_effects": self.status_effects
+            "fish_id": self.fish_id,          # Which fish type (links to JSON)
+            "level": self.level,              # Current level (1-50)
+            "xp": self.xp,                    # XP toward next level
+            "current_hp": self.current_hp,    # Current HP (can be damaged)
+            "held_item": self.held_item,      # Equipped item (or None)
+            "status_effects": self.status_effects  # Active status effects
         }
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any], fish_data: Dict[str, Any]) -> 'Fish':
-        """Create fish from saved dictionary"""
+        """
+        Create fish from saved dictionary (load game).
+
+        This is a "class method" - called on the Fish class itself, not an instance.
+        Usage: fish = Fish.from_dict(saved_data, fish_json_data)
+
+        Args:
+            data: Dictionary from save file (from to_dict())
+            fish_data: Static fish data from fish.json
+
+        Returns:
+            Fully restored Fish instance with saved state
+
+        Note:
+            Stats are recalculated from base stats + level, ensuring
+            balance changes in fish.json apply to saved fish.
+        """
+        # Create fish with saved level (recalculates all stats)
         fish = cls(data["fish_id"], fish_data, data["level"])
-        fish.xp = data["xp"]
-        fish.current_hp = data["current_hp"]
-        fish.held_item = data.get("held_item")
-        fish.status_effects = data.get("status_effects", [])
+
+        # Restore saved state
+        fish.xp = data["xp"]                              # Restore XP progress
+        fish.current_hp = data["current_hp"]              # Restore HP (might be damaged)
+        fish.held_item = data.get("held_item")            # Restore equipped item
+        fish.status_effects = data.get("status_effects", [])  # Restore status effects
+
         return fish
