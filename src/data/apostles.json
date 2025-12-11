@@ -1,0 +1,426 @@
+{
+  "apostles": [
+    {
+      "id": "bartholomew",
+      "name": "Bartholomew",
+      "alternate_name": "Nathanael",
+      "title": "The True Israelite",
+      "town": "Cana",
+      "town_number": 2,
+      "battle_ability": {
+        "name": "Fig Tree Wisdom",
+        "description": "Reveals enemy weaknesses, resistances, and next move for 3 turns. Shows all enemy stats.",
+        "effect": "reveal_enemy_data",
+        "duration": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Illusion Detection",
+        "description": "Can identify fake walls and hidden passages. Reveals secret areas marked with '???' on map.",
+        "overworld_effect": "detect_illusions"
+      },
+      "personality": {
+        "default": "Started with 'Can anything good come from Nazareth?' Nice first impression. Brutally honest to the point of rudeness. Apologized twice. Still brings it up sometimes. Sees through deceptions. Terrible poker face.",
+        "christian_edition": "Honest and forthright, Bartholomew speaks his mind but seeks truth sincerely. When convinced, his faith is genuine and unwavering. He sees through deception to find what is real."
+      },
+      "biblical_reference": "John 1:45-51 (under the fig tree)",
+      "recruitment_event": {
+        "default": "Witnessed the water-to-wine incident. Went from 'you're from WHERE?' to 'okay I believe' real fast. The wine was THAT good.",
+        "christian_edition": "After witnessing the miracle at Cana where water became wine, Bartholomew recognized Jesus's divine nature and joined him willingly."
+      }
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "alternate_name": "Simon Peter",
+      "title": "The Rock",
+      "town": "Capernaum",
+      "town_number": 3,
+      "battle_ability": {
+        "name": "Keys to the Kingdom",
+        "description": "Locks enemy's strongest attack for entire battle. Enemy cannot use their most powerful move.",
+        "effect": "lock_strongest_attack",
+        "duration": "permanent",
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Stone Moving",
+        "description": "Opens heavy stone gates and boulder-blocked paths. Required for several mountain/cave passages.",
+        "overworld_effect": "move_stones"
+      },
+      "personality": {
+        "default": "Passionate, impulsive, says things BEFORE thinking. Big heart, bigger mouth. Natural leader even when he's wrong. Fails spectacularly, rebounds anyway. The Rock (sometimes more like a rolling stone).",
+        "christian_edition": "Peter is passionate and devoted, though sometimes impulsive. He is a natural leader among the disciples, loyal and courageous even when he stumbles. His faith, though tested, becomes the foundation."
+      },
+      "biblical_reference": "Matthew 16:18 (You are Peter, and on this rock...)",
+      "recruitment_event": {
+        "default": "Caught so many fish his nets nearly broke. Immediately had an existential crisis and said 'I'm a sinner!' Jesus: 'From now on you catch PEOPLE.' Peter: '...Okay that's better I guess?'",
+        "christian_edition": "After the miraculous catch of fish, Peter recognized his unworthiness. Jesus called him to follow, saying 'from now on you will catch people,' and Peter left everything to join him."
+      },
+      "combo_fish": "basilica",
+      "combo_attack": {
+        "name": "Rock Solid Foundation",
+        "description": "Massive DEF buff to all party + heal 30 HP",
+        "effect": "combo_rock_solid"
+      }
+    },
+    {
+      "id": "andrew",
+      "name": "Andrew",
+      "title": "The Introducer",
+      "town": "Bethsaida",
+      "town_number": 4,
+      "battle_ability": {
+        "name": "Brother's Keeper",
+        "description": "Heal 50% of Jesus's max HP. Remove all debuffs from Jesus.",
+        "effect": "heal_and_cleanse_jesus",
+        "amount": 0.5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Social Recruitment",
+        "description": "Can recruit crowds of townspeople to help. Opens paths that require multiple people (gates, bridges).",
+        "overworld_effect": "recruit_crowds"
+      },
+      "personality": {
+        "default": "The guy who introduces everyone. 'Have you met my brother?' is basically his catchphrase. Quieter than Peter but no less devoted. Always finding people who need to join the group. Professional networker.",
+        "christian_edition": "Andrew is thoughtful and observant, always bringing others to Jesus. He sees the needs of people and connects them to help. Though quieter than his brother Peter, his devotion is equally strong."
+      },
+      "biblical_reference": "John 1:40-42 (brought Peter to Jesus)",
+      "recruitment_event": {
+        "default": "Saw Jesus help people and immediately thought 'my brother needs to meet this guy!' Brought Peter. The rest is history. Good job, Andrew.",
+        "christian_edition": "After witnessing Jesus's compassion and teaching, Andrew immediately brought his brother Simon Peter to meet Jesus, becoming one of the first disciples called."
+      },
+      "combo_fish": "tuna_other_cheek",
+      "combo_attack": {
+        "name": "Brother's Counter",
+        "description": "Reflect 100% of all damage for 1 turn",
+        "effect": "combo_brothers_counter"
+      }
+    },
+    {
+      "id": "james_zebedee",
+      "name": "James",
+      "alternate_name": "James son of Zebedee",
+      "title": "Son of Thunder",
+      "town": "Magdala",
+      "town_number": 5,
+      "battle_ability": {
+        "name": "Thunder Strike",
+        "description": "30 Lightning damage to all enemies. 20% chance to paralyze all targets.",
+        "effect": "lightning_aoe",
+        "damage": 30,
+        "paralyze_chance": 0.2,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Weather Control",
+        "description": "Summon or calm storms to clear obstacles. Can cross stormy waters or clear storm-blocked paths.",
+        "overworld_effect": "control_weather"
+      },
+      "personality": {
+        "default": "Son of Thunder. LOUD. Wanted to call down FIRE on people who disagreed. Jesus said 'maybe chill?' James did not chill. Passionate about justice. The human equivalent of caps lock.",
+        "christian_edition": "James is fiery and zealous, earning the title 'Son of Thunder.' His passion for justice is strong, though he learns to temper his zeal with wisdom. He is protective and devoted."
+      },
+      "biblical_reference": "Mark 3:17 (Jesus named them Boanerges)",
+      "recruitment_event": {
+        "default": "Saw Jesus cast out demons and thought 'THAT'S what I'm talking about!' Joined immediately to fight the forces of evil. Very enthusiastic about smiting.",
+        "christian_edition": "After witnessing Jesus's power over evil spirits, James was moved to join him in the spiritual battle against darkness, bringing his fierce devotion to the cause."
+      }
+    },
+    {
+      "id": "john",
+      "name": "John",
+      "title": "The Beloved",
+      "town": "Chorazin",
+      "town_number": 6,
+      "battle_ability": {
+        "name": "Revelation Vision",
+        "description": "Shows enemy's next 3 moves in advance. Also reveals hidden enemy abilities.",
+        "effect": "foresight",
+        "turns": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Ancient Text Reading",
+        "description": "Can read and decipher ancient scrolls. Opens sealed prophecy doors and old script locks.",
+        "overworld_effect": "read_ancient_texts"
+      },
+      "personality": {
+        "default": "The youngest. The 'beloved disciple.' Sees DEEP spiritual truths others miss. Will later write the most philosophically complex Gospel and then Revelation, which is... A LOT. Contemplative king.",
+        "christian_edition": "John is the youngest disciple, known for his deep spiritual insight and close relationship with Jesus. He sees beyond the physical to eternal truths. His love and devotion are profound."
+      },
+      "biblical_reference": "Gospel of John, Book of Revelation",
+      "recruitment_event": {
+        "default": "Recognized Jesus as 'the Word made flesh.' Which is incredibly theologically sophisticated for a first meeting. Joined quietly and has been contemplating deeply ever since.",
+        "christian_edition": "John recognized Jesus as the Word incarnate and joined with quiet, unwavering devotion. His understanding of spiritual truths was evident from the beginning."
+      },
+      "combo_fish": "holy_mackerel",
+      "combo_attack": {
+        "name": "Revelation Smack",
+        "description": "200 Holy damage + blind all enemies for 2 turns",
+        "effect": "combo_revelation"
+      }
+    },
+    {
+      "id": "philip",
+      "name": "Philip",
+      "title": "The Calculator",
+      "town": "Tiberias",
+      "town_number": 7,
+      "battle_ability": {
+        "name": "Feed the 5000",
+        "description": "Multiply next bread item used × 5. One bread becomes five uses.",
+        "effect": "multiply_item",
+        "multiplier": 5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Mathematical Puzzles",
+        "description": "Solves complex numerical locks and puzzles. Required for certain gate mechanisms.",
+        "overworld_effect": "solve_math_puzzles"
+      },
+      "personality": {
+        "default": "The Excel spreadsheet guy. Calculates EVERYTHING. 'It would take 8 months wages to feed them!' Practical, logical, needs concrete plans. Learns that some things can't be calculated. Still brings spreadsheets.",
+        "christian_edition": "Philip is logical and practical, always seeking to understand through reason and calculation. He learns that faith sometimes transcends human logic, though his analytical mind is valuable."
+      },
+      "biblical_reference": "John 6:7 (calculated cost of feeding crowd)",
+      "recruitment_event": {
+        "default": "Did the math on feeding 5000 people. The math said 'impossible.' Then Jesus fed 5000 people. Philip: 'I need to recalculate EVERYTHING.' Joined to see more impossible math.",
+        "christian_edition": "After witnessing miracles that defied logical explanation, Philip recognized Jesus as the answer beyond calculation and joined, saying 'Come and see!'"
+      },
+      "combo_fish": "salmon_of_wisdom",
+      "combo_attack": {
+        "name": "Calculated Devastation",
+        "description": "Ignores all enemy defenses and type resistances",
+        "effect": "combo_calculated"
+      }
+    },
+    {
+      "id": "matthew",
+      "name": "Matthew",
+      "alternate_name": "Levi",
+      "title": "The Tax Collector",
+      "town": "Gadara",
+      "town_number": 8,
+      "battle_ability": {
+        "name": "Render unto Caesar",
+        "description": "Steal money from all enemies (5x normal battle reward). Also steals one random item from enemy.",
+        "effect": "steal_money_items",
+        "money_multiplier": 5,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Bribery/Negotiation",
+        "description": "Can bribe corrupt officials and guards. Opens 'pay-to-pass' gates and checkpoints.",
+        "overworld_effect": "bribe_guards"
+      },
+      "personality": {
+        "default": "Former tax collector. EVERYONE hated him. Everyone. Left it all behind instantly. Now VERY generous (overcompensating?). Detail-oriented. Writes EVERYTHING down. Will later write a whole Gospel with extensive genealogies.",
+        "christian_edition": "Matthew was a tax collector, despised by his own people. When Jesus called him, he left everything behind immediately. Now he serves with gratitude and generosity, recording the teachings faithfully."
+      },
+      "biblical_reference": "Matthew 9:9 (tax collector called by Jesus)",
+      "recruitment_event": {
+        "default": "Jesus said 'Follow me.' Matthew left his tax booth WITH MONEY STILL IN IT and followed. Everyone was shocked. Matthew never looked back. New life, who dis?",
+        "christian_edition": "When Jesus called him from his tax collector's booth, Matthew immediately left everything behind to follow, demonstrating that no one is beyond redemption."
+      },
+      "combo_fish": "hali_but",
+      "combo_attack": {
+        "name": "Tax the Wicked",
+        "description": "Multi-hit attack + steal 10x money",
+        "effect": "combo_tax_wicked"
+      }
+    },
+    {
+      "id": "simon_zealot",
+      "name": "Simon",
+      "alternate_name": "Simon the Zealot",
+      "title": "The Revolutionary",
+      "town": "Samaria",
+      "town_number": 9,
+      "battle_ability": {
+        "name": "Righteous Fury",
+        "description": "Next attack does 3x damage. Breaks through enemy defenses.",
+        "effect": "triple_damage_next",
+        "multiplier": 3,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Intimidation",
+        "description": "Scares off hostile guards and enemies. Clears aggressive checkpoints without fighting.",
+        "overworld_effect": "intimidate_enemies"
+      },
+      "personality": {
+        "default": "Former REVOLUTIONARY. Wanted to OVERTHROW ROME with VIOLENCE. Now learning that love is more revolutionary than swords. Still very intense about it. Traded political revolution for heart revolution.",
+        "christian_edition": "Simon was a zealot who sought to overthrow Rome through force. In following Jesus, he learned that true revolution comes through transformed hearts, not violence. His passion redirected to peace."
+      },
+      "biblical_reference": "Luke 6:15 (called the Zealot)",
+      "recruitment_event": {
+        "default": "Realized violent revolution wasn't working. Saw Jesus flip tables in the temple and thought 'okay THAT'S revolutionary!' Joined the REAL revolution—one of love and justice.",
+        "christian_edition": "After seeing Jesus challenge unjust systems through love rather than violence, Simon recognized a deeper revolution and joined, redirecting his zeal toward God's kingdom."
+      },
+      "combo_fish": "swordfish",
+      "combo_attack": {
+        "name": "Zealot's Blade",
+        "description": "500 damage, single target, usable ONCE PER GAME",
+        "effect": "combo_zealot_blade",
+        "uses": 1
+      }
+    },
+    {
+      "id": "james_alphaeus",
+      "name": "James",
+      "alternate_name": "James son of Alphaeus",
+      "title": "The Lesser",
+      "town": "Jericho",
+      "town_number": 10,
+      "battle_ability": {
+        "name": "Humble Service",
+        "description": "Permanently increase all stats by 10% (stacks each use). Slow but steady power growth.",
+        "effect": "stat_boost_permanent",
+        "boost": 0.1,
+        "stacks": true,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Humility Gate",
+        "description": "Can pass through 'only the humble may enter' barriers. Required for certain holy sites.",
+        "overworld_effect": "humility_pass"
+      },
+      "personality": {
+        "default": "James the Lesser. James the Less. James #2. The OTHER James. Gets mistaken for the other James constantly. Doesn't complain. Quiet, humble, steady. The unsung hero. Literally unsung—people forget to sing about him.",
+        "christian_edition": "Often called James the Lesser to distinguish him from James son of Zebedee. He serves quietly and humbly, never seeking recognition. His faithful service is his strength."
+      },
+      "biblical_reference": "Often called James the Less to distinguish from James son of Zebedee",
+      "recruitment_event": {
+        "default": "Joined quietly. Served faithfully. Never complained about being overlooked. His humility is his superpower. Still gets mail addressed to 'the other James.'",
+        "christian_edition": "This often-overlooked apostle joined and served quietly, demonstrating that true greatness lies in humble, faithful service without seeking recognition."
+      },
+      "combo_fish": "grouper_therapy",
+      "combo_attack": {
+        "name": "Humble Healing",
+        "description": "Full heal to all party members and Jesus",
+        "effect": "combo_humble_heal"
+      }
+    },
+    {
+      "id": "thomas",
+      "name": "Thomas",
+      "alternate_name": "Didymus",
+      "title": "The Doubter",
+      "town": "Bethany",
+      "town_number": 11,
+      "battle_ability": {
+        "name": "Proof Required",
+        "description": "Negates one enemy illusion, trick, or dodge. Reveals true form of shapeshifters.",
+        "effect": "negate_illusion",
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Trap Detection",
+        "description": "Sees through false paths and detects traps. Required for navigating treacherous dungeons.",
+        "overworld_effect": "detect_traps"
+      },
+      "personality": {
+        "default": "DOUBTING Thomas. Wants PROOF. Evidence. Citations. 'Unless I see the nail marks I will NOT believe!' Gets proof. Believes HARD. Goes from biggest skeptic to most devoted. All or nothing guy.",
+        "christian_edition": "Thomas is honest about his doubts, requiring evidence before believing. When he receives proof, his faith becomes absolute. He teaches us that honest questions can lead to deeper faith."
+      },
+      "biblical_reference": "John 20:24-29 (unless I see... I will not believe)",
+      "recruitment_event": {
+        "default": "Saw Lazarus walk out of a tomb after being DEAD for FOUR DAYS. Thomas: 'Okay. OKAY. I believe. That's... that's pretty convincing proof.' Joined with zero doubts remaining.",
+        "christian_edition": "After witnessing the ultimate proof of Jesus's power over death through the raising of Lazarus, Thomas's doubts were answered and he joined with conviction."
+      },
+      "combo_fish": "leviathan_lament",
+      "combo_attack": {
+        "name": "Proof of Power",
+        "description": "800 damage single target, undeniable damage",
+        "effect": "combo_proof_power"
+      }
+    },
+    {
+      "id": "thaddaeus",
+      "name": "Thaddaeus",
+      "alternate_name": "Jude",
+      "title": "The Forgotten",
+      "town": "Bethlehem",
+      "town_number": 12,
+      "battle_ability": {
+        "name": "Hidden Strength",
+        "description": "Random powerful effect (wild card). Could be massive heal, huge damage, full buffs, or minor effect.",
+        "effect": "random_wildcard",
+        "options": ["massive_heal", "huge_damage", "full_buffs", "minor_effect"],
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Secret Passages",
+        "description": "Finds hidden doors and forgotten paths. The forgotten apostle finds forgotten places.",
+        "overworld_effect": "find_secrets"
+      },
+      "personality": {
+        "default": "The FORGOTTEN apostle. Not Judas Iscariot—the OTHER Judas. Wait, there's a Thaddaeus too? Same guy? Nobody knows. Often confused. Underestimated. Surprisingly capable. Finds hidden things because HE'S hidden.",
+        "christian_edition": "Often overlooked and underestimated, Thaddaeus (also called Jude) serves faithfully despite being frequently forgotten. His humility and hidden strength make him surprisingly capable."
+      },
+      "biblical_reference": "John 14:22 (asks Jesus a question, often forgotten)",
+      "recruitment_event": {
+        "default": "Was quietly helping people. Jesus noticed. 'Hey, you want to join?' Thaddaeus: 'You... you know my name?' Joined, grateful someone finally saw him. Still gets introduced wrong.",
+        "christian_edition": "While quietly serving those in need, Jesus saw Thaddaeus's faithful heart and called him. He joined, grateful to be recognized and given purpose."
+      },
+      "combo_fish": "angler_of_light",
+      "combo_attack": {
+        "name": "Forgotten Illumination",
+        "description": "Reveals all secrets in current area (items, parables, hidden paths)",
+        "effect": "combo_reveal_all"
+      }
+    },
+    {
+      "id": "judas",
+      "name": "Judas Iscariot",
+      "title": "The Betrayer",
+      "town": "Jerusalem",
+      "town_number": 13,
+      "battle_ability": {
+        "name": "Thirty Silver Pieces",
+        "description": "30-60 massive damage to enemy. Costs Jesus 30 HP (blood money). Most powerful single attack but comes with cost.",
+        "effect": "blood_money_attack",
+        "damage": [30, 60],
+        "cost_jesus_hp": 30,
+        "cooldown": "once_per_battle"
+      },
+      "key_power": {
+        "name": "Point of No Return",
+        "description": "Unlocks path to Gethsemane/Golgotha. Opens 'point of no return' final dungeon.",
+        "overworld_effect": "unlock_final_path"
+      },
+      "personality": {
+        "default": "The Betrayer. Complex. Troubled. Something's OFF about him. Good with money (keeps the purse). Powerful abilities with COSTS. Using his abilities feels... wrong. Because it is. Tragedy waiting to happen.",
+        "christian_edition": "Judas is complex and troubled, showing hints of inner conflict throughout. He manages the group's finances but struggles with darker impulses. His story is one of warning and redemption's opposite."
+      },
+      "biblical_reference": "Matthew 26:14-16, 27:3-5 (betrayal and regret)",
+      "recruitment_event": {
+        "default": "Shows up in Jerusalem managing funds. 'I'll handle the money.' Something feels off. Everyone's uneasy but can't say why. Foreshadowing: the ability.",
+        "christian_edition": "Joins as the group's treasurer in Jerusalem, already managing financial matters. Though capable, there are troubling signs that not all is as it seems."
+      },
+      "special_note": "1% chance to 'accidentally' help enemies in battle. Final boss requires his attack.",
+      "combo_fish": "red_herring",
+      "combo_attack": {
+        "name": "Silver Deception",
+        "description": "100 damage + steal all enemy buffs",
+        "effect": "combo_silver_deception"
+      }
+    }
+  ],
+  "ultimate_combo": {
+    "name": "Great Commission",
+    "description": "All 12 apostles + Fishers of Men-haden fish = Ultimate attack, final boss only",
+    "requires": ["all_12_apostles", "fishers_of_men_haden"],
+    "effect": "ultimate_commission",
+    "usable": "final_boss_only"
+  },
+  "metadata": {
+    "total_apostles": 12,
+    "recruitment_order": [
+      "bartholomew", "peter", "andrew", "james_zebedee", "john", "philip",
+      "matthew", "simon_zealot", "james_alphaeus", "thomas", "thaddaeus", "judas"
+    ]
+  }
+}

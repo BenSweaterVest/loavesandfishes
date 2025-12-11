@@ -1,0 +1,109 @@
+{
+  "miracles": [
+    {
+      "id": "healing_miracle",
+      "name": {
+        "default": "Healing Miracle",
+        "christian_edition": "Healing Miracle"
+      },
+      "type": "healing",
+      "meter_cost": 50,
+      "biblical_reference": "Matthew 9:22 (Woman with bleeding)",
+      "description": {
+        "default": "Your faith has made you WHOLE! Fully heals ALL party fish and cures ALL status effects. The ultimate do-over!",
+        "christian_edition": "Your faith has made you whole. Fully heals all party fish and cures all status effects."
+      },
+      "battle_text": {
+        "default": "Jesus touches the afflicted with compassion. INSTANT HEALING! Everyone's back to full HP!",
+        "christian_edition": "Jesus heals the sick with a touch. All fish are restored to full health."
+      },
+      "unlock_condition": {
+        "unlocked_at_start": true,
+        "description": "Available from the beginning"
+      }
+    },
+    {
+      "id": "loaves_and_fishes",
+      "name": {
+        "default": "Loaves and Fishes",
+        "christian_edition": "Multiplication of Loaves and Fishes"
+      },
+      "type": "support",
+      "meter_cost": 40,
+      "biblical_reference": "Matthew 14:13-21 (Feeding of 5000)",
+      "description": {
+        "default": "Feed the MULTITUDE! Multiplies the effects of ALL bread items by 3x for this battle. Bread stock goes BRRR!",
+        "christian_edition": "Feed the multitude. Multiplies the effects of all bread items by 3x for this battle."
+      },
+      "battle_text": {
+        "default": "Jesus blesses the bread and fish. MULTIPLY! Bread is now 3x more effective! Economics don't work like this!",
+        "christian_edition": "Jesus blesses the provisions. All bread items are now three times more effective."
+      },
+      "unlock_condition": {
+        "quest": "multiplication_practice",
+        "description": "Unlocked after feeding the 5000"
+      }
+    },
+    {
+      "id": "divine_judgment",
+      "name": {
+        "default": "Divine Judgment",
+        "christian_edition": "Righteous Judgment"
+      },
+      "type": "offensive",
+      "meter_cost": 75,
+      "biblical_reference": "Matthew 21:12-13 (Cleansing of Temple)",
+      "description": {
+        "default": "The WRATH of the righteous! Deals 300 HOLY damage to ALL enemies and reduces their stats by 50% for 3 turns. Table-flipping intensity!",
+        "christian_edition": "Righteous judgment upon the wicked. Deals 300 Holy damage to all enemies and reduces their stats by 50% for 3 turns."
+      },
+      "battle_text": {
+        "default": "Jesus overturns the tables of the wicked! *CRASH* 'MY FATHER'S HOUSE!' MASSIVE damage! Stats CRUSHED!",
+        "christian_edition": "Jesus drives out those who defile the temple. His righteous anger strikes down the enemies."
+      },
+      "unlock_condition": {
+        "quest": "money_changers",
+        "description": "Unlocked after cleansing the temple"
+      }
+    },
+    {
+      "id": "resurrection_power",
+      "name": {
+        "default": "Resurrection Power",
+        "christian_edition": "Power of Resurrection"
+      },
+      "type": "resurrection",
+      "meter_cost": 100,
+      "biblical_reference": "John 11:43-44 (Raising of Lazarus)",
+      "description": {
+        "default": "'LAZARUS, COME FORTH!' Revives ALL fainted fish with FULL HP and grants IMMUNITY for 2 turns. Ultimate comeback!",
+        "christian_edition": "Lazarus, come forth! Revives all fainted fish with full HP and grants immunity for 2 turns."
+      },
+      "battle_text": {
+        "default": "Jesus calls with a LOUD voice! 'COME FORTH!' The dead rise! Full HP! Invincible! ULTIMATE POWER!",
+        "christian_edition": "Jesus commands with authority. 'Come forth!' The fallen are raised and protected by divine power."
+      },
+      "unlock_condition": {
+        "boss": "death_manifest",
+        "description": "Unlocked after defeating Death and raising Lazarus"
+      }
+    }
+  ],
+  "miracle_meter": {
+    "max_value": 100,
+    "generation_rate": {
+      "per_turn": 5,
+      "on_damage_taken": "1% per 10 damage",
+      "on_fish_fainted": 15,
+      "on_enemy_defeated": 10
+    },
+    "description": {
+      "default": "The Miracle Meter fills as you fight! Once full, unleash DIVINE POWER!",
+      "christian_edition": "The Miracle Meter represents faith building through trials. Once full, you can perform a miracle."
+    }
+  },
+  "metadata": {
+    "total_miracles": 4,
+    "description": "Jesus's special abilities (limit breaks) with dual-text support"
+  }
+}

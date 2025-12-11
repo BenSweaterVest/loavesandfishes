@@ -1,0 +1,429 @@
+{
+  "bread_items": [
+    {
+      "id": "plain_pita",
+      "name": "Plain Pita",
+      "type": "healing",
+      "effect": "heal_hp",
+      "power": 20,
+      "cost": 0,
+      "town": "Nazareth",
+      "flavor_text": {
+        "default": "Nothing fancy, but it'll fill you up. Basic. Boring. Gets the job done.",
+        "christian_edition": "Simple bread that sustains. Sometimes the simplest blessings are the most important."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "ryedemption_roll",
+      "name": "Rye-demption Roll",
+      "type": "healing",
+      "effect": "heal_hp",
+      "power": 30,
+      "cost": 30,
+      "town": "Cana",
+      "flavor_text": {
+        "default": "RYE-demption! Rise again with restored health! Get it? RYE? We're not sorry.",
+        "christian_edition": "Bread that restores and renews. Redemption brings us back to wholeness and health."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "challah_lujah",
+      "name": "Challah-lujah Bread",
+      "type": "healing",
+      "effect": "heal_hp",
+      "power": 50,
+      "cost": 50,
+      "town": "Bethsaida",
+      "flavor_text": {
+        "default": "CHALLAH-LUJAH! Praise the yeast! This bread is blessed! *angelic choir sounds*",
+        "christian_edition": "Bread of celebration and praise. Let us give thanks for the gifts we receive!"
+      },
+      "quick_item": true
+    },
+    {
+      "id": "naan_business",
+      "name": "Naan of Your Business",
+      "type": "healing_cure",
+      "effect": "heal_and_cure_poison",
+      "power": 40,
+      "cost": 60,
+      "town": "Gadara",
+      "flavor_text": {
+        "default": "Naan of your business what's in this! Mind the blessing! It's private! ...It's curative herbs.",
+        "christian_edition": "Blessed bread with healing properties. The cure for what ails you, given freely."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "breadgel",
+      "name": "Breadgel",
+      "type": "healing_buff",
+      "effect": "heal_and_atk_boost",
+      "heal_power": 60,
+      "atk_boost": 10,
+      "duration": 3,
+      "cost": 100,
+      "town": "Bethlehem",
+      "flavor_text": {
+        "default": "The BREADgel! Combines EVERYTHING good! Healing? Check. Strength boost? Check. Carbs? OH YES.",
+        "christian_edition": "A perfect combination of sustenance and strength. Everything needed for the journey ahead."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "manna_breakfast",
+      "name": "Manna from Breakfast",
+      "type": "healing_full",
+      "effect": "full_heal_all",
+      "power": 999,
+      "cost": 200,
+      "town": "Jerusalem",
+      "flavor_text": {
+        "default": "Manna from Breakfast! The OG miracle food! Your ancestors ate this in the desert for 40 YEARS. Full heal, baby!",
+        "christian_edition": "The bread from heaven that sustained God's people through their wilderness journey. Divine provision made manifest."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "loaf_divine",
+      "name": "Loaf Divine",
+      "type": "buff_atk",
+      "effect": "atk_boost",
+      "boost_percent": 20,
+      "duration": 3,
+      "cost": 40,
+      "town": "Capernaum",
+      "flavor_text": {
+        "default": "The POWER of GLUTEN! Attack boost! Makes you strong! *Not suitable for celiac sufferers*",
+        "christian_edition": "Bread that strengthens the body and fortifies the spirit for battle ahead."
+      },
+      "quick_item": false
+    },
+    {
+      "id": "focaccia_blessing",
+      "name": "Focaccia Blessing",
+      "type": "buff_spd",
+      "effect": "spd_boost",
+      "boost_percent": 40,
+      "duration": 3,
+      "cost": 55,
+      "town": "Tiberias",
+      "flavor_text": {
+        "default": "Focaccia Blessing! Light, quick, and blessed! Speed boost activated! Zoom zoom!",
+        "christian_edition": "Light bread that grants swiftness. Move quickly on your mission with divine blessing."
+      },
+      "quick_item": false
+    },
+    {
+      "id": "pumpernickel_dime",
+      "name": "Pumper-nickel and Dime",
+      "type": "buff_def",
+      "effect": "def_boost",
+      "boost_percent": 30,
+      "duration": 4,
+      "cost": 65,
+      "town": "Samaria",
+      "flavor_text": {
+        "default": "Pumper-NICKEL and DIME! Cheap defense! Tougher than it looks! Dense enough to stop arrows. Probably.",
+        "christian_edition": "Hearty bread that fortifies defenses. Protection that exceeds its humble appearance."
+      },
+      "quick_item": false
+    },
+    {
+      "id": "sourdough_sorrow",
+      "name": "Sourdough of Sorrow",
+      "type": "debuff_enemy",
+      "effect": "enemy_atk_down",
+      "debuff_percent": 30,
+      "duration": 3,
+      "cost": 50,
+      "town": "Magdala",
+      "flavor_text": {
+        "default": "Sourdough of SORROW! Bitter. Effective. Makes enemies weaker just by existing. Tastes terrible. Works great.",
+        "christian_edition": "Bread infused with sorrow that weakens the wicked. Bitter but righteous in purpose."
+      },
+      "quick_item": false
+    },
+    {
+      "id": "unleavened_legend",
+      "name": "Unleavened Legend",
+      "type": "cure_all",
+      "effect": "remove_all_debuffs",
+      "cost": 70,
+      "town": "Chorazin",
+      "flavor_text": {
+        "default": "Unleavened Legend! Pure! Simple! Removes ALL bad stuff! No rise, no problem. Passover approved!",
+        "christian_edition": "Bread made without leaven, symbol of purity. Cleanses all impurities and ailments."
+      },
+      "quick_item": true
+    },
+    {
+      "id": "bagel_second_chances",
+      "name": "Bagel of Second Chances",
+      "type": "revive_auto",
+      "effect": "auto_revive",
+      "revive_hp": 1,
+      "cost": 150,
+      "town": "Jericho",
+      "flavor_text": {
+        "default": "Bagel of Second Chances! Everything returns—even YOU! Auto-revive! It's a do-over in bread form!",
+        "christian_edition": "Bread of resurrection and renewal. When you fall, this brings you back. Grace made edible."
+      },
+      "quick_item": true,
+      "special": "consumed_when_triggered"
+    },
+    {
+      "id": "croissant_crusader",
+      "name": "Croissant Crusader",
+      "type": "invincibility",
+      "effect": "invincible",
+      "duration": 3,
+      "cost": 180,
+      "town": "Bethany",
+      "flavor_text": {
+        "default": "Croissant CRUSADER! Flaky but INCREDIBLY strong! Temporary invincibility! Buttery protection!",
+        "christian_edition": "Layered bread that grants divine protection. Invincible for a time through faith's shield."
+      },
+      "quick_item": false
+    }
+  ],
+  "equipment": {
+    "robes": [
+      {
+        "id": "simple_robe",
+        "name": "Simple Robe",
+        "type": "robe",
+        "def_bonus": 5,
+        "cost": 0,
+        "location": "Starting gear",
+        "description": "Basic traveling robe"
+      },
+      {
+        "id": "carpenters_robe",
+        "name": "Carpenter's Robe",
+        "type": "robe",
+        "def_bonus": 10,
+        "cost": 50,
+        "location": "Nazareth",
+        "description": "Sturdy work robe from carpentry days"
+      },
+      {
+        "id": "shepherds_garment",
+        "name": "Shepherd's Garment",
+        "type": "robe",
+        "def_bonus": 15,
+        "cost": 100,
+        "location": "Cana",
+        "description": "Warm garment of the shepherds"
+      },
+      {
+        "id": "travelers_cloak",
+        "name": "Traveler's Cloak",
+        "type": "robe",
+        "def_bonus": 20,
+        "cost": 200,
+        "location": "Capernaum",
+        "description": "Practical cloak for long journeys"
+      },
+      {
+        "id": "prophets_mantle",
+        "name": "Prophet's Mantle",
+        "type": "robe",
+        "def_bonus": 30,
+        "cost": 400,
+        "location": "Tiberias",
+        "description": "Mantle of the prophets of old"
+      },
+      {
+        "id": "priestly_vestment",
+        "name": "Priestly Vestment",
+        "type": "robe",
+        "def_bonus": 40,
+        "cost": 800,
+        "location": "Bethany",
+        "description": "Sacred priestly garments"
+      },
+      {
+        "id": "messiahs_raiment",
+        "name": "Messiah's Raiment",
+        "type": "robe",
+        "def_bonus": 50,
+        "cost": 1500,
+        "location": "Jerusalem",
+        "description": "The raiment of the promised one"
+      },
+      {
+        "id": "crown_thorns",
+        "name": "Crown of Thorns",
+        "type": "robe_special",
+        "def_bonus": 50,
+        "atk_bonus": 20,
+        "cost": 0,
+        "location": "Jerusalem (hidden, post-game)",
+        "description": "Suffering transformed into strength",
+        "special": "post_game_only"
+      }
+    ],
+    "accessories": [
+      {
+        "id": "sandals_peace",
+        "name": "Sandals of Peace",
+        "type": "accessory",
+        "spd_bonus": 5,
+        "cost": 0,
+        "location": "Nazareth (found)",
+        "description": "Walk in peace"
+      },
+      {
+        "id": "staff_moses",
+        "name": "Staff of Moses",
+        "type": "accessory",
+        "effect": "boost_spirit_moves",
+        "boost_percent": 20,
+        "cost": 0,
+        "location": "Egypt (DLC reference/joke)",
+        "description": "The legendary staff (or is it?)"
+      },
+      {
+        "id": "dove_pendant",
+        "name": "Dove Pendant",
+        "type": "accessory",
+        "effect": "regen",
+        "heal_per_turn": 5,
+        "cost": 0,
+        "location": "Nazareth side quest",
+        "description": "Symbol of the Spirit"
+      },
+      {
+        "id": "cross_necklace",
+        "name": "Cross Necklace",
+        "type": "accessory",
+        "effect": "auto_revive",
+        "revive_hp_percent": 50,
+        "cost": 0,
+        "location": "Bethany (found)",
+        "description": "Hope in suffering"
+      },
+      {
+        "id": "prayer_beads",
+        "name": "Prayer Beads",
+        "type": "accessory",
+        "effect": "miracle_meter_boost",
+        "boost_percent": 20,
+        "cost": 500,
+        "location": "Jerusalem",
+        "description": "Fill Miracle Meter 20% faster"
+      },
+      {
+        "id": "carpenters_tools",
+        "name": "Carpenter's Tools",
+        "type": "accessory",
+        "effect": "fish_atk_boost",
+        "atk_bonus": 10,
+        "cost": 0,
+        "location": "Nazareth (found)",
+        "description": "+10 ATK with fish weapons"
+      },
+      {
+        "id": "phylactery",
+        "name": "Phylactery",
+        "type": "accessory",
+        "effect": "dark_resistance",
+        "damage_reduction": 20,
+        "cost": 300,
+        "location": "Samaria",
+        "description": "Protects against Dark-type attacks"
+      },
+      {
+        "id": "fish_symbol_ring",
+        "name": "Fish Symbol Ring",
+        "type": "accessory",
+        "effect": "xp_boost",
+        "boost_percent": 10,
+        "cost": 0,
+        "location": "Capernaum (hidden)",
+        "description": "All fish gain +10% XP"
+      }
+    ],
+    "fish_held_items": [
+      {
+        "id": "coral_crown",
+        "name": "Coral Crown",
+        "type": "fish_item",
+        "def_bonus": 5,
+        "cost": 100,
+        "description": "+5 DEF for equipped fish"
+      },
+      {
+        "id": "pearl_wisdom",
+        "name": "Pearl of Wisdom",
+        "type": "fish_item",
+        "effect": "xp_boost",
+        "boost_percent": 10,
+        "cost": 150,
+        "description": "+10% XP gain for equipped fish"
+      },
+      {
+        "id": "net_protection",
+        "name": "Net of Protection",
+        "type": "fish_item",
+        "effect": "damage_reduction",
+        "reduction_percent": 10,
+        "cost": 200,
+        "description": "Reduce damage taken by 10%"
+      },
+      {
+        "id": "miracle_scale",
+        "name": "Miracle Scale",
+        "type": "fish_item",
+        "effect": "regen",
+        "heal_per_turn": 5,
+        "cost": 250,
+        "description": "Heal 5 HP per turn"
+      },
+      {
+        "id": "lucky_fin",
+        "name": "Lucky Fin",
+        "type": "fish_item",
+        "effect": "crit_boost",
+        "crit_chance_bonus": 10,
+        "cost": 300,
+        "description": "+10% critical hit chance"
+      },
+      {
+        "id": "speed_current",
+        "name": "Speed Current",
+        "type": "fish_item",
+        "spd_bonus": 5,
+        "cost": 150,
+        "description": "+5 SPD for equipped fish"
+      },
+      {
+        "id": "power_plankton",
+        "name": "Power Plankton",
+        "type": "fish_item",
+        "atk_bonus": 5,
+        "cost": 200,
+        "description": "+5 ATK for equipped fish"
+      },
+      {
+        "id": "holy_halo",
+        "name": "Holy Halo",
+        "type": "fish_item",
+        "effect": "holy_boost",
+        "boost_percent": 20,
+        "cost": 350,
+        "description": "Boosts Holy-type moves by 20%"
+      }
+    ]
+  },
+  "metadata": {
+    "total_bread_items": 13,
+    "total_robes": 8,
+    "total_accessories": 8,
+    "total_fish_items": 8,
+    "currency": "denarii"
+  }
+}

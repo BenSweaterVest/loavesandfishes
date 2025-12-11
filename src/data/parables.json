@@ -1,0 +1,935 @@
+{
+  "parables": [
+    {
+      "id": "sower",
+      "name": "The Sower",
+      "category": "Kingdom",
+      "location": "Galilee - Farm Field",
+      "found_how": "Hidden in wheat field",
+      "biblical_reference": "Matthew 13:1-23",
+      "short_teaching": {
+        "default": "The Kingdom of Heaven is like a sower scattering seed. Some falls on good soil and produces a GREAT harvest. ROI varies by soil type!",
+        "christian_edition": "The Kingdom of Heaven is like a sower scattering seed. Some falls on good soil and produces a great harvest."
+      },
+      "full_text": "A farmer went out to sow seed. Some fell on the path and birds ate it. Some fell on rocky ground and withered. Some fell among thorns and was choked. But some fell on good soil and produced a crop—a hundred, sixty, or thirty times what was sown. Whoever has ears, let them hear!",
+      "moral": {
+        "default": "Be good SOIL: receptive, deep-rooted, and FREE from worldly distractions. Don't be rocky or thorny!",
+        "christian_edition": "Be good soil: receptive, deep-rooted, and free from worldly distractions."
+      },
+      "game_effect": {
+        "type": "xp_bonus",
+        "value": 0.02,
+        "description": "+2% XP from battles"
+      }
+    },
+    {
+      "id": "mustard_seed",
+      "name": "The Mustard Seed",
+      "category": "Kingdom",
+      "location": "Galilee - Garden",
+      "found_how": "Given by farmer after helping with crops",
+      "biblical_reference": "Matthew 13:31-32",
+      "short_teaching": {
+        "default": "The Kingdom is like a mustard seed—SMALL at first, but grows into something GREAT. Tiny seed, BIG tree!",
+        "christian_edition": "The Kingdom of Heaven is like a mustard seed—small at first, but grows into something great."
+      },
+      "full_text": "The kingdom of heaven is like a mustard seed, which a man took and planted in his field. Though it is the smallest of all seeds, yet when it grows, it is the largest of garden plants and becomes a tree, so that the birds come and perch in its branches.",
+      "moral": {
+        "default": "Great things come from SMALL beginnings. Faith starts small but grows MIGHTY. Exponential growth!",
+        "christian_edition": "Great things come from small beginnings. Faith starts small but grows mighty."
+      },
+      "game_effect": {
+        "type": "fish_growth",
+        "value": 0.03,
+        "description": "Fish stats grow 3% faster"
+      }
+    },
+    {
+      "id": "hidden_treasure",
+      "name": "The Hidden Treasure",
+      "category": "Kingdom",
+      "location": "Coastal - Hidden Cave",
+      "found_how": "Hidden treasure (requires search)",
+      "biblical_reference": "Matthew 13:44",
+      "short_teaching": {
+        "default": "The Kingdom is like TREASURE hidden in a field, worth selling EVERYTHING to obtain. Liquidate ALL assets!",
+        "christian_edition": "The Kingdom of Heaven is like treasure hidden in a field, worth selling everything to obtain."
+      },
+      "full_text": "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field.",
+      "moral": {
+        "default": "The Kingdom is worth EVERYTHING you have. Don't hesitate—give ALL for what truly matters! Total commitment!",
+        "christian_edition": "The Kingdom is worth everything you have. Don't hesitate to give all for what truly matters."
+      },
+      "game_effect": {
+        "type": "money_find",
+        "value": 0.1,
+        "description": "10% chance to find extra money after battles"
+      }
+    },
+    {
+      "id": "pearl",
+      "name": "The Pearl of Great Price",
+      "category": "Kingdom",
+      "location": "Coastal - Merchant Shop",
+      "found_how": "Purchase for 1000 denarii",
+      "biblical_reference": "Matthew 13:45-46",
+      "short_teaching": {
+        "default": "The Kingdom is like a merchant seeking fine pearls who sold EVERYTHING for ONE pearl. Ultimate trade!",
+        "christian_edition": "The Kingdom is like a merchant seeking fine pearls who sold everything for one pearl of great value."
+      },
+      "full_text": "The kingdom of heaven is like a merchant looking for fine pearls. When he found one of great value, he went away and sold everything he had and bought it.",
+      "moral": {
+        "default": "When you find what's TRULY valuable, let NOTHING stop you from obtaining it! All in!",
+        "christian_edition": "When you find what's truly valuable, let nothing stop you from obtaining it."
+      },
+      "game_effect": {
+        "type": "rare_fish",
+        "value": 0.05,
+        "description": "+5% chance to encounter rare fish"
+      }
+    },
+    {
+      "id": "net",
+      "name": "The Net",
+      "category": "Kingdom",
+      "location": "Galilee - Fishing Boat",
+      "found_how": "Catch 50 fish total",
+      "biblical_reference": "Matthew 13:47-50",
+      "short_teaching": {
+        "default": "The Kingdom is like a net that catches ALL kinds of fish. The good are kept, the bad discarded. Quality control!",
+        "christian_edition": "The Kingdom is like a net that catches all kinds of fish. The good are kept, the bad discarded."
+      },
+      "full_text": "The kingdom of heaven is like a net that was let down into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore. Then they sat down and collected the good fish in baskets, but threw the bad away.",
+      "moral": {
+        "default": "At the end of the age, there will be SEPARATION between the righteous and the wicked. Final sorting!",
+        "christian_edition": "At the end of the age, there will be separation between the righteous and the wicked."
+      },
+      "game_effect": {
+        "type": "catch_bonus",
+        "value": 0.1,
+        "description": "+10% fish catch rate"
+      }
+    },
+    {
+      "id": "wheat_tares",
+      "name": "The Wheat and Tares",
+      "category": "Kingdom",
+      "location": "Galilee - Wheat Field",
+      "found_how": "Quest reward: 'Wheat and Tares'",
+      "biblical_reference": "Matthew 13:24-30",
+      "short_teaching": {
+        "default": "The Kingdom is like a field where wheat and weeds grow TOGETHER until harvest. Coexistence until judgment day!",
+        "christian_edition": "The Kingdom is like a field where wheat and weeds grow together until harvest."
+      },
+      "full_text": "The kingdom of heaven is like a man who sowed good seed in his field. But while everyone was sleeping, his enemy came and sowed weeds among the wheat. The servants wanted to pull up the weeds, but the owner said, 'Let both grow together until the harvest. At that time I will tell the harvesters to collect the weeds and burn them, but gather the wheat into my barn.'",
+      "moral": {
+        "default": "Good and evil COEXIST in the world. Final judgment comes at HARVEST time. Patience required!",
+        "christian_edition": "Good and evil coexist in the world. Final judgment comes at harvest time."
+      },
+      "game_effect": {
+        "type": "experience",
+        "value": 500,
+        "description": "Grants 500 XP when collected"
+      }
+    },
+    {
+      "id": "yeast",
+      "name": "The Yeast",
+      "category": "Kingdom",
+      "location": "Cana - Baker's Shop",
+      "found_how": "Buy bread 10 times",
+      "biblical_reference": "Matthew 13:33",
+      "short_teaching": {
+        "default": "The Kingdom is like YEAST that permeates the ENTIRE batch of dough. Invisible but POWERFUL!",
+        "christian_edition": "The Kingdom is like yeast that permeates the entire batch of dough."
+      },
+      "full_text": "The kingdom of heaven is like yeast that a woman took and mixed into about sixty pounds of flour until it worked all through the dough.",
+      "moral": {
+        "default": "The Kingdom starts SMALL but influences EVERYTHING it touches. Pervasive transformation!",
+        "christian_edition": "The Kingdom starts small but influences everything it touches."
+      },
+      "game_effect": {
+        "type": "bread_effect",
+        "value": 0.15,
+        "description": "All bread items 15% more effective"
+      }
+    },
+    {
+      "id": "lost_sheep",
+      "name": "The Lost Sheep",
+      "category": "Lost and Found",
+      "location": "Galilee - Shepherd's Field",
+      "found_how": "Quest reward: 'Lost Sheep Roundup'",
+      "biblical_reference": "Luke 15:3-7",
+      "short_teaching": {
+        "default": "There is MORE rejoicing in heaven over ONE sinner who repents than NINETY-NINE righteous. The one matters!",
+        "christian_edition": "There is more rejoicing in heaven over one sinner who repents than ninety-nine righteous."
+      },
+      "full_text": "Suppose one of you has a hundred sheep and loses one of them. Doesn't he leave the ninety-nine in the open country and go after the lost sheep until he finds it? And when he finds it, he joyfully puts it on his shoulders and goes home. Then he calls his friends and neighbors together and says, 'Rejoice with me; I have found my lost sheep.'",
+      "moral": {
+        "default": "EVERY soul matters to God. He seeks the LOST with RELENTLESS love. No sheep left behind!",
+        "christian_edition": "Every soul matters to God. He seeks the lost with relentless love."
+      },
+      "game_effect": {
+        "type": "fainted_fish",
+        "value": 0.1,
+        "description": "10% chance fainted fish revives with 1 HP"
+      }
+    },
+    {
+      "id": "lost_coin",
+      "name": "The Lost Coin",
+      "category": "Lost and Found",
+      "location": "Capernaum - Woman's House",
+      "found_how": "Quest reward: 'The Lost Coin'",
+      "biblical_reference": "Luke 15:8-10",
+      "short_teaching": {
+        "default": "There is REJOICING in the presence of angels over ONE sinner who repents. Heaven's party time!",
+        "christian_edition": "There is rejoicing in the presence of angels over one sinner who repents."
+      },
+      "full_text": "Suppose a woman has ten silver coins and loses one. Doesn't she light a lamp, sweep the house and search carefully until she finds it? And when she finds it, she calls her friends and neighbors together and says, 'Rejoice with me; I have found my lost coin.'",
+      "moral": {
+        "default": "God searches DILIGENTLY for each lost soul, and heaven CELEBRATES when one is found! Divine search party!",
+        "christian_edition": "God searches diligently for each lost soul, and heaven celebrates when one is found."
+      },
+      "game_effect": {
+        "type": "money_find",
+        "value": 0.15,
+        "description": "15% more money from all sources"
+      }
+    },
+    {
+      "id": "prodigal_son",
+      "name": "The Prodigal Son",
+      "category": "Lost and Found",
+      "location": "Samaria - Father's House",
+      "found_how": "Quest reward: 'The Prodigal Returns'",
+      "biblical_reference": "Luke 15:11-32",
+      "short_teaching": {
+        "default": "A father welcomes home his wayward son with JOY and CELEBRATION. Ultimate comeback story!",
+        "christian_edition": "A father welcomes home his wayward son with joy and celebration."
+      },
+      "full_text": "A man had two sons. The younger demanded his inheritance and squandered it in wild living. When famine came, he returned home, ready to be a servant. But his father ran to him, embraced him, and threw a feast. 'My son was dead and is alive again; he was lost and is found!'",
+      "moral": {
+        "default": "God's love is UNCONDITIONAL. No matter how FAR you've strayed, He welcomes you HOME! Return accepted!",
+        "christian_edition": "God's love is unconditional. No matter how far you've strayed, He welcomes you home."
+      },
+      "game_effect": {
+        "type": "forgiveness",
+        "value": 1,
+        "description": "Remove one negative status effect from party"
+      }
+    },
+    {
+      "id": "good_samaritan",
+      "name": "The Good Samaritan",
+      "category": "Love and Compassion",
+      "location": "Samaria - Roadside Inn",
+      "found_how": "Quest reward: 'The Good Samaritan'",
+      "biblical_reference": "Luke 10:25-37",
+      "short_teaching": {
+        "default": "Love your neighbor as yourself. Your neighbor is ANYONE in need. Cultural boundaries? Irrelevant!",
+        "christian_edition": "Love your neighbor as yourself. Your neighbor is anyone in need."
+      },
+      "full_text": "A man was attacked by robbers and left for dead. A priest and a Levite passed by without helping. But a Samaritan took pity on him, bandaged his wounds, took him to an inn, and paid for his care. Which of these three was a neighbor to the man?",
+      "moral": {
+        "default": "True love CROSSES all boundaries and helps those in need, regardless of who they are. No excuses!",
+        "christian_edition": "True love crosses all boundaries and helps those in need, regardless of who they are."
+      },
+      "game_effect": {
+        "type": "healing_bonus",
+        "value": 0.2,
+        "description": "All healing effects +20%"
+      }
+    },
+    {
+      "id": "unforgiving_servant",
+      "name": "The Unforgiving Servant",
+      "category": "Forgiveness",
+      "location": "Tiberias - Palace Courtyard",
+      "found_how": "Hidden behind throne",
+      "biblical_reference": "Matthew 18:21-35",
+      "short_teaching": {
+        "default": "Forgive others as you have been FORGIVEN. Mercy begets mercy. Pass it on!",
+        "christian_edition": "Forgive others as you have been forgiven. Mercy begets mercy."
+      },
+      "full_text": "A servant owed the king a huge debt. Unable to pay, he begged for mercy, and the king forgave it all. But that servant then refused to forgive a fellow servant who owed him a small amount. When the king heard, he punished the unforgiving servant. 'Shouldn't you have had mercy on your fellow servant just as I had on you?'",
+      "moral": {
+        "default": "As we have been FORGIVEN much, we MUST forgive others. Refusing to forgive brings JUDGMENT. Don't be that guy!",
+        "christian_edition": "As we have been forgiven much, we must forgive others. Refusing to forgive others brings judgment."
+      },
+      "game_effect": {
+        "type": "miracle_meter",
+        "value": 0.05,
+        "description": "+5% miracle meter generation"
+      }
+    },
+    {
+      "id": "two_debtors",
+      "name": "The Two Debtors",
+      "category": "Forgiveness",
+      "location": "Magdala - Mary's House",
+      "found_how": "Given by Mary Magdalene after boss fight",
+      "biblical_reference": "Luke 7:36-50",
+      "short_teaching": {
+        "default": "Those who have been forgiven MUCH, love MUCH. Debt forgiveness = love unlocked!",
+        "christian_edition": "Those who have been forgiven much, love much."
+      },
+      "full_text": "Two people owed money to a moneylender. One owed five hundred denarii, the other fifty. Neither could pay, so he forgave both debts. 'Now which of them will love him more?' The one who was forgiven more. 'Therefore, I tell you, her many sins have been forgiven—as her great love has shown.'",
+      "moral": {
+        "default": "When you realize how MUCH you've been forgiven, you CAN'T HELP but love deeply! Gratitude overflow!",
+        "christian_edition": "When you realize how much you've been forgiven, you can't help but love deeply."
+      },
+      "game_effect": {
+        "type": "love_bonus",
+        "value": 1,
+        "description": "Unlocks special combo: Forgiveness Strike"
+      }
+    },
+    {
+      "id": "pharisee_tax_collector",
+      "name": "The Pharisee and Tax Collector",
+      "category": "Humility",
+      "location": "Jerusalem - Temple",
+      "found_how": "Pray at temple altar",
+      "biblical_reference": "Luke 18:9-14",
+      "short_teaching": {
+        "default": "Those who humble themselves will be EXALTED; the proud will be HUMBLED. Ego check required!",
+        "christian_edition": "Those who humble themselves will be exalted; the proud will be humbled."
+      },
+      "full_text": "Two men went to the temple to pray. The Pharisee stood and prayed about himself: 'God, I thank you that I am not like other people.' But the tax collector stood at a distance and beat his breast, saying, 'God, have mercy on me, a sinner.' I tell you, this man went home justified before God. For all those who exalt themselves will be humbled, and those who humble themselves will be exalted.",
+      "moral": {
+        "default": "True prayer comes from a HUMBLE heart that recognizes its need for God's mercy. No bragging allowed!",
+        "christian_edition": "True prayer comes from a humble heart that recognizes its need for God's mercy."
+      },
+      "game_effect": {
+        "type": "prayer_bonus",
+        "value": 0.1,
+        "description": "Healing at inns 10% more effective"
+      }
+    },
+    {
+      "id": "rich_fool",
+      "name": "The Rich Fool",
+      "category": "Wealth",
+      "location": "Judea - Rich Man's Estate",
+      "found_how": "Found in barn full of grain",
+      "biblical_reference": "Luke 12:13-21",
+      "short_teaching": {
+        "default": "Don't store up treasures on EARTH. Be RICH toward God. Eternal ROI beats temporal assets!",
+        "christian_edition": "Don't store up treasures on earth. Be rich toward God."
+      },
+      "full_text": "A rich man's ground produced a great harvest. He said to himself, 'I'll tear down my barns and build bigger ones to store all my grain. Then I'll take life easy.' But God said to him, 'You fool! This very night your life will be demanded from you. Then who will get what you have prepared?' This is how it will be with whoever stores up things for themselves but is not rich toward God.",
+      "moral": {
+        "default": "Life is MORE than possessions. Invest in ETERNAL treasures, not earthly wealth. You can't take it with you!",
+        "christian_edition": "Life is more than possessions. Invest in eternal treasures, not earthly wealth."
+      },
+      "game_effect": {
+        "type": "death_protection",
+        "value": 1,
+        "description": "One-time protection from party wipe"
+      }
+    },
+    {
+      "id": "rich_man_lazarus",
+      "name": "The Rich Man and Lazarus",
+      "category": "Wealth",
+      "location": "Bethany - Rich Man's Gate",
+      "found_how": "Give bread to beggar",
+      "biblical_reference": "Luke 16:19-31",
+      "short_teaching": {
+        "default": "The roles are REVERSED in eternity. Care for the poor NOW. Future role reversal incoming!",
+        "christian_edition": "The roles are reversed in eternity. Care for the poor now."
+      },
+      "full_text": "There was a rich man who lived in luxury. At his gate lay a beggar named Lazarus, covered with sores. The beggar died and was carried by angels to Abraham's side. The rich man also died and in torment he begged for relief. But Abraham said, 'In your lifetime you received good things, while Lazarus received bad things, but now he is comforted and you are in agony.'",
+      "moral": {
+        "default": "How you treat the poor and marginalized matters ETERNALLY. Compassion now means blessing later. Help the beggar!",
+        "christian_edition": "How you treat the poor and marginalized matters eternally. Compassion now means blessing later."
+      },
+      "game_effect": {
+        "type": "blessing",
+        "value": 1,
+        "description": "Beggars may give rare items"
+      }
+    },
+    {
+      "id": "talents",
+      "name": "The Talents",
+      "category": "Stewardship",
+      "location": "Jerusalem - Treasury",
+      "found_how": "Donate 5000 denarii total",
+      "biblical_reference": "Matthew 25:14-30",
+      "short_teaching": {
+        "default": "Use what God has GIVEN you. To whom MUCH is given, MUCH is required. Divine accountability!",
+        "christian_edition": "Use what God has given you. To whom much is given, much is required."
+      },
+      "full_text": "A man gave his servants talents: five to one, two to another, one to the last. The first two doubled their talents through investment. The last buried his talent. The master praised the faithful servants: 'Well done, good and faithful servant! You have been faithful with a few things; I will put you in charge of many things.' But he condemned the one who buried his talent.",
+      "moral": {
+        "default": "God expects us to USE our gifts wisely. Faithful stewardship is REWARDED; fearful hoarding is PUNISHED. Invest or perish!",
+        "christian_edition": "God expects us to use our gifts wisely. Faithful stewardship is rewarded; fearful hoarding is punished."
+      },
+      "game_effect": {
+        "type": "money_multiplier",
+        "value": 0.25,
+        "description": "+25% money from all sources"
+      }
+    },
+    {
+      "id": "shrewd_manager",
+      "name": "The Shrewd Manager",
+      "category": "Stewardship",
+      "location": "Coastal - Manager's Office",
+      "found_how": "Complete 10 quests",
+      "biblical_reference": "Luke 16:1-13",
+      "short_teaching": {
+        "default": "Use worldly WEALTH to gain eternal friends. Be FAITHFUL in small things. Strategic resource management!",
+        "christian_edition": "Use worldly wealth to gain eternal friends. Be faithful in small things."
+      },
+      "full_text": "A rich man's manager was wasting his possessions. When about to be fired, the manager reduced the debts of his master's debtors to secure his future. The master commended the dishonest manager because he had acted shrewdly. Use worldly wealth to gain friends, so that when it is gone, you will be welcomed into eternal dwellings.",
+      "moral": {
+        "default": "Be SHREWD in using resources for ETERNAL purposes. Worldly wealth should serve eternal goals. Smart investing!",
+        "christian_edition": "Be shrewd in using resources for eternal purposes. Worldly wealth should serve eternal goals."
+      },
+      "game_effect": {
+        "type": "discount",
+        "value": 0.1,
+        "description": "10% discount at all shops"
+      }
+    },
+    {
+      "id": "workers_vineyard",
+      "name": "Workers in the Vineyard",
+      "category": "Grace",
+      "location": "Galilee - Vineyard",
+      "found_how": "Work in vineyard (mini-game)",
+      "biblical_reference": "Matthew 20:1-16",
+      "short_teaching": {
+        "default": "God's grace is GENEROUS and NOT based on our merit. Equal pay for unequal work? Yes!",
+        "christian_edition": "God's grace is generous and not based on our merit."
+      },
+      "full_text": "A landowner hired workers throughout the day. Some worked all day, others only one hour. At the end, he paid them all the same wage. Those who worked all day complained, but the owner said, 'Don't I have the right to do what I want with my own money? Or are you envious because I am generous?'",
+      "moral": {
+        "default": "God's grace is NOT EARNED; it's FREELY given. Don't begrudge others God's generosity. No envy allowed!",
+        "christian_edition": "God's grace is not earned; it's freely given. Don't begrudge others God's generosity."
+      },
+      "game_effect": {
+        "type": "equal_xp",
+        "value": 1,
+        "description": "All party fish gain equal XP in battles"
+      }
+    },
+    {
+      "id": "persistent_widow",
+      "name": "The Persistent Widow",
+      "category": "Prayer",
+      "location": "Judea - Judge's House",
+      "found_how": "Talk to judge 5 times",
+      "biblical_reference": "Luke 18:1-8",
+      "short_teaching": {
+        "default": "Pray PERSISTENTLY and DON'T GIVE UP. Persistence pays off!",
+        "christian_edition": "Pray persistently and don't give up."
+      },
+      "full_text": "A widow kept coming to an unjust judge, pleading for justice. For a while he refused, but eventually said, 'Because this widow keeps bothering me, I will see that she gets justice.' And will not God bring about justice for his chosen ones who cry out to him day and night?",
+      "moral": {
+        "default": "Persistent prayer is HEARD by God. NEVER give up praying. Keep bothering Him!",
+        "christian_edition": "Persistent prayer is heard by God. Never give up praying."
+      },
+      "game_effect": {
+        "type": "prayer_power",
+        "value": 1,
+        "description": "Miracle meter fills 2x faster during boss battles"
+      }
+    },
+    {
+      "id": "friend_midnight",
+      "name": "The Friend at Midnight",
+      "category": "Prayer",
+      "location": "Bethany - Friend's House",
+      "found_how": "Visit at night",
+      "biblical_reference": "Luke 11:5-13",
+      "short_teaching": {
+        "default": "ASK and it will be GIVEN. God gives GOOD gifts to those who ask. Shameless boldness works!",
+        "christian_edition": "Ask and it will be given. God gives good gifts to those who ask."
+      },
+      "full_text": "Suppose you go to a friend at midnight and ask for bread. Though he won't get up because of friendship, he will get up because of your shameless boldness. So I say to you: Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
+      "moral": {
+        "default": "BOLD, persistent asking MOVES God. He DELIGHTS to give good gifts to His children. Be shameless!",
+        "christian_edition": "Bold, persistent asking moves God. He delights to give good gifts to His children."
+      },
+      "game_effect": {
+        "type": "item_find",
+        "value": 0.15,
+        "description": "+15% item drop rate"
+      }
+    },
+    {
+      "id": "ten_virgins",
+      "name": "The Ten Virgins",
+      "category": "Readiness",
+      "location": "Bethlehem - Wedding Hall",
+      "found_how": "Attend wedding",
+      "biblical_reference": "Matthew 25:1-13",
+      "short_teaching": {
+        "default": "Be READY. The bridegroom comes when you LEAST expect. Extra oil essential!",
+        "christian_edition": "Be ready. The bridegroom comes when you least expect."
+      },
+      "full_text": "Ten virgins took their lamps to meet the bridegroom. Five were wise and brought extra oil; five were foolish and didn't. When the bridegroom came at midnight, the foolish virgins' lamps went out. They went to buy oil, but while they were gone, the bridegroom arrived. The door was shut. 'Therefore keep watch, because you do not know the day or the hour.'",
+      "moral": {
+        "default": "Be spiritually PREPARED. The Lord's return comes UNEXPECTEDLY—stay ready. Don't be caught without oil!",
+        "christian_edition": "Be spiritually prepared. The Lord's return comes unexpectedly—stay ready."
+      },
+      "game_effect": {
+        "type": "readiness",
+        "value": 1,
+        "description": "Party always starts battles at full HP"
+      }
+    },
+    {
+      "id": "faithful_servant",
+      "name": "The Faithful Servant",
+      "category": "Readiness",
+      "location": "Jerusalem - Servant Quarters",
+      "found_how": "Serve others 20 times",
+      "biblical_reference": "Matthew 24:45-51",
+      "short_teaching": {
+        "default": "Be FAITHFUL in your master's absence. He returns when LEAST expected. Always on duty!",
+        "christian_edition": "Be faithful in your master's absence. He returns when least expected."
+      },
+      "full_text": "Who is the faithful and wise servant, whom the master has put in charge of his household? It will be good for that servant whose master finds him doing so when he returns. But suppose that servant is wicked and says to himself, 'My master is staying away a long time,' and begins to beat his fellow servants and eat and drink with drunkards. The master will come on a day when he does not expect him.",
+      "moral": {
+        "default": "Live FAITHFULLY as if Christ could return at ANY moment. Readiness means FAITHFUL service. No slacking!",
+        "christian_edition": "Live faithfully as if Christ could return at any moment. Readiness means faithful service."
+      },
+      "game_effect": {
+        "type": "faithful_bonus",
+        "value": 0.1,
+        "description": "+10% to all stats when at full party"
+      }
+    },
+    {
+      "id": "wedding_feast",
+      "name": "The Wedding Feast",
+      "category": "Invitation",
+      "location": "Cana - Wedding Hall",
+      "found_how": "Given after Steward boss fight",
+      "biblical_reference": "Matthew 22:1-14",
+      "short_teaching": {
+        "default": "MANY are invited, but FEW accept. Come to the feast! RSVP required!",
+        "christian_edition": "Many are invited, but few accept. Come to the feast!"
+      },
+      "full_text": "A king prepared a wedding feast for his son and sent servants to invite guests, but they refused to come. He sent servants again, but they paid no attention. The king was enraged and destroyed those who rejected his invitation. Then he sent servants to the streets: 'Invite to the banquet anyone you find.' The wedding hall was filled with guests.",
+      "moral": {
+        "default": "God's invitation is OPEN to ALL, but many REFUSE. Accept the invitation—the feast is ready! Don't miss out!",
+        "christian_edition": "God's invitation is open to all, but many refuse. Accept the invitation—the feast is ready!"
+      },
+      "game_effect": {
+        "type": "feast_bonus",
+        "value": 1,
+        "description": "Bread items restore 50% more HP"
+      }
+    },
+    {
+      "id": "great_banquet",
+      "name": "The Great Banquet",
+      "category": "Invitation",
+      "location": "Jerusalem - Banquet Hall",
+      "found_how": "Invite 12 apostles to party",
+      "biblical_reference": "Luke 14:15-24",
+      "short_teaching": {
+        "default": "When you REFUSE the invitation, it goes to OTHERS. Excuses not accepted!",
+        "christian_edition": "When you refuse the invitation, it goes to others."
+      },
+      "full_text": "A man prepared a great banquet and invited many guests. But they all made excuses: 'I just bought a field,' 'I just bought oxen,' 'I just got married.' The master told his servant, 'Go to the streets and bring in the poor, the crippled, the blind and the lame.' Still there was room. 'Go and make them come in, so that my house will be full. Not one of those who were invited will taste my banquet.'",
+      "moral": {
+        "default": "Don't make EXCUSES when God calls. The invitation is URGENT—respond NOW! Snooze and lose!",
+        "christian_edition": "Don't make excuses when God calls. The invitation is urgent—respond now!"
+      },
+      "game_effect": {
+        "type": "banquet",
+        "value": 1,
+        "description": "Party heals fully after each boss battle"
+      }
+    },
+    {
+      "id": "growing_seed",
+      "name": "The Growing Seed",
+      "category": "Kingdom",
+      "location": "Galilee - Field",
+      "found_how": "Plant and harvest crops",
+      "biblical_reference": "Mark 4:26-29",
+      "short_teaching": {
+        "default": "The Kingdom grows MYSTERIOUSLY, and the harvest comes in time. Auto-growth enabled!",
+        "christian_edition": "The Kingdom grows mysteriously, and the harvest comes in time."
+      },
+      "full_text": "A man scatters seed on the ground. Night and day, whether he sleeps or gets up, the seed sprouts and grows, though he does not know how. All by itself the soil produces grain—first the stalk, then the head, then the full kernel in the head. As soon as the grain is ripe, he puts the sickle to it, because the harvest has come.",
+      "moral": {
+        "default": "God's Kingdom grows in HIS timing. We plant and water, but GOD gives the growth. Passive income!",
+        "christian_edition": "God's Kingdom grows in His timing. We plant and water, but God gives the growth."
+      },
+      "game_effect": {
+        "type": "passive_growth",
+        "value": 1,
+        "description": "Fish gain XP even when not in active party"
+      }
+    },
+    {
+      "id": "builders",
+      "name": "The Wise and Foolish Builders",
+      "category": "Wisdom",
+      "location": "Capernaum - Construction Site",
+      "found_how": "Build on rock (complete foundation quest)",
+      "biblical_reference": "Matthew 7:24-27",
+      "short_teaching": {
+        "default": "Build your life on the ROCK of Christ's words. Foundation matters!",
+        "christian_edition": "Build your life on the rock of Christ's words."
+      },
+      "full_text": "Everyone who hears my words and puts them into practice is like a wise man who built his house on the rock. The rain came, the streams rose, the winds blew, yet it did not fall, because it had its foundation on the rock. But everyone who hears my words and does not put them into practice is like a foolish man who built his house on sand. When the storm came, it fell with a great crash.",
+      "moral": {
+        "default": "Hearing isn't ENOUGH—you must OBEY. Build your life on Christ's teachings. Rock > sand!",
+        "christian_edition": "Hearing isn't enough—you must obey. Build your life on Christ's teachings."
+      },
+      "game_effect": {
+        "type": "defense",
+        "value": 0.15,
+        "description": "+15% DEF to all party members"
+      }
+    },
+    {
+      "id": "lamp_basket",
+      "name": "The Lamp Under a Basket",
+      "category": "Witness",
+      "location": "Nazareth - Home",
+      "found_how": "Light 10 lamps",
+      "biblical_reference": "Matthew 5:14-16",
+      "short_teaching": {
+        "default": "Let your light SHINE before others so they may see and glorify God. No hiding!",
+        "christian_edition": "Let your light shine before others so they may see and glorify God."
+      },
+      "full_text": "You are the light of the world. A town built on a hill cannot be hidden. Neither do people light a lamp and put it under a bowl. Instead they put it on its stand, and it gives light to everyone in the house. In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
+      "moral": {
+        "default": "Don't HIDE your faith. Let your life ILLUMINATE the way to God for others. Shine bright!",
+        "christian_edition": "Don't hide your faith. Let your life illuminate the way to God for others."
+      },
+      "game_effect": {
+        "type": "light",
+        "value": 1,
+        "description": "Reveals hidden items in dungeons"
+      }
+    },
+    {
+      "id": "new_wine",
+      "name": "New Wine in Old Wineskins",
+      "category": "Renewal",
+      "location": "Cana - Wine Cellar",
+      "found_how": "Transform water to wine (miracle)",
+      "biblical_reference": "Mark 2:21-22",
+      "short_teaching": {
+        "default": "The new covenant requires NEW vessels. Old forms can't CONTAIN new life. Upgrade required!",
+        "christian_edition": "The new covenant requires new vessels. Old forms can't contain new life."
+      },
+      "full_text": "No one sews a patch of unshrunk cloth on an old garment. Otherwise, the new piece will pull away from the old, making the tear worse. And no one pours new wine into old wineskins. Otherwise, the wine will burst the skins, and both the wine and the wineskins will be ruined. No, they pour new wine into new wineskins.",
+      "moral": {
+        "default": "Christ brings RADICAL renewal. The old religious system can't CONTAIN the new covenant. New wine, new skins!",
+        "christian_edition": "Christ brings radical renewal. The old religious system can't contain the new covenant."
+      },
+      "game_effect": {
+        "type": "renewal",
+        "value": 1,
+        "description": "Can reset fish stats (one time)"
+      }
+    },
+    {
+      "id": "narrow_gate",
+      "name": "The Narrow Gate",
+      "category": "Salvation",
+      "location": "Jerusalem - City Gate",
+      "found_how": "Enter through small gate",
+      "biblical_reference": "Matthew 7:13-14",
+      "short_teaching": {
+        "default": "The path to life is NARROW. FEW find it. Exclusive club!",
+        "christian_edition": "The path to life is narrow. Few find it."
+      },
+      "full_text": "Enter through the narrow gate. For wide is the gate and broad is the road that leads to destruction, and many enter through it. But small is the gate and narrow the road that leads to life, and only a few find it.",
+      "moral": {
+        "default": "The way to eternal life is NARROW and difficult. Don't follow the CROWD—follow Christ. Hard mode only!",
+        "christian_edition": "The way to eternal life is narrow and difficult. Don't follow the crowd—follow Christ."
+      },
+      "game_effect": {
+        "type": "narrow_path",
+        "value": 0.2,
+        "description": "Solo fish gain +20% XP"
+      }
+    },
+    {
+      "id": "sheep_goats",
+      "name": "The Sheep and the Goats",
+      "category": "Judgment",
+      "location": "Jerusalem - Judgment Hall",
+      "found_how": "Serve the least 25 times",
+      "biblical_reference": "Matthew 25:31-46",
+      "short_teaching": {
+        "default": "How you treat the LEAST is how you treat Christ. Service = worship!",
+        "christian_edition": "How you treat the least is how you treat Christ."
+      },
+      "full_text": "When the Son of Man comes in glory, he will separate people as a shepherd separates sheep from goats. To those on his right he will say, 'Come, you who are blessed, for I was hungry and you gave me something to eat, I was thirsty and you gave me something to drink.' They will ask, 'When did we see you hungry?' He will reply, 'Whatever you did for the least of these, you did for me.'",
+      "moral": {
+        "default": "Serving the poor and marginalized is SERVING Christ. Our treatment of others reveals our HEART. Help = Jesus!",
+        "christian_edition": "Serving the poor and marginalized is serving Christ. Our treatment of others reveals our heart."
+      },
+      "game_effect": {
+        "type": "service",
+        "value": 1,
+        "description": "Helping others grants miracle meter"
+      }
+    },
+    {
+      "id": "minas",
+      "name": "The Ten Minas",
+      "category": "Stewardship",
+      "location": "Jericho - Bank",
+      "found_how": "Invest 2000 denarii",
+      "biblical_reference": "Luke 19:11-27",
+      "short_teaching": {
+        "default": "Use what you're GIVEN. Faithful servants are REWARDED. Invest wisely!",
+        "christian_edition": "Use what you're given. Faithful servants are rewarded."
+      },
+      "full_text": "A nobleman gave ten servants each a mina and said, 'Put this money to work until I come back.' The first servant earned ten more minas. The master said, 'Well done! Because you have been trustworthy in a very small matter, take charge of ten cities.' Another earned five minas and received five cities. But one servant buried his mina. The master rebuked him and took the mina away.",
+      "moral": {
+        "default": "God REWARDS faithful stewardship with GREATER responsibility. Use your gifts or LOSE them. Level up!",
+        "christian_edition": "God rewards faithful stewardship with greater responsibility. Use your gifts or lose them."
+      },
+      "game_effect": {
+        "type": "investment",
+        "value": 0.5,
+        "description": "Money deposited earns 50% interest"
+      }
+    },
+    {
+      "id": "unmerciful_servant",
+      "name": "The Unmerciful Servant",
+      "category": "Forgiveness",
+      "location": "Tiberias - Prison",
+      "found_how": "Free 10 prisoners",
+      "biblical_reference": "Matthew 18:23-35",
+      "short_teaching": {
+        "default": "Forgive from your HEART, as you have been FORGIVEN. Forgiveness cycle required!",
+        "christian_edition": "Forgive from your heart, as you have been forgiven."
+      },
+      "full_text": "A king wanted to settle accounts with his servants. One owed him ten thousand bags of gold. Unable to pay, he begged for patience, and the king forgave the entire debt. But that servant went and found a fellow servant who owed him a hundred silver coins. He grabbed him and demanded payment. When the king heard, he handed him over to the jailers to be tortured. 'This is how my heavenly Father will treat you unless you forgive your brother from your heart.'",
+      "moral": {
+        "default": "Having been forgiven SO much, we MUST forgive others. Unforgiveness brings JUDGMENT. Pay it forward!",
+        "christian_edition": "Having been forgiven so much, we must forgive others. Unforgiveness brings judgment."
+      },
+      "game_effect": {
+        "type": "mercy",
+        "value": 1,
+        "description": "Enemies may flee instead of fighting"
+      }
+    },
+    {
+      "id": "lost_son",
+      "name": "The Loving Father",
+      "category": "Love",
+      "location": "Galilee - Father's Field",
+      "found_how": "Return home after traveling far",
+      "biblical_reference": "Luke 15:11-32",
+      "short_teaching": {
+        "default": "God RUNS to meet you when you return to Him. Sprint mode activated!",
+        "christian_edition": "God runs to meet you when you return to Him."
+      },
+      "full_text": "While the son was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him. The son said, 'Father, I have sinned against heaven and against you. I am no longer worthy to be called your son.' But the father said, 'Quick! Bring the best robe and put it on him. Let's have a feast and celebrate!'",
+      "moral": {
+        "default": "God's love RUNS to meet repentant sinners. No matter how FAR you've fallen, COME HOME. Welcome back party!",
+        "christian_edition": "God's love runs to meet repentant sinners. No matter how far you've fallen, come home."
+      },
+      "game_effect": {
+        "type": "homecoming",
+        "value": 1,
+        "description": "Fast travel unlocked to all towns"
+      }
+    },
+    {
+      "id": "barren_fig_tree",
+      "name": "The Barren Fig Tree",
+      "category": "Fruitfulness",
+      "location": "Bethany - Fig Tree",
+      "found_how": "Water barren tree",
+      "biblical_reference": "Luke 13:6-9",
+      "short_teaching": {
+        "default": "God is PATIENT, but expects FRUIT. Time is limited. Produce or perish!",
+        "christian_edition": "God is patient, but expects fruit. Time is limited."
+      },
+      "full_text": "A man had a fig tree planted in his vineyard, and he came looking for fruit on it but did not find any. So he said to the gardener, 'For three years now I've been coming to look for fruit on this fig tree and haven't found any. Cut it down!' The gardener replied, 'Sir, leave it alone for one more year, and I'll dig around it and fertilize it. If it bears fruit next year, fine! If not, then cut it down.'",
+      "moral": {
+        "default": "God is PATIENT but expects us to BEAR fruit. Don't WASTE the time He gives you. Final warning!",
+        "christian_edition": "God is patient but expects us to bear fruit. Don't waste the time He gives you."
+      },
+      "game_effect": {
+        "type": "fruitfulness",
+        "value": 0.25,
+        "description": "+25% quest rewards"
+      }
+    },
+    {
+      "id": "rebellious_son",
+      "name": "The Two Sons",
+      "category": "Obedience",
+      "location": "Galilee - Vineyard Gate",
+      "found_how": "Complete father's quest",
+      "biblical_reference": "Matthew 21:28-32",
+      "short_teaching": {
+        "default": "It's not what you SAY, but what you DO that matters. Actions > words!",
+        "christian_edition": "It's not what you say, but what you do that matters."
+      },
+      "full_text": "A man had two sons. He told the first, 'Go work in the vineyard.' The son said no, but later changed his mind and went. The father told the second son the same thing. He said, 'I will, sir,' but didn't go. Which of the two did what his father wanted? Tax collectors and prostitutes believed John, but you did not.",
+      "moral": {
+        "default": "Obedience is BETTER than empty promises. ACTIONS reveal true faith, NOT words. Walk the talk!",
+        "christian_edition": "Obedience is better than empty promises. Actions reveal true faith, not words."
+      },
+      "game_effect": {
+        "type": "obedience",
+        "value": 1,
+        "description": "Quest completion grants bonus XP"
+      }
+    },
+    {
+      "id": "wicked_tenants",
+      "name": "The Wicked Tenants",
+      "category": "Rejection",
+      "location": "Jerusalem - Vineyard",
+      "found_how": "Find rejected cornerstone",
+      "biblical_reference": "Matthew 21:33-46",
+      "short_teaching": {
+        "default": "The stone the builders REJECTED has become the CORNERSTONE. Epic reversal!",
+        "christian_edition": "The stone the builders rejected has become the cornerstone."
+      },
+      "full_text": "A landowner planted a vineyard and rented it to tenants. When harvest time came, he sent servants to collect his fruit, but the tenants beat them. Finally, he sent his son. 'They will respect my son,' he said. But the tenants killed the son. Jesus said, 'The kingdom of God will be taken away from you and given to a people who will produce its fruit. The stone the builders rejected has become the cornerstone.'",
+      "moral": {
+        "default": "Rejecting God's messengers leads to JUDGMENT. Christ is the CORNERSTONE—don't reject Him. Foundation essential!",
+        "christian_edition": "Rejecting God's messengers leads to judgment. Christ is the cornerstone—don't reject Him."
+      },
+      "game_effect": {
+        "type": "cornerstone",
+        "value": 1,
+        "description": "Unlocks ultimate fish transformation"
+      }
+    },
+    {
+      "id": "salt_light",
+      "name": "Salt and Light",
+      "category": "Witness",
+      "location": "Galilee - Salt Sea",
+      "found_how": "Collect salt from sea",
+      "biblical_reference": "Matthew 5:13-16",
+      "short_teaching": {
+        "default": "You are SALT and LIGHT. Preserve and illuminate the world. Dual-purpose believers!",
+        "christian_edition": "You are salt and light. Preserve and illuminate the world."
+      },
+      "full_text": "You are the salt of the earth. But if the salt loses its saltiness, how can it be made salty again? It is no longer good for anything, except to be thrown out and trampled underfoot. You are the light of the world. Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
+      "moral": {
+        "default": "Christians PRESERVE moral goodness and SHINE God's truth. Don't lose your distinctive FLAVOR. Stay salty!",
+        "christian_edition": "Christians preserve moral goodness and shine God's truth. Don't lose your distinctive flavor."
+      },
+      "game_effect": {
+        "type": "salt_light",
+        "value": 0.1,
+        "description": "+10% ATK and +10% SPD to party"
+      }
+    },
+    {
+      "id": "teachers_law",
+      "name": "The Teachers of the Law",
+      "category": "Warning",
+      "location": "Jerusalem - Synagogue",
+      "found_how": "Read all scriptures",
+      "biblical_reference": "Mark 12:38-40",
+      "short_teaching": {
+        "default": "BEWARE of those who love HONOR but devour widows' houses. Religious fraud alert!",
+        "christian_edition": "Beware of those who love honor but devour widows' houses."
+      },
+      "full_text": "Watch out for the teachers of the law. They like to walk around in flowing robes and be greeted with respect in the marketplaces, and have the most important seats in the synagogues and the places of honor at banquets. They devour widows' houses and for a show make lengthy prayers. These men will be punished most severely.",
+      "moral": {
+        "default": "BEWARE of religious hypocrites who seek HONOR but lack true righteousness. Severe judgment incoming!",
+        "christian_edition": "Beware of religious hypocrites who seek honor but lack true righteousness."
+      },
+      "game_effect": {
+        "type": "discernment",
+        "value": 1,
+        "description": "See enemy stats before battle"
+      }
+    },
+    {
+      "id": "fig_tree_signs",
+      "name": "The Fig Tree and Signs",
+      "category": "Discernment",
+      "location": "Bethany - Tree",
+      "found_how": "Observe seasons changing",
+      "biblical_reference": "Mark 13:28-31",
+      "short_teaching": {
+        "default": "Learn to DISCERN the signs of the times. Pattern recognition essential!",
+        "christian_edition": "Learn to discern the signs of the times."
+      },
+      "full_text": "Now learn this lesson from the fig tree: As soon as its twigs get tender and its leaves come out, you know that summer is near. Even so, when you see these things happening, you know that it is near, right at the door. Heaven and earth will pass away, but my words will never pass away.",
+      "moral": {
+        "default": "PAY ATTENTION to the signs of the times. Christ's return is CERTAIN—be watchful. It's happening!",
+        "christian_edition": "Pay attention to the signs of the times. Christ's return is certain—be watchful."
+      },
+      "game_effect": {
+        "type": "signs",
+        "value": 1,
+        "description": "Map reveals all hidden locations"
+      }
+    },
+    {
+      "id": "watchful_servants",
+      "name": "The Watchful Servants",
+      "category": "Readiness",
+      "location": "Jerusalem - Watchtower",
+      "found_how": "Keep watch at night",
+      "biblical_reference": "Mark 13:32-37",
+      "short_teaching": {
+        "default": "Stay AWAKE and WATCH. You don't know when the master returns. No sleep mode!",
+        "christian_edition": "Stay awake and watch. You don't know when the master returns."
+      },
+      "full_text": "It's like a man going away: He leaves his house and puts his servants in charge, each with their assigned task, and tells the one at the door to keep watch. Therefore keep watch because you do not know when the owner of the house will come back—whether in the evening, or at midnight, or when the rooster crows, or at dawn. What I say to you, I say to everyone: 'Watch!'",
+      "moral": {
+        "default": "Christ's return is IMMINENT and UNEXPECTED. Live EACH day ready for His coming. Always on alert!",
+        "christian_edition": "Christ's return is imminent and unexpected. Live each day ready for His coming."
+      },
+      "game_effect": {
+        "type": "watchfulness",
+        "value": 1,
+        "description": "Cannot be ambushed by enemies"
+      }
+    }
+  ],
+  "metadata": {
+    "total_parables": 40,
+    "categories": [
+      "Kingdom",
+      "Lost and Found",
+      "Love and Compassion",
+      "Forgiveness",
+      "Humility",
+      "Wealth",
+      "Stewardship",
+      "Grace",
+      "Prayer",
+      "Readiness",
+      "Invitation",
+      "Wisdom",
+      "Witness",
+      "Renewal",
+      "Salvation",
+      "Judgment",
+      "Fruitfulness",
+      "Obedience",
+      "Rejection",
+      "Warning",
+      "Discernment"
+    ],
+    "game_effects": 40,
+    "biblical_books": ["Matthew", "Mark", "Luke"],
+    "collection_bonus": "Collecting all 40 parables unlocks the 'Teacher' title and permanent +50% XP gain"
+  }
+}

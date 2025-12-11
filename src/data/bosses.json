@@ -1,0 +1,976 @@
+{
+  "bosses": [
+    {
+      "id": "steward_feast",
+      "name": "Steward of the Feast",
+      "title": "Master of the Wedding",
+      "type": "Normal",
+      "town": "Cana",
+      "level": 5,
+      "base_stats": {
+        "hp": 80,
+        "atk": 15,
+        "def": 12,
+        "spd": 10
+      },
+      "attacks": [
+        {
+          "name": "Wine Toss",
+          "type": "Water",
+          "power": [15, 22],
+          "accuracy": 85,
+          "effect": "confusion",
+          "effect_chance": 0.2
+        },
+        {
+          "name": "Harsh Critique",
+          "type": "Spirit",
+          "power": [12, 18],
+          "accuracy": 100,
+          "effect": "atk_down",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Sommelier Sniff",
+          "type": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "evasion_up",
+          "effect_value": 0.3
+        }
+      ],
+      "xp_reward": 120,
+      "money_reward": 250,
+      "phases": 1,
+      "gimmick": "Gets progressively drunker and sloppier (accuracy decreases over time)",
+      "intro_dialogue": {
+        "default": "This wine is *hic* absolutely UNACCEPTABLE! Who serves this SWILL at a WEDDING?! I have STANDARDS! *wobbles* HIGH standards!",
+        "christian_edition": "This wine is not suitable for such an important celebration. The quality must be maintained for our honored guests."
+      },
+      "defeat_dialogue": {
+        "default": "Wait... this new wine is... *sniff* ...magnificent? This is the BEST wine I've ever tasted! My apologies! I may have judged too harshly! *hic*",
+        "christian_edition": "This new wine is of exceptional quality! You have saved the best wine for last! This is truly remarkable!"
+      },
+      "biblical_reference": "John 2:1-11 (Wedding at Cana - First Miracle)",
+      "ai_pattern": "random",
+      "special_mechanics": {
+        "drunkenness": {
+          "description": "Each turn, accuracy drops by 5%",
+          "max_reduction": 30
+        }
+      },
+      "item_drops": [
+        {"item": "fine_wine_bread", "chance": 0.5},
+        {"item": "wedding_robe", "chance": 0.3}
+      ]
+    },
+    {
+      "id": "four_friends",
+      "name": "The Four Friends",
+      "title": "Barrier of Doubt",
+      "type": "Earth",
+      "town": "Capernaum",
+      "level": 8,
+      "base_stats": {
+        "hp": 100,
+        "atk": 18,
+        "def": 20,
+        "spd": 8
+      },
+      "attacks": [
+        {
+          "name": "Roof Collapse",
+          "type": "Earth",
+          "power": [18, 25],
+          "accuracy": 90,
+          "special": "multi_target"
+        },
+        {
+          "name": "Block Path",
+          "type": "Earth",
+          "power": [15, 22],
+          "accuracy": 100,
+          "effect": "paralyzed",
+          "effect_chance": 0.15
+        },
+        {
+          "name": "Crowd Pressure",
+          "type": "Normal",
+          "power": [12, 20],
+          "accuracy": 95,
+          "effect": "def_down",
+          "effect_value": 0.2
+        }
+      ],
+      "xp_reward": 150,
+      "money_reward": 300,
+      "phases": 1,
+      "gimmick": "Puzzle boss - must defeat the four barriers in specific order to reach the paralytic",
+      "intro_dialogue": {
+        "default": "You'll NEVER get through this crowd! It's PACKED! The paralytic will NEVER walk again! We're an impenetrable wall of PEOPLE!",
+        "christian_edition": "You cannot reach him through this crowd. The path is blocked. There is no way forward."
+      },
+      "defeat_dialogue": {
+        "default": "The ROOF... they opened the ROOF?! That's... that's actually pretty creative. Faith moves mountains... and apparently roofs. I stand corrected.",
+        "christian_edition": "The roof has opened! Such faith I have never seen! Truly, nothing is impossible for those who believe!"
+      },
+      "biblical_reference": "Mark 2:1-12 (Healing of the Paralytic)",
+      "ai_pattern": "defensive",
+      "special_mechanics": {
+        "puzzle": {
+          "description": "Four segments must be defeated in order: North, East, South, West",
+          "segments": 4,
+          "hp_per_segment": 25
+        }
+      },
+      "item_drops": [
+        {"item": "faithful_focaccia", "chance": 0.6},
+        {"item": "roof_token", "chance": 1.0}
+      ]
+    },
+    {
+      "id": "blind_doubters",
+      "name": "The Blind Man's Doubters",
+      "title": "Chorus of Disbelief",
+      "type": "Spirit",
+      "town": "Bethsaida",
+      "level": 12,
+      "base_stats": {
+        "hp": 120,
+        "atk": 22,
+        "def": 16,
+        "spd": 14
+      },
+      "attacks": [
+        {
+          "name": "Seeds of Doubt",
+          "type": "Spirit",
+          "power": [20, 28],
+          "accuracy": 90,
+          "effect": "accuracy_down",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Blind to Truth",
+          "type": "Spirit",
+          "power": [18, 26],
+          "accuracy": 85,
+          "effect": "blind",
+          "effect_chance": 0.3
+        },
+        {
+          "name": "Question Everything",
+          "type": "Spirit",
+          "power": [15, 23],
+          "accuracy": 100,
+          "effect": "confusion",
+          "effect_chance": 0.25
+        },
+        {
+          "name": "Mass Hysteria",
+          "type": "Spirit",
+          "power": [22, 30],
+          "accuracy": 80,
+          "special": "multi_target"
+        }
+      ],
+      "xp_reward": 180,
+      "money_reward": 350,
+      "phases": 1,
+      "gimmick": "Attacks that blind or reduce accuracy. Vision clears as you defeat them.",
+      "intro_dialogue": {
+        "default": "This man was NEVER blind! It's a TRICK! A HOAX! You're all being DECEIVED! We have QUESTIONS! Many, many questions!",
+        "christian_edition": "This man was never truly blind. You are deceiving these people with tricks and illusions!"
+      },
+      "defeat_dialogue": {
+        "default": "I... I can see now. Clearly. We were the blind ones all along. Ironic, really. Very ironic. The metaphor was right there.",
+        "christian_edition": "I see now... we were the ones who could not see. Our doubt blinded us to the truth. Forgive us."
+      },
+      "biblical_reference": "John 9:1-41 (Healing of the Man Born Blind)",
+      "ai_pattern": "random",
+      "special_mechanics": {
+        "vision_impairment": {
+          "description": "All party members start with 30% accuracy reduction",
+          "clears_on_defeat": true
+        }
+      },
+      "item_drops": [
+        {"item": "sight_restoring_sourdough", "chance": 0.5},
+        {"item": "clear_sight_charm", "chance": 0.4}
+      ]
+    },
+    {
+      "id": "seven_demons",
+      "name": "Seven Demons of Magdala",
+      "title": "Legion of Torment",
+      "type": "Dark",
+      "town": "Magdala",
+      "level": 15,
+      "base_stats": {
+        "hp": 140,
+        "atk": 25,
+        "def": 18,
+        "spd": 16
+      },
+      "attacks": [
+        {
+          "name": "Seven Sorrows",
+          "type": "Dark",
+          "power": [24, 32],
+          "accuracy": 90,
+          "special": "multi_hit",
+          "hits": 7,
+          "description": "Attacks 1-7 times randomly"
+        },
+        {
+          "name": "Possession Grip",
+          "type": "Dark",
+          "power": [22, 30],
+          "accuracy": 85,
+          "effect": "possession",
+          "effect_chance": 0.25
+        },
+        {
+          "name": "Torment",
+          "type": "Dark",
+          "power": [20, 28],
+          "accuracy": 95,
+          "effect": "all_stats_down",
+          "effect_value": 0.15
+        },
+        {
+          "name": "Demon Swarm",
+          "type": "Dark",
+          "power": [18, 26],
+          "accuracy": 100,
+          "special": "multi_target"
+        }
+      ],
+      "xp_reward": 220,
+      "money_reward": 400,
+      "phases": 1,
+      "gimmick": "Seven demons must be exorcised one by one. Each demon defeated makes boss weaker.",
+      "intro_dialogue": {
+        "default": "WE ARE MANY! WE ARE LEGION! *demonic screeching* YOU CANNOT CAST US OUT! WE ARE SEVEN! COUNT THEM! SEVEN!",
+        "christian_edition": "We are many! We are legion! You cannot cast us out! We have claimed this soul!"
+      },
+      "defeat_dialogue": {
+        "default": "Master... *normal voice* ...thank you. I am... myself again. Finally. All seven are gone. Mary Magdalene, at your service. Sorry about all the screeching.",
+        "christian_edition": "Master, thank you. I am freed from my torment. I am myself once more. Mary Magdalene, forever grateful."
+      },
+      "biblical_reference": "Luke 8:2 (Mary Magdalene and the Seven Demons)",
+      "ai_pattern": "aggressive",
+      "special_mechanics": {
+        "demon_count": {
+          "description": "Boss has 7 'demon stacks'. Each 20 HP lost removes 1 demon, weakening attacks.",
+          "total_demons": 7,
+          "atk_reduction_per_demon": 0.05
+        }
+      },
+      "item_drops": [
+        {"item": "exorcism_bread", "chance": 0.6},
+        {"item": "magdalene_token", "chance": 1.0}
+      ]
+    },
+    {
+      "id": "unrepentant_generation",
+      "name": "The Unrepentant Generation",
+      "title": "Stubborn Hearts",
+      "type": "Earth",
+      "town": "Chorazin",
+      "level": 18,
+      "base_stats": {
+        "hp": 160,
+        "atk": 28,
+        "def": 24,
+        "spd": 12
+      },
+      "attacks": [
+        {
+          "name": "Stone Heart",
+          "type": "Earth",
+          "power": [26, 34],
+          "accuracy": 95,
+          "effect": "def_up",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Refuse Grace",
+          "type": "Earth",
+          "power": [24, 32],
+          "accuracy": 90,
+          "special": "nullify_healing"
+        },
+        {
+          "name": "Hardened Soul",
+          "type": "Earth",
+          "power": [22, 30],
+          "accuracy": 100,
+          "effect": "atk_up",
+          "effect_value": 0.25
+        },
+        {
+          "name": "Reject Truth",
+          "type": "Spirit",
+          "power": [20, 28],
+          "accuracy": 85,
+          "special": "counter",
+          "counter_percent": 0.4
+        }
+      ],
+      "xp_reward": 260,
+      "money_reward": 450,
+      "phases": 1,
+      "gimmick": "Extremely high defense. Rejects all healing. Only Holy-type moves are fully effective.",
+      "intro_dialogue": {
+        "default": "We've SEEN your so-called miracles and REJECT them! Our hearts are STONE! We don't NEED you! We're FINE!",
+        "christian_edition": "We have witnessed your works and still reject you. Our hearts are hardened. We will not believe!"
+      },
+      "defeat_dialogue": {
+        "default": "Woe... woe to us. We had our chance and THREW it away. *stone hearts crumbling* We should have listened...",
+        "christian_edition": "Woe to us... we had the opportunity to believe and rejected it. What have we done?"
+      },
+      "biblical_reference": "Matthew 11:20-24 (Woe to Unrepentant Cities)",
+      "ai_pattern": "defensive",
+      "special_mechanics": {
+        "stone_heart": {
+          "description": "All healing effects are nullified. Holy damage deals 1.5x instead of normal effectiveness.",
+          "healing_nullified": true,
+          "holy_bonus": 0.5
+        }
+      },
+      "item_drops": [
+        {"item": "stone_heart_bread", "chance": 0.4},
+        {"item": "repentance_robe", "chance": 0.3}
+      ]
+    },
+    {
+      "id": "herod_antipas",
+      "name": "Herod Antipas",
+      "title": "The Fox King",
+      "type": "Dark",
+      "town": "Tiberias",
+      "level": 22,
+      "base_stats": {
+        "hp": 180,
+        "atk": 32,
+        "def": 26,
+        "spd": 18
+      },
+      "attacks": [
+        {
+          "name": "Royal Decree",
+          "type": "Dark",
+          "power": [30, 38],
+          "accuracy": 90,
+          "effect": "paralyzed",
+          "effect_chance": 0.2
+        },
+        {
+          "name": "Tyrant's Rage",
+          "type": "Dark",
+          "power": [28, 36],
+          "accuracy": 95,
+          "special": "ignore_def"
+        },
+        {
+          "name": "Foxlike Cunning",
+          "type": "Dark",
+          "power": [26, 34],
+          "accuracy": 100,
+          "effect": "evasion_up",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Execute",
+          "type": "Dark",
+          "power": [35, 45],
+          "accuracy": 80,
+          "special": "high_crit",
+          "crit_chance": 0.4
+        }
+      ],
+      "xp_reward": 300,
+      "money_reward": 500,
+      "phases": 2,
+      "phase_transitions": {
+        "2": "You think you can challenge ME?! I killed John the Baptist! You're next!"
+      },
+      "gimmick": "Two phases. In phase 2, summons guards and becomes more aggressive.",
+      "intro_dialogue": {
+        "default": "So YOU'RE the miracle worker everyone won't shut up about. ENTERTAIN me, prophet. Show me a TRICK. I'm BORED and you're here, so... perform!",
+        "christian_edition": "So you are the one they call a prophet. I have heard much about you. Show me your power."
+      },
+      "defeat_dialogue": {
+        "default": "This isn't OVER! I'll tell Pilate about you! You haven't heard the LAST of Herod! The Fox remembers! *retreats dramatically*",
+        "christian_edition": "This is not finished. Pilate will hear of this. You have not seen the last of me!"
+      },
+      "biblical_reference": "Luke 13:31-32, Luke 23:8-12 (Herod the Fox)",
+      "ai_pattern": "tactical",
+      "special_mechanics": {
+        "phase_2_guards": {
+          "description": "In phase 2, summons 2 Herodian Guards to assist",
+          "guard_count": 2
+        },
+        "fox_cunning": {
+          "description": "High evasion, attacks can miss more frequently",
+          "base_evasion": 0.15
+        }
+      },
+      "item_drops": [
+        {"item": "royal_bread", "chance": 0.5},
+        {"item": "fox_pelt_robe", "chance": 0.4},
+        {"item": "herod_crown", "chance": 0.2}
+      ]
+    },
+    {
+      "id": "legion_demoniac",
+      "name": "The Gerasene Demoniac",
+      "title": "Legion, the Many",
+      "type": "Dark",
+      "town": "Gadara",
+      "level": 25,
+      "base_stats": {
+        "hp": 200,
+        "atk": 35,
+        "def": 22,
+        "spd": 20
+      },
+      "attacks": [
+        {
+          "name": "We Are Legion",
+          "type": "Dark",
+          "power": [32, 40],
+          "accuracy": 90,
+          "special": "multi_hit",
+          "hits": 5
+        },
+        {
+          "name": "Chains Break",
+          "type": "Dark",
+          "power": [30, 38],
+          "accuracy": 95,
+          "effect": "atk_up",
+          "effect_value": 0.4
+        },
+        {
+          "name": "Tomb Dweller's Curse",
+          "type": "Dark",
+          "power": [28, 36],
+          "accuracy": 100,
+          "effect": "all_stats_down",
+          "effect_value": 0.2
+        },
+        {
+          "name": "Possession Storm",
+          "type": "Dark",
+          "power": [35, 45],
+          "accuracy": 85,
+          "effect": "confusion",
+          "effect_chance": 0.35
+        }
+      ],
+      "xp_reward": 350,
+      "money_reward": 600,
+      "phases": 2,
+      "phase_transitions": {
+        "2": "NO! DON'T SEND US AWAY! Let us enter the swine! THE PIGS! ANYTHING BUT THE ABYSS!"
+      },
+      "gimmick": "Phase 1: Possessed man. Phase 2: Demons flee into swine that charge at you.",
+      "intro_dialogue": {
+        "default": "*demonic voices* WHAT DO YOU WANT WITH US, SON OF THE MOST HIGH GOD?! *chains rattling* HAVE YOU COME TO TORMENT US BEFORE THE APPOINTED TIME?!",
+        "christian_edition": "What do you want with us, Son of the Most High God?! Have you come here to torment us before the appointed time?!"
+      },
+      "defeat_dialogue": {
+        "default": "*normal voice* Thank you... I'm... myself. FREE. The demons are... gone. *looks at drowned swine* Drowned in the sea. That's... that's a lot of dead pigs.",
+        "christian_edition": "Thank you, Lord. I am free at last. The demons have been cast out. They are gone, drowned in the depths."
+      },
+      "biblical_reference": "Mark 5:1-20 (Legion and the Swine)",
+      "ai_pattern": "aggressive",
+      "special_mechanics": {
+        "phase_1_demon": {
+          "description": "Multiple attacks per turn, represents many demons",
+          "multi_attack": true
+        },
+        "phase_2_swine": {
+          "description": "Swine rush attacks, high damage but self-destructive",
+          "swine_count": 3,
+          "swine_hp": 40,
+          "swine_atk": 25
+        }
+      },
+      "item_drops": [
+        {"item": "exorcism_bread", "chance": 0.7},
+        {"item": "legion_token", "chance": 1.0},
+        {"item": "chain_breaker", "chance": 0.3}
+      ]
+    },
+    {
+      "id": "five_husbands",
+      "name": "The Five Husbands",
+      "title": "Shadows of the Past",
+      "type": "Spirit",
+      "town": "Samaria",
+      "level": 28,
+      "base_stats": {
+        "hp": 175,
+        "atk": 30,
+        "def": 24,
+        "spd": 22
+      },
+      "attacks": [
+        {
+          "name": "Guilt Strike",
+          "type": "Spirit",
+          "power": [32, 40],
+          "accuracy": 90,
+          "effect": "def_down",
+          "effect_value": 0.25
+        },
+        {
+          "name": "Shame Spiral",
+          "type": "Spirit",
+          "power": [30, 38],
+          "accuracy": 95,
+          "effect": "confusion",
+          "effect_chance": 0.3
+        },
+        {
+          "name": "Past Regrets",
+          "type": "Spirit",
+          "power": [28, 36],
+          "accuracy": 100,
+          "special": "hp_drain",
+          "drain_percent": 0.3
+        },
+        {
+          "name": "Five-Fold Assault",
+          "type": "Spirit",
+          "power": [25, 33],
+          "accuracy": 85,
+          "special": "multi_hit",
+          "hits": 5
+        }
+      ],
+      "xp_reward": 380,
+      "money_reward": 650,
+      "phases": 1,
+      "gimmick": "Manifestation of past mistakes. Must defeat each 'husband' (35 HP each) to free the woman.",
+      "intro_dialogue": {
+        "default": "Woman: My past... it HAUNTS me. Five husbands. FIVE. The shadows of my failures... they won't let me go. *shadow figures appear*",
+        "christian_edition": "Woman: My past burdens me. Five marriages, each one ending. The weight of my choices... I cannot escape them."
+      },
+      "defeat_dialogue": {
+        "default": "Woman: You knew EVERYTHING about me... ALL of it... and you STILL offered living water. I'm... I'm FREE! The shadows are gone!",
+        "christian_edition": "Woman: You knew all about me, yet you offered me living water. I am forgiven. I am free! Thank you!"
+      },
+      "biblical_reference": "John 4:1-42 (Woman at the Well)",
+      "ai_pattern": "random",
+      "special_mechanics": {
+        "five_segments": {
+          "description": "Boss has 5 'husband' segments. Defeating each (35 HP) changes attack pattern.",
+          "segments": 5,
+          "hp_per_segment": 35
+        }
+      },
+      "item_drops": [
+        {"item": "living_water_bread", "chance": 0.6},
+        {"item": "well_token", "chance": 1.0},
+        {"item": "samaritan_robe", "chance": 0.4}
+      ]
+    },
+    {
+      "id": "rahabs_pursuers",
+      "name": "Rahab's Pursuers",
+      "title": "The King's Men",
+      "type": "Normal",
+      "town": "Jericho",
+      "level": 32,
+      "base_stats": {
+        "hp": 220,
+        "atk": 38,
+        "def": 30,
+        "spd": 24
+      },
+      "attacks": [
+        {
+          "name": "Royal Guard Strike",
+          "type": "Physical",
+          "power": [36, 44],
+          "accuracy": 95
+        },
+        {
+          "name": "Pursuit",
+          "type": "Physical",
+          "power": [34, 42],
+          "accuracy": 100,
+          "special": "priority",
+          "priority": 1
+        },
+        {
+          "name": "Coordinated Assault",
+          "type": "Physical",
+          "power": [32, 40],
+          "accuracy": 90,
+          "special": "multi_target"
+        },
+        {
+          "name": "Wall Breaker",
+          "type": "Earth",
+          "power": [40, 50],
+          "accuracy": 85,
+          "special": "ignore_def"
+        }
+      ],
+      "xp_reward": 420,
+      "money_reward": 700,
+      "phases": 2,
+      "phase_transitions": {
+        "2": "The walls are falling! Jericho crumbles! We must finish this NOW!"
+      },
+      "gimmick": "Walls of Jericho fall during battle, changing terrain and weakening defense.",
+      "intro_dialogue": {
+        "default": "Hand over the SPIES! Rahab the TRAITOR will face JUSTICE! The king's men NEVER fail! *walls rumbling ominously in background*",
+        "christian_edition": "Surrender the spies! Rahab has betrayed the king and must face justice!"
+      },
+      "defeat_dialogue": {
+        "default": "The scarlet cord... *walls crumbling* ...it SAVED her?! Faith has protected the faithful. *defeated as walls collapse* We failed...",
+        "christian_edition": "The scarlet cord marked her house... faith has protected those who believed. We have been defeated."
+      },
+      "biblical_reference": "Joshua 2:1-24, 6:22-25 (Rahab and the Spies)",
+      "ai_pattern": "aggressive",
+      "special_mechanics": {
+        "falling_walls": {
+          "description": "At 50% HP, walls fall dealing damage to all combatants and reducing defense",
+          "wall_fall_damage": 30,
+          "def_reduction": 0.3
+        }
+      },
+      "item_drops": [
+        {"item": "jericho_bread", "chance": 0.6},
+        {"item": "scarlet_cord", "chance": 0.5},
+        {"item": "wall_fragment", "chance": 0.4}
+      ]
+    },
+    {
+      "id": "death_manifest",
+      "name": "Death Itself",
+      "title": "The Final Enemy",
+      "type": "Dark",
+      "town": "Bethany",
+      "level": 35,
+      "base_stats": {
+        "hp": 250,
+        "atk": 42,
+        "def": 28,
+        "spd": 26
+      },
+      "attacks": [
+        {
+          "name": "Touch of Death",
+          "type": "Dark",
+          "power": [40, 50],
+          "accuracy": 90,
+          "special": "instant_ko",
+          "ko_chance": 0.1
+        },
+        {
+          "name": "Grave's Embrace",
+          "type": "Dark",
+          "power": [38, 48],
+          "accuracy": 95,
+          "special": "hp_drain",
+          "drain_percent": 0.5
+        },
+        {
+          "name": "Despair Wave",
+          "type": "Dark",
+          "power": [36, 46],
+          "accuracy": 100,
+          "effect": "all_stats_down",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Four Days Dead",
+          "type": "Dark",
+          "power": [42, 52],
+          "accuracy": 85,
+          "special": "multi_target"
+        }
+      ],
+      "xp_reward": 500,
+      "money_reward": 800,
+      "phases": 1,
+      "gimmick": "Represents death holding Lazarus. Very powerful but can be overcome with Holy damage.",
+      "intro_dialogue": {
+        "default": "I am the END of ALL things. FOUR DAYS I have held this one. His body DECAYS. You CANNOT undo DEATH! I am INEVITABLE!",
+        "christian_edition": "I am Death. I am the end. Four days this one has been mine. You cannot undo what has been done. Death is final."
+      },
+      "defeat_dialogue": {
+        "default": "*voice echoing* LAZARUS, COME FORTH! ...No... NO! My hold is BROKEN! Death... is not... *fading* ...final? IMPOSSIBLE!",
+        "christian_edition": "Lazarus, come forth! No... my hold is broken! Death itself has been defeated. This cannot be!"
+      },
+      "biblical_reference": "John 11:1-44 (Raising of Lazarus)",
+      "ai_pattern": "aggressive",
+      "special_mechanics": {
+        "death_grip": {
+          "description": "All party members have reduced max HP (75%). Holy attacks deal 2x damage.",
+          "hp_reduction": 0.25,
+          "holy_multiplier": 2.0
+        },
+        "resurrection": {
+          "description": "Defeating Death resurrects Lazarus (cutscene)",
+          "resurrects_lazarus": true
+        }
+      },
+      "item_drops": [
+        {"item": "resurrection_bread", "chance": 0.8},
+        {"item": "lazarus_token", "chance": 1.0},
+        {"item": "death_defier", "chance": 0.3}
+      ]
+    },
+    {
+      "id": "captain_guard",
+      "name": "Captain of the Guard",
+      "title": "The Faithful Centurion",
+      "type": "Normal",
+      "town": "Bethlehem",
+      "level": 38,
+      "base_stats": {
+        "hp": 200,
+        "atk": 40,
+        "def": 32,
+        "spd": 28
+      },
+      "attacks": [
+        {
+          "name": "Disciplined Strike",
+          "type": "Physical",
+          "power": [38, 48],
+          "accuracy": 100
+        },
+        {
+          "name": "Roman Formation",
+          "type": "Physical",
+          "power": [36, 46],
+          "accuracy": 95,
+          "effect": "def_up",
+          "effect_value": 0.3
+        },
+        {
+          "name": "Centurion's Command",
+          "type": "Normal",
+          "power": [34, 44],
+          "accuracy": 90,
+          "special": "summon_allies"
+        },
+        {
+          "name": "Faith Strike",
+          "type": "Holy",
+          "power": [40, 50],
+          "accuracy": 100,
+          "description": "Used only if you choose mercy"
+        }
+      ],
+      "xp_reward": 550,
+      "money_reward": 900,
+      "phases": 1,
+      "gimmick": "CHOICE BOSS: Can choose to fight or show mercy. Mercy heals his servant and he joins you.",
+      "intro_dialogue": {
+        "default": "My servant is dying. But I'm a man of authority—I give orders, they're followed. You need only SAY THE WORD. Will you heal him? Or must we fight?",
+        "christian_edition": "My servant lies at home, paralyzed and suffering. But I know you need only say the word, and he will be healed. Will you help?"
+      },
+      "defeat_dialogue": {
+        "default": "Fight: Your power is... incredible. Perhaps you ARE who they say... // Mercy: Lord, I am not WORTHY for you to come under my roof! Just say the word, and my servant will be healed!",
+        "christian_edition": "If you fight: Your power is great. Truly, you are who they claim. // If you show mercy: Lord, I am not worthy that you should enter under my roof. But only say the word and my servant shall be healed."
+      },
+      "biblical_reference": "Matthew 8:5-13 (The Centurion's Servant)",
+      "ai_pattern": "defensive",
+      "special_mechanics": {
+        "choice_boss": {
+          "description": "Player can choose FIGHT or MERCY. Mercy heals servant, centurion becomes ally.",
+          "mercy_option": true,
+          "mercy_outcome": "centurion_ally"
+        },
+        "great_faith": {
+          "description": "If mercy is chosen, gain permanent +10% miracle meter generation",
+          "faith_bonus": 0.1
+        }
+      },
+      "item_drops": [
+        {"item": "centurion_bread", "chance": 0.7},
+        {"item": "faith_token", "chance": 1.0},
+        {"item": "roman_plume", "chance": 0.5}
+      ]
+    },
+    {
+      "id": "final_trial",
+      "name": "The Final Trial",
+      "title": "Caiaphas → Pilate → Satan",
+      "type": "Dark",
+      "town": "Jerusalem",
+      "level": 42,
+      "base_stats": {
+        "hp": 300,
+        "atk": 45,
+        "def": 35,
+        "spd": 30
+      },
+      "attacks": [
+        {
+          "name": "False Witness",
+          "type": "Holy",
+          "power": [42, 52],
+          "accuracy": 90,
+          "effect": "confusion",
+          "effect_chance": 0.3,
+          "phase": 1
+        },
+        {
+          "name": "Religious Condemnation",
+          "type": "Holy",
+          "power": [40, 50],
+          "accuracy": 95,
+          "effect": "all_stats_down",
+          "effect_value": 0.25,
+          "phase": 1
+        },
+        {
+          "name": "Sanhedrin Judgment",
+          "type": "Holy",
+          "power": [38, 48],
+          "accuracy": 100,
+          "special": "ignore_def",
+          "phase": 1
+        },
+        {
+          "name": "Political Pressure",
+          "type": "Normal",
+          "power": [44, 54],
+          "accuracy": 95,
+          "effect": "def_down",
+          "effect_value": 0.3,
+          "phase": 2
+        },
+        {
+          "name": "Wash Hands",
+          "type": "Water",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "evasion_up",
+          "effect_value": 0.4,
+          "phase": 2
+        },
+        {
+          "name": "Roman Authority",
+          "type": "Physical",
+          "power": [46, 56],
+          "accuracy": 90,
+          "special": "multi_target",
+          "phase": 2
+        },
+        {
+          "name": "Temptation of Power",
+          "type": "Dark",
+          "power": [50, 60],
+          "accuracy": 85,
+          "effect": "charm",
+          "effect_chance": 0.35,
+          "phase": 3
+        },
+        {
+          "name": "Kingdom Offer",
+          "type": "Dark",
+          "power": [48, 58],
+          "accuracy": 90,
+          "special": "hp_drain",
+          "drain_percent": 0.5,
+          "phase": 3
+        },
+        {
+          "name": "Prince of Darkness",
+          "type": "Dark",
+          "power": [52, 62],
+          "accuracy": 95,
+          "special": "multi_target",
+          "phase": 3
+        },
+        {
+          "name": "Ultimate Temptation",
+          "type": "Dark",
+          "power": [55, 70],
+          "accuracy": 80,
+          "effect": "all_stats_down",
+          "effect_value": 0.4,
+          "phase": 3
+        }
+      ],
+      "xp_reward": 1000,
+      "money_reward": 0,
+      "phases": 3,
+      "phase_transitions": {
+        "2": "Caiaphas defeated. Pilate: I find no fault in this man... but the people demand blood. Very well, let Rome's justice prevail!",
+        "3": "Pilate defeated. Satan appears: So, you've made it this far. But can you resist... EVERYTHING? All the kingdoms of the world can be yours... just bow down."
+      },
+      "gimmick": "Three-phase finale. Each phase has different mechanics and must be defeated in sequence.",
+      "intro_dialogue": {
+        "default": "Caiaphas: You claim to be the SON OF GOD?! BLASPHEMY! The Sanhedrin finds you GUILTY! *pounds staff* GUILTY OF BLASPHEMY!",
+        "christian_edition": "Caiaphas: You claim to be the Son of God? This is blasphemy! The Sanhedrin finds you guilty!"
+      },
+      "defeat_dialogue": {
+        "default": "Satan: You have... resisted. *fading* The victory is... yours. But REMEMBER... I WILL return. This is not the end... *disappears* // [Victory theme - credits roll]",
+        "christian_edition": "Satan: You have withstood every trial. The victory is yours. But I will return... this is not finished... // [Victory - the journey continues]"
+      },
+      "biblical_reference": "Matthew 26-27, Luke 22-23, John 18-19 (The Passion), Matthew 4:1-11 (Temptation)",
+      "ai_pattern": "tactical",
+      "special_mechanics": {
+        "three_phases": {
+          "description": "Phase 1 (Caiaphas): Religious attacks, Holy type. Phase 2 (Pilate): Political, defensive. Phase 3 (Satan): Ultimate test, Dark type.",
+          "phase_1_hp": 100,
+          "phase_2_hp": 100,
+          "phase_3_hp": 100
+        },
+        "final_test": {
+          "description": "Phase 3 tests all apostles and fish bonds. Combo attacks deal 3x damage.",
+          "combo_multiplier": 3.0
+        },
+        "no_mercy": {
+          "description": "Cannot flee or surrender. Must defeat all three phases.",
+          "cannot_flee": true
+        }
+      },
+      "item_drops": [
+        {"item": "ultimate_bread", "chance": 1.0},
+        {"item": "victory_token", "chance": 1.0},
+        {"item": "final_robe", "chance": 1.0}
+      ]
+    }
+  ],
+  "metadata": {
+    "total_bosses": 13,
+    "implemented": 13,
+    "towns": [
+      "Cana",
+      "Capernaum",
+      "Bethsaida",
+      "Magdala",
+      "Chorazin",
+      "Tiberias",
+      "Gadara",
+      "Samaria",
+      "Jericho",
+      "Bethany",
+      "Bethlehem",
+      "Jerusalem"
+    ],
+    "types": ["Normal", "Earth", "Spirit", "Dark", "Holy", "Water", "Physical"],
+    "special_mechanics": [
+      "puzzle",
+      "multi_phase",
+      "choice",
+      "environmental",
+      "summoning",
+      "stat_manipulation"
+    ]
+  }
+}

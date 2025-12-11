@@ -1,0 +1,1523 @@
+{
+  "quests": [
+    {
+      "id": "first_catch",
+      "name": "Your First Catch",
+      "type": "tutorial",
+      "region": "Galilee",
+      "level_requirement": 1,
+      "description": "Simon Peter's nets are empty. Help him catch his first fish.",
+      "objectives": [
+        {
+          "type": "catch_fish",
+          "target": "any",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 50,
+        "money": 20,
+        "items": [
+          {"item": "plain_pita", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Peter: Okay, real talk? We fished ALL NIGHT. Caught absolutely nothing. My hands are blistered, my back is killing me, and I smell like disappointment. But... *sigh* ...you're the boss. Let's do this. Again.",
+          "christian_edition": "Simon Peter: Master, we have worked hard all night and haven't caught anything. But because you say so, I will let down the nets."
+        },
+        "complete": {
+          "default": "Peter: HOLY—sorry, I mean—LOOK AT ALL THESE FISH! The nets are about to BREAK! I've never seen anything like this! Okay, I'm in. From now on, I'm catching PEOPLE. ...That sounded better in my head.",
+          "christian_edition": "Simon Peter: Master, this is a miracle! The nets are full! I have never seen such a catch! From now on, I will be a fisher of men, as you have called me."
+        }
+      },
+      "unlocks": ["fishing_basics"]
+    },
+    {
+      "id": "doubting_thomas",
+      "name": "Doubting Thomas",
+      "type": "side",
+      "region": "Galilee",
+      "level_requirement": 3,
+      "description": "Thomas won't believe in your miracles until he sees proof. Show him three different fish types.",
+      "objectives": [
+        {
+          "type": "show_fish_types",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "xp": 80,
+        "money": 50,
+        "items": [
+          {"item": "faith_bagel", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Thomas: Look, I'm not saying you're lying, but I need PROOF. Show me these 'miraculous' fish. With evidence. Peer-reviewed evidence, ideally.",
+          "christian_edition": "Thomas: I will not believe unless I see with my own eyes. Show me these miraculous fish you speak of."
+        },
+        "complete": {
+          "default": "Thomas: Okay. OKAY. I believe. I REALLY believe. Sorry for being difficult. My Lord and my God! ...Can I stop doubting everything now?",
+          "christian_edition": "Thomas: My Lord and my God! I believe! Blessed are those who have not seen and yet have believed."
+        }
+      }
+    },
+    {
+      "id": "lost_sheep_roundup",
+      "name": "The Lost Sheep Roundup",
+      "type": "collection",
+      "region": "Galilee",
+      "level_requirement": 2,
+      "description": "A shepherd has lost 5 sheep. Find and battle them to bring them back.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "lost_sheep",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 100,
+        "money": 75,
+        "items": [
+          {"item": "shepards_bread", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Shepherd: I had 100 sheep. Count 'em. ONE HUNDRED. Now I have 95 because FIVE decided to wander off. Why? WHO KNOWS. Sheep are the WORST. Please help!",
+          "christian_edition": "Shepherd: I have 100 sheep, but five have wandered away from the flock. Please help me find my lost sheep!"
+        },
+        "complete": {
+          "default": "Shepherd: You found them! ALL FIVE! Rejoice with me! ...Seriously though, these sheep are grounded. There's more joy over one found sheep than 99 that didn't run off!",
+          "christian_edition": "Shepherd: Rejoice with me, for I have found my sheep that were lost! There is more joy in heaven over one sinner who repents than over ninety-nine righteous persons who need no repentance."
+        }
+      },
+      "biblical_reference": "Luke 15:3-7"
+    },
+    {
+      "id": "tax_trouble",
+      "name": "Tax Trouble",
+      "type": "story",
+      "region": "Galilee",
+      "level_requirement": 4,
+      "description": "The temple tax is due, but you have no money. Fish for a special catch.",
+      "objectives": [
+        {
+          "type": "catch_fish",
+          "target": "any",
+          "count": 1,
+          "special": "coin_in_mouth"
+        }
+      ],
+      "rewards": {
+        "xp": 120,
+        "money": 200,
+        "unlocks": ["matthew_recruit"]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Tax Collector: Temple tax. Two drachmas per person. Yes, it's due NOW. No, I don't care that you're busy. Money. Now.",
+          "christian_edition": "Tax Collector: The temple tax is due. Each person must pay two drachmas."
+        },
+        "complete": {
+          "default": "You found a COIN in the FISH'S MOUTH. How? WHY? This doesn't make biological sense! But it's exactly enough for the tax, so... okay! Caesar gets his coin!",
+          "christian_edition": "You found a coin in the fish's mouth—exactly the amount needed for the temple tax. Give to Caesar what is Caesar's, and to God what is God's."
+        }
+      },
+      "biblical_reference": "Matthew 17:24-27"
+    },
+    {
+      "id": "multiplication_practice",
+      "name": "Multiplication Practice",
+      "type": "teaching",
+      "region": "Galilee",
+      "level_requirement": 5,
+      "description": "5,000 people are hungry. Use your bread items to feed them (requires 5 loaves).",
+      "objectives": [
+        {
+          "type": "use_items",
+          "target": "any_bread",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 250,
+        "money": 100,
+        "items": [
+          {"item": "plain_pita", "count": 12},
+          {"item": "miracle_meter_boost", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Andrew: So there's this kid with 5 loaves and 2 fish. Great. Wonderful. That'll feed about... *checks math* ...one person. Maybe. We have FIVE THOUSAND people here. This is impossible.",
+          "christian_edition": "Andrew: There is a boy here who has five loaves and two fish, but what are these among so many people?"
+        },
+        "complete": {
+          "default": "Everyone ATE and was SATISFIED! From FIVE LOAVES! And there are TWELVE BASKETS of leftovers! I don't understand physics anymore, but this is AMAZING!",
+          "christian_edition": "Everyone ate and was satisfied! You gathered twelve baskets full of leftovers. The miracle of multiplication has blessed this multitude!"
+        }
+      },
+      "biblical_reference": "John 6:1-14"
+    },
+    {
+      "id": "bandit_cleanup",
+      "name": "Bandit Cleanup",
+      "type": "battle",
+      "region": "Galilee",
+      "level_requirement": 5,
+      "description": "Wild bandits are terrorizing the roads. Defeat 8 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "wild_bandit",
+          "count": 8
+        }
+      ],
+      "rewards": {
+        "xp": 180,
+        "money": 300,
+        "items": [
+          {"item": "ryedemption_roll", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Merchant: The roads are a NIGHTMARE! Bandits EVERYWHERE! I can't move my goods! I'm losing MONEY! Please help before I go bankrupt!",
+          "christian_edition": "Merchant: The roads are not safe. Bandits terrorize travelers. Please, can you help restore peace?"
+        },
+        "complete": {
+          "default": "Merchant: The roads are safe again! You've turned the other cheek... AFTER whooping them senseless! That's... technically still turning the other cheek, right?",
+          "christian_edition": "Merchant: The roads are safe once more! You have brought justice and peace. Thank you for your courage!"
+        }
+      }
+    },
+    {
+      "id": "pharisee_debate",
+      "name": "The Pharisee Debate",
+      "type": "battle",
+      "region": "Galilee",
+      "level_requirement": 6,
+      "description": "Defeat 5 Questioning Pharisees in theological debates (battles).",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "questioning_pharisee",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 200,
+        "money": 150,
+        "items": [
+          {"item": "wisdom_wafer", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Pharisee: By what AUTHORITY do you do these things?! We have 613 rules! MEMORIZED! Let's see if you can pass our pop quiz!",
+          "christian_edition": "Pharisee: By what authority do you teach and perform these acts? We will test your knowledge of the Law."
+        },
+        "complete": {
+          "default": "Pharisee: Your wisdom is... *adjusts glasses* ...unexpected. Perhaps there is more to you than we thought. We may have judged too quickly.",
+          "christian_edition": "Pharisee: Your wisdom surpasses our expectations. Perhaps we have much to learn from you. You understand the heart of the Law."
+        }
+      }
+    },
+    {
+      "id": "wheat_and_tares",
+      "name": "Wheat and Tares",
+      "type": "collection",
+      "region": "Galilee",
+      "level_requirement": 4,
+      "description": "Help a farmer separate wheat from tares. Defeat 10 Wheat Wisps.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "wheat_wisp",
+          "count": 10
+        }
+      ],
+      "rewards": {
+        "xp": 150,
+        "money": 120,
+        "items": [
+          {"item": "whole_grain_grace", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Farmer: Some JERK planted weeds in my wheat field! WEEDS! Do you know how passive-aggressive that is?! But I can't pull them up or I'll damage the wheat!",
+          "christian_edition": "Farmer: An enemy has sown tares among my wheat. If I pull them up now, I risk uprooting the wheat as well. What shall I do?"
+        },
+        "complete": {
+          "default": "Farmer: At harvest time, we've separated them! Wheat goes in the barn, weeds go in the burn pile. Justice is served, agricultural edition!",
+          "christian_edition": "Farmer: At harvest time, we have separated the wheat from the tares. The wheat is gathered into the barn, and the tares are bound for burning. All is well."
+        }
+      },
+      "biblical_reference": "Matthew 13:24-30"
+    },
+    {
+      "id": "walking_on_water",
+      "name": "Walking on Water",
+      "type": "challenge",
+      "region": "Coastal",
+      "level_requirement": 10,
+      "description": "Cross the Sea of Galilee while battling Water Spirits (must complete without switching fish).",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "water_spirit",
+          "count": 5,
+          "special": "no_switching"
+        }
+      ],
+      "rewards": {
+        "xp": 300,
+        "money": 250,
+        "items": [
+          {"item": "water_walking_boots", "count": 1}
+        ],
+        "unlocks": ["water_walking"]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Peter: If that's REALLY you out there, tell me to walk on the water! ...Wait, did I just volunteer to WALK ON WATER? Why do I say these things?!",
+          "christian_edition": "Peter: Lord, if it is you, command me to come to you on the water."
+        },
+        "complete": {
+          "default": "Peter: You truly ARE the Son of God! The wind and waves OBEY you! Also I just WALKED ON WATER and I'm having a moment here!",
+          "christian_edition": "Peter: Truly you are the Son of God! Even the wind and the waves obey your command!"
+        }
+      },
+      "biblical_reference": "Matthew 14:22-33"
+    },
+    {
+      "id": "tax_collector_redemption",
+      "name": "Tax Collector Redemption",
+      "type": "story",
+      "region": "Coastal",
+      "level_requirement": 12,
+      "description": "Matthew wants to make amends. Defeat 6 Tax Collector Shades representing his past.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "tax_collector_shade",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 350,
+        "money": 400,
+        "items": [
+          {"item": "forgiveness_focaccia", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Matthew: These shadow-things are literally my past sins haunting me. LITERALLY. This is some psychological horror stuff. Help me beat them up so I can move on!",
+          "christian_edition": "Matthew: These shades represent the shameful actions of my past. Help me defeat them so I can truly move forward in my new life."
+        },
+        "complete": {
+          "default": "Matthew: My past is GONE! I'm a new person! NEW CREATION! Let's write a Gospel together! I'm thinking... lots of genealogies. People LOVE genealogies.",
+          "christian_edition": "Matthew: My past is behind me. I am a new creation in you! Let us write together and share this good news with the world!"
+        }
+      },
+      "requires_apostle": "matthew"
+    },
+    {
+      "id": "possessed_merchant_exorcism",
+      "name": "Demon-Possessed Merchants",
+      "type": "battle",
+      "region": "Coastal",
+      "level_requirement": 14,
+      "description": "Exorcise demons from 4 possessed merchants.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "possessed_merchant",
+          "count": 4
+        }
+      ],
+      "rewards": {
+        "xp": 380,
+        "money": 350,
+        "items": [
+          {"item": "exorcism_bread", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Merchant: HELP US! *demonic voice* STAY AWAY FROM US! *normal voice* Please help! *demonic* FLEE! This is very confusing!",
+          "christian_edition": "Merchant: Help us, please! *demonic voice* Leave us alone! *The demons cry out in torment*"
+        },
+        "complete": {
+          "default": "Merchant: We're FREE! The demons are GONE! Thank you! We feel so much lighter! Also significantly less evil-voiced!",
+          "christian_edition": "Merchant: Thank you! The demons have been cast out! We are free from their torment! Praise be!"
+        }
+      }
+    },
+    {
+      "id": "roman_patrol",
+      "name": "Roman Patrol",
+      "type": "battle",
+      "region": "Coastal",
+      "level_requirement": 16,
+      "description": "Roman Scouts are searching for you. Defeat 7 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "roman_scout",
+          "count": 7
+        }
+      ],
+      "rewards": {
+        "xp": 420,
+        "money": 380,
+        "items": [
+          {"item": "camouflage_cloak", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Roman Scout: We have orders to monitor you, traveling rabbi. Don't make this difficult. We're just doing our jobs! Very intimidating jobs!",
+          "christian_edition": "Roman Scout: We are under orders to observe you. Do not interfere with Roman business."
+        },
+        "complete": {
+          "default": "You've evaded the patrols! But Rome doesn't forget. They'll be watching. Always watching. It's what they do. Very committed to watching.",
+          "christian_edition": "You have eluded the Roman patrols for now. But be watchful—they will not cease their surveillance."
+        }
+      }
+    },
+    {
+      "id": "herodian_conspiracy",
+      "name": "Herodian Conspiracy",
+      "type": "battle",
+      "region": "Coastal",
+      "level_requirement": 18,
+      "description": "Herodian Guards plot against you. Defeat 5 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "herodian_guard",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 460,
+        "money": 420,
+        "items": [
+          {"item": "royal_robe_fragment", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Herodian Guard: Herod wants a word with you. Come QUIETLY or come BY FORCE! Your choice! Hint: we prefer force. More exciting.",
+          "christian_edition": "Herodian Guard: King Herod summons you. You will come with us, willingly or otherwise."
+        },
+        "complete": {
+          "default": "The guards retreat! But word has reached Herod's court. Great. Now you're on a paranoid king's radar. This'll end well.",
+          "christian_edition": "The guards have withdrawn. But news of your deeds has reached Herod's palace. Be cautious."
+        }
+      }
+    },
+    {
+      "id": "corrupt_officials",
+      "name": "Corruption Cleanup",
+      "type": "battle",
+      "region": "Coastal",
+      "level_requirement": 17,
+      "description": "Expose and defeat 6 corrupt officials.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "corrupt_official",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 440,
+        "money": 500,
+        "items": [
+          {"item": "justice_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Official: You can't PROVE anything! We RUN this town! You have NO power here! *nervous sweating*",
+          "christian_edition": "Official: You have no authority here! We are in control of this town!"
+        },
+        "complete": {
+          "default": "The corruption is EXPOSED! Justice PREVAILS! Give to God what is God's! And give corrupt officials what THEY deserve!",
+          "christian_edition": "The corruption has been brought to light! Justice is served! Give to God what belongs to God!"
+        }
+      }
+    },
+    {
+      "id": "good_samaritan",
+      "name": "The Good Samaritan",
+      "type": "teaching",
+      "region": "Gentile",
+      "level_requirement": 20,
+      "description": "Help an injured traveler. Use 3 healing items and defeat the bandits who attacked him.",
+      "objectives": [
+        {
+          "type": "use_items",
+          "target": "healing",
+          "count": 3
+        },
+        {
+          "type": "defeat_enemy",
+          "target": "wild_bandit",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "xp": 500,
+        "money": 300,
+        "items": [
+          {"item": "samaritan_salve", "count": 5}
+        ],
+        "unlocks": ["good_samaritan_title"]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Injured Man: Please... help... bandits took everything... left me here... This is a bad day. The worst day.",
+          "christian_edition": "Injured Man: Please, I beg you... help me... bandits attacked me and left me for dead..."
+        },
+        "complete": {
+          "default": "Injured Man: You HELPED me! Even though we're supposed to be enemies! Who is my neighbor? EVERYONE! Mind = blown!",
+          "christian_edition": "Injured Man: You have shown me mercy when others passed by. Who is my neighbor? I understand now—everyone is my neighbor!"
+        }
+      },
+      "biblical_reference": "Luke 10:25-37"
+    },
+    {
+      "id": "swine_spirits",
+      "name": "Unclean Spirits",
+      "type": "battle",
+      "region": "Gentile",
+      "level_requirement": 22,
+      "description": "Cleanse the land of Swine Spirits. Defeat 8 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "swine_spirit",
+          "count": 8
+        }
+      ],
+      "rewards": {
+        "xp": 550,
+        "money": 450,
+        "items": [
+          {"item": "cleansing_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Villager: Unclean spirits are EVERYWHERE! They're in the pigs! THE PIGS! Please, drive them out before they ruin everything!",
+          "christian_edition": "Villager: Unclean spirits roam our lands, tormenting us. Please, drive them out and cleanse this place!"
+        },
+        "complete": {
+          "default": "Villager: The spirits have FLED! Our land is clean again! The pigs are...well, the pigs didn't make it, but WE'RE safe!",
+          "christian_edition": "Villager: The spirits have been banished! Our land is cleansed! Thank you for your righteousness!"
+        }
+      }
+    },
+    {
+      "id": "cultural_bridge",
+      "name": "Bridge the Divide",
+      "type": "battle",
+      "region": "Gentile",
+      "level_requirement": 24,
+      "description": "Overcome Cultural Critics who sow division. Defeat 6 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "cultural_critic",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 580,
+        "money": 480,
+        "items": [
+          {"item": "unity_bread", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Critic: Jews and Gentiles should NEVER mix! This is WRONG! Separate! Divided! That's how it SHOULD be!",
+          "christian_edition": "Critic: Jews and Gentiles must remain separate! It is not proper for them to associate!"
+        },
+        "complete": {
+          "default": "In Christ, there is neither Jew nor Gentile! We're ALL one! Unity! Togetherness! Breaking down walls! *metaphorical walls, not Jericho walls*",
+          "christian_edition": "In Christ, there is neither Jew nor Gentile, slave nor free. We are all one in the body of Christ!"
+        }
+      },
+      "biblical_reference": "Galatians 3:28"
+    },
+    {
+      "id": "zealot_uprising",
+      "name": "Misguided Zeal",
+      "type": "battle",
+      "region": "Gentile",
+      "level_requirement": 26,
+      "description": "Calm the Zealot Agitators before they cause violence. Defeat 5 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "zealot_agitator",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 620,
+        "money": 500,
+        "items": [
+          {"item": "peace_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Zealot: Only VIOLENCE will free us from Rome! Swords! Revolution! Join us or GET OUT OF THE WAY! No compromise!",
+          "christian_edition": "Zealot: Violence is the only way to freedom from Roman oppression! Join our cause or stand aside!"
+        },
+        "complete": {
+          "default": "Zealot: Your way... non-violence... *lowers sword* ...maybe there's another path? Blessed are the peacemakers. Huh. That's... different.",
+          "christian_edition": "Zealot: I see now that there is another way. A path of peace, not violence. Blessed are the peacemakers, for they shall be called children of God."
+        }
+      },
+      "requires_apostle": "simon_zealot"
+    },
+    {
+      "id": "samaritan_acceptance",
+      "name": "Breaking Barriers",
+      "type": "battle",
+      "region": "Gentile",
+      "level_requirement": 25,
+      "description": "Overcome Samaritan Skeptics. Show that love transcends boundaries.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "samaritan_skeptic",
+          "count": 7
+        }
+      ],
+      "rewards": {
+        "xp": 600,
+        "money": 520,
+        "items": [
+          {"item": "acceptance_bread", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Skeptic: A JEW in SAMARIA?! You people HATE us! This is a trick! What do you want?!",
+          "christian_edition": "Skeptic: A Jew in Samaria? Your people have always despised us. Why are you here?"
+        },
+        "complete": {
+          "default": "Skeptic: You're... different. You actually SEE us. As equals. As PEOPLE. Thank you. This is... unexpected.",
+          "christian_edition": "Skeptic: You are not like the others. You see us as equals, as neighbors. Thank you for showing us love."
+        }
+      }
+    },
+    {
+      "id": "legion_fragments",
+      "name": "Scatter the Legion",
+      "type": "battle",
+      "region": "Gentile",
+      "level_requirement": 27,
+      "description": "Defeat Legion Fragments before they can reform. Defeat 10 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "legion_fragment",
+          "count": 10
+        }
+      ],
+      "rewards": {
+        "xp": 650,
+        "money": 550,
+        "items": [
+          {"item": "exorcism_bread", "count": 4}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Fragment: *whispers* We are many... we will reform... you cannot destroy us ALL... *hissing* ...we are LEGION...",
+          "christian_edition": "Fragment: We are many. We will reform. You cannot destroy all of us. We endure."
+        },
+        "complete": {
+          "default": "The fragments are SCATTERED! Legion cannot reform! Too spread out! The possessed are FREE! No more hissing!",
+          "christian_edition": "The fragments are scattered beyond recovery! Legion cannot reform! The possessed souls are freed from torment!"
+        }
+      }
+    },
+    {
+      "id": "prodigal_son",
+      "name": "The Prodigal Returns",
+      "type": "teaching",
+      "region": "Gentile",
+      "level_requirement": 23,
+      "description": "A young man squandered his inheritance. Help him defeat his Shame and Guilt (3 battles).",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "guilt_shadow",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "xp": 570,
+        "money": 100,
+        "items": [
+          {"item": "forgiveness_feast", "count": 1},
+          {"item": "fathers_robe", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Young Man: I'm not WORTHY to be called his son... I wasted EVERYTHING... the guilt... *shadow looming* ...it CONSUMES me...",
+          "christian_edition": "Young Man: I am not worthy to be called your son. I have squandered everything. The guilt overwhelms me..."
+        },
+        "complete": {
+          "default": "Father: My SON was LOST and is FOUND! He was DEAD and is ALIVE! Bring the fattened calf! Let's CELEBRATE! *overwhelming joy*",
+          "christian_edition": "Father: My son was lost and now is found! He was dead and now is alive again! Let us feast and celebrate!"
+        }
+      },
+      "biblical_reference": "Luke 15:11-32"
+    },
+    {
+      "id": "temple_defenders",
+      "name": "Temple Politics",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 32,
+      "description": "Temple Guards oppose your teachings. Defeat 7 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "temple_guard",
+          "count": 7
+        }
+      ],
+      "rewards": {
+        "xp": 750,
+        "money": 650,
+        "items": [
+          {"item": "temple_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Temple Guard: You THREATEN the ORDER! The SANHEDRIN will hear of this! You can't just waltz in and teach whatever you want!",
+          "christian_edition": "Temple Guard: You threaten the established order. The Sanhedrin will be informed of your teachings!"
+        },
+        "complete": {
+          "default": "Temple Guard: Your authority is... *grudgingly* ...undeniable. But the priests WON'T like this. At all. You're making enemies.",
+          "christian_edition": "Temple Guard: Your authority is clear. But know that the priests will not accept this challenge to their power."
+        }
+      }
+    },
+    {
+      "id": "sanhedrin_opposition",
+      "name": "The Sanhedrin's Challenge",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 34,
+      "description": "Face representatives of the Sanhedrin. Defeat 5 Sanhedrin Members.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "sanhedrin_member",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 800,
+        "money": 700,
+        "items": [
+          {"item": "wisdom_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Sanhedrin: By what AUTHORITY do you teach?! You have NO formal training! No credentials! You're a CARPENTER! Who do you think you ARE?!",
+          "christian_edition": "Sanhedrin: By what authority do you teach these things? You have no formal training in the Law!"
+        },
+        "complete": {
+          "default": "Sanhedrin: His wisdom is... *reluctant admission* ...it's from God. We cannot deny it. This carpenter knows MORE than we do. Unsettling.",
+          "christian_edition": "Sanhedrin: His wisdom is beyond human learning. It comes from God. We cannot deny this truth."
+        }
+      }
+    },
+    {
+      "id": "haunted_memories",
+      "name": "Haunted by the Past",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 33,
+      "description": "Help villagers overcome Memory Phantoms. Defeat 8 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "memory_phantom",
+          "count": 8
+        }
+      ],
+      "rewards": {
+        "xp": 770,
+        "money": 680,
+        "items": [
+          {"item": "memory_eraser", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Villager: We're HAUNTED by traumatic memories... the occupation... the violence... *ghostly shapes* ...they won't LEAVE us alone...",
+          "christian_edition": "Villager: We are haunted by memories of occupation and violence. The past torments us endlessly."
+        },
+        "complete": {
+          "default": "Villager: The memories don't CONTROL us anymore! We're FREE from the past! We can finally... breathe...",
+          "christian_edition": "Villager: The memories no longer control us! We are free from the burden of the past! Thank you!"
+        }
+      }
+    },
+    {
+      "id": "wall_sentinels",
+      "name": "Break Down the Walls",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 35,
+      "description": "Wall Sentinels block your path. Defeat 6 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "wall_sentinel",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 820,
+        "money": 720,
+        "items": [
+          {"item": "wall_breaker_bread", "count": 2}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Sentinel: NONE SHALL PASS! The walls stand FIRM! Impenetrable! Unbreakable! ...Probably unbreakable...",
+          "christian_edition": "Sentinel: None may pass! The walls stand firm and cannot be breached!"
+        },
+        "complete": {
+          "default": "The walls CRUMBLE! *dramatic collapse* Nothing can stand against the TRUTH! Not even REALLY BIG WALLS!",
+          "christian_edition": "The walls crumble and fall! No barrier can stand against divine truth!"
+        }
+      }
+    },
+    {
+      "id": "grief_and_loss",
+      "name": "Comfort the Grieving",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 36,
+      "description": "Grief Manifest torments mourners. Defeat 5 of them to bring comfort.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "grief_manifest",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 850,
+        "money": 750,
+        "items": [
+          {"item": "comfort_bread", "count": 4}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Mourner: The grief is... *sobbing* ...overwhelming... we CAN'T escape it... it's EVERYWHERE... *shadows of grief loom*",
+          "christian_edition": "Mourner: The grief overwhelms us. We cannot escape this sorrow. It follows us everywhere..."
+        },
+        "complete": {
+          "default": "Mourner: Blessed are those who mourn, for they WILL be comforted. *finally at peace* Thank you. The weight... it's lifted.",
+          "christian_edition": "Mourner: Blessed are those who mourn, for they shall be comforted. Thank you for bringing us peace."
+        }
+      },
+      "biblical_reference": "Matthew 5:4"
+    },
+    {
+      "id": "guilt_absolution",
+      "name": "Shadows of Guilt",
+      "type": "battle",
+      "region": "Judean",
+      "level_requirement": 37,
+      "description": "Guilt Shadows plague the guilty. Show them forgiveness by defeating 6 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "guilt_shadow",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 880,
+        "money": 780,
+        "items": [
+          {"item": "absolution_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Guilty One: I can't ESCAPE what I've done... *dark shadows swirl* ...the guilt FOLLOWS me... everywhere... always...",
+          "christian_edition": "Guilty One: I cannot escape my actions. The guilt pursues me relentlessly. I am trapped."
+        },
+        "complete": {
+          "default": "Guilty One: You've shown me forgiveness is POSSIBLE! My guilt is LIFTED! *shadows disperse* I'm... I'm FREE!",
+          "christian_edition": "Guilty One: You have shown me that forgiveness is possible! My guilt is lifted! I am free at last!"
+        }
+      }
+    },
+    {
+      "id": "ten_lepers",
+      "name": "The Ten Lepers",
+      "type": "teaching",
+      "region": "Judean",
+      "level_requirement": 31,
+      "description": "Heal ten lepers (use 10 healing items). Only one returns to thank you.",
+      "objectives": [
+        {
+          "type": "use_items",
+          "target": "healing",
+          "count": 10
+        }
+      ],
+      "rewards": {
+        "xp": 700,
+        "money": 200,
+        "items": [
+          {"item": "grateful_bread", "count": 5}
+        ],
+        "special_reward": "one_leper_returns"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Leper: Master, have MERCY on us! Cleanse us! We're outcasts! Unclean! Please!",
+          "christian_edition": "Leper: Master, have mercy on us! Cleanse us from our affliction! Please, help us!"
+        },
+        "complete": {
+          "default": "One Leper Returns: THANK YOU, Lord! *bowing* // Where are the other NINE? Seriously? Was NO ONE found to return except this foreigner? Gratitude, people!",
+          "christian_edition": "One Leper Returns: Thank you, Lord! I am healed! // Were not all ten cleansed? Where are the other nine? Was no one found to return and give praise to God except this foreigner?"
+        }
+      },
+      "biblical_reference": "Luke 17:11-19"
+    },
+    {
+      "id": "widow_offering",
+      "name": "The Widow's Offering",
+      "type": "teaching",
+      "region": "Judean",
+      "level_requirement": 30,
+      "description": "A poor widow gives her last coins. Match her sacrifice (donate 100 denarii).",
+      "objectives": [
+        {
+          "type": "donate_money",
+          "amount": 100
+        }
+      ],
+      "rewards": {
+        "xp": 600,
+        "money": 0,
+        "items": [
+          {"item": "widows_blessing", "count": 1}
+        ],
+        "special_reward": "true_generosity_title"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Jesus: See this widow? She put in MORE than all the rich people. They gave pocket change. She gave EVERYTHING she had. That's real generosity.",
+          "christian_edition": "Jesus: This poor widow has put in more than all the others. They gave out of their wealth, but she out of her poverty put in all she had to live on."
+        },
+        "complete": {
+          "default": "Your sacrifice is noted in heaven. True generosity gives from WANT, not abundance. You get it. *divine approval*",
+          "christian_edition": "Your sacrifice has been seen and recorded in heaven. True generosity comes from giving what you need, not what you can spare."
+        }
+      },
+      "biblical_reference": "Mark 12:41-44"
+    },
+    {
+      "id": "roman_legion",
+      "name": "The Roman Legion",
+      "type": "battle",
+      "region": "Jerusalem",
+      "level_requirement": 42,
+      "description": "Face the might of Rome. Defeat 8 Roman Legionnaires.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "roman_legionnaire",
+          "count": 8
+        }
+      ],
+      "rewards": {
+        "xp": 950,
+        "money": 850,
+        "items": [
+          {"item": "legion_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Legionnaire: ROME'S authority is ABSOLUTE! Bow or be CRUSHED! We are the LEGION! We are INEVITABLE!",
+          "christian_edition": "Legionnaire: Rome's authority is absolute! Submit or be destroyed! The might of the legion is unstoppable!"
+        },
+        "complete": {
+          "default": "Even the legions cannot stop the TRUTH! Render unto Caesar what is Caesar's! ...But render unto GOD what is God's!",
+          "christian_edition": "Even the might of Rome cannot stop divine truth! Render to Caesar what is Caesar's, and to God what is God's!"
+        }
+      }
+    },
+    {
+      "id": "high_priest_lackeys",
+      "name": "Corrupted Priesthood",
+      "type": "battle",
+      "region": "Jerusalem",
+      "level_requirement": 44,
+      "description": "The high priests send their lackeys. Defeat 6 High Priest Lackeys.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "high_priest_lackey",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 1000,
+        "money": 900,
+        "items": [
+          {"item": "purity_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Lackey: The HIGH PRIEST commands it! You must STOP these teachings! Authority! Tradition! RULES! We have PROTOCOLS!",
+          "christian_edition": "Lackey: The high priest commands it! You must cease these teachings at once! Our authority demands obedience!"
+        },
+        "complete": {
+          "default": "Their authority is from MEN, not GOD! Religious bureaucracy FAILS! The TRUTH prevails! No amount of fancy robes can stop it!",
+          "christian_edition": "Their authority comes from men, not from God! The truth cannot be suppressed by human institutions!"
+        }
+      }
+    },
+    {
+      "id": "demonic_tempters",
+      "name": "Resist Temptation",
+      "type": "battle",
+      "region": "Jerusalem",
+      "level_requirement": 46,
+      "description": "Demonic Tempters offer worldly power. Resist by defeating 7 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "demonic_tempter",
+          "count": 7
+        }
+      ],
+      "rewards": {
+        "xp": 1050,
+        "money": 950,
+        "items": [
+          {"item": "resistance_bread", "count": 4}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Tempter: ALL this can be YOURS! Kingdoms! Power! Glory! Just one tiny little worship session! What's the harm? *devilish grin*",
+          "christian_edition": "Tempter: All these kingdoms and their glory can be yours! Just bow down and worship me..."
+        },
+        "complete": {
+          "default": "AWAY from me, Satan! Worship the LORD your God and serve Him ONLY! Nice try, demon! *divine mic drop*",
+          "christian_edition": "Away from me, Satan! For it is written: 'Worship the Lord your God, and serve Him only!'"
+        }
+      },
+      "biblical_reference": "Matthew 4:8-10"
+    },
+    {
+      "id": "shadows_of_doubt",
+      "name": "Banish the Shadows",
+      "type": "battle",
+      "region": "Jerusalem",
+      "level_requirement": 45,
+      "description": "Shadows of Doubt creep in. Defeat 8 of them with faith.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "shadow_of_doubt",
+          "count": 8
+        }
+      ],
+      "rewards": {
+        "xp": 1020,
+        "money": 920,
+        "items": [
+          {"item": "faith_bread", "count": 4}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Shadow: Are you REALLY the Messiah? Maybe you're just... a guy? A dude? Some random carpenter having a midlife crisis? *whispers intensify*",
+          "christian_edition": "Shadow: Are you truly the Messiah? Perhaps you are merely a man with delusions of grandeur..."
+        },
+        "complete": {
+          "default": "The shadows FLEE! Faith OBLITERATES doubt! I KNOW in whom I have believed! Get REKT, shadows!",
+          "christian_edition": "The shadows flee before the light of faith! Faith overcomes doubt! I know in whom I have believed!"
+        }
+      }
+    },
+    {
+      "id": "pilates_guards",
+      "name": "Pilate's Judgment",
+      "type": "battle",
+      "region": "Jerusalem",
+      "level_requirement": 47,
+      "description": "Pilate's Guards enforce Roman will. Defeat 6 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "pilates_guard",
+          "count": 6
+        }
+      ],
+      "rewards": {
+        "xp": 1080,
+        "money": 1000,
+        "items": [
+          {"item": "judgment_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Pilate's Guard: The GOVERNOR finds you GUILTY! His word is LAW! Rome has SPOKEN! Due process? Never heard of her!",
+          "christian_edition": "Pilate's Guard: The governor has pronounced judgment! You are found guilty! Submit to Roman authority!"
+        },
+        "complete": {
+          "default": "Pilate washes his hands, but the TRUTH cannot be washed away! Nice try, spineless bureaucrat! *judgment reversed*",
+          "christian_edition": "Pilate may wash his hands of responsibility, but the truth cannot be cleansed away by ritual gestures!"
+        }
+      }
+    },
+    {
+      "id": "money_changers",
+      "name": "Cleanse the Temple",
+      "type": "story",
+      "region": "Jerusalem",
+      "level_requirement": 43,
+      "description": "Drive out the Money Changers defiling the temple. Defeat all 10 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "money_changer",
+          "count": 10
+        }
+      ],
+      "rewards": {
+        "xp": 980,
+        "money": 1200,
+        "items": [
+          {"item": "temple_cleansing_bread", "count": 5}
+        ],
+        "unlocks": ["temple_cleansed"]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Jesus: My house shall be called a house of PRAYER, but you have made it a DEN OF ROBBERS! *flips tables* TIME TO CLEAN HOUSE!",
+          "christian_edition": "Jesus: It is written, 'My house shall be called a house of prayer,' but you have made it a den of robbers!"
+        },
+        "complete": {
+          "default": "The temple is CLEANSED! No longer a marketplace! No more religious capitalism! House of prayer RESTORED! *divine capitalism critique*",
+          "christian_edition": "The temple is cleansed! It is once again a house of prayer for all nations, not a place of commerce!"
+        }
+      },
+      "biblical_reference": "Matthew 21:12-13"
+    },
+    {
+      "id": "deadly_sins_pride",
+      "name": "Humble the Proud",
+      "type": "special",
+      "region": "Special",
+      "level_requirement": 35,
+      "description": "Pride comes before the fall. Defeat Pride Personified.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "pride_personified",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 800,
+        "money": 700,
+        "items": [
+          {"item": "humility_bread", "count": 1}
+        ],
+        "special_reward": "humility_virtue"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Pride: I am ABOVE all! None can MATCH me! I am PERFECTION! BOW before my GREATNESS! *insufferably smug*",
+          "christian_edition": "Pride: I am above all others! None can match my greatness! I am beyond reproach!"
+        },
+        "complete": {
+          "default": "Humility CONQUERS pride! Get DOWN from your high horse! Blessed are the MEEK! *ego destroyed*",
+          "christian_edition": "Humility conquers pride! Blessed are the meek, for they shall inherit the earth!"
+        }
+      }
+    },
+    {
+      "id": "deadly_sins_envy",
+      "name": "Overcome Envy",
+      "type": "special",
+      "region": "Special",
+      "level_requirement": 33,
+      "description": "Defeat Envy Incarnate and learn contentment.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "envy_incarnate",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 750,
+        "money": 650,
+        "items": [
+          {"item": "contentment_bread", "count": 1}
+        ],
+        "special_reward": "contentment_virtue"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Envy: What THEY have should be MINE! Why do THEY get it?! Not FAIR! I DESERVE it more! *jealous rage*",
+          "christian_edition": "Envy: What they possess should rightfully be mine! Why do they have what I lack?"
+        },
+        "complete": {
+          "default": "Be CONTENT with what you have! Stop comparing! Godliness with contentment is GREAT gain! *comparison is the thief of joy*",
+          "christian_edition": "Be content with what you have! Godliness with contentment is great gain!"
+        }
+      }
+    },
+    {
+      "id": "deadly_sins_wrath",
+      "name": "Quell the Wrath",
+      "type": "special",
+      "region": "Special",
+      "level_requirement": 36,
+      "description": "Defeat Wrath Embodied with patience and peace.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "wrath_embodied",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 850,
+        "money": 750,
+        "items": [
+          {"item": "patience_bread", "count": 1}
+        ],
+        "special_reward": "patience_virtue"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Wrath: RAGE! FURY! DESTRUCTION! ANGER! SMASH! DESTROY EVERYTHING! *uncontrollable fury*",
+          "christian_edition": "Wrath: Rage! Fury! Destruction! Uncontrolled anger consumes all!"
+        },
+        "complete": {
+          "default": "Patience OVERCOMES wrath! Chill OUT, dude! Be SLOW to anger, QUICK to love! *anger management success*",
+          "christian_edition": "Patience overcomes wrath! Be slow to anger and quick to love!"
+        }
+      }
+    },
+    {
+      "id": "deadly_sins_greed",
+      "name": "Resist Greed",
+      "type": "special",
+      "region": "Special",
+      "level_requirement": 34,
+      "description": "Defeat Greed Given Form and embrace generosity.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "greed_given_form",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 780,
+        "money": 50,
+        "items": [
+          {"item": "generosity_bread", "count": 3}
+        ],
+        "special_reward": "generosity_virtue"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Greed: MORE! I NEED MORE! NEVER ENOUGH! GIMME! MINE! ALL MINE! *hoarding intensifies*",
+          "christian_edition": "Greed: More! I must have more! It is never enough! Everything must be mine!"
+        },
+        "complete": {
+          "default": "True riches are found in GIVING, not taking! It is MORE blessed to GIVE than receive! *generosity unlocked*",
+          "christian_edition": "True riches are found in giving, not taking. It is more blessed to give than to receive!"
+        }
+      }
+    },
+    {
+      "id": "deadly_sins_gluttony",
+      "name": "Fast Against Gluttony",
+      "type": "special",
+      "region": "Special",
+      "level_requirement": 32,
+      "description": "Defeat Gluttony Embodied through self-control.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "gluttony_embodied",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "xp": 730,
+        "money": 600,
+        "items": [
+          {"item": "temperance_bread", "count": 1}
+        ],
+        "special_reward": "temperance_virtue"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Gluttony: CONSUME! DEVOUR! FEAST FOREVER! EAT! MORE! NEVER STOP! *endless munching*",
+          "christian_edition": "Gluttony: Consume! Devour everything! An endless feast! Never be satisfied!"
+        },
+        "complete": {
+          "default": "Self-control CONQUERS gluttony! Man shall not live by BREAD alone! Put down the fork! *temperance achieved*",
+          "christian_edition": "Self-control conquers gluttony! Man shall not live by bread alone, but by every word of God!"
+        }
+      }
+    },
+    {
+      "id": "lost_coin",
+      "name": "The Lost Coin",
+      "type": "collection",
+      "region": "Galilee",
+      "level_requirement": 8,
+      "description": "A woman lost one of her ten silver coins. Help her find it (search 10 locations).",
+      "objectives": [
+        {
+          "type": "search_locations",
+          "count": 10
+        }
+      ],
+      "rewards": {
+        "xp": 180,
+        "money": 100,
+        "items": [
+          {"item": "found_treasure", "count": 1}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Woman: I've lost ONE of my TEN silver coins! It's SOMEWHERE! Help me search! *frantically sweeping*",
+          "christian_edition": "Woman: I have lost one of my ten silver coins! Please help me search for it!"
+        },
+        "complete": {
+          "default": "Woman: I FOUND it! REJOICE with me! There is JOY in heaven over ONE sinner who repents! *party time*",
+          "christian_edition": "Woman: I found it! Rejoice with me! In the same way, there is joy in heaven over one sinner who repents!"
+        }
+      },
+      "biblical_reference": "Luke 15:8-10"
+    },
+    {
+      "id": "fishers_of_men",
+      "name": "Fishers of Men",
+      "type": "teaching",
+      "region": "Galilee",
+      "level_requirement": 7,
+      "description": "Recruit your first apostles by demonstrating your fishing prowess (catch 12 fish).",
+      "objectives": [
+        {
+          "type": "catch_fish",
+          "target": "any",
+          "count": 12
+        }
+      ],
+      "rewards": {
+        "xp": 200,
+        "money": 150,
+        "unlocks": ["peter_andrew_recruit"]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Simon Peter: We've caught NOTHING all night. ZERO fish. But if YOU say so... I'll let down the nets. *skeptical fisherman*",
+          "christian_edition": "Simon Peter: Master, we have worked all night and caught nothing. But at your word, I will let down the nets."
+        },
+        "complete": {
+          "default": "Peter & Andrew: WHOA! SO MANY FISH! We'll leave EVERYTHING and follow you! Make us FISHERS OF MEN! *career change unlocked*",
+          "christian_edition": "Peter & Andrew: Lord, we will leave everything and follow you! Make us fishers of men!"
+        }
+      },
+      "biblical_reference": "Matthew 4:18-20"
+    },
+    {
+      "id": "wilderness_trial",
+      "name": "40 Days in the Wilderness",
+      "type": "challenge",
+      "region": "Special",
+      "level_requirement": 15,
+      "description": "Survive wilderness trials. Defeat Wilderness Wolves and Desert Scorpions (5 each).",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "wilderness_wolf",
+          "count": 5
+        },
+        {
+          "type": "defeat_enemy",
+          "target": "desert_scorpion",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "xp": 600,
+        "money": 400,
+        "items": [
+          {"item": "wilderness_survival_bread", "count": 3}
+        ],
+        "special_reward": "wilderness_survivor"
+      },
+      "dialogue": {
+        "start": {
+          "default": "You enter the wilderness to pray and fast... *survival mode activated* This is gonna be rough.",
+          "christian_edition": "You are led by the Spirit into the wilderness to be tested. You will pray and fast for forty days and nights."
+        },
+        "complete": {
+          "default": "You have ENDURED the wilderness trial! Angels come to minister to you! *achievement unlocked: Survived 40 days*",
+          "christian_edition": "You have endured the wilderness trial! The tempter has departed, and angels come to minister to you."
+        }
+      },
+      "biblical_reference": "Matthew 4:1-11"
+    },
+    {
+      "id": "false_prophets",
+      "name": "Beware False Prophets",
+      "type": "battle",
+      "region": "Special",
+      "level_requirement": 38,
+      "description": "Expose False Prophets who deceive the people. Defeat 3 of them.",
+      "objectives": [
+        {
+          "type": "defeat_enemy",
+          "target": "false_prophet",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "xp": 900,
+        "money": 800,
+        "items": [
+          {"item": "discernment_bread", "count": 3}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "False Prophet: I speak for GOD! Follow ME, not this charlatan! I have the REAL truth! Subscribe to my newsletter! *total scam*",
+          "christian_edition": "False Prophet: I alone speak for God! Follow me, not this deceiver! I am the true prophet!"
+        },
+        "complete": {
+          "default": "By their FRUITS you will KNOW them! These wolves in sheep's clothing are EXPOSED! Nice costume, buddy! *fraud detected*",
+          "christian_edition": "By their fruits you will know them! These wolves in sheep's clothing have been exposed and cast out!"
+        }
+      },
+      "biblical_reference": "Matthew 7:15-20"
+    },
+    {
+      "id": "pearl_of_great_price",
+      "name": "The Pearl of Great Price",
+      "type": "teaching",
+      "region": "Coastal",
+      "level_requirement": 20,
+      "description": "Find the ultimate treasure. Pay all your money (minimum 1000 denarii) for a special fish.",
+      "objectives": [
+        {
+          "type": "donate_money",
+          "amount": 1000
+        }
+      ],
+      "rewards": {
+        "xp": 500,
+        "money": 0,
+        "items": [
+          {"item": "pearl_fish", "count": 1}
+        ],
+        "special_reward": "pearl_merchant_title"
+      },
+      "dialogue": {
+        "start": {
+          "default": "Merchant: I have a fish of IMMEASURABLE value. Are you willing to sell EVERYTHING for it? Like, literally everything? Your whole bank account?",
+          "christian_edition": "Merchant: I possess a fish of immeasurable value. Are you willing to give up all you have to obtain it?"
+        },
+        "complete": {
+          "default": "The kingdom of heaven is like a merchant seeking fine pearls, who sold ALL to obtain ONE pearl of great price! Worth it! *net worth = 0, spiritual wealth = infinite*",
+          "christian_edition": "The kingdom of heaven is like a merchant seeking fine pearls, who upon finding one pearl of great price, went and sold all that he had and bought it!"
+        }
+      },
+      "biblical_reference": "Matthew 13:45-46"
+    },
+    {
+      "id": "sower_seeds",
+      "name": "The Sower's Seeds",
+      "type": "teaching",
+      "region": "Galilee",
+      "level_requirement": 9,
+      "description": "Plant seeds in different soils (complete 4 mini-quests in different regions).",
+      "objectives": [
+        {
+          "type": "complete_quests",
+          "count": 4,
+          "requirement": "different_regions"
+        }
+      ],
+      "rewards": {
+        "xp": 300,
+        "money": 200,
+        "items": [
+          {"item": "good_soil_bread", "count": 5}
+        ]
+      },
+      "dialogue": {
+        "start": {
+          "default": "Farmer: Some seed fell on the PATH, some on ROCKY ground, some among THORNS, and some on GOOD soil... Results may vary! *farming wisdom*",
+          "christian_edition": "Farmer: A sower went out to sow. Some seed fell along the path, some on rocky ground, some among thorns, and some on good soil..."
+        },
+        "complete": {
+          "default": "The seed on GOOD soil produces a crop—a HUNDRED, SIXTY, or THIRTY times what was sown! That's ROI! *divine agriculture*",
+          "christian_edition": "The seed on good soil produces a crop, yielding a hundred, sixty, or thirty times what was sown!"
+        }
+      },
+      "biblical_reference": "Matthew 13:1-23"
+    }
+  ],
+  "metadata": {
+    "total_quests": 45,
+    "quest_types": ["story", "side", "battle", "teaching", "collection", "challenge", "special"],
+    "regions": ["Galilee", "Coastal", "Gentile", "Judean", "Jerusalem", "Special"],
+    "max_level_requirement": 47,
+    "biblical_references": 20
+  }
+}
