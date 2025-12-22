@@ -1,7 +1,6 @@
 # Loaves and Fishes - Development Session Summary
 
 **Date**: Session resumed from previous context
-**Branch**: `claude/loaves-fishes-game-01WqRtuSxGNvLV2qLSn7YXKB`
 **Status**: ✅ ALL PRIORITY TASKS COMPLETED
 
 ---
@@ -386,7 +385,6 @@ The game is now **feature-complete** for the core loop:
 5. ✅ Quests and parables (45 + 40)
 6. ✅ UI and save systems
 
-**All commits pushed to**: `claude/loaves-fishes-game-01WqRtuSxGNvLV2qLSn7YXKB`
 
 ---
 
