@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var location_label: Label = $TownUI/LocationLabel
+@onready var dialogue_box: DialogueBox = $TownUI/DialogueBox
 
 func _ready() -> void:
 	GameState.town_changed.connect(_on_town_changed)
@@ -17,3 +18,9 @@ func _load_town_data(town_id: String) -> void:
 			var story_dict = town.get("story", {})
 			print(TextManager.get_text(story_dict))
 			return
+
+func show_dialogue(speaker: String, text: String) -> void:
+	$PlayerCharacter.set_physics_process(false)
+	dialogue_box.display_text(text, speaker)
+	await dialogue_box.dialogue_closed
+	$PlayerCharacter.set_physics_process(true)

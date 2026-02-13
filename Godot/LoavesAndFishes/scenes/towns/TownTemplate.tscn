@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" path="res://scenes/world/PlayerCharacter.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/systems/TownSystem.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/DialogueBox.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/world/NPC.tscn" id="4"]
+[ext_resource type="Script" path="res://scripts/world/TownGate.gd" id="5"]
 
 [node name="TownTemplate" type="Node2D"]
 script = ExtResource(2)
@@ -12,7 +15,14 @@ script = ExtResource(2)
 
 [node name="Buildings" type="Node2D" parent="."]
 
+[node name="TownGate" type="Area2D" parent="Buildings"]
+script = ExtResource(5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/TownGate"]
+
 [node name="NPCs" type="Node2D" parent="."]
+
+[node name="NPC" parent="NPCs" instance=ExtResource(4)]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource(1)]
 
@@ -20,3 +30,5 @@ script = ExtResource(2)
 
 [node name="LocationLabel" type="Label" parent="TownUI"]
 text = "Unknown Town"
+
+[node name="DialogueBox" parent="TownUI" instance=ExtResource(3)]
