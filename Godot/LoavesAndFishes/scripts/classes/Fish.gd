@@ -105,3 +105,89 @@ func level_up() -> bool:
 			known_moves.append(move)
 
 	return true
+
+func take_damage(damage: int) -> int:
+	var defense_mult = float(stat_modifiers.get("def", 1.0))
+	var effective_defense = defense * defense_mult
+	var damage_multiplier = 100.0 / (100.0 + effective_defense)
+	var actual_damage = int(damage * damage_multiplier)
+	actual_damage = max(1, actual_damage)
+	current_hp = max(0, current_hp - actual_damage)
+	return actual_damage
+
+func heal(amount: int) -> int:
+	var old_hp = current_hp
+	current_hp = min(max_hp, current_hp + amount)
+	return current_hp - old_hp
+
+func is_fainted() -> bool:
+	return current_hp <= 0
+
+func revive(hp_percent: float = 0.5) -> void:
+	if is_fainted():
+		current_hp = int(max_hp * hp_percent)
+
+func apply_status_effect(status: String) -> void:
+	if not status_effects.has(status):
+		status_effects.append(status)
+
+func remove_status_effect(status: String) -> void:
+	if status_effects.has(status):
+		status_effects.erase(status)
+
+func clear_status_effects() -> void:
+	status_effects.clear()
+
+func apply_stat_modifier(stat: String, multiplier: float) -> void:
+	if stat_modifiers.has(stat):
+		stat_modifiers[stat] = float(stat_modifiers[stat]) * multiplier
+
+func reset_stat_modifiers() -> void:
+	for stat in stat_modifiers.keys():
+		stat_modifiers[stat] = 1.0
+
+func get_effective_stat(stat: String) -> int:
+	var base_value = 0
+	match stat:
+		"atk":
+			base_value = atk
+		"def":
+			base_value = defense
+		"spd":
+			base_value = spd
+		_:
+			base_value = 0
+
+	if held_item is Dictionary:
+		var bonus_key = stat + "_bonus"
+		if held_item.has(bonus_key):
+			base_value += int(held_item[bonus_key])
+
+	var modifier = float(stat_modifiers.get(stat, 1.0))
+	return int(base_value * modifier)
+
+func to_dict() -> Dictionary:
+	return {
+		"fish_id": fish_id,
+		"level": level,
+		"xp": xp,
+		"current_hp": current_hp,
+		"held_item": held_item,
+		"status_effects": status_effects
+	}
+
+static func from_dict(data: Dictionary) -> Fish:
+	var fish_id_value = str(data.get("fish_id", ""))
+	if fish_id_value == "":
+		return null
+
+	var fish_data = DataLoader.get_fish_by_id(fish_id_value)
+	if fish_data.is_empty():
+		return null
+
+	var fish = Fish.new(fish_id_value, fish_data, int(data.get("level", 1)))
+	fish.xp = int(data.get("xp", 0))
+	fish.current_hp = int(data.get("current_hp", fish.max_hp))
+	fish.held_item = data.get("held_item", null)
+	fish.status_effects = data.get("status_effects", [])
+	return fish
