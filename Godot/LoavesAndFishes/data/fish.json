@@ -1,0 +1,1598 @@
+{
+  "fish": [
+    {
+      "id": "starter_sardine",
+      "name": "Starter Sardine",
+      "tier": 0,
+      "type": "Water",
+      "base_stats": {
+        "hp": 20,
+        "atk": 8,
+        "def": 6,
+        "spd": 12
+      },
+      "property": {
+        "name": "Tutorial Helper",
+        "description": "Gains XP 20% faster",
+        "effect": "xp_boost",
+        "value": 1.2
+      },
+      "moves": [
+        {
+          "name": "Splash",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": [5, 8],
+          "accuracy": 100,
+          "description": "A simple water splash attack"
+        },
+        {
+          "name": "Nibble",
+          "level": 1,
+          "type": "Physical",
+          "category": "Physical",
+          "power": [6, 10],
+          "accuracy": 95,
+          "description": "A quick nibbling attack"
+        },
+        {
+          "name": "School Together",
+          "level": 5,
+          "type": "Water",
+          "category": "Healing",
+          "power": 10,
+          "accuracy": 100,
+          "description": "Heal 10 HP with the power of friendship"
+        },
+        {
+          "name": "Sardine Rush",
+          "level": 10,
+          "type": "Water",
+          "category": "Multi-Target",
+          "power": 15,
+          "accuracy": 90,
+          "description": "Rush at all enemies at once"
+        }
+      ],
+      "acquisition": {
+        "method": "gift",
+        "location": "Nazareth",
+        "npc": "Joseph",
+        "cost": 0
+      },
+      "flavor_text": {
+        "default": "Started from the bottom, now we're... still pretty small, honestly. But we try!",
+        "christian_edition": "Even the smallest beginnings can lead to great things with faith and perseverance."
+      }
+    },
+    {
+      "id": "carp_diem",
+      "name": "Carp Diem",
+      "tier": 1,
+      "type": "Earth",
+      "base_stats": {
+        "hp": 25,
+        "atk": 12,
+        "def": 8,
+        "spd": 10
+      },
+      "property": {
+        "name": "Seize the Moment",
+        "description": "15% chance to stun enemy for 1 turn",
+        "effect": "stun_chance",
+        "value": 0.15
+      },
+      "moves": [
+        {
+          "name": "Seize Strike",
+          "level": 1,
+          "type": "Earth",
+          "category": "Physical",
+          "power": [10, 15],
+          "accuracy": 100,
+          "description": "Strike decisively"
+        },
+        {
+          "name": "Mud Slap",
+          "level": 1,
+          "type": "Earth",
+          "category": "Status",
+          "power": 8,
+          "accuracy": 100,
+          "effect": "lower_accuracy",
+          "effect_value": 0.2,
+          "description": "Slap mud, lowering accuracy 20%"
+        },
+        {
+          "name": "Carpe Momentum",
+          "level": 8,
+          "type": "Earth",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "special": "momentum",
+          "description": "Damage increases each consecutive turn used"
+        },
+        {
+          "name": "Time's Up",
+          "level": 15,
+          "type": "Earth",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 90,
+          "effect": "stun",
+          "effect_chance": 0.3,
+          "description": "Heavy strike with 30% stun chance"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Cana",
+        "cost": 50
+      },
+      "flavor_text": {
+        "default": "Carpe diem? More like CARPe diem! We're not sorry about this pun.",
+        "christian_edition": "Seize the day with purpose. Every moment is a gift to be used wisely."
+      }
+    },
+    {
+      "id": "sole_survivor",
+      "name": "Sole Survivor",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 30,
+        "atk": 10,
+        "def": 12,
+        "spd": 8
+      },
+      "property": {
+        "name": "Last Stand",
+        "description": "Takes 20% less damage when only fish remaining",
+        "effect": "damage_reduction_alone",
+        "value": 0.2
+      },
+      "moves": [
+        {
+          "name": "Last Stand",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [8, 15],
+          "accuracy": 100,
+          "special": "low_hp_boost",
+          "description": "Damage increases when below 30% HP"
+        },
+        {
+          "name": "Sole Comfort",
+          "level": 1,
+          "type": "Holy",
+          "category": "Healing",
+          "power": 15,
+          "accuracy": 100,
+          "description": "Heal 15 HP"
+        },
+        {
+          "name": "Survivor's Will",
+          "level": 10,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "auto_revive",
+          "description": "Auto-revive once at 1 HP (once per battle)"
+        },
+        {
+          "name": "Sole Purpose",
+          "level": 18,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 40,
+          "accuracy": 95,
+          "description": "A powerful holy strike"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Capernaum",
+        "cost": 100
+      },
+      "flavor_text": {
+        "default": "The last fish standing. Literally. Everyone else gave up. This one's stubborn.",
+        "christian_edition": "Through faith and perseverance, even a single soul can endure any trial."
+      }
+    },
+    {
+      "id": "basilica",
+      "name": "Bass-ilica",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 35,
+        "atk": 15,
+        "def": 18,
+        "spd": 7
+      },
+      "property": {
+        "name": "Foundation Stone",
+        "description": "Takes 50% less damage from Dark-type moves",
+        "effect": "dark_resistance",
+        "value": 0.5
+      },
+      "moves": [
+        {
+          "name": "Foundation Strike",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "description": "A solid foundational attack"
+        },
+        {
+          "name": "Stone Wall",
+          "level": 1,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "def_boost",
+          "effect_value": 0.3,
+          "duration": 3,
+          "description": "Increase DEF by 30% for 3 turns"
+        },
+        {
+          "name": "Sacred Ground",
+          "level": 12,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "barrier",
+          "effect_value": 0.5,
+          "duration": 2,
+          "description": "Reduce all damage by 50% for 2 turns"
+        },
+        {
+          "name": "Pillar of Faith",
+          "level": 20,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "special": "heal_jesus",
+          "heal_amount": 10,
+          "description": "Deal 25 damage and heal Jesus 10 HP"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Bethsaida",
+        "cost": 150
+      },
+      "flavor_text": {
+        "default": "Upon this Bass I will build my church. *pause* Did I really just say Bass?",
+        "christian_edition": "A foundation as solid as stone, built upon unwavering faith and devotion."
+      },
+      "combo_attack": {
+        "apostle": "peter",
+        "name": "Rock Solid Foundation",
+        "description": "Massive DEF buff + heal",
+        "effect": "combo_rock_solid"
+      }
+    },
+    {
+      "id": "holy_mackerel",
+      "name": "Holy Mackerel",
+      "tier": 1,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 32,
+        "atk": 20,
+        "def": 10,
+        "spd": 15
+      },
+      "property": {
+        "name": "Righteous Fury",
+        "description": "Deals +20% damage to Dark and sinful enemy types",
+        "effect": "bonus_vs_evil",
+        "value": 0.2
+      },
+      "moves": [
+        {
+          "name": "Sacred Slap",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": [15, 22],
+          "accuracy": 100,
+          "description": "A holy slap of justice"
+        },
+        {
+          "name": "Blessed Strike",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 18,
+          "accuracy": 100,
+          "special": "boosted_vs_evil",
+          "description": "Boosted damage vs evil enemies"
+        },
+        {
+          "name": "Act of Cod",
+          "level": 14,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 95,
+          "description": "A divine act of fishy justice"
+        },
+        {
+          "name": "Mackerel Miracle",
+          "level": 22,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 40,
+          "accuracy": 90,
+          "effect": "confuse",
+          "effect_chance": 0.2,
+          "description": "Miraculous strike with 20% confuse chance"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Magdala",
+        "cost": 200
+      },
+      "flavor_text": {
+        "default": "Holy mackerel! That's a LOT of damage! This fish does NOT mess around.",
+        "christian_edition": "The most sacred of all fish, blessed with divine power to smite evil."
+      },
+      "combo_attack": {
+        "apostle": "john",
+        "name": "Revelation Smack",
+        "description": "200 Holy damage + blind all enemies",
+        "effect": "combo_revelation"
+      }
+    },
+    {
+      "id": "tuna_other_cheek",
+      "name": "Tuna the Other Cheek",
+      "tier": 2,
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 28,
+        "atk": 16,
+        "def": 14,
+        "spd": 12
+      },
+      "property": {
+        "name": "Counter Theology",
+        "description": "Automatically counters when attacked (30% of damage reflected)",
+        "effect": "auto_counter",
+        "value": 0.3
+      },
+      "moves": [
+        {
+          "name": "Turn Strike",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": [12, 18],
+          "accuracy": 100,
+          "description": "Turn and strike back"
+        },
+        {
+          "name": "Counter Tuna",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "counter_stance",
+          "effect_value": 0.5,
+          "description": "Reflect 50% damage back next turn"
+        },
+        {
+          "name": "Forgiveness",
+          "level": 16,
+          "type": "Spirit",
+          "category": "Healing",
+          "power": 25,
+          "accuracy": 100,
+          "special": "remove_debuffs",
+          "description": "Heal 25 HP and remove all debuffs"
+        },
+        {
+          "name": "Ultimate Counter",
+          "level": 24,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "full_counter",
+          "effect_value": 1.0,
+          "description": "Reflect 100% damage next turn"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Chorazin",
+        "cost": 300
+      },
+      "flavor_text": {
+        "default": "Turn the other cheek... THEN smack 'em back twice as hard! Counter theology in action.",
+        "christian_edition": "Teaches the power of mercy and strategic patience. Sometimes the greatest strength is in restraint."
+      },
+      "combo_attack": {
+        "apostle": "andrew",
+        "name": "Brother's Counter",
+        "description": "Reflect all damage for 1 turn",
+        "effect": "combo_brothers_counter"
+      }
+    },
+    {
+      "id": "salmon_of_wisdom",
+      "name": "Salmon of Wisdom",
+      "tier": 2,
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 30,
+        "atk": 18,
+        "def": 12,
+        "spd": 14
+      },
+      "property": {
+        "name": "Ancient Knowledge",
+        "description": "Shows enemy stats, weaknesses, and next move at battle start",
+        "effect": "enemy_scan",
+        "value": 1.0
+      },
+      "moves": [
+        {
+          "name": "Wise Strike",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": [15, 20],
+          "accuracy": 100,
+          "description": "Strike with ancient wisdom"
+        },
+        {
+          "name": "Insight",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "reveal_moves",
+          "description": "Reveals enemy's next 3 moves"
+        },
+        {
+          "name": "Upstream Thinking",
+          "level": 15,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "special": "ignore_type_disadvantage",
+          "description": "Ignores type disadvantage"
+        },
+        {
+          "name": "Ancient Knowledge",
+          "level": 25,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 35,
+          "accuracy": 95,
+          "effect": "atk_def_down",
+          "effect_value": 0.2,
+          "description": "Lower enemy ATK and DEF by 20%"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Tiberias",
+        "cost": 400
+      },
+      "flavor_text": {
+        "default": "Swims upstream through rivers of bad takes and questionable decisions. Very wise. Knows things.",
+        "christian_edition": "Ancient wisdom guides those who seek understanding. Knowledge flows like water to the discerning."
+      },
+      "combo_attack": {
+        "apostle": "philip",
+        "name": "Calculated Devastation",
+        "description": "Ignores all enemy defenses",
+        "effect": "combo_calculated"
+      }
+    },
+    {
+      "id": "swordfish",
+      "name": "Swordfish",
+      "tier": 2,
+      "type": "Water",
+      "base_stats": {
+        "hp": 35,
+        "atk": 25,
+        "def": 10,
+        "spd": 16
+      },
+      "property": {
+        "name": "Armor Piercing",
+        "description": "Ignores 30% of enemy defense",
+        "effect": "pierce_defense",
+        "value": 0.3
+      },
+      "moves": [
+        {
+          "name": "Sword Slash",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": [20, 28],
+          "accuracy": 95,
+          "special": "piercing",
+          "description": "Piercing damage that ignores some DEF"
+        },
+        {
+          "name": "En Garde",
+          "level": 1,
+          "type": "Water",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "evasion_up",
+          "effect_value": 0.5,
+          "duration": 2,
+          "description": "Increase evasion by 50% for 2 turns"
+        },
+        {
+          "name": "Rapier Thrust",
+          "level": 18,
+          "type": "Water",
+          "category": "Physical",
+          "power": 35,
+          "accuracy": 100,
+          "special": "ignore_all_def",
+          "description": "Ignores all DEF"
+        },
+        {
+          "name": "Blade Dance",
+          "level": 28,
+          "type": "Water",
+          "category": "Physical",
+          "power": 45,
+          "accuracy": 90,
+          "special": "double_strike",
+          "description": "Strikes twice"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Gadara",
+        "cost": 500
+      },
+      "flavor_text": {
+        "default": "Mightier than the pen, sharper than wit, and WAY more stabby than either! En garde!",
+        "christian_edition": "A warrior's spirit with precision and grace. Cuts through deception with truth."
+      },
+      "combo_attack": {
+        "apostle": "simon_zealot",
+        "name": "Zealot's Blade",
+        "description": "500 damage, usable once per game",
+        "effect": "combo_zealot_blade"
+      }
+    },
+    {
+      "id": "eel_pray",
+      "name": "Eel Pray for You",
+      "tier": 2,
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 33,
+        "atk": 22,
+        "def": 11,
+        "spd": 18
+      },
+      "property": {
+        "name": "Shocking Faith",
+        "description": "20% chance to paralyze enemy on any attack",
+        "effect": "paralyze_chance",
+        "value": 0.2
+      },
+      "moves": [
+        {
+          "name": "Shock Therapy",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": [18, 24],
+          "accuracy": 100,
+          "effect": "paralyze",
+          "effect_chance": 0.15,
+          "description": "Lightning damage with paralyze chance"
+        },
+        {
+          "name": "Prayer Circle",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Healing",
+          "power": 20,
+          "accuracy": 100,
+          "description": "Heal Jesus 20 HP"
+        },
+        {
+          "name": "Chain Lightning",
+          "level": 20,
+          "type": "Spirit",
+          "category": "Multi-Target",
+          "power": 30,
+          "accuracy": 90,
+          "description": "Lightning damage to all enemies"
+        },
+        {
+          "name": "Shocking Devotion",
+          "level": 30,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 50,
+          "accuracy": 95,
+          "effect": "paralyze",
+          "effect_chance": 0.4,
+          "description": "Massive damage with 40% paralyze"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Gadara",
+        "cost": 550
+      },
+      "flavor_text": {
+        "default": "Eel pray for you! *ZAP* There, prayed. With lightning. You're welcome.",
+        "christian_edition": "Faith that energizes and revitalizes. Prayers that carry the power of divine blessing."
+      }
+    },
+    {
+      "id": "red_herring",
+      "name": "Red Herring",
+      "tier": 2,
+      "type": "Dark",
+      "base_stats": {
+        "hp": 30,
+        "atk": 20,
+        "def": 13,
+        "spd": 20
+      },
+      "property": {
+        "name": "Misdirection",
+        "description": "30% chance enemy attacks itself instead",
+        "effect": "confuse_enemy",
+        "value": 0.3
+      },
+      "moves": [
+        {
+          "name": "Misdirect",
+          "level": 1,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 15,
+          "accuracy": 90,
+          "effect": "confusion",
+          "description": "Confuse the enemy"
+        },
+        {
+          "name": "False Lead",
+          "level": 1,
+          "type": "Dark",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "random_target",
+          "description": "Enemy targets random ally next turn"
+        },
+        {
+          "name": "Herring's Gambit",
+          "level": 22,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "special": "self_attack_chance",
+          "effect_value": 0.4,
+          "description": "40% chance enemy attacks itself"
+        },
+        {
+          "name": "Ultimate Deception",
+          "level": 32,
+          "type": "Dark",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "guarantee_next_crit",
+          "description": "Next attack is guaranteed critical"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Samaria",
+        "cost": 600
+      },
+      "flavor_text": {
+        "default": "Not the fish you were looking for! Completely misleading! A total distraction! ...That's the point.",
+        "christian_edition": "Teaches vigilance against deception. Not all that appears true leads to righteousness."
+      },
+      "combo_attack": {
+        "apostle": "judas",
+        "name": "Silver Deception",
+        "description": "100 damage + steal all enemy buffs",
+        "effect": "combo_silver_deception"
+      }
+    },
+    {
+      "id": "hali_but",
+      "name": "Hali-but Wait, There's More!",
+      "tier": 3,
+      "type": "Water",
+      "base_stats": {
+        "hp": 38,
+        "atk": 24,
+        "def": 14,
+        "spd": 13
+      },
+      "property": {
+        "name": "Double Deal",
+        "description": "Always attacks twice per turn (all moves hit 2x)",
+        "effect": "double_attack",
+        "value": 2.0
+      },
+      "moves": [
+        {
+          "name": "Double Strike",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": 18,
+          "accuracy": 95,
+          "special": "hits_twice",
+          "description": "Strikes twice automatically"
+        },
+        {
+          "name": "But Wait",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": 20,
+          "accuracy": 100,
+          "special": "second_boosted",
+          "description": "Second attack is boosted by 50%"
+        },
+        {
+          "name": "Triple Threat",
+          "level": 24,
+          "type": "Water",
+          "category": "Physical",
+          "power": 20,
+          "accuracy": 95,
+          "special": "hits_thrice",
+          "description": "Strikes three times!"
+        },
+        {
+          "name": "Infomercial Finale",
+          "level": 35,
+          "type": "Water",
+          "category": "Multi-Target",
+          "power": 30,
+          "accuracy": 90,
+          "effect": "confusion",
+          "special": "hits_twice",
+          "description": "Double hit all enemies, confuse them"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Jericho",
+        "cost": 800
+      },
+      "flavor_text": {
+        "default": "But WAIT, there's MORE! Order now and get a second attack FREE! *Not actually free, it's just how this fish works.*",
+        "christian_edition": "Abundance and generosity made manifest. Gives double blessings to those in need."
+      },
+      "combo_attack": {
+        "apostle": "matthew",
+        "name": "Tax the Wicked",
+        "description": "Multi-hit + steal 10x money",
+        "effect": "combo_tax_wicked"
+      }
+    },
+    {
+      "id": "fishers_of_men_haden",
+      "name": "Fishers of Men-haden",
+      "tier": 3,
+      "type": "Holy",
+      "base_stats": {
+        "hp": 40,
+        "atk": 28,
+        "def": 16,
+        "spd": 12
+      },
+      "property": {
+        "name": "Great Commission",
+        "description": "All attacks hit all enemies (multi-target specialist)",
+        "effect": "always_multi_target",
+        "value": 1.0
+      },
+      "moves": [
+        {
+          "name": "Net of Faith",
+          "level": 1,
+          "type": "Holy",
+          "category": "Multi-Target",
+          "power": [22, 30],
+          "accuracy": 100,
+          "description": "Holy damage to all enemies"
+        },
+        {
+          "name": "Cast Out",
+          "level": 1,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "remove_enemy_buffs",
+          "description": "Remove all enemy buffs"
+        },
+        {
+          "name": "Great Commission",
+          "level": 25,
+          "type": "Holy",
+          "category": "Multi-Target",
+          "power": 35,
+          "accuracy": 100,
+          "special": "heal_jesus",
+          "heal_amount": 15,
+          "description": "Damage all + heal Jesus 15 HP"
+        },
+        {
+          "name": "Ultimate Catch",
+          "level": 40,
+          "type": "Holy",
+          "category": "Multi-Target",
+          "power": 60,
+          "accuracy": 95,
+          "special": "instant_defeat_low_hp",
+          "threshold": 0.2,
+          "description": "May instantly defeat enemies below 20% HP"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Bethany",
+        "cost": 1000
+      },
+      "flavor_text": {
+        "default": "I will make you fishers of men! ...Wait, we're fishing FOR the fish that fishes men? This got complicated.",
+        "christian_edition": "The Great Commission embodied. Bringing souls to the light through love and example."
+      }
+    },
+    {
+      "id": "leviathan_lament",
+      "name": "Leviathan's Lament",
+      "tier": 3,
+      "type": "Water",
+      "dual_type": "Dark",
+      "base_stats": {
+        "hp": 50,
+        "atk": 35,
+        "def": 20,
+        "spd": 10
+      },
+      "property": {
+        "name": "Biblical Behemoth",
+        "description": "Massive single-target damage, slow but devastating",
+        "effect": "power_boost",
+        "value": 1.2
+      },
+      "moves": [
+        {
+          "name": "Whale's Wrath",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": [30, 40],
+          "accuracy": 100,
+          "description": "Devastating single strike"
+        },
+        {
+          "name": "Tidal Wave",
+          "level": 1,
+          "type": "Water",
+          "category": "Multi-Target",
+          "power": 25,
+          "accuracy": 95,
+          "description": "Damage all enemies"
+        },
+        {
+          "name": "Depths of Despair",
+          "level": 30,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 50,
+          "accuracy": 100,
+          "effect": "all_stats_down",
+          "effect_value": 0.3,
+          "description": "Massive damage + lower all enemy stats 30%"
+        },
+        {
+          "name": "Biblical Behemoth",
+          "level": 45,
+          "type": "Water",
+          "category": "Physical",
+          "power": 80,
+          "accuracy": 95,
+          "special": "recoil",
+          "recoil_amount": 20,
+          "description": "Ultimate power, costs Jesus 20 HP"
+        }
+      ],
+      "acquisition": {
+        "method": "shop",
+        "location": "Jerusalem",
+        "cost": 2000
+      },
+      "flavor_text": {
+        "default": "The ancient chaos monster from Job. Yes, THAT Leviathan. This is fine. Everything is fine. *nervous sweating*",
+        "christian_edition": "The mighty beast of the deep, representing trials that test faith. Even chaos can be tamed."
+      },
+      "combo_attack": {
+        "apostle": "thomas",
+        "name": "Proof of Power",
+        "description": "800 damage single target",
+        "effect": "combo_proof_power"
+      }
+    },
+    {
+      "id": "cod_save_king",
+      "name": "Cod Save the King",
+      "tier": "special",
+      "type": "Holy",
+      "base_stats": {
+        "hp": 35,
+        "atk": 22,
+        "def": 18,
+        "spd": 11
+      },
+      "property": {
+        "name": "Royal Protection",
+        "description": "Heals Jesus 5 HP at start of each turn",
+        "effect": "passive_regen_jesus",
+        "value": 5
+      },
+      "moves": [
+        {
+          "name": "Royal Decree",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 20,
+          "accuracy": 100,
+          "special": "jesus_def_boost",
+          "effect_value": 0.2,
+          "description": "Damage + raise Jesus's DEF by 20%"
+        },
+        {
+          "name": "Divine Right",
+          "level": 1,
+          "type": "Holy",
+          "category": "Healing",
+          "power": 25,
+          "accuracy": 100,
+          "description": "Heal 25 HP"
+        },
+        {
+          "name": "Coronation",
+          "level": 20,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 100,
+          "effect": "all_stats_up",
+          "effect_value": 0.1,
+          "duration": 3,
+          "description": "Damage + all stats +10% for 3 turns"
+        },
+        {
+          "name": "God Save",
+          "level": 35,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "auto_revive_jesus",
+          "description": "Auto-revive Jesus once if he falls to 0 HP"
+        }
+      ],
+      "acquisition": {
+        "method": "side_quest",
+        "location": "Tiberias",
+        "quest": "Royal Audience"
+      },
+      "flavor_text": {
+        "default": "Cod save the King! No really, save him, he keeps getting into trouble. Royalty is exhausting.",
+        "christian_edition": "Protects and serves with regal devotion. A guardian blessed by divine authority."
+      }
+    },
+    {
+      "id": "grouper_therapy",
+      "name": "Grouper Therapy",
+      "tier": "special",
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 40,
+        "atk": 15,
+        "def": 20,
+        "spd": 8
+      },
+      "property": {
+        "name": "Group Healing",
+        "description": "Heals all party fish 5 HP per turn",
+        "effect": "passive_party_regen",
+        "value": 5
+      },
+      "moves": [
+        {
+          "name": "Healing Circle",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Healing",
+          "power": 20,
+          "accuracy": 100,
+          "description": "Heal 20 HP to one fish"
+        },
+        {
+          "name": "Support Group",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "all_stats_up",
+          "effect_value": 0.15,
+          "duration": 3,
+          "description": "Boost all stats by 15% for 3 turns"
+        },
+        {
+          "name": "Emotional Support",
+          "level": 18,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "remove_all_party_status",
+          "description": "Remove all status effects from party"
+        },
+        {
+          "name": "Group Hug",
+          "level": 30,
+          "type": "Spirit",
+          "category": "Healing",
+          "power": 30,
+          "accuracy": 100,
+          "special": "heal_all_fish",
+          "description": "Heal all fish 30 HP"
+        }
+      ],
+      "acquisition": {
+        "method": "side_quest",
+        "location": "Bethany",
+        "quest": "Comfort the Mourners"
+      },
+      "flavor_text": {
+        "default": "Let's talk about your feelings. No really, sit down. This fish has OPINIONS about your emotional health.",
+        "christian_edition": "Provides comfort and healing to troubled souls. Fellowship brings restoration and peace."
+      },
+      "combo_attack": {
+        "apostle": "james_alphaeus",
+        "name": "Humble Healing",
+        "description": "Full heal to all party members and Jesus",
+        "effect": "combo_humble_heal"
+      }
+    },
+    {
+      "id": "angler_of_light",
+      "name": "Angler of Light",
+      "tier": "special",
+      "type": "Holy",
+      "base_stats": {
+        "hp": 32,
+        "atk": 26,
+        "def": 12,
+        "spd": 16
+      },
+      "property": {
+        "name": "Beacon",
+        "description": "Reveals hidden paths, items, and secret areas on overworld",
+        "effect": "reveal_secrets",
+        "value": 1.0
+      },
+      "moves": [
+        {
+          "name": "Lure of Truth",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 20,
+          "accuracy": 100,
+          "special": "taunt",
+          "description": "Draw enemy attention (taunt)"
+        },
+        {
+          "name": "Beacon Strike",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 22,
+          "accuracy": 100,
+          "description": "Holy damage strike"
+        },
+        {
+          "name": "Lighthouse",
+          "level": 22,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "find_hidden_items",
+          "description": "Illuminate secrets (find hidden items)"
+        },
+        {
+          "name": "Blinding Light",
+          "level": 38,
+          "type": "Holy",
+          "category": "Multi-Target",
+          "power": 45,
+          "accuracy": 95,
+          "effect": "blind",
+          "effect_chance": 0.5,
+          "description": "Damage + 50% blind all enemies"
+        }
+      ],
+      "acquisition": {
+        "method": "mini_game",
+        "location": "Sea of Galilee",
+        "game": "Fishing Competition Grand Prize"
+      },
+      "flavor_text": {
+        "default": "This fish has a LIGHT on its HEAD. Like a miner. For finding secrets. And also looking cool.",
+        "christian_edition": "Illuminates hidden truths and guides the lost. A beacon of hope in dark places."
+      },
+      "combo_attack": {
+        "apostle": "thaddaeus",
+        "name": "Forgotten Illumination",
+        "description": "Reveals all secrets in current area",
+        "effect": "combo_reveal_all"
+      }
+    },
+    {
+      "id": "catfish_burglar",
+      "name": "Catfish Burglar",
+      "tier": "special",
+      "type": "Dark",
+      "base_stats": {
+        "hp": 28,
+        "atk": 18,
+        "def": 10,
+        "spd": 22
+      },
+      "property": {
+        "name": "Master Thief",
+        "description": "Steals items and money from enemies automatically",
+        "effect": "auto_steal",
+        "value": 1.0
+      },
+      "moves": [
+        {
+          "name": "Steal",
+          "level": 1,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 10,
+          "accuracy": 100,
+          "special": "steal_item",
+          "description": "Damage + take item from enemy"
+        },
+        {
+          "name": "Whisker Whip",
+          "level": 1,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 15,
+          "accuracy": 95,
+          "effect": "def_down",
+          "effect_value": 0.25,
+          "description": "Damage + lower enemy DEF by 25%"
+        },
+        {
+          "name": "Cat's Claw",
+          "level": 20,
+          "type": "Dark",
+          "category": "Physical",
+          "power": 28,
+          "accuracy": 100,
+          "special": "double_money_steal",
+          "description": "Damage + steal 2x money from enemy"
+        },
+        {
+          "name": "Nine Lives",
+          "level": 32,
+          "type": "Dark",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "nine_lives",
+          "description": "Survive 9 fatal blows at 1 HP (resets each battle)"
+        }
+      ],
+      "acquisition": {
+        "method": "night_encounter",
+        "location": "Jericho",
+        "time": "night_only"
+      },
+      "flavor_text": {
+        "default": "Not actually a catfish (the internet kind). Actually a fish. That steals. It's complicated.",
+        "christian_edition": "Reminds us that appearances can deceive. Discernment reveals true character."
+      }
+    },
+    {
+      "id": "trout_of_bounds",
+      "name": "Trout of Bounds",
+      "tier": "special",
+      "type": "Water",
+      "base_stats": {
+        "hp": 30,
+        "atk": 21,
+        "def": 11,
+        "spd": 24
+      },
+      "property": {
+        "name": "Rule Breaker",
+        "description": "Ignores type disadvantages (always neutral damage)",
+        "effect": "ignore_type_chart",
+        "value": 1.0
+      },
+      "moves": [
+        {
+          "name": "Illegal Move",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": 18,
+          "accuracy": 100,
+          "special": "ignore_rules",
+          "description": "Breaks conventional rules"
+        },
+        {
+          "name": "Out of Line",
+          "level": 1,
+          "type": "Water",
+          "category": "Physical",
+          "power": 20,
+          "accuracy": 100,
+          "effect": "stun",
+          "effect_chance": 0.3,
+          "description": "Damage + 30% stun"
+        },
+        {
+          "name": "Foul Play",
+          "level": 20,
+          "type": "Water",
+          "category": "Physical",
+          "power": 30,
+          "accuracy": 100,
+          "special": "neutral_vs_all",
+          "description": "Ignores all type matchups"
+        },
+        {
+          "name": "Ejection",
+          "level": 34,
+          "type": "Water",
+          "category": "Physical",
+          "power": 45,
+          "accuracy": 95,
+          "special": "instant_defeat_chance",
+          "effect_chance": 0.15,
+          "description": "Damage + 15% instant-defeat chance"
+        }
+      ],
+      "acquisition": {
+        "method": "rare_encounter",
+        "location": "Any",
+        "spawn_rate": 0.01,
+        "note": "1% spawn rate in random encounters"
+      },
+      "flavor_text": {
+        "default": "Doesn't care about type charts, meta analysis, or your carefully planned strategy. Chaos fish.",
+        "christian_edition": "Sometimes faith transcends conventional wisdom. Divine providence works beyond our understanding."
+      }
+    },
+    {
+      "id": "betta_together",
+      "name": "Betta Together",
+      "tier": "special",
+      "type": "Spirit",
+      "base_stats": {
+        "hp": 25,
+        "atk": 16,
+        "def": 14,
+        "spd": 16
+      },
+      "property": {
+        "name": "Unity Aura",
+        "description": "Boosts all other fish's stats by 25% while in party",
+        "effect": "passive_party_buff",
+        "value": 0.25
+      },
+      "moves": [
+        {
+          "name": "Unity Strike",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 14,
+          "accuracy": 100,
+          "special": "damage_per_party_fish",
+          "bonus_per_fish": 5,
+          "description": "+5 damage per fish in party"
+        },
+        {
+          "name": "Better Half",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "effect": "target_atk_boost",
+          "effect_value": 0.5,
+          "duration": 3,
+          "description": "Buff target fish's ATK by 50% for 3 turns"
+        },
+        {
+          "name": "Stronger Together",
+          "level": 16,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "special": "heal_weakest_fish",
+          "heal_amount": 15,
+          "description": "Damage + heal weakest fish 15 HP"
+        },
+        {
+          "name": "Perfect Harmony",
+          "level": 28,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 35,
+          "accuracy": 100,
+          "special": "all_party_attack",
+          "description": "All 4 party fish attack together"
+        }
+      ],
+      "acquisition": {
+        "method": "apostle_gift",
+        "location": "Bethsaida",
+        "quest": "Brotherly Love",
+        "giver": "Andrew"
+      },
+      "flavor_text": {
+        "default": "We're Betta Together! Get it? BETTA? Like the fish? *awkward finger guns* ...I'll see myself out.",
+        "christian_edition": "Unity strengthens all. Together in fellowship, we achieve what one alone cannot."
+      }
+    },
+    {
+      "id": "thunder_pike",
+      "name": "Thunder Pike",
+      "tier": "special",
+      "type": "Spirit",
+      "dual_type": "Holy",
+      "base_stats": {
+        "hp": 35,
+        "atk": 25,
+        "def": 12,
+        "spd": 25
+      },
+      "property": {
+        "name": "Priority Strike",
+        "description": "Always acts first (highest priority, ignores SPD)",
+        "effect": "always_first",
+        "value": 999
+      },
+      "moves": [
+        {
+          "name": "Thunder Strike",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 25,
+          "accuracy": 100,
+          "description": "Lightning damage"
+        },
+        {
+          "name": "Quick Attack",
+          "level": 1,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 15,
+          "accuracy": 100,
+          "special": "priority",
+          "description": "Always goes first"
+        },
+        {
+          "name": "Volt Tackle",
+          "level": 25,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 40,
+          "accuracy": 100,
+          "special": "recoil",
+          "recoil_amount": 10,
+          "description": "Powerful attack, recoil 10 HP"
+        },
+        {
+          "name": "Divine Thunder",
+          "level": 50,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 100,
+          "accuracy": 100,
+          "special": "once_per_battle",
+          "description": "100 damage, once per battle only"
+        }
+      ],
+      "acquisition": {
+        "method": "ultra_rare_encounter",
+        "location": "Any",
+        "spawn_rate": 0.001,
+        "note": "0.1% chance in any region - ULTRA RARE"
+      },
+      "flavor_text": {
+        "default": "So fast it makes other fish look like they're standing still. Catch it if you can! (You probably can't.)",
+        "christian_edition": "Blessed with divine speed. A rare gift that appears only to those deemed worthy."
+      }
+    },
+    {
+      "id": "ichthys_divine",
+      "name": "Ichthys Divine",
+      "tier": "post_game",
+      "type": "Holy",
+      "dual_type": "Spirit",
+      "tri_type": "Water",
+      "base_stats": {
+        "hp": 60,
+        "atk": 40,
+        "def": 30,
+        "spd": 20
+      },
+      "property": {
+        "name": "Divine Blessing",
+        "description": "Immune to all status effects, regenerates 10 HP per turn",
+        "effect": "ultimate_blessing",
+        "value": 10
+      },
+      "moves": [
+        {
+          "name": "Divine Judgment",
+          "level": 1,
+          "type": "Holy",
+          "category": "Physical",
+          "power": 50,
+          "accuracy": 100,
+          "description": "Mighty holy damage"
+        },
+        {
+          "name": "Sacred Waters",
+          "level": 1,
+          "type": "Water",
+          "category": "Healing",
+          "power": 40,
+          "accuracy": 100,
+          "special": "heal_all_party",
+          "description": "Heal all party members 40 HP"
+        },
+        {
+          "name": "Alpha and Omega",
+          "level": 40,
+          "type": "Spirit",
+          "category": "Physical",
+          "power": 80,
+          "accuracy": 100,
+          "special": "heal_jesus",
+          "heal_amount": 30,
+          "description": "80 damage + heal Jesus 30 HP"
+        },
+        {
+          "name": "Resurrection",
+          "level": 50,
+          "type": "Holy",
+          "category": "Status",
+          "power": 0,
+          "accuracy": 100,
+          "special": "revive_all_fish",
+          "revive_percent": 0.5,
+          "description": "Revive all fainted fish at 50% HP (once per battle)"
+        }
+      ],
+      "acquisition": {
+        "method": "new_game_plus",
+        "location": "Post-Game",
+        "requirement": "Complete all 40 Parables quest",
+        "note": "New Game+ only"
+      },
+      "flavor_text": {
+        "default": "The fish that launched a thousand bumper stickers. The ultimate catch. You did it. GG.",
+        "christian_edition": "The ancient symbol of faith made flesh. Pure devotion in aquatic form. The ultimate blessing."
+      }
+    }
+  ],
+  "type_chart": {
+    "Holy": {
+      "Holy": 1.0,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 2.0
+    },
+    "Water": {
+      "Holy": 1.0,
+      "Water": 0.5,
+      "Earth": 2.0,
+      "Spirit": 1.0,
+      "Dark": 1.0
+    },
+    "Earth": {
+      "Holy": 1.0,
+      "Water": 0.5,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 1.0
+    },
+    "Spirit": {
+      "Holy": 1.5,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 1.0,
+      "Dark": 1.5
+    },
+    "Dark": {
+      "Holy": 0.5,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Spirit": 0.5,
+      "Dark": 1.0
+    }
+  },
+  "metadata": {
+    "total_fish": 20,
+    "implemented": 20,
+    "tiers": {
+      "0": "Tutorial (1 fish)",
+      "1": "Early Game Towns 2-5 (5 fish)",
+      "2": "Mid Game Towns 6-9 (4 fish)",
+      "3": "Late Game Towns 10-12 (3 fish)",
+      "special": "Hidden/Rare (6 fish)",
+      "post_game": "New Game+ (1 fish)"
+    },
+    "types": ["Holy", "Water", "Earth", "Spirit", "Dark"],
+    "acquisition_methods": [
+      "shop",
+      "gift",
+      "side_quest",
+      "mini_game",
+      "night_encounter",
+      "rare_encounter",
+      "ultra_rare_encounter",
+      "apostle_gift",
+      "new_game_plus"
+    ]
+  }
+}

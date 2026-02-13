@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[node name="Bootstrap" type="Node"]
+script = ExtResource(1)
+
+[ext_resource type="Script" path="res://scripts/ui/Bootstrap.gd" id="1"]

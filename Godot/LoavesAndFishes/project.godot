@@ -1,0 +1,12 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+config/name="LoavesAndFishes"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
+
+[autoload]
+DataLoader="*res://scripts/autoloads/DataLoader.gd"
+GameState="*res://scripts/autoloads/GameState.gd"
+TextManager="*res://scripts/autoloads/TextManager.gd"
+Constants="*res://scripts/autoloads/Constants.gd"
