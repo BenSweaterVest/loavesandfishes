@@ -21,7 +21,7 @@ from engine.apostle_abilities import ApostleManager
 from engine.miracles import MiracleMeter
 from engine.combos import ComboManager
 from engine.fishing import FISHING_SPOTS
-from ui.menu import MainMenu, MenuManager
+from ui.menu import MainMenu, MenuManager, MenuResult, ShopMenu
 from ui.shops import get_shop
 from utils.save_system import get_save_system
 from utils.data_loader import DataLoader
@@ -310,7 +310,7 @@ class LoavesAndFishesGame:
         print("The innkeeper welcomes you...")
         print("Your fish rest and are restored to full health!")
         print("=" * 60)
-        # TODO: Actually heal party fish
+        self.player.rest_at_inn()
         input("\nPress Enter...")
 
     def visit_shop(self, location):
@@ -322,8 +322,27 @@ class LoavesAndFishesGame:
 
         if shop:
             print(f"\n{shop.greeting}")
-            # TODO: Implement shop interface
-            input("\nPress Enter...")
+            shop_manager = MenuManager()
+            shop_manager.push_menu(ShopMenu(self.player, shop))
+
+            while shop_manager.current_menu():
+                menu = shop_manager.current_menu()
+                print("\n" + "\n".join(menu.get_display_text()))
+
+                choice = input("\nSelect: ").strip().lower()
+                if choice in ["w", "up"]:
+                    result = shop_manager.handle_input("up")
+                elif choice in ["s", "down"]:
+                    result = shop_manager.handle_input("down")
+                elif choice in ["e", "enter", "select"]:
+                    result = shop_manager.handle_input("select")
+                elif choice in ["q", "back", "exit"]:
+                    result = shop_manager.handle_input("back")
+                else:
+                    result = MenuResult.CONTINUE
+
+                if result == MenuResult.EXIT:
+                    break
 
     def world_map_scene(self):
         """Handle world map"""
@@ -401,25 +420,29 @@ class LoavesAndFishesGame:
 
     def menu_scene(self):
         """Handle menu"""
-        self.menu_manager.push_menu(MainMenu(self.player))
+        self.menu_manager.clear_menus()
+        self.menu_manager.push_menu(MainMenu(self.player, self.game_state, self.data_loader))
 
         while self.menu_manager.current_menu():
             menu = self.menu_manager.current_menu()
             print("\n" + "\n".join(menu.get_display_text()))
 
             choice = input("\nSelect: ").strip().lower()
+            if choice in ["w", "up"]:
+                result = self.menu_manager.handle_input("up")
+            elif choice in ["s", "down"]:
+                result = self.menu_manager.handle_input("down")
+            elif choice in ["e", "enter", "select"]:
+                result = self.menu_manager.handle_input("select")
+            elif choice in ["q", "back", "exit"]:
+                result = self.menu_manager.handle_input("back")
+            else:
+                result = MenuResult.CONTINUE
 
-            if choice in ['w', 'up']:
-                menu.move_up()
-            elif choice in ['s', 'down']:
-                menu.move_down()
-            elif choice in ['e', 'enter', 'select']:
-                menu.select()
-            elif choice in ['q', 'back', 'exit']:
-                self.menu_manager.pop_menu()
-                if not self.menu_manager.menu_stack:
-                    self.game_state.return_to_previous_scene()
-                    return
+            if result == MenuResult.EXIT:
+                self.menu_manager.clear_menus()
+                self.game_state.return_to_previous_scene()
+                return
 
     def fishing_scene(self):
         """Handle fishing mini-game"""

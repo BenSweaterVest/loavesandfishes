@@ -6,6 +6,7 @@ import json
 import os
 from typing import Dict, Any, Optional
 from datetime import datetime
+from utils.data_loader import get_data_loader
 from pathlib import Path
 
 
@@ -67,7 +68,7 @@ class SaveSystem:
                 "slot": slot,
                 "save_name": save_name or f"Save {slot}",
                 "timestamp": datetime.now().isoformat(),
-                "playtime": 0,  # TODO: Track playtime
+                "playtime": getattr(player, "playtime", 0),
                 "player_data": self._serialize_player(player)
             }
 
@@ -229,8 +230,8 @@ class SaveSystem:
             "current_town": player.current_town,
             "active_party": [self._serialize_fish(f) for f in player.active_party],
             "fish_storage": [self._serialize_fish(f) for f in player.fish_storage],
-            "bread_inventory": player.bread_inventory,
-            "key_items": player.key_items,
+            "bread_items": getattr(player, "bread_items", {}),
+            "key_items": getattr(player, "key_items", []),
             "equipped_robe": player.equipped_robe,
             "equipped_accessory": player.equipped_accessory,
             "recruited_apostles": player.recruited_apostles,
@@ -254,8 +255,14 @@ class SaveSystem:
         """
         # Use the player's built-in from_dict method if available
         if hasattr(player, 'from_dict'):
-            player.from_dict(data)
-            return
+            try:
+                loader = get_data_loader()
+                loaded_player = player.__class__.from_dict(data, loader)
+                player.__dict__.update(loaded_player.__dict__)
+                return
+            except TypeError:
+                player.from_dict(data)
+                return
 
         # Otherwise manually deserialize
         player.name = data.get("name", "Jesus")
@@ -267,11 +274,19 @@ class SaveSystem:
         player.current_town = data.get("current_town", "Nazareth")
 
         # Load fish (requires Fish class to deserialize)
-        # TODO: Implement fish deserialization
-        player.active_party = []
-        player.fish_storage = []
+        loader = get_data_loader()
+        player.active_party = [
+            self._deserialize_fish(f_data, loader)
+            for f_data in data.get("active_party", [])
+        ]
+        player.active_party = [fish for fish in player.active_party if fish]
+        player.fish_storage = [
+            self._deserialize_fish(f_data, loader)
+            for f_data in data.get("fish_storage", [])
+        ]
+        player.fish_storage = [fish for fish in player.fish_storage if fish]
 
-        player.bread_inventory = data.get("bread_inventory", {})
+        player.bread_items = data.get("bread_items", {})
         player.key_items = data.get("key_items", [])
         player.equipped_robe = data.get("equipped_robe")
         player.equipped_accessory = data.get("equipped_accessory")
@@ -304,21 +319,21 @@ class SaveSystem:
         """
         return {
             "fish_id": fish.fish_id,
-            "nickname": fish.nickname,
+            "nickname": getattr(fish, "nickname", fish.name),
             "level": fish.level,
             "current_hp": fish.current_hp,
             "max_hp": fish.max_hp,
-            "current_xp": fish.current_xp,
+            "current_xp": getattr(fish, "xp", 0),
             "atk": fish.atk,
             "defense": fish.defense,
             "spd": fish.spd,
             "type": fish.type,
-            "known_moves": fish.known_moves,
-            "status_effects": fish.status_effects,
+            "known_moves": getattr(fish, "known_moves", []),
+            "status_effects": getattr(fish, "status_effects", []),
             "held_item": getattr(fish, 'held_item', None)
         }
 
-    def _deserialize_fish(self, data: Dict[str, Any]):
+    def _deserialize_fish(self, data: Dict[str, Any], loader):
         """
         Deserialize a fish from dictionary
 
@@ -328,10 +343,11 @@ class SaveSystem:
         Returns:
             Fish instance
         """
-        # TODO: Import Fish class and create instance
-        # This requires the Fish class to have a from_dict method or
-        # a constructor that accepts serialized data
-        pass
+        from engine.fish import Fish
+        fish_data = loader.get_fish_by_id(data.get("fish_id", ""))
+        if not fish_data:
+            return None
+        return Fish.from_dict(data, fish_data)
 
     def create_autosave(self, player) -> bool:
         """

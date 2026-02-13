@@ -68,11 +68,13 @@ class Player:
         """
         if len(self.active_party) >= 4:
             return False
+        fish.owner = self
         self.active_party.append(fish)
         return True
 
     def add_fish_to_storage(self, fish: Fish):
         """Add a fish to storage"""
+        fish.owner = self
         self.fish_storage.append(fish)
 
     def remove_fish_from_party(self, index: int) -> Optional[Fish]:

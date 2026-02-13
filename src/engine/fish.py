@@ -70,6 +70,8 @@ class Fish:
             "accuracy": 1.0,
             "evasion": 1.0
         }
+        self.timed_stat_modifiers = {stat: [] for stat in self.stat_modifiers}
+        self.status_durations: Dict[str, int] = {}
 
     def _calculate_stat(self, base_stat: int, level: int) -> int:
         """
@@ -181,6 +183,9 @@ class Fish:
             Defense is MULTIPLICATIVE with stat modifiers (buffs/debuffs).
             Always deals at least 1 damage to prevent stalling.
         """
+        if "invincible" in self.status_effects:
+            return 0
+
         # Get current defense modifier (affected by buffs/debuffs)
         defense_mult = self.stat_modifiers["def"]
 
@@ -196,9 +201,10 @@ class Fish:
 
         # Apply special property effects (e.g., damage reduction abilities)
         if self.property.get("effect") == "damage_reduction_alone":
-            # TODO: Check if this is the only fish remaining in party
-            # If yes, apply 50% damage reduction bonus
-            pass
+            owner = getattr(self, "owner", None)
+            if owner and hasattr(owner, "get_active_fish"):
+                if len(owner.get_active_fish()) == 1:
+                    actual_damage = max(1, int(actual_damage * 0.5))
 
         # Reduce HP, but never go below 0
         self.current_hp = max(0, self.current_hp - actual_damage)
@@ -233,35 +239,80 @@ class Fish:
         if self.is_fainted():
             self.current_hp = int(self.max_hp * hp_percent)
 
-    def apply_status_effect(self, status: str):
+    def apply_status_effect(self, status: str, turns: Optional[int] = None):
         """Apply a status effect to the fish"""
+        if status != "immunity" and "immunity" in self.status_effects:
+            return
         if status not in self.status_effects:
             self.status_effects.append(status)
+        if turns and turns > 0:
+            current = self.status_durations.get(status, 0)
+            self.status_durations[status] = max(current, turns)
 
     def remove_status_effect(self, status: str):
         """Remove a status effect from the fish"""
         if status in self.status_effects:
             self.status_effects.remove(status)
+        if status in self.status_durations:
+            del self.status_durations[status]
 
     def clear_status_effects(self):
         """Remove all status effects"""
         self.status_effects.clear()
+        self.status_durations.clear()
 
-    def apply_stat_modifier(self, stat: str, multiplier: float):
+    def apply_stat_modifier(self, stat: str, multiplier: float,
+                            turns: Optional[int] = None):
         """
         Apply a temporary stat modifier
 
         Args:
             stat: Stat to modify (atk, def, spd, accuracy, evasion)
             multiplier: Multiplier to apply (e.g., 1.2 for +20%)
+            turns: Number of turns the modifier lasts (None or 0 for permanent)
         """
         if stat in self.stat_modifiers:
             self.stat_modifiers[stat] *= multiplier
+            if turns and turns > 0:
+                self.timed_stat_modifiers[stat].append({
+                    "multiplier": multiplier,
+                    "turns": turns
+                })
 
     def reset_stat_modifiers(self):
         """Reset all stat modifiers to 1.0"""
         for stat in self.stat_modifiers:
             self.stat_modifiers[stat] = 1.0
+        for stat in self.timed_stat_modifiers:
+            self.timed_stat_modifiers[stat] = []
+
+    def tick_temporary_effects(self):
+        """Tick down temporary stat modifiers and timed status effects"""
+        for stat, entries in self.timed_stat_modifiers.items():
+            if not entries:
+                continue
+            remaining_entries = []
+            for entry in entries:
+                entry["turns"] -= 1
+                if entry["turns"] <= 0:
+                    multiplier = entry["multiplier"]
+                    if multiplier:
+                        self.stat_modifiers[stat] /= multiplier
+                else:
+                    remaining_entries.append(entry)
+            self.timed_stat_modifiers[stat] = remaining_entries
+
+        if not self.status_durations:
+            return
+        expired = []
+        for status, turns in self.status_durations.items():
+            turns -= 1
+            if turns <= 0:
+                expired.append(status)
+            else:
+                self.status_durations[status] = turns
+        for status in expired:
+            self.remove_status_effect(status)
 
     def can_use_move(self, move_index: int) -> bool:
         """Check if fish can use the specified move"""

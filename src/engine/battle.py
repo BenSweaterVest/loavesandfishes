@@ -33,12 +33,19 @@ from enum import Enum
 from .fish import Fish
 from .player import Player
 from .enemy import Enemy, Boss
+from .apostle_abilities import APOSTLE_ABILITIES
+from .miracles import MIRACLES
 
 # Import constants - handle both direct and relative imports
 try:
     from utils.constants import TYPE_CHART, BASE_CRIT_CHANCE, CRIT_MULTIPLIER
 except ImportError:
     from ..utils.constants import TYPE_CHART, BASE_CRIT_CHANCE, CRIT_MULTIPLIER
+
+try:
+    from utils.data_loader import DataLoader
+except ImportError:
+    from ..utils.data_loader import DataLoader
 
 
 class BattleAction(Enum):
@@ -184,6 +191,13 @@ class Battle:
         # ABILITY TRACKING: One-time use abilities
         self.apostle_used = False  # Can only use apostle once per battle
         self.miracle_used = False  # Can only use miracle once per battle
+
+        # ITEM/MIRACLE STATE
+        self.bread_multiplier = 1.0
+        self._queued_enemy_attack: Optional[Dict[str, Any]] = None
+
+        # DATA LOADER
+        self.data_loader = DataLoader()
 
         # INITIALIZE: Set up starting combatants and show intro
         self._initialize_battle()
@@ -497,7 +511,7 @@ class Battle:
 
         return True  # Attack succeeded
 
-    def enemy_attack(self) -> bool:
+    def enemy_attack(self, attack: Optional[Dict[str, Any]] = None) -> bool:
         """
         Enemy performs an attack against the player's active fish.
 
@@ -527,10 +541,9 @@ class Battle:
         if not self.active_enemy or not self.active_fish:
             return False  # Invalid state - no combatants
 
-        # STEP 1: Enemy AI chooses attack
-        # Enemy.choose_attack() picks from available moves
-        # Simple enemies pick randomly, bosses may use strategy
-        attack = self.active_enemy.choose_attack()
+        # STEP 1: Enemy AI chooses attack (or use pre-queued attack)
+        attack = self._queued_enemy_attack if self._queued_enemy_attack else self.active_enemy.choose_attack()
+        self._queued_enemy_attack = None
 
         # STEP 2: Accuracy check
         # Same as player attacks - some moves may miss
@@ -633,12 +646,13 @@ class Battle:
             return False
 
         # PERFORM SWITCH
+        previous_fish = self.active_fish
         self.active_fish = target_fish
         self.log.add(f"Go, {self.active_fish.name}!")
 
-        # Note: Stat modifiers should be reset here (TODO)
-        # When a fish is switched out, buffs/debuffs should clear
-        # This prevents stacking buffs by switching repeatedly
+        # Reset modifiers on the switched-out fish to avoid buff stacking
+        if previous_fish:
+            previous_fish.reset_stat_modifiers()
 
         return True  # Switch succeeded
 
@@ -682,39 +696,76 @@ class Battle:
             self.log.add("You don't have that item!")
             return False
 
+        item_data = self.data_loader.get_item_by_id(item_id)
+        if not item_data:
+            self.log.add("That item has no effect.")
+            return False
+
         # CONSUME ITEM: Remove from inventory
-        # Items are one-use consumables (like Pokémon potions)
         self.player.remove_bread_item(item_id, 1)
 
-        # APPLY EFFECT: Simple healing for now
-        # TODO: Load item data from items.json and apply actual effects
-        # Different items should have different effects:
-        # - heal: Restore HP
-        # - revive: Bring back fainted fish at 50% HP
-        # - cure: Remove status effects
-        # - buff: Apply stat modifiers
-        if self.active_fish:
-            healed = self.active_fish.heal(30)  # Placeholder: 30 HP heal
-            self.log.add(f"Used item! {self.active_fish.name} restored {healed} HP!")
+        target_fish = self.active_fish
+        if 0 <= target_index < len(self.player.active_party):
+            target_fish = self.player.active_party[target_index]
 
-        # TODO: Implement full item system
-        # Example of what full implementation should look like:
-        #
-        # item_data = get_item(item_id)
-        # effect_type = item_data["effect"]["type"]
-        #
-        # if effect_type == "heal":
-        #     amount = item_data["effect"]["amount"]
-        #     healed = target_fish.heal(amount)
-        # elif effect_type == "revive":
-        #     if target_fish.is_fainted():
-        #         target_fish.revive(0.5)
-        # elif effect_type == "cure":
-        #     target_fish.clear_status_effects()
-        # elif effect_type == "buff":
-        #     stat = item_data["effect"]["stat"]
-        #     multiplier = item_data["effect"]["multiplier"]
-        #     target_fish.apply_stat_modifier(stat, multiplier)
+        effect = item_data.get("effect", "")
+        multiplier = self.bread_multiplier
+        duration = int(item_data.get("duration", 0))
+
+        if effect == "heal_hp":
+            healed = target_fish.heal(int(item_data.get("power", 0) * multiplier))
+            self.log.add(f"{target_fish.name} restored {healed} HP!")
+        elif effect == "heal_and_cure_poison":
+            healed = target_fish.heal(int(item_data.get("power", 0) * multiplier))
+            target_fish.remove_status_effect("poisoned")
+            self.log.add(f"{target_fish.name} restored {healed} HP and was cured!")
+        elif effect == "heal_and_atk_boost":
+            healed = target_fish.heal(int(item_data.get("heal_power", 0) * multiplier))
+            boost = float(item_data.get("atk_boost", 0)) / 100.0
+            if boost > 0:
+                target_fish.apply_stat_modifier("atk", 1.0 + boost, duration)
+            self.log.add(f"{target_fish.name} restored {healed} HP and felt stronger!")
+        elif effect == "full_heal_all":
+            for fish in self.player.active_party:
+                fish.heal(fish.max_hp)
+                fish.clear_status_effects()
+            self.log.add("All fish were fully healed!")
+        elif effect == "atk_boost":
+            boost = float(item_data.get("boost_percent", 0)) / 100.0
+            if boost > 0:
+                target_fish.apply_stat_modifier("atk", 1.0 + boost, duration)
+            self.log.add(f"{target_fish.name}'s attack rose!")
+        elif effect == "spd_boost":
+            boost = float(item_data.get("boost_percent", 0)) / 100.0
+            if boost > 0:
+                target_fish.apply_stat_modifier("spd", 1.0 + boost, duration)
+            self.log.add(f"{target_fish.name}'s speed rose!")
+        elif effect == "def_boost":
+            boost = float(item_data.get("boost_percent", 0)) / 100.0
+            if boost > 0:
+                target_fish.apply_stat_modifier("def", 1.0 + boost, duration)
+            self.log.add(f"{target_fish.name}'s defense rose!")
+        elif effect == "enemy_atk_down" and self.active_enemy:
+            debuff = float(item_data.get("debuff_percent", 0)) / 100.0
+            if debuff > 0:
+                self.active_enemy.apply_stat_modifier("atk", 1.0 - debuff, duration)
+            self.log.add(f"{self.active_enemy.name}'s attack fell!")
+        elif effect == "remove_all_debuffs":
+            target_fish.clear_status_effects()
+            target_fish.reset_stat_modifiers()
+            self.log.add(f"{target_fish.name} was purified!")
+        elif effect == "auto_revive":
+            if target_fish.is_fainted():
+                revive_hp = int(item_data.get("revive_hp", 1))
+                target_fish.current_hp = max(1, revive_hp)
+                self.log.add(f"{target_fish.name} was revived!")
+            else:
+                self.log.add("Nothing happened.")
+        elif effect == "invincible":
+            target_fish.apply_status_effect("invincible", duration)
+            self.log.add(f"{target_fish.name} became invincible!")
+        else:
+            self.log.add("That item has no effect.")
 
         return True  # Item used successfully
 
@@ -797,7 +848,7 @@ class Battle:
         TURN ORDER RULES:
         - Higher speed goes first
         - Tie goes to player (SPD >= enemy SPD)
-        - Priority moves always go first (TODO)
+        - Priority moves always go first
         - If one side's action ends battle, other doesn't act
 
         This creates strategic depth:
@@ -840,15 +891,19 @@ class Battle:
             # Compare speeds: >= means player wins ties
             player_goes_first = self.active_fish.spd >= self.active_enemy.spd
 
-        # TODO: PRIORITY MOVES
-        # Some moves should always go first regardless of speed
-        # Examples: Quick Attack, Protect, etc.
-        # Implementation would check move.priority field:
-        #
-        # if player_action == BattleAction.ATTACK:
-        #     move = self.active_fish.known_moves[player_data]
-        #     if move.get("priority", 0) > 0:
-        #         player_goes_first = True
+        # PRIORITY MOVES
+        player_priority = 0
+        enemy_priority = 0
+        if player_action == BattleAction.ATTACK and self.active_fish:
+            move = self.active_fish.known_moves[player_data]
+            player_priority = move.get("priority", 0)
+
+        if self.active_enemy:
+            self._queued_enemy_attack = self.active_enemy.choose_attack()
+            enemy_priority = self._queued_enemy_attack.get("priority", 0)
+
+        if player_priority != enemy_priority:
+            player_goes_first = player_priority > enemy_priority
 
         # EXECUTE ACTIONS IN ORDER
         if player_goes_first:
@@ -870,12 +925,9 @@ class Battle:
                 # Battle still ongoing - player acts
                 self._execute_player_action(player_action, player_data)
 
-        # TODO: END-OF-TURN EFFECTS
-        # Some effects trigger at end of turn:
-        # - Poison/burn damage
-        # - Status effect duration countdown
-        # - Weather effects (future feature)
-        # - Terrain effects (future feature)
+        # END-OF-TURN EFFECTS
+        if self.result == BattleResult.ONGOING:
+            self._apply_end_of_turn_effects()
 
         return self.result  # Return current battle status
 
@@ -923,7 +975,7 @@ class Battle:
         """
         # Only act if enemy exists and isn't defeated
         if self.active_enemy and not self.active_enemy.is_defeated():
-            self.enemy_attack()  # Enemy chooses and uses an attack
+            self.enemy_attack(self._queued_enemy_attack)
 
     def _handle_fish_faint(self):
         """
@@ -952,10 +1004,13 @@ class Battle:
             self.result = BattleResult.DEFEAT  # Ends battle
             self.player.battles_lost += 1      # Track loss stat
 
-            # TODO: Handle defeat consequences
-            # - Return to last town
-            # - Lose money (50% penalty?)
-            # - All fish revived at town
+            # Defeat consequences
+            lost_money = self.player.money // 2
+            self.player.money -= lost_money
+            for fish in self.player.active_party:
+                fish.revive(0.1)
+                fish.clear_status_effects()
+            self.log.add(f"You lost {lost_money} denarii and retreated to safety.")
         else:
             # FISH AVAILABLE: Auto-switch to next fish
             # Takes first available fish from list
@@ -1016,10 +1071,17 @@ class Battle:
             self.result = BattleResult.VICTORY
             self.player.battles_won += 1  # Track victory stat
 
-            # TODO: Additional victory rewards
-            # - Story progression unlocks
-            # - Unlock new fish/abilities
-            # - Unlock new towns/areas
+            # Additional victory rewards (optional data-driven hooks)
+            if hasattr(self.active_enemy, "properties"):
+                props = self.active_enemy.properties
+                bonus_money = int(props.get("bonus_money", 0))
+                bonus_xp = int(props.get("bonus_xp", 0))
+                if bonus_money > 0:
+                    self.player.add_money(bonus_money)
+                    self.log.add(f"Bonus reward: {bonus_money} denarii!")
+                if bonus_xp > 0:
+                    self.player.gain_xp(bonus_xp)
+                    self.log.add(f"Bonus reward: {bonus_xp} XP!")
         else:
             # ENEMIES REMAIN: Next enemy appears
             # Switch to next enemy in list
@@ -1029,7 +1091,7 @@ class Battle:
             # Battle continues against new enemy
             # Player's fish stays in battle (doesn't auto-heal)
 
-    def _use_miracle(self):
+    def _use_miracle(self, miracle_id: Optional[str] = None):
         """
         Use Jesus's miracle ability (limit break system).
 
@@ -1049,43 +1111,53 @@ class Battle:
         Encourages aggressive and risky play.
 
         Note:
-            This is a STUB implementation.
-            Full miracle system should have multiple miracle types
-            to choose from (see TODO).
+            This currently selects the first available miracle when
+            none is specified.
         """
-        # VALIDATION: Check meter is full
-        if not self.player.is_miracle_ready():
-            self.log.add("Miracle meter is not full!")
-            return  # Can't use miracle yet
+        if self.miracle_used:
+            self.log.add("Miracle already used this battle!")
+            return
 
-        # TODO: MIRACLE SELECTION SYSTEM
-        # Different miracles with different effects:
-        # - "Loaves and Fishes": Heal all fish, moderate damage to all enemies
-        # - "Walking on Water": Raise all fish speed stats for battle
-        # - "Water to Wine": Cure all status effects, buff all stats
-        # - "Resurrection": Revive all fainted fish at full HP
-        # - "Holy Fire": Massive damage to all enemies, no healing
-        #
-        # Implementation would show miracle selection menu,
-        # then execute based on choice
+        selected = MIRACLES.get(miracle_id) if miracle_id else None
+        if selected is None:
+            for miracle in MIRACLES.values():
+                if self.player.miracle_meter >= miracle.meter_cost:
+                    selected = miracle
+                    break
 
-        # CURRENT IMPLEMENTATION: "Loaves and Fishes" miracle
-        self.log.add("Jesus used Loaves and Fishes miracle!")
-        self.log.add("All fish were healed!")
+        if selected is None:
+            self.log.add("Miracle meter is not high enough!")
+            return
 
-        # HEAL ALL FISH (including fainted ones? Currently only active)
-        for fish in self.player.active_party:
-            fish.heal(50)  # Heal 50 HP each
+        if self.player.miracle_meter < selected.meter_cost:
+            self.log.add("Miracle meter is not high enough!")
+            return
 
-        # DAMAGE ALL ENEMIES
-        for enemy in self.enemies:
-            enemy.take_damage(30)  # Fixed 30 damage (ignores defense)
-            self.log.add(f"{enemy.name} took 30 damage!")
+        self.player.miracle_meter = max(0.0, self.player.miracle_meter - selected.meter_cost)
+        self.log.add(f"Jesus used {selected.name} miracle!")
 
-        # CONSUME MIRACLE: Reset meter to 0
-        self.player.use_miracle()
+        if selected.miracle_id == "healing_miracle":
+            for fish in self.player.active_party:
+                fish.heal(fish.max_hp)
+                fish.clear_status_effects()
+            self.log.add("All fish were healed!")
+        elif selected.miracle_id == "loaves_and_fishes":
+            self.bread_multiplier = 3.0
+            self.log.add("Bread effects were multiplied!")
+        elif selected.miracle_id == "divine_judgment":
+            for enemy in self.enemies:
+                enemy.take_damage(300)
+                enemy.apply_stat_modifier("atk", 0.5, 3)
+                enemy.apply_stat_modifier("def", 0.5, 3)
+                enemy.apply_stat_modifier("spd", 0.5, 3)
+            self.log.add("Divine judgment struck all enemies!")
+        elif selected.miracle_id == "resurrection_power":
+            for fish in self.player.active_party:
+                if fish.is_fainted():
+                    fish.revive(1.0)
+                    fish.apply_status_effect("immunity", 2)
+            self.log.add("The fallen rose again!")
 
-        # MARK AS USED: Can only use once per battle
         self.miracle_used = True
 
     def _use_apostle(self, apostle_id: str):
@@ -1098,7 +1170,7 @@ class Battle:
         - Each apostle has unique ability
         - Grants +5% miracle meter
 
-        Example apostle abilities (TODO):
+        Example apostle abilities:
         - Peter: Revive one fainted fish at 50% HP
         - John: Heal all fish for 30 HP
         - James: Deal 50 damage to all enemies
@@ -1110,9 +1182,7 @@ class Battle:
             apostle_id: ID of apostle to call (e.g., "peter")
 
         Note:
-            This is a STUB implementation.
-            Full apostle system needs apostle data loaded
-            from apostles.json with ability definitions.
+            Abilities are loaded from APOSTLE_ABILITIES.
         """
         # VALIDATION: Can only use once per battle
         if self.apostle_used:
@@ -1124,31 +1194,100 @@ class Battle:
             self.log.add("That apostle has not been recruited!")
             return
 
-        # TODO: LOAD APOSTLE DATA AND EXECUTE ABILITY
-        # Full implementation:
-        #
-        # apostle_data = get_apostle(apostle_id)
-        # ability = apostle_data["battle_ability"]
-        # ability_type = ability["type"]
-        #
-        # if ability_type == "revive":
-        #     # Find first fainted fish and revive
-        # elif ability_type == "heal":
-        #     # Heal all fish
-        # elif ability_type == "damage":
-        #     # Damage all enemies
-        # elif ability_type == "buff":
-        #     # Apply stat buffs
-        # etc.
+        ability = APOSTLE_ABILITIES.get(apostle_id)
+        if not ability:
+            self.log.add("That apostle has no ability yet!")
+            return
 
-        # CURRENT STUB: Just shows message
-        self.log.add(f"Called upon {apostle_id}!")
+        self.log.add(f"Called upon {ability.name}!")
+
+        if ability.ability_id == "rock_foundation":
+            for fish in self.player.active_party:
+                fish.apply_stat_modifier("def", 1.5)
+            self.log.add("Party defense rose!")
+        elif ability.ability_id == "fishers_net":
+            self.log.add("Enemy escape was prevented!")
+        elif ability.ability_id == "sons_of_thunder":
+            for enemy in self.enemies:
+                enemy.take_damage(ability.power)
+            self.log.add("Thunder struck all enemies!")
+        elif ability.ability_id == "beloved_healing":
+            for fish in self.player.active_party:
+                fish.heal(ability.power)
+            self.log.add("All fish were healed!")
+        elif ability.ability_id == "multiplication":
+            self.bread_multiplier = 3.0
+            self.log.add("Bread effects were multiplied!")
+        elif ability.ability_id == "true_sight":
+            if self.active_enemy:
+                self.log.add(f"Enemy HP: {self.active_enemy.current_hp}/{self.active_enemy.max_hp}")
+        elif ability.ability_id == "tax_audit":
+            self.player.add_money(100)
+            for enemy in self.enemies:
+                enemy.apply_stat_modifier("atk", 0.7)
+            self.log.add("Enemy attack fell and money was gained!")
+        elif ability.ability_id == "doubting_strike":
+            if self.active_enemy and self.active_enemy.current_hp <= self.active_enemy.max_hp * 0.5:
+                self.active_enemy.take_damage(ability.power)
+                self.log.add("A devastating strike landed!")
+            else:
+                self.log.add("The enemy must be below 50% HP!")
+                return
+        elif ability.ability_id == "lesser_miracle":
+            for fish in self.player.active_party:
+                fish.heal(ability.power)
+                fish.clear_status_effects()
+            self.log.add("All fish were healed and cured!")
+        elif ability.ability_id == "righteous_zeal" and self.active_fish:
+            self.active_fish.apply_stat_modifier("atk", 1.4)
+            self.active_fish.apply_stat_modifier("spd", 1.4)
+            self.log.add("Your fish is filled with zeal!")
+        elif ability.ability_id == "revolutionary_fervor" and self.active_fish:
+            damage = int(self.active_fish.current_hp * 0.5)
+            for enemy in self.enemies:
+                enemy.take_damage(damage)
+            self.log.add("Zealous damage struck all enemies!")
+        elif ability.ability_id == "thirty_silver":
+            sacrificed = next((f for f in self.player.active_party if not f.is_fainted()), None)
+            if sacrificed:
+                sacrificed.current_hp = 0
+            self.player.add_money(300)
+            for fish in self.player.active_party:
+                fish.apply_stat_modifier("atk", 1.5)
+            self.log.add("A sacrifice was made for power and silver!")
 
         # MARK AS USED
         self.apostle_used = True
 
         # GRANT MIRACLE METER: Using apostle gives +5%
         self.player.add_miracle_meter(5)
+
+    def _apply_end_of_turn_effects(self):
+        if self.active_fish:
+            self._apply_status_damage(self.active_fish, "poisoned", 0.05, "poison")
+            self._apply_status_damage(self.active_fish, "burned", 0.03, "burn")
+
+        if self.active_enemy:
+            self._apply_status_damage(self.active_enemy, "poisoned", 0.05, "poison")
+            self._apply_status_damage(self.active_enemy, "burned", 0.03, "burn")
+
+        self._tick_temporary_effects()
+
+    def _tick_temporary_effects(self):
+        for fish in self.player.active_party:
+            fish.tick_temporary_effects()
+        for enemy in self.enemies:
+            enemy.tick_temporary_effects()
+
+    def _apply_status_damage(self, target: Any, status: str,
+                             max_hp_ratio: float, label: str):
+        if "invincible" in target.status_effects:
+            return
+        if status not in target.status_effects:
+            return
+        damage = max(1, int(target.max_hp * max_hp_ratio))
+        target.current_hp = max(0, target.current_hp - damage)
+        self.log.add(f"{target.name} took {damage} {label} damage!")
 
     def get_battle_state(self) -> Dict[str, Any]:
         """

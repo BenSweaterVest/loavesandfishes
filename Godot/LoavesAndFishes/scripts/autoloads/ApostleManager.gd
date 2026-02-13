@@ -214,5 +214,125 @@ func use_ability(apostle_id: String) -> ApostleAbility:
 func execute_overworld_ability(apostle_id: String) -> bool:
 	return has_apostle(apostle_id)
 
-func execute_battle_ability(apostle_id: String, _context: Dictionary = {}) -> bool:
-	return use_ability(apostle_id) != null
+func execute_battle_ability(apostle_id: String, context: Dictionary = {}) -> bool:
+	var ability = get_ability(apostle_id)
+	if ability == null or not ability.is_ready():
+		return false
+
+	var battle = context.get("battle", GameState.current_battle)
+	var player = context.get("player", GameState.player)
+	var active_fish: Fish = context.get("active_fish", null)
+	var enemy: Enemy = context.get("enemy", null)
+	var party: Array = context.get("party", [])
+
+	if battle and active_fish == null and battle.has_method("get"):
+		active_fish = battle.player_fish
+	if battle and enemy == null and battle.has_method("get"):
+		enemy = battle.enemy
+	if party.is_empty() and player:
+		party = player.active_party
+
+	if ability.ability_id == "doubting_strike" and not _can_use_doubting_strike(enemy):
+		return false
+
+	if not ability.use():
+		return false
+
+	match ability.ability_id:
+		"rock_foundation":
+			_apply_party_buff(party, "def", 1.5)
+			_set_flag_turns("apostle_rock_foundation_turns", 3)
+		"fishers_net":
+			_set_flag_turns("apostle_fishers_net_turns", 3)
+		"sons_of_thunder":
+			_deal_ability_damage(battle, active_fish, enemy, ability.power, "Holy")
+		"beloved_healing":
+			_heal_party(party, ability.power)
+		"multiplication":
+			GameState.story_flags["apostle_multiplication_active"] = true
+			_set_flag_turns("apostle_multiplication_turns", 3)
+		"true_sight":
+			GameState.story_flags["apostle_true_sight"] = true
+			_set_flag_turns("apostle_true_sight_turns", 3)
+		"tax_audit":
+			if player:
+				player.add_money(100)
+			if enemy:
+				enemy.apply_stat_modifier("atk", 0.7)
+		"doubting_strike":
+			_deal_ability_damage(battle, active_fish, enemy, ability.power, "Holy")
+		"lesser_miracle":
+			_heal_party(party, ability.power, true)
+		"righteous_zeal":
+			if active_fish:
+				active_fish.apply_stat_modifier("atk", 1.4)
+				active_fish.apply_stat_modifier("spd", 1.4)
+				_set_flag_turns("apostle_righteous_zeal_turns", 3)
+		"revolutionary_fervor":
+			_apply_hp_based_damage(active_fish, enemy)
+		"thirty_silver":
+			_apply_thirty_silver(party, player)
+			_set_flag_turns("apostle_thirty_silver_turns", 3)
+		_:
+			return false
+
+	return true
+
+func _deal_ability_damage(
+	battle,
+	attacker: Fish,
+	target: Enemy,
+	power: int,
+	attack_type: String
+) -> void:
+	if target == null:
+		return
+
+	var damage = power
+	if battle and battle.has_method("calculate_damage") and attacker:
+		var move = {"name": "Apostle Ability", "power": power, "type": attack_type}
+		damage = battle.calculate_damage(attacker, target, move)
+
+	target.current_hp = max(0, target.current_hp - int(damage))
+
+func _apply_party_buff(party: Array, stat: String, multiplier: float) -> void:
+	for fish in party:
+		if fish:
+			fish.apply_stat_modifier(stat, multiplier)
+
+func _heal_party(party: Array, amount: int, cure_status: bool = false) -> void:
+	for fish in party:
+		if fish:
+			fish.heal(amount)
+			if cure_status:
+				fish.clear_status_effects()
+
+func _can_use_doubting_strike(target: Enemy) -> bool:
+	if target == null:
+		return false
+	return target.current_hp <= int(target.max_hp * 0.5)
+
+func _apply_hp_based_damage(attacker: Fish, target: Enemy) -> void:
+	if attacker == null or target == null:
+		return
+	var damage = int(attacker.current_hp * 0.5)
+	target.current_hp = max(0, target.current_hp - damage)
+
+func _apply_thirty_silver(party: Array, player) -> void:
+	if party.is_empty():
+		return
+
+	var sacrificed: Fish = null
+	for fish in party:
+		if fish and fish.current_hp > 0:
+			sacrificed = fish
+			break
+
+	if sacrificed:
+		sacrificed.current_hp = 0
+	if player:
+		player.add_money(300)
+	_apply_party_buff(party, "atk", 1.5)
+
+func _set_flag_turns(flag: String, turns: int) -> void:
+	GameState.story_flags[flag] = turns

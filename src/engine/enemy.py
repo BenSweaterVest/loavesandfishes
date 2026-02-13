@@ -56,6 +56,11 @@ class Enemy:
             "def": 1.0,
             "spd": 1.0
         }
+        self.timed_stat_modifiers = {stat: [] for stat in self.stat_modifiers}
+        self.status_durations: Dict[str, int] = {}
+
+        # Track last used attack for cycle pattern
+        self._last_attack_index = -1
 
     def _scale_stat(self, base_stat: int, level: int) -> int:
         """Scale stat based on level"""
@@ -85,8 +90,10 @@ class Enemy:
             return strongest
         elif self.ai_pattern == "cycle":
             # Cycle through attacks in order
-            # TODO: Track which attack was last used
-            return random.choice(self.attacks)
+            if not self.attacks:
+                return random.choice(self.attacks)
+            self._last_attack_index = (self._last_attack_index + 1) % len(self.attacks)
+            return self.attacks[self._last_attack_index]
         else:
             return random.choice(self.attacks)
 
@@ -110,25 +117,68 @@ class Enemy:
         """Check if enemy is defeated"""
         return self.current_hp <= 0
 
-    def apply_status_effect(self, status: str):
+    def apply_status_effect(self, status: str, turns: Optional[int] = None):
         """Apply a status effect"""
+        if status != "immunity" and "immunity" in self.status_effects:
+            return
         if status not in self.status_effects:
             self.status_effects.append(status)
+        if turns and turns > 0:
+            current = self.status_durations.get(status, 0)
+            self.status_durations[status] = max(current, turns)
 
     def remove_status_effect(self, status: str):
         """Remove a status effect"""
         if status in self.status_effects:
             self.status_effects.remove(status)
+        if status in self.status_durations:
+            del self.status_durations[status]
 
-    def apply_stat_modifier(self, stat: str, multiplier: float):
+    def apply_stat_modifier(self, stat: str, multiplier: float,
+                            turns: Optional[int] = None):
         """Apply a temporary stat modifier"""
         if stat in self.stat_modifiers:
             self.stat_modifiers[stat] *= multiplier
+            if turns and turns > 0:
+                self.timed_stat_modifiers[stat].append({
+                    "multiplier": multiplier,
+                    "turns": turns
+                })
 
     def reset_stat_modifiers(self):
         """Reset all stat modifiers"""
         for stat in self.stat_modifiers:
             self.stat_modifiers[stat] = 1.0
+        for stat in self.timed_stat_modifiers:
+            self.timed_stat_modifiers[stat] = []
+
+    def tick_temporary_effects(self):
+        """Tick down temporary stat modifiers and timed status effects"""
+        for stat, entries in self.timed_stat_modifiers.items():
+            if not entries:
+                continue
+            remaining_entries = []
+            for entry in entries:
+                entry["turns"] -= 1
+                if entry["turns"] <= 0:
+                    multiplier = entry["multiplier"]
+                    if multiplier:
+                        self.stat_modifiers[stat] /= multiplier
+                else:
+                    remaining_entries.append(entry)
+            self.timed_stat_modifiers[stat] = remaining_entries
+
+        if not self.status_durations:
+            return
+        expired = []
+        for status, turns in self.status_durations.items():
+            turns -= 1
+            if turns <= 0:
+                expired.append(status)
+            else:
+                self.status_durations[status] = turns
+        for status in expired:
+            self.remove_status_effect(status)
 
     def get_effective_stat(self, stat: str) -> int:
         """Get effective stat value after modifiers"""

@@ -6,6 +6,8 @@ from enum import Enum
 from typing import Optional, Dict, Any
 import random
 
+from utils.data_loader import get_data_loader
+
 
 class GameScene(Enum):
     """Game scenes/states"""
@@ -227,9 +229,9 @@ class GameState:
         """
         region = self.get_current_region()
 
-        # TODO: Load from enemies.json filtered by region
-        # For now, return placeholder
-        return []
+        data_loader = get_data_loader()
+        enemies_data = data_loader.load_json("enemies.json").get("enemies", [])
+        return [e["id"] for e in enemies_data if e.get("region") == region]
 
     def to_dict(self) -> Dict[str, Any]:
         """

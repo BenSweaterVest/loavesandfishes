@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/DialogueBox.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/world/NPC.tscn" id="4"]
 [ext_resource type="Script" path="res://scripts/world/TownGate.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/ui/CutsceneOverlay.gd" id="6"]
 
 [node name="TownTemplate" type="Node2D"]
 script = ExtResource(2)
@@ -32,3 +33,14 @@ script = ExtResource(5)
 text = "Unknown Town"
 
 [node name="DialogueBox" parent="TownUI" instance=ExtResource(3)]
+
+[node name="CutsceneOverlay" type="ColorRect" parent="TownUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+color = Color(0, 0, 0, 1)
+script = ExtResource(6)

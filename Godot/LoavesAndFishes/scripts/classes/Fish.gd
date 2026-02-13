@@ -35,6 +35,14 @@ var stat_modifiers: Dictionary = {
 	"accuracy": 1.0,
 	"evasion": 1.0
 }
+var timed_stat_modifiers: Dictionary = {
+	"atk": [],
+	"def": [],
+	"spd": [],
+	"accuracy": [],
+	"evasion": []
+}
+var status_durations: Dictionary = {}
 
 func _init(fish_id_param: String = "", fish_data: Dictionary = {}, level_param: int = 1) -> void:
 	if fish_id_param == "" or fish_data.is_empty():
@@ -107,6 +115,8 @@ func level_up() -> bool:
 	return true
 
 func take_damage(damage: int) -> int:
+	if status_effects.has("invincible"):
+		return 0
 	var defense_mult = float(stat_modifiers.get("def", 1.0))
 	var effective_defense = defense * defense_mult
 	var damage_multiplier = 100.0 / (100.0 + effective_defense)
@@ -127,24 +137,68 @@ func revive(hp_percent: float = 0.5) -> void:
 	if is_fainted():
 		current_hp = int(max_hp * hp_percent)
 
-func apply_status_effect(status: String) -> void:
+func apply_status_effect(status: String, turns: int = 0) -> void:
+	if status != "immunity" and status_effects.has("immunity"):
+		return
 	if not status_effects.has(status):
 		status_effects.append(status)
+	if turns > 0:
+		var remaining = int(status_durations.get(status, 0))
+		status_durations[status] = max(remaining, turns)
 
 func remove_status_effect(status: String) -> void:
 	if status_effects.has(status):
 		status_effects.erase(status)
+	if status_durations.has(status):
+		status_durations.erase(status)
 
 func clear_status_effects() -> void:
 	status_effects.clear()
+	status_durations.clear()
 
-func apply_stat_modifier(stat: String, multiplier: float) -> void:
+func apply_stat_modifier(stat: String, multiplier: float, turns: int = 0) -> void:
 	if stat_modifiers.has(stat):
 		stat_modifiers[stat] = float(stat_modifiers[stat]) * multiplier
+		if turns > 0 and timed_stat_modifiers.has(stat):
+			timed_stat_modifiers[stat].append({
+				"multiplier": multiplier,
+				"turns": turns
+			})
 
 func reset_stat_modifiers() -> void:
 	for stat in stat_modifiers.keys():
 		stat_modifiers[stat] = 1.0
+	for stat in timed_stat_modifiers.keys():
+		timed_stat_modifiers[stat].clear()
+
+func tick_temporary_effects() -> void:
+	for stat in timed_stat_modifiers.keys():
+		var entries: Array = timed_stat_modifiers[stat]
+		if entries.is_empty():
+			continue
+		var remaining: Array = []
+		for entry in entries:
+			var turns_left = int(entry.get("turns", 0)) - 1
+			if turns_left <= 0:
+				var multiplier = float(entry.get("multiplier", 1.0))
+				if multiplier != 0.0:
+					stat_modifiers[stat] = float(stat_modifiers[stat]) / multiplier
+			else:
+				entry["turns"] = turns_left
+				remaining.append(entry)
+		timed_stat_modifiers[stat] = remaining
+
+	if status_durations.is_empty():
+		return
+	var expired: Array[String] = []
+	for status in status_durations.keys():
+		var turns_left = int(status_durations.get(status, 0)) - 1
+		if turns_left <= 0:
+			expired.append(status)
+		else:
+			status_durations[status] = turns_left
+	for status in expired:
+		remove_status_effect(status)
 
 func get_effective_stat(stat: String) -> int:
 	var base_value = 0

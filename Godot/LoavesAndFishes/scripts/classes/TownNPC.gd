@@ -7,6 +7,8 @@ extends Area2D
 	"Strange things are happening lately.",
 	"The Romans are always watching."
 ]
+@export var search_locations_on_talk: int = 0
+@export var donation_amount: int = 0
 
 var player_in_range: bool = false
 var current_line: int = 0
@@ -30,6 +32,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		var town_system = get_parent().get_parent()
 		if town_system and town_system.has_method("show_dialogue"):
 			town_system.show_dialogue(npc_name, dialogue_lines[current_line])
+			if search_locations_on_talk > 0 and town_system.has_method("register_location_search"):
+				town_system.register_location_search(search_locations_on_talk)
+			if donation_amount > 0 and ShopSystem:
+				ShopSystem.donate_money(donation_amount)
 		current_line += 1
 		if current_line >= dialogue_lines.size():
 			current_line = 0

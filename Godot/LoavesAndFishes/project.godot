@@ -5,6 +5,10 @@ config_version=5
 config/name="LoavesAndFishes"
 run/main_scene="res://scenes/ui/MainMenu.tscn"
 
+[cutscene]
+fade_default_color=Color(0, 0, 0, 1)
+fade_default_duration=1.0
+
 [autoload]
 DataLoader="*res://scripts/autoloads/DataLoader.gd"
 GameState="*res://scripts/autoloads/GameState.gd"
@@ -12,3 +16,8 @@ TextManager="*res://scripts/autoloads/TextManager.gd"
 Constants="*res://scripts/autoloads/Constants.gd"
 WorldMapManager="*res://scripts/autoloads/WorldMapManager.gd"
 ApostleManager="*res://scripts/autoloads/ApostleManager.gd"
+ComboManager="*res://scripts/autoloads/ComboManager.gd"
+DialogueManager="*res://scripts/autoloads/DialogueManager.gd"
+SaveSystem="*res://scripts/systems/SaveSystem.gd"
+QuestManager="*res://scripts/systems/QuestManager.gd"
+MiracleSystem="*res://scripts/systems/MiracleSystem.gd"

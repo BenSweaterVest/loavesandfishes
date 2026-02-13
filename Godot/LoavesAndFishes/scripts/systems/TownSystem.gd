@@ -24,3 +24,10 @@ func show_dialogue(speaker: String, text: String) -> void:
 	dialogue_box.display_text(text, speaker)
 	await dialogue_box.dialogue_closed
 	$PlayerCharacter.set_physics_process(true)
+
+func register_location_search(count: int = 1) -> void:
+	var current = int(GameState.story_flags.get("locations_searched", 0))
+	GameState.story_flags["locations_searched"] = current + max(1, count)
+	if QuestManager:
+		for quest_id in GameState.active_quests:
+			QuestManager.advance_quest(quest_id)

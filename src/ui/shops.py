@@ -5,6 +5,8 @@ Shop System - Fishmonger and Baker shops
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 
+from utils.data_loader import get_data_loader
+
 
 @dataclass
 class ShopItem:
@@ -429,8 +431,19 @@ class FishmongerShop(Shop):
         base_value = 50
         level_bonus = fish_level * 10
 
-        # TODO: Add rarity multiplier based on fish data
-        total_value = base_value + level_bonus
+        data_loader = get_data_loader()
+        fish_data = data_loader.get_fish_by_id(fish_id)
+        tier = fish_data.get("tier") if fish_data else 1
+
+        rarity_multiplier = 1.0
+        if tier == 2:
+            rarity_multiplier = 1.5
+        elif tier == 3:
+            rarity_multiplier = 2.0
+        elif str(tier).lower() == "special":
+            rarity_multiplier = 3.0
+
+        total_value = int((base_value + level_bonus) * rarity_multiplier)
 
         player.add_money(total_value)
 

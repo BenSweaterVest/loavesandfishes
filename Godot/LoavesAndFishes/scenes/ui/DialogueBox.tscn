@@ -21,4 +21,6 @@ text = "Speaker"
 [node name="TextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 fit_content = true
 
+[node name="ChoicesContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+
 [node name="ContinueIcon" type="TextureRect" parent="."]

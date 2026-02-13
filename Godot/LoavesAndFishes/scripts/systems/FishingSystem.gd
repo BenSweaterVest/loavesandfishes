@@ -20,8 +20,9 @@ class FishingSpot:
 		quality = spot_quality
 		available_fish = fish_list
 
-	func start_fishing() -> void:
-		FishingSystem.start_fishing(quality)
+	func start_fishing(system: FishingSystem) -> void:
+		if system:
+			system.start_fishing(quality, {}, {}, spot_id)
 
 var current_rod: Dictionary = {}
 var current_tension: float = 0.0
@@ -44,7 +45,12 @@ var progress_increase_rate: float = 3.0
 var net_quality: float = 1.0
 var bait_quality: float = 1.0
 
-func start_fishing(spot_quality: int = 50, rod: Dictionary = {}, bait: Dictionary = {}) -> void:
+func start_fishing(
+	spot_quality: int = 50,
+	rod: Dictionary = {},
+	bait: Dictionary = {},
+	spot_id: String = ""
+) -> void:
 	fishing_spot_quality = spot_quality
 	current_rod = rod
 	net_quality = float(current_rod.get("net_quality", 1.0))
@@ -60,7 +66,7 @@ func start_fishing(spot_quality: int = 50, rod: Dictionary = {}, bait: Dictionar
 	var bite_chance = float(fishing_spot_quality) / 100.0
 	bite_chance *= bait_quality
 	if randf() < bite_chance:
-		current_fish = _generate_fish()
+		current_fish = _generate_fish(spot_id)
 		_set_difficulty(current_fish.get("difficulty", FishingDifficulty.EASY))
 		fish_hooked.emit(str(current_fish.get("fish_id", "unknown")))
 	else:
@@ -109,6 +115,10 @@ func update(reel_in: bool = false) -> FishingResult:
 		is_active = false
 		current_fish["caught"] = true
 		catch_successful.emit(current_fish)
+		GameState.fish_caught += 1
+		if QuestManager:
+			for quest_id in GameState.active_quests:
+				QuestManager.advance_quest(quest_id)
 		return FishingResult.CAUGHT
 
 	return FishingResult.ONGOING
@@ -128,7 +138,7 @@ func get_state() -> Dictionary:
 		"fish_size": current_fish.get("size", null)
 	}
 
-func _generate_fish() -> Dictionary:
+func _generate_fish(spot_id: String) -> Dictionary:
 	var roll = randf()
 	var tier: Variant = 1
 	var difficulty = FishingDifficulty.EASY
@@ -143,13 +153,60 @@ func _generate_fish() -> Dictionary:
 		tier = 2
 		difficulty = FishingDifficulty.MEDIUM
 
+	var available_ids: Array = _get_available_fish_ids(spot_id)
+	var fish_entry = _pick_fish_by_tier(available_ids, tier)
+	var fish_id = ""
+	var fish_data: Dictionary = {}
+	if not fish_entry.is_empty():
+		fish_id = str(fish_entry.get("id", ""))
+		fish_data = fish_entry
+
 	return {
-		"fish_id": "tier_%s" % str(tier),
+		"fish_id": fish_id,
+		"fish_data": fish_data,
 		"tier": tier,
 		"difficulty": difficulty,
 		"size": randi_range(1, 10),
 		"caught": false
 	}
+
+func _get_available_fish_ids(spot_id: String) -> Array:
+	if spot_id != "" and fishing_spots.has(spot_id):
+		var spot: FishingSpot = fishing_spots[spot_id]
+		return spot.available_fish
+	return []
+
+func _pick_fish_by_tier(available_ids: Array, tier: Variant) -> Dictionary:
+	var all_fish = DataLoader.get_all_fish()
+	if all_fish.is_empty():
+		return {}
+
+	var candidates: Array = []
+	if available_ids.is_empty():
+		candidates = all_fish
+	else:
+		for fish in all_fish:
+			var fish_id = str(fish.get("id", ""))
+			if available_ids.has(fish_id):
+				candidates.append(fish)
+
+	if candidates.is_empty():
+		candidates = all_fish
+
+	var tier_candidates: Array = []
+	for fish in candidates:
+		if _tier_matches(fish.get("tier", null), tier):
+			tier_candidates.append(fish)
+
+	var pool = tier_candidates if not tier_candidates.is_empty() else candidates
+	return pool.pick_random()
+
+func _tier_matches(fish_tier: Variant, desired_tier: Variant) -> bool:
+	if fish_tier == null:
+		return false
+	if typeof(fish_tier) == TYPE_INT and typeof(desired_tier) == TYPE_INT:
+		return int(fish_tier) == int(desired_tier)
+	return str(fish_tier).to_lower() == str(desired_tier).to_lower()
 
 func _set_difficulty(difficulty: int) -> void:
 	match difficulty:
