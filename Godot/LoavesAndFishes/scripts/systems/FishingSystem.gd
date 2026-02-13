@@ -5,6 +5,24 @@ signal fish_hooked(fish_id: String)
 signal line_snapped
 signal catch_successful(fish_data: Dictionary)
 
+enum FishingDifficulty { EASY, MEDIUM, HARD, LEGENDARY }
+enum FishingResult { CAUGHT, ESCAPED, NOTHING, ONGOING }
+
+class FishingSpot:
+	var spot_id: String
+	var name: String
+	var quality: int
+	var available_fish: Array
+
+	func _init(id: String, spot_name: String, spot_quality: int, fish_list: Array) -> void:
+		spot_id = id
+		name = spot_name
+		quality = spot_quality
+		available_fish = fish_list
+
+	func start_fishing() -> void:
+		FishingSystem.start_fishing(quality)
+
 var current_rod: Dictionary = {}
 var current_tension: float = 0.0
 var max_tension: float = 100.0
@@ -43,18 +61,19 @@ func start_fishing(spot_quality: int = 50, rod: Dictionary = {}, bait: Dictionar
 	bite_chance *= bait_quality
 	if randf() < bite_chance:
 		current_fish = _generate_fish()
-		_set_difficulty(current_fish.get("difficulty", "easy"))
+		_set_difficulty(current_fish.get("difficulty", FishingDifficulty.EASY))
 		fish_hooked.emit(str(current_fish.get("fish_id", "unknown")))
 	else:
+		current_fish = {}
 		is_active = false
 
-func update(reel_in: bool = false) -> String:
+func update(reel_in: bool = false) -> FishingResult:
 	if not is_active:
-		return "nothing"
+		return FishingResult.NOTHING
 
 	if current_fish.is_empty():
 		is_active = false
-		return "nothing"
+		return FishingResult.NOTHING
 
 	if randf() < fish_change_direction_chance:
 		fish_position += randf_range(-fish_speed, fish_speed)
@@ -73,7 +92,7 @@ func update(reel_in: bool = false) -> String:
 	if current_tension >= max_tension:
 		is_active = false
 		line_snapped.emit()
-		return "escaped"
+		return FishingResult.ESCAPED
 
 	if reel_in:
 		if hook_position < fish_position:
@@ -90,9 +109,9 @@ func update(reel_in: bool = false) -> String:
 		is_active = false
 		current_fish["caught"] = true
 		catch_successful.emit(current_fish)
-		return "caught"
+		return FishingResult.CAUGHT
 
-	return "ongoing"
+	return FishingResult.ONGOING
 
 func move_hook(direction: int) -> void:
 	hook_position += float(direction) * 5.0
@@ -111,18 +130,18 @@ func get_state() -> Dictionary:
 
 func _generate_fish() -> Dictionary:
 	var roll = randf()
-	var tier = 1
-	var difficulty = "easy"
+	var tier: Variant = 1
+	var difficulty = FishingDifficulty.EASY
 
 	if roll < 0.05:
-		tier = 4
-		difficulty = "legendary"
+		tier = "special"
+		difficulty = FishingDifficulty.LEGENDARY
 	elif roll < 0.15:
 		tier = 3
-		difficulty = "hard"
+		difficulty = FishingDifficulty.HARD
 	elif roll < 0.40:
 		tier = 2
-		difficulty = "medium"
+		difficulty = FishingDifficulty.MEDIUM
 
 	return {
 		"fish_id": "tier_%s" % str(tier),
@@ -132,17 +151,17 @@ func _generate_fish() -> Dictionary:
 		"caught": false
 	}
 
-func _set_difficulty(difficulty: String) -> void:
+func _set_difficulty(difficulty: int) -> void:
 	match difficulty:
-		"easy":
+		FishingDifficulty.EASY:
 			fish_speed = 3.0
 			fish_change_direction_chance = 0.05
 			tension_increase_rate = 1.0
-		"medium":
+		FishingDifficulty.MEDIUM:
 			fish_speed = 5.0
 			fish_change_direction_chance = 0.1
 			tension_increase_rate = 2.0
-		"hard":
+		FishingDifficulty.HARD:
 			fish_speed = 8.0
 			fish_change_direction_chance = 0.15
 			tension_increase_rate = 3.0
@@ -150,3 +169,71 @@ func _set_difficulty(difficulty: String) -> void:
 			fish_speed = 12.0
 			fish_change_direction_chance = 0.2
 			tension_increase_rate = 4.0
+
+func get_display_bar() -> String:
+	var bar_length = 50
+	var fish_pos = int((fish_position / 100.0) * bar_length)
+	var hook_pos = int((hook_position / 100.0) * bar_length)
+
+	var bar: Array = []
+	for index in range(bar_length):
+		bar.append("-")
+
+	if fish_pos >= 0 and fish_pos < bar_length:
+		bar[fish_pos] = "F"
+
+	if hook_pos >= 0 and hook_pos < bar_length:
+		bar[hook_pos] = "X" if bar[hook_pos] == "F" else "H"
+
+	var bar_str = "".join(bar)
+	var tension_bar = "#".repeat(int((current_tension / 100.0) * 20))
+	var progress_bar = "=".repeat(int((progress / 100.0) * 20))
+
+	var display: Array = []
+	display.append("|" + bar_str + "|")
+	var tension_line = "Tension:  [" + tension_bar.ljust(20, " ") + "] "
+	tension_line += str(int(current_tension)) + "%"
+	var progress_line = "Progress: [" + progress_bar.ljust(20, " ") + "] "
+	progress_line += str(int(progress)) + "%"
+	display.append(tension_line)
+	display.append(progress_line)
+
+	if not current_fish.is_empty():
+		var tier_text = str(current_fish.get("tier", "?"))
+		var size_text = str(current_fish.get("size", "?"))
+		display.append("Fish Tier: " + tier_text + " | Size: " + size_text + "/10")
+
+	return "\n".join(display)
+
+func upgrade_net(quality: float) -> void:
+	net_quality = quality
+
+func use_bait(quality: float) -> void:
+	bait_quality = quality
+
+var fishing_spots: Dictionary = {
+	"sea_of_galilee": FishingSpot.new(
+		"sea_of_galilee",
+		"Sea of Galilee",
+		80,
+		["carp_diem", "holy_mackerel", "sole_survivor", "bass_ackwards", "tilapia"]
+	),
+	"jordan_river": FishingSpot.new(
+		"jordan_river",
+		"Jordan River",
+		60,
+		["carp_diem", "stone_loach", "eel_pray_for_you"]
+	),
+	"bethesda_pool": FishingSpot.new(
+		"bethesda_pool",
+		"Pool of Bethesda",
+		70,
+		["holy_mackerel", "salmon_of_wisdom", "betta_together"]
+	),
+	"miraculous_catch": FishingSpot.new(
+		"miraculous_catch",
+		"Miraculous Catch Site",
+		100,
+		["fishers_of_men_haden", "ichthys_divine", "leviathans_lament"]
+	)
+}
